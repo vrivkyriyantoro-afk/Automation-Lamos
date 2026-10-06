@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:credit": "playwright test tests/credit-application.spec.ts --project=chromium",
+    "test:credit:headed": "playwright test tests/credit-application.spec.ts --headed --project=chromium",
+    "test:doc": "playwright test tests/document-bucket.spec.ts --project=chromium",
+    "test:doc:headed": "playwright test tests/document-bucket.spec.ts --headed --project=chromium",
+    "test:bulk": "playwright test tests/bulk-upload-mandatory.spec.ts --project=chromium",
+    "test:bulk:headed": "playwright test tests/bulk-upload-mandatory.spec.ts --headed --project=chromium",
+    "test:ui": "playwright test --ui --project=chromium",
+    "report": "playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.2"
+    "@types/node": "^26.6.2",
+    "dotenv": "^18.0.5"
   }
 }
+
