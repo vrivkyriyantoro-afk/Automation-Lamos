@@ -1,0 +1,36 @@
+{
+  "bucket": "collateral",
+  "title": "Agunan",
+  "sidebar": [
+    {
+      "title": "Data Agunan",
+      "status": "Belum Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "Pengikatan agunan ke fasilitas",
+      "status": "Belum Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Data Agunan",
+      "section": "Data agunan",
+      "fields": [
+        {
+          "section": "Data agunan",
+          "subsection": "Daftar agunan (0)",
+          "kind": "button",
+          "label": "Agunan",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "sidebar": "Data Agunan",
+      "section": "Pengikatan agunan ke fasilitas",
+      "fields": []
+    }
+  ]
+}

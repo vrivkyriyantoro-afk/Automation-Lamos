@@ -1,0 +1,46 @@
+{
+  "_catatan": "Skenario 1: Penjamin Perorangan (Personal Guarantee) WNI, status Menikah. Data dari user 2026-10-12. Status MUCHAMMAD TAUFAN dikoreksi user menjadi Menikah. Field bertanda _default tidak diberikan user, diisi nilai default agar form valid.",
+  "penjamin": {
+    "kewarganegaraan": "WNI",
+    "nomorKtp": "3276020602850001",
+    "namaLengkap": "MUCHAMMAD TAUFAN",
+    "tanggalLahir": "1985-02-06",
+    "tempatLahir": "DEPOK",
+    "_default_tempatLahir": true,
+    "namaIbuKandung": "SUDARMIYATI",
+    "jenisKelamin": "Laki-Laki",
+    "nomorHp": "081327595761",
+    "statusPerkawinan": "Menikah",
+    "npwp": "3276020602850001",
+    "_default_npwp": "NPWP tidak diberikan, memakai NIK 16 digit",
+    "alamatKtp": {
+      "_default": true,
+      "alamat": "Jl. Kebon Kacang Raya No. 10",
+      "rt": "003",
+      "rw": "004",
+      "provinsi": "DKI JAKARTA",
+      "kota": "KOTA ADM. JAKARTA PUSAT",
+      "kecamatan": "TANAH ABANG",
+      "kelurahan": "KEBON KACANG",
+      "kodePos": "10240"
+    },
+    "domisiliSamaDenganKtp": true
+  },
+  "pasangan": {
+    "kewarganegaraan": "WNI",
+    "nomorKtp": "3209244711730001",
+    "namaLengkap": "MUNAWAROH",
+    "tanggalLahir": "1973-11-07",
+    "tempatLahir": "CIREBON",
+    "_default_tempatLahir": true,
+    "namaIbuKandung": "SUTIAH",
+    "jenisKelamin": "Perempuan",
+    "nomorHp": "081327595765",
+    "npwp": "3209244711730001",
+    "_default_npwp": "NPWP tidak diberikan, memakai NIK 16 digit",
+    "domisiliSamaDenganPenjamin": true
+  },
+  "_tidak_terpetakan": {
+    "pasangan.nilai": "900.000.000 (kolom tidak disebut; form penjamin tidak punya field nominal)"
+  }
+}

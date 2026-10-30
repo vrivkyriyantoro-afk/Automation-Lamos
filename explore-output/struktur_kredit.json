@@ -1,0 +1,405 @@
+{
+  "bucket": "struktur_kredit",
+  "title": "Struktur Kredit",
+  "sidebar": [
+    {
+      "title": "Struktur Pengajuan Kredit",
+      "status": "Belum Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "Ringkasan Pengajuan",
+      "status": "Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Struktur Pengajuan Kredit",
+      "section": "Struktur pengajuan kredit",
+      "fields": [
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "key": "products.0.product",
+          "id": "products.0.product-r0",
+          "disabled": false,
+          "value": "SME Umum",
+          "testid": "dropdownsearch",
+          "options": [
+            "SCF",
+            "Simas Dana Tunai",
+            "SME Umum",
+            "Back to Back",
+            "Kredit dengan Agunan Produk Investasi"
+          ],
+          "hasSearch": true
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "key": "products.0.facility.0.facilityType",
+          "id": "products.0.facility.0.facilityType-r1",
+          "disabled": false,
+          "value": "DL",
+          "testid": "dropdownsearch",
+          "options": [
+            "TL",
+            "DL",
+            "PRK"
+          ],
+          "hasSearch": true
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Jenis pengajuan",
+          "required": true,
+          "key": "products.0.facility.0.submissionType",
+          "id": "products.0.facility.0.submissionType-r2",
+          "disabled": false,
+          "value": "Pilih jenis pengajuan",
+          "testid": "dropdownsearch",
+          "options": [
+            "Pengajuan Baru"
+          ],
+          "hasSearch": true
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Pengajuan plafon",
+          "required": true,
+          "name": "products.0.facility.0.plafon",
+          "id": "products.0.facility.0.plafon-r3",
+          "key": "products.0.facility.0.plafon",
+          "ariaLabel": "",
+          "placeholder": "Masukkan nominal",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Periode pinjaman (dalam bulan)",
+          "required": true,
+          "name": "products.0.facility.0.tenorMonths",
+          "id": "products.0.facility.0.tenorMonths-r5",
+          "key": "products.0.facility.0.tenorMonths",
+          "ariaLabel": "",
+          "placeholder": "Masukkan periode pinjaman (dalam bulan)",
+          "inputType": "text",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": "12"
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Tujuan penggunaan",
+          "required": true,
+          "key": "products.0.facility.0.usagePurpose",
+          "id": "products.0.facility.0.usagePurpose-r7",
+          "disabled": false,
+          "value": "Pilih tujuan penggunaan",
+          "testid": "dropdownsearch",
+          "options": [
+            "Modal Kerja",
+            "Investasi",
+            "Konsumsi"
+          ],
+          "hasSearch": true
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "textarea",
+          "label": "Keterangan tujuan",
+          "required": true,
+          "name": "products.0.facility.0.usageDescription",
+          "id": "products.0.facility.0.usageDescription-r8",
+          "key": "products.0.facility.0.usageDescription",
+          "ariaLabel": "",
+          "placeholder": "Masukkan keterangan tujuan",
+          "inputType": "textarea",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "textarea",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "table",
+          "headers": [
+            "Bunga efektif (p.a) *",
+            "Bunga flat (p.a) *",
+            "Tindakan"
+          ],
+          "rows": 1
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.interestSchema.0.effectiveRatePA",
+          "id": "products.0.facility.0.interestSchema.0.effectiveRatePA-ra",
+          "key": "products.0.facility.0.interestSchema.0.effectiveRatePA",
+          "ariaLabel": "products.0.facility.0.interestSchema.0.effectiveRatePA",
+          "placeholder": "Bunga",
+          "inputType": "text",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.interestSchema.0.flateRatePA",
+          "id": "products.0.facility.0.interestSchema.0.flateRatePA-rb",
+          "key": "products.0.facility.0.interestSchema.0.flateRatePA",
+          "ariaLabel": "products.0.facility.0.interestSchema.0.flateRatePA",
+          "placeholder": "Bunga",
+          "inputType": "text",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "table",
+          "headers": [
+            "Tipe biaya *",
+            "Nominal *",
+            "Presentase (%) *",
+            "Tindakan"
+          ],
+          "rows": 2
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "key": "products.0.facility.0.creditFee.0.feeType",
+          "id": "products.0.facility.0.creditFee.0.feeType-rc",
+          "disabled": true,
+          "value": "biaya provisi",
+          "testid": "dropdownsearch"
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.creditFee.0.nominal",
+          "id": "products.0.facility.0.creditFee.0.nominal-rd",
+          "key": "products.0.facility.0.creditFee.0.nominal",
+          "ariaLabel": "products.0.facility.0.creditFee.0.nominal",
+          "placeholder": "Nominal",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.creditFee.0.percentage",
+          "id": "products.0.facility.0.creditFee.0.percentage-re",
+          "key": "products.0.facility.0.creditFee.0.percentage",
+          "ariaLabel": "products.0.facility.0.creditFee.0.percentage",
+          "placeholder": "Presentase",
+          "inputType": "text",
+          "suffix": "%",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "key": "products.0.facility.0.creditFee.1.feeType",
+          "id": "products.0.facility.0.creditFee.1.feeType-rf",
+          "disabled": true,
+          "value": "biaya admin",
+          "testid": "dropdownsearch"
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.creditFee.1.nominal",
+          "id": "products.0.facility.0.creditFee.1.nominal-rg",
+          "key": "products.0.facility.0.creditFee.1.nominal",
+          "ariaLabel": "products.0.facility.0.creditFee.1.nominal",
+          "placeholder": "Nominal",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "text",
+          "label": "Jenis fasilitas",
+          "required": true,
+          "name": "products.0.facility.0.creditFee.1.percentage",
+          "id": "products.0.facility.0.creditFee.1.percentage-rh",
+          "key": "products.0.facility.0.creditFee.1.percentage",
+          "ariaLabel": "products.0.facility.0.creditFee.1.percentage",
+          "placeholder": "Presentase",
+          "inputType": "text",
+          "suffix": "%",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "button",
+          "label": "Biaya",
+          "disabled": false
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "button",
+          "label": "Fasilitas",
+          "disabled": false
+        },
+        {
+          "section": "Struktur pengajuan kredit",
+          "subsection": "",
+          "kind": "button",
+          "label": "Produk",
+          "disabled": false
+        }
+      ]
+    },
+    {
+      "sidebar": "Struktur Pengajuan Kredit",
+      "section": "Fasilitas kredit & obligor",
+      "fields": []
+    },
+    {
+      "sidebar": "Struktur Pengajuan Kredit",
+      "section": "Ringkasan pengajuan",
+      "fields": [
+        {
+          "section": "Ringkasan pengajuan",
+          "subsection": "",
+          "kind": "text",
+          "label": "Total pengajuan fasilitas",
+          "required": true,
+          "name": "totalPengajuanFasilitas",
+          "id": "totalPengajuanFasilitas-ri",
+          "key": "totalPengajuanFasilitas",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": true,
+          "readOnly": false,
+          "testid": "input",
+          "value": "0"
+        },
+        {
+          "section": "Ringkasan pengajuan",
+          "subsection": "",
+          "kind": "text",
+          "label": "Total fasilitas saat ini",
+          "required": true,
+          "name": "totalFasilitasSaatIni",
+          "id": "totalFasilitasSaatIni-rk",
+          "key": "totalFasilitasSaatIni",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": true,
+          "readOnly": false,
+          "testid": "input",
+          "value": "0"
+        },
+        {
+          "section": "Ringkasan pengajuan",
+          "subsection": "",
+          "kind": "text",
+          "label": "Total fasilitas obligor",
+          "required": true,
+          "name": "totalFasilitasObligor",
+          "id": "totalFasilitasObligor-rm",
+          "key": "totalFasilitasObligor",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": true,
+          "readOnly": false,
+          "testid": "input",
+          "value": "0"
+        },
+        {
+          "section": "Ringkasan pengajuan",
+          "subsection": "",
+          "kind": "text",
+          "label": "Total exposure",
+          "required": true,
+          "name": "totalExposure",
+          "id": "totalExposure-ro",
+          "key": "totalExposure",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "text",
+          "suffix": "Rp",
+          "disabled": true,
+          "readOnly": false,
+          "testid": "input",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}

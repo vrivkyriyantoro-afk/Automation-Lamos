@@ -1,0 +1,35 @@
+{
+  "bucket": "covenant_tbo",
+  "title": "Covenant & TBO",
+  "sidebar": [
+    {
+      "title": "Covenant",
+      "status": "Belum Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Covenant",
+      "section": "Covenant",
+      "fields": [
+        {
+          "section": "Covenant",
+          "subsection": "Lihat template covenant di sini",
+          "kind": "button",
+          "label": "template covenant",
+          "disabled": false
+        },
+        {
+          "section": "Covenant",
+          "subsection": "Lihat template covenant di sini",
+          "kind": "richtext",
+          "label": "Covenant",
+          "required": true,
+          "id": "rich-text-editor",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

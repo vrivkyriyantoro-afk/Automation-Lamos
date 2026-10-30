@@ -1,0 +1,77 @@
+{
+  "documentName": "LAMOS SME : Phase 1.1 - Agunan, 6C, FPPA",
+  "fileKey": "hayDfdzm40LHECLlcVsebo",
+  "lastModified": "2026-10-26T03:41:24Z",
+  "totalFrames": 4,
+  "totalComponents": 3,
+  "totalTextElements": 4,
+  "uniqueTexts": [
+    "👤",
+    "Ditemukan?",
+    "TIDAK, buat agunan baru",
+    "YA, gunakan data dari CLS"
+  ],
+  "extracted": {
+    "textItems": [
+      {
+        "id": "I5389:602025;1:2",
+        "text": "👤",
+        "section": "Ninode Stack"
+      },
+      {
+        "id": "I5389:602025;1:5",
+        "text": "Ditemukan?",
+        "section": "Ninode Stack"
+      },
+      {
+        "id": "I5389:602026;1:11",
+        "text": "TIDAK, buat agunan baru",
+        "section": "Item"
+      },
+      {
+        "id": "I5389:602027;1:11",
+        "text": "YA, gunakan data dari CLS",
+        "section": "Item"
+      }
+    ],
+    "frames": [
+      {
+        "id": "5389:602023",
+        "name": "Group 1000004991",
+        "type": "GROUP"
+      },
+      {
+        "id": "5389:602024",
+        "name": "Ninode Stack",
+        "type": "FRAME"
+      },
+      {
+        "id": "I5389:602026;3:39",
+        "name": "Item",
+        "type": "FRAME"
+      },
+      {
+        "id": "I5389:602027;3:39",
+        "name": "Item",
+        "type": "FRAME"
+      }
+    ],
+    "components": [
+      {
+        "id": "5389:602025",
+        "name": "Ninode",
+        "section": "Ninode Stack"
+      },
+      {
+        "id": "5389:602026",
+        "name": "Ninode",
+        "section": "Ninode Stack"
+      },
+      {
+        "id": "5389:602027",
+        "name": "Ninode",
+        "section": "Ninode Stack"
+      }
+    ]
+  }
+}

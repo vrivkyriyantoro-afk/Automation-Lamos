@@ -1,0 +1,10 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-5133",
+  "summary": "3. [FE&BE] LAMOS LOS SME - Lembar Kerja AO PK : Step 1 Data Agunan & Pengikatan Agunan ke Fasilitas",
+  "issueType": "Story",
+  "status": "Backlog",
+  "description": "User Story: \n\nSebagai \nAccount Officer (AO) , \nsaya ingin melihat informasi detail agunan dan hasil  pengikatan Agunan ke fasilitas yang otomatis  termaaping dari bucket agunan dari pengajuan dan AO OL untuk memastikan kembali data sebelum melanjutkan ke proses penerbitan akad.\n\n### Scope : \n- Section Data Agunan (Read-Only) sama dari Bucket Agunan\n- Section Pengikatan Agunan ke Fasilitas (Mapping View)\n\nNote:\n- - Menyesuaikan seluruh tampilan di section ini agar \ndisamakan dengan komponen dari pengajuan & AO OL\n- Tombol \n\"Lanjutkan\"\n otomatis muncul untuk next proses\n\nLink design DEV\nScenario\nAcceptance Criteria\nDesign\nTampilan Ringkasan & Detail Objek Agunan\nGIVEN\n User telah menyelesaikan tahap Validasi Debitur\nWHEN\n User membuka Halaman \n\"Data agunan\"\nTHEN\n Sistem wajib menampilkan data secara \nread-only\n dengan ketentuan:\n- Dua card summary nilai komulatif agunan di bagian atas.\n- - Nilai total appraisal & Nilai Wajar yang di gunakan)\n- informasi detail objek agunan beserta sub-section \n\"Struktur kredit terhubung\"\n .\nNotes : Disamakan dengan tampilan Bucket Agunan \nPengikatan Agunan ke Fasilitas \nGIVEN\n User berada di Halaman \n\"Pengikatan agunan ke fasilitas\"\nWHEN\n Halaman dibuka oleh user\nTHEN\n Sistem wajib Menampilkan mappingan fasilitas dengan Agunan \n\n\n",
+  "totalChildStories": 0,
+  "childStories": []
+}

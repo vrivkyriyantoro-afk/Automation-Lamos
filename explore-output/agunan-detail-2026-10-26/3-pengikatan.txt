@@ -1,0 +1,40 @@
+John Doe AO5
+Senior Financing Sales Officer (005 - KCP Cempaka Mas-JKT)
+JD
+Ganti kata sandi
+Keluar
+Pengajuan kredit
+Buat pengajuan kredit
+Buat pengajuan kredit
+Riwayat
+Identitas dan Pengecekan
+Struktur Kredit
+Penilaian Kelayakan
+Data Usaha
+Agunan
+Analisa Keuangan
+Legal, Risk, & Compliance
+Dokumen
+Covenant & TBO
+Penyimpangan & Pihak Terkait
+Catatan Anda
+Data Agunan
+Belum Lengkap
+Pengikatan agunan ke fasilitas
+Belum Lengkap
+Data agunan
+Pengikatan agunan ke fasilitas
+Data struktur kredit belum lengkap
+Tidak dapat mengisi pengikatan agunan ke fasilitas karena data struktur kredit belum lengkap. Silakan melengkapi data struktur kredit terlebih dahulu untuk dapat mengisi pengikatan agunan ke fasilitas.
+Ringkasan
+Total nilai appraisal yang dapat diagunkan
+Rp 0
+Total plafond
+Rp 0
+Daftar produk kredit (0)
+Belum ada data
+Belum ada produk kredit yang ditambahkan.
+Silakan melengkapi dan menyimpan data kredit pada bucket "Struktur kredit"
+1/11 selesai
+Kirim
+Copyright © 2026 PT Bank Sinarmas Tbk. All rights reserved.

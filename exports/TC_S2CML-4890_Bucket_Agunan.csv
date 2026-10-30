@@ -1,0 +1,55 @@
+﻿Test Case ID,Tipe Debitur,Kelompok / Modul,Judul Skenario,Tipe,Prioritas,Prekondisi,Langkah Pengujian,Expected Result,Referensi Sumber
+TC-4890-01,Perorangan & Badan Usaha,Navigasi Stepper & Indikator,Default Step saat Form Terbuka,Positive,High,Modal form Tambah Agunan Baru terbuka,1. Buka modal tambah agunan baru via tombol + Agunan Baru,"Form secara default langsung membuka Step 1: Informasi Umum Agunan, dan indikatornya berstatus ""Belum Lengkap"".",Jira AC: Step of entry data agunan & Figma
+TC-4890-02,Perorangan & Badan Usaha,Navigasi Stepper & Indikator,Struktur 3-Step Side Navigation,Positive,High,Modal form Tambah Agunan Baru terbuka,1. Periksa panel navigasi vertikal di sebelah kiri modal,"Menampilkan tepat 3 step berurutan:
+1. Informasi umum agunan
+2. Data tambahan agunan
+3. Informasi kepemilikan",Jira AC & S2WP-4878
+TC-4890-03,Perorangan & Badan Usaha,Navigasi Stepper & Indikator,Navigasi Paralel / Bebas Antar Step,Positive,High,Step 1 belum diisi lengkap,"1. Klik step 2 (Data tambahan agunan) pada side-nav kiri
+2. Klik step 1 (Informasi umum agunan)",Sistem langsung berpindah step form sesuai yang diklik tanpa membatasi urutan pengerjaan (unrestricted order).,Jira AC: Paralel Form
+TC-4890-04,Perorangan & Badan Usaha,Navigasi Stepper & Indikator,"Indikator Berubah Jadi ""Lengkap""",Positive,High,Berada di Step 1,"1. Lengkapi seluruh kolom mandatory pada Step 1 (Status, Alamat, dll.)","Indikator Step 1 di side-nav kiri otomatis berubah status dari ""Belum Lengkap"" menjadi ""Lengkap"".",Jira AC: Indicators Form
+TC-4890-05,Perorangan & Badan Usaha,Navigasi Stepper & Indikator,"Form Tetap Dapat Diedit Saat Sudah ""Lengkap""",Positive,Medium,"Step 1 berstatus ""Lengkap""","1. Pindah ke Step 2
+2. Klik kembali Step 1
+3. Ubah salah satu nilai kolom",Form tetap bisa dibuka dan diubah nilainya tanpa terkunci (read-only lock).,Jira AC: Indicators Form
+TC-4890-06,Perorangan & Badan Usaha,Gating Validasi Bucket Identitas,Akses Step 3 saat Bucket Identitas Belum Lengkap,Negative,Critical,"Tab Identitas dan Pengecekan di aplikasi berstatus ""Belum Lengkap"" / not locked","1. Masuk ke modal Tambah Agunan
+2. Klik Step 3 (Informasi kepemilikan) pada side-nav",Sistem memunculkan dialog / modal error peringatan bahwa user tidak dapat mengakses/melanjutkan step ini sebelum Bucket Identitas dan Pengecekan selesai (Lengkap). Form Step 3 diblokir.,Jira AC: Step Form Informasi Kepemilikan (Tidak Lengkap) & CSV TC-04-62
+TC-4890-07,Perorangan & Badan Usaha,Gating Validasi Bucket Identitas,Akses Step 3 saat Bucket Identitas Lengkap,Positive,High,"Tab Identitas dan Pengecekan berstatus ""Lengkap"" (centang hijau)","1. Masuk ke modal Tambah Agunan
+2. Klik Step 3 (Informasi kepemilikan)",Step 3 berhasil terbuka dan memuat form kategori pemilik agunan sesuai profil debitur.,Jira AC: Step Form Informasi Kepemilikan (Lengkap) & CSV TC-04-67
+TC-4890-08,Perorangan & Badan Usaha,Batasan Maksimal Agunan,Validasi Batas Maksimal Agunan (Max 100),Negative,High,Aplikasi debitur sudah memiliki total 100 agunan (parameterized X = 100),"1. Buka halaman Data Agunan
+2. Klik tombol + Agunan / Tambah Agunan","Sistem menampilkan popup/alert:
+""Maximum number agunan has been reached, please ask administrator to remove from current data agunan"" dan memblokir penambahan.",Jira AC: Max Entry & S2WP-4881
+TC-4890-09,Perorangan & Badan Usaha,Simpan Sebagai Draft,Simpan Draft dengan Form Parsial (Bypass Mandatory),Positive,High,"Berada di Step 1, baru mengisi 1 atau 2 field (sebagian besar mandatory masih kosong)","1. Klik tombol ""Simpan sebagai draft""","Sistem tidak memvalidasi kolom kosong, menampilkan notifikasi/toast sukses (""Draft Saved Successfully"" / ""Berhasil menyimpan draft""), data tersimpan sementara.",Jira AC: Save to Draft
+TC-4890-10,Perorangan & Badan Usaha,Simpan Sebagai Draft,Retensi Data Draft setelah Modal Ditutup,Positive,High,Data draft telah tersimpan,"1. Tutup modal agunan
+2. Buka kembali agunan terkait dari daftar draft",Data yang sebelumnya diinput pada draft tetap ada dan tidak hilang / ter-reset.,Jira AC: Save to Draft
+TC-4890-11,Perorangan & Badan Usaha,Tombol Simpan & Final Submission,Tombol Simpan Disabled saat Mandatory Belum Lengkap,Negative,High,Satu atau lebih field mandatory pada Step 1/2/3 masih kosong,"1. Periksa status tombol ""Simpan"" di bagian footer modal","Tombol ""Simpan"" berstatus disabled (aria-disabled=""true"" atau tidak dapat diklik).",Jira AC: Button Simpan & UI SIT
+TC-4890-12,Perorangan & Badan Usaha,Tombol Simpan & Final Submission,Validasi Error Submission jika Field Mandatory Belum Lengkap,Negative,High,Ada field salah format / belum diisi saat mencoba submit,1. Coba lakukan klik / submit Simpan,"Sistem memblokir proses submit, menampilkan notifikasi merah / toast berisi daftar field yang belum lengkap / salah (incomplete form error).","Jira AC: Fail to submit final & CSV TC-04-64, 65"
+TC-4890-13,Perorangan & Badan Usaha,Tombol Simpan & Final Submission,Submit Final Berhasil saat Seluruh 3 Step Lengkap,Positive,Critical,"Semua field mandatory pada Step 1, Step 2, dan Step 3 telah terisi valid (indikator ketiga step berstatus Lengkap)","1. Tombol ""Simpan"" menjadi aktif (enabled)
+2. Klik tombol ""Simpan""","1. Sistem memproses simpan ke server/CLS.
+2. Muncul toast sukses: ""Penginputan data agunan sudah sesuai"".
+3. Modal otomatis tertutup.
+4. Halaman ringkasan Bucket Agunan ter-refresh menampilkan agunan baru di daftar kartu agunan.",Jira AC: Successfully submit final
+TC-4890-14,Perorangan & Badan Usaha,Aturan Bisnis & Datapoints,"Default Tipe Penilaian saat LPA = ""Tidak""",Positive,Medium,Berada di Step 1 (Penilaian Agunan),"1. Pada radio ""Apakah LPA sudah tersedia?"", pilih Tidak","Nilai input dropdown Tipe Penilaian otomatis ter-set default menjadi ""Internal"".",Jira Linked Issue: S2CML-6756
+TC-4890-15,Perorangan & Badan Usaha,Aturan Bisnis & Datapoints,Render Dinamis Step 2 (Data Tambahan Agunan) Sesuai Segmen,Positive,High,Step 1 memilih Jenis Agunan tertentu,1. Bandingkan form Step 2 antara jenis Housing vs Vehicle vs Cash Collateral,"Form Step 2 memuat komponen spesifik:
+- Housing: data sertifikat/IMB/NJOP.
+- Kendaraan: No Rangka/Mesin/BPKB.
+- Cash: CIF, Rekening, Blokir.",Jira AC & S2WP-4880 & Excel Baris 112
+TC-4890-16,Perorangan,Spesifik Debitur Perorangan,"Step 3: Kategori Pemilik ""010 - Pasangan"" pada Debitur Belum Menikah",Negative,High,"Debitur perorangan berstatus perkawinan ""Belum Menikah"" di Bucket Identitas (ID: 01M4F7TNSCSHEDB5G3WTSP7HDY)","1. Buka Step 3: Informasi Kepemilikan
+2. Buka dropdown Kategori Pemilik Agunan
+3. Periksa ketersediaan opsi 010 - Pasangan peminjam","Opsi ""010 - Pasangan peminjam"" tidak ditampilkan atau jika dipilih memicu pesan validasi bahwa status debitur belum menikah.",CSV TC-04-75 & Excel Business Rules
+TC-4890-17,Perorangan,Spesifik Debitur Perorangan,"Step 3: Kategori Pemilik ""009 - Penjamin"" saat Data Penjamin Belum Ada",Negative,High,Debitur perorangan belum memiliki data penjamin di Bucket Identitas,"1. Buka Step 3: Informasi Kepemilikan
+2. Pilih Kategori Pemilik ""009 - Penjamin (PG)""
+3. Periksa dropdown pilihan Penjamin",Sistem menampilkan indikasi/pesan validasi bahwa data penjamin perorangan belum terdaftar pada pengajuan debitur ini.,"CSV TC-04-72, 73 & Excel"
+TC-4890-BU-01,Badan Usaha,Spesifik Debitur Badan Usaha,Step 3: Kategori Pemilik Perusahaan (006 - Pengurus & 007 - Pemilik),Positive,High,"Debitur berjenis Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ, debtorType=business)","1. Buka modal Agunan pada debitur Badan Usaha
+2. Buka Step 3: Informasi Kepemilikan
+3. Buka dropdown Kategori Pemilik Agunan","Dropdown Kategori Pemilik memuat opsi khusus entitas bisnis: ""006 - Pengurus perusahaan"" dan ""007 - Pemilik perusahaan"", serta tidak menampilkan opsi pasangan perorangan.","CSV TC-04-79, 80, 81 & Excel"
+TC-4890-BU-02,Badan Usaha,Spesifik Debitur Badan Usaha,Step 3: Kategori 003 - Debitur Badan Usaha Mapping NPWP & Legalitas,Positive,High,Debitur Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ),"1. Pada Step 3, pilih Kategori Pemilik ""003 - Debitur (Badan Usaha)""","Sistem otomatis memetakan nama badan usaha, NPWP, dan nomor legalitas perusahaan dari Bucket Identitas Badan Usaha ke form kepemilikan agunan.","CSV TC-04-81, 82 & Excel"
+TC-4890-BU-03,Badan Usaha,Spesifik Debitur Badan Usaha,Step 3: Kategori 006 - Pengurus Tanpa Data Pengurus Terdaftar,Negative,High,Debitur Badan Usaha yang belum memiliki pengurus terdaftar di Bucket Identitas,"1. Pilih Kategori Pemilik ""006 - Pengurus perusahaan""
+2. Periksa dropdown pilihan Pengurus",Sistem memunculkan alert / warning bahwa daftar pengurus perusahaan belum diinput pada Bucket Identitas.,CSV TC-04-79 edge case & Excel
+TC-4890-18,Perorangan & Badan Usaha,Negative Form & Business Logic,Step 2: Pengecekan CIF Cash Collateral Tidak Terdaftar,Negative,High,"Form Step 2 Agunan Cash Collateral, Agunan Tersimpan di Bank Sinarmas = Ya","1. Masukkan nomor CIF fiktif (misal: 9999999999)
+2. Klik tombol ""Cek""","Sistem menampilkan ikon silang merah ""CIF tidak ditemukan"", field rekening tetap terkunci, dan tombol Simpan diblokir.",CSV TC-04-58 & Excel Baris 112
+TC-4890-19,Perorangan & Badan Usaha,Negative Form & Business Logic,Step 2: Nominal Cash Collateral Bernilai 0 atau Minus,Negative,High,Form Step 2 Agunan Cash Collateral (Giro/Tabungan/Deposito),"1. Isi field Nominal Agunan dengan angka 0 atau nilai negatif
+2. Blur field / klik luar","Muncul alert/pesan validasi error ""Nominal agunan harus lebih besar dari 0"" dan tombol Simpan tetap disabled.",Excel Baris 116 & Form Validation Rules
+TC-4890-20,Perorangan & Badan Usaha,Negative Form & Business Logic,Step 2: Tanggal Berakhir Sertifikat Tanah/Bangunan Kadaluarsa,Negative,Medium,Form Step 2 Agunan Housing / Tanah Bangunan dengan sertifikat berjangka (SHGB/HGB),1. Isi field Tanggal Berakhir Sertifikat dengan tanggal di masa lalu (misal: 01/01/2020),Sistem menampilkan validasi error bahwa tanggal berakhir sertifikat tidak boleh lebih kecil dari tanggal saat ini (kadaluarsa).,Excel Data Agunan & Validation Rules
+TC-4890-21,Perorangan & Badan Usaha,Negative Form & Business Logic,Step 2: Luas Tanah / Bangunan Diisi Angka 0,Negative,Medium,Form Step 2 Agunan Housing,"1. Isi field Luas Tanah atau Luas Bangunan dengan angka 0
+2. Blur field","Sistem memicu error validasi ""Luas tanah/bangunan minimal 1 m² / tidak boleh 0"".",Form Data Agunan Validation
+TC-4890-22,Perorangan & Badan Usaha,Negative Form & Business Logic,Step 1: Nilai Agunan Wajar/NJOP Bernilai 0 saat LPA Tersedia,Negative,High,"Step 1 (Penilaian Agunan), Apakah LPA sudah tersedia = Ya","1. Kosongkan atau isi field Nilai Agunan Wajar/NJOP dengan 0
+2. Blur field",Sistem memvalidasi kolom mandatory tidak boleh 0/kosong dan tombol Simpan tetap disabled.,Excel Baris 85 & CSV TC-04-44

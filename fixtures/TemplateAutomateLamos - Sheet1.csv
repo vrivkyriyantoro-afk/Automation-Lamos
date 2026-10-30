@@ -1,0 +1,159 @@
+TC ID,Title/Test Case Description,(Positive/Negative),Priority,Type,Precondition,Test Step,Expected Result,Status,Status Dokumentasi,PIC,Need Automation,Tested By,Execution Date,Notes
+"TC-4 
+5685",LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 1,,,,,,,,,,,,,
+TC - 04 - 01,Validasi Modal dan Urutan Stepper saat Klik Tambah Agunan,Positive,Medium,Functional,Modal Tambah Agunan belum dibuka.,Klik tombol Tambah Agunan. 2. Periksa tampilan modal. 3. Periksa nama dan urutan stepper.,Modal terbuka dengan urutan stepper Pencarian → Hasil Pencarian → Data Agunan.,PASSED,ON PROGRESS,,Tambah Agunan,Rivky,,"Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685
+Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889"
+TC - 04 - 02,Validasi Pencarian ketika Jenis Kode Agunan Belum Dipilih,Positive,,,Tersedia data Nomor Bukti Kepemilikan untuk diinput.,"Klik Tambah Agunan.
+2. Biarkan Jenis Kode Agunan belum dipilih.
+3. Isi Nomor Bukti Kepemilikan.
+4. Coba lakukan pencarian menggunakan tombol Cari.",Sistem tidak memproses pencarian sebelum Jenis Kode Agunan dipilih. Bentuk validasi mengikuti spesifikasi UI yang disepakati.,PASSED,,,,Rivky,,
+TC - 04 - 03,Validasi Pencarian ketika Seluruh Field Optional Kosong,,,,Tersedia agunan di CLS yang memenuhi kriteria wajib pencarian.,"1. Klik Tambah Agunan.
+2. Pilih Jenis Kode Agunan.
+3. Isi Nomor Bukti Kepemilikan menggunakan data uji yang tersedia di CLS.
+4. Biarkan seluruh field optional kosong.
+5. Klik Cari dan periksa hasilnya.",Pencarian diproses menggunakan kriteria wajib saja. Field optional kosong diabaikan dan tidak menghalangi data yang memenuhi kriteria wajib untuk ditampilkan.,ON PROGRESS,,,,Rivky,,
+TC - 04 - 04,Validasi Pencarian Ulang setelah Data Agunan Tidak Ditemukan,Positive,Medium,Functional,Tersedia dua set kriteria: satu tidak memiliki kecocokan di CLS dan satu memiliki kecocokan.,"1. Isi Jenis Agunan, Bukti Kepemilikan, dan opsional Kecamatan/Kelurahan.
+2. Klik Cari.","Sistem query dengan Jenis Agunan (Exact Match), Bukti Kepemilikan (Include Match), Kecamatan (Exact Match), Kelurahan (Exact Match); field kosong diabaikan, field terisi digabung dengan operator AND.",ON PROGRESS,NOT TESTED,,Tambah Agunan,Rivky,,"Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685
+Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889"
+TC - 04 - 05,Validasi Tombol Tambah Agunan Baru Sebelum dan Sesudah Pencarian,,,,Modal belum dibuka dan pencarian belum dilakukan pada sesi modal yang akan diuji.,"Klik Tambah Agunan.
+2. Periksa keberadaan tombol Tambah Agunan Baru sebelum pencarian.
+3. Isi seluruh kriteria wajib.
+4. Klik Cari.
+5. Periksa kembali keberadaan tombol Tambah Agunan Baru.",Tombol Tambah Agunan Baru tidak ditampilkan sebelum pencarian dan ditampilkan setelah pencarian dilakukan.,PASSED,,,,Rivky,,
+TC - 04 - 06,Validasi Tambah Agunan Baru ketika Hasil Pencarian Kosong,,,,Tersedia kriteria pencarian yang tidak memiliki kecocokan di CLS.,"Isi kriteria wajib menggunakan data yang tidak tersedia di CLS.
+2. Klik Cari.
+3. Pastikan hasil pencarian kosong.
+4. Klik Tambah Agunan Baru.",Sistem membuka form input agunan baru.,PASSED,,,,Rivky,,
+TC - 04 - 07,Validasi Tambah Agunan Baru ketika Hasil Pencarian Ada tetapi Tidak Sesuai Dokumen,,,,Tersedia hasil pencarian di CLS yang tidak sesuai dengan dokumen agunan yang akan diajukan.,"Siapkan dokumen agunan yang berbeda dari data hasil pencarian.
+2. Isi kriteria wajib dan klik Cari hingga terdapat hasil.
+3. Bandingkan hasil pencarian dengan dokumen yang disiapkan.
+4. Tanpa memilih data existing, klik Tambah Agunan Baru.",AO tetap dapat membuka form input agunan baru meskipun hasil pencarian tersedia.,ON PROGRESS,,,,Rivky,,
+TC - 04 - 08,Validasi Reuse Agunan Existing yang Memenuhi Syarat hingga Data Agunan Dimuat,,,,"Tersedia agunan existing dengan Paripasu = Y, penggunaan <100%, dan belum digunakan pada pengajuan yang sama.","Siapkan agunan existing dengan Paripasu = Y, penggunaan <100%, dan belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Klik Lanjutkan.
+5. Bandingkan data yang dimuat dengan agunan yang dipilih.",Sistem mengizinkan proses dilanjutkan dan memuat data agunan existing yang dipilih untuk proses pada Part 2.,ON PROGRESS,,,,Rivky,,
+TC - 04 - 09,Validasi Sistem Memblokir Reuse Agunan Existing dengan Paripasu = N,Positive,High,Functional,Tersedia agunan existing dengan Paripasu = N dan belum digunakan pada pengajuan yang sama.,"Siapkan agunan existing dengan Paripasu = N yang belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Coba lanjutkan proses reuse.",Sistem tidak mengizinkan AO melanjutkan reuse agunan dengan Paripasu = N.,ON PROGRESS,NOT TESTED,,Tambah Agunan,Rivky,,"Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685
+Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889"
+TC - 04 - 10,Validasi Sistem Memblokir Reuse Agunan Existing dengan Persentase Penggunaan Lebih dari 100%,Negative,High,Functional,"Tersedia data uji agunan existing dengan Paripasu = Y, penggunaan >100%, dan belum digunakan pada pengajuan yang sama.","Siapkan agunan existing dengan Paripasu = Y dan persentase penggunaan >100% yang belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Coba lanjutkan proses reuse.",Sistem memblokir reuse agunan dengan persentase penggunaan >100%.,ON PROGRESS,NOT TESTED,,Tambah Agunan,Rivky,,"Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685
+Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889"
+TC - 04 - 11,Validasi Pengambilan Persentase Paripasu dari CLS saat Memilih Agunan Existing,Negative,High,Functional,Tersedia agunan dengan persentase penggunaan yang diketahui di CLS. Tester memiliki akses network/log untuk memeriksa respons API.,"Siapkan agunan existing dengan persentase penggunaan yang diketahui di CLS.
+2. Cari dan pilih agunan tersebut.
+3. Periksa respons API melalui network atau log yang tersedia.
+4. Cocokkan identitas agunan dan persentase pada respons dengan data uji CLS.
+5. Periksa penggunaan persentase tersebut pada validasi atau kalkulasi sistem.",Identitas dan persentase penggunaan sesuai data CLS. Sistem menggunakan persentase tersebut sebagai dasar validasi ketersediaan dan kalkulasi sisa nilai agunan.,ON PROGRESS,NOT TESTED,,Tambah Agunan,Rivky,,"Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685
+Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889"
+TC - 04 - 12,Validasi Penolakan Penambahan Agunan Existing yang Sudah Digunakan pada Pengajuan yang Sama,,,,Agunan existing sudah tercatat pada pengajuan yang sedang diuji. Agunan memiliki Paripasu = Y dan penggunaan <100% agar pengujian fokus pada duplikasi.,"Cari agunan yang sudah tercatat pada pengajuan tersebut.
+2. Pilih agunan yang sama.
+3. Coba lanjutkan proses penambahan.
+4. Periksa notifikasi dan daftar agunan pengajuan",Sistem menampilkan notifikasi bahwa AO harus memilih agunan lain. Agunan yang sama tidak ditambahkan kembali ke pengajuan.,ON PROGRESS,NOT TESTED,,,Rivky,,
+TC - 04 - 13,Validasi Sistem Memblokir Reuse Agunan Existing dengan Penggunaan Tepat 100%,,,,"Tersedia agunan existing dengan Paripasu = Y, penggunaan 100%, dan belum digunakan pada pengajuan yang sama.","Cari agunan sesuai data uji.
+2. Pilih agunan tersebut.
+3. Coba lanjutkan proses melalui tombol Lanjutkan.",Sistem memblokir reuse karena seluruh nilai agunan sudah digunakan.,ON PROGRESS,NOT TESTED,,,Rivky,,
+TC - 04 - 14,Validasi Sistem Memblokir Reuse Agunan Existing dengan Paripasu = N,,,,Tersedia agunan existing dengan Paripasu = N dan belum digunakan pada pengajuan yang sama.,"Cari agunan sesuai data uji.
+2. Pilih agunan tersebut.
+3. Coba lanjutkan proses melalui tombol Lanjutkan.",Sistem memblokir reuse sehingga AO tidak dapat melanjutkan penggunaan agunan tersebut.,ON PROGRESS,NOT TESTED,,,Rivky,,
+TC - 04 - 15,"Permutasi filter ""cari agunan""",Positive,High,Functional,User di halaman pencarian agunan,"1) Isi filter dengan berbagai kombinasi (satu filter, dua filter, semua filter)
+2) Klik Cari",Hasil sesuai kombinasi filter yang dipilih,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Search agunan
+TC - 04 - 16,Field mandatory pada pencarian,Negative,High,Functional,Halaman pencarian terbuka,"1) Kosongkan field mandatory
+2) Klik Cari","Validasi muncul pada field wajib, pencarian tidak dijalankan",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Search agunan
+TC - 04 - 17,Time out saat memilih agunan,Negative,High,Functional,Hasil pencarian tampil; simulasikan time out,"1) Pilih salah satu agunan
+2) Sistem time out","Muncul pesan error yang sesuai, user bisa mencoba lagi, tidak ada data tersimpan setengah jalan",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Search agunan
+TC - 04 - 18,Agunan tanpa sisa nilai wajar,Negative,High,Functional,Agunan dengan sisa nilai wajar = 0,1) Pilih agunan tersebut,Agunan tidak bisa dipilih / muncul pesan bahwa tidak ada sisa nilai wajar,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Search agunan
+TC - 04 - 19,Agunan sudah ditambahkan di pengajuan ini,Negative,High,Functional,Agunan sudah ada di pengajuan,"1) Cari agunan yang sama
+2) Pilih","Muncul penanda/pesan agunan telah ditambahkan, tidak bisa ditambahkan ulang",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Search agunan
+TC - 04 - 20,Urutan Jenis agunan sesuai master data,Positive,Medium,Functional,Modal Tambah agunan terbuka,1) Buka dropdown Jenis agunan,Urutan opsi sama dengan master data,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 21,Detail isian Jenis agunan Housing/Kendaraan/Elektronik (Status Tersedia),Positive,High,Functional,Status = Tersedia,"1) Pilih Jenis agunan Housing
+2) Ulangi dengan Kendaraan, lalu Elektronik",Isian detail tampil sesuai jenis agunan,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 22,Field Peringkat muncul untuk Dokumen & Cash collateral (Tersedia),Positive,High,Functional,Status = Tersedia,"1) Pilih Jenis agunan Dokumen
+2) Ulangi dengan Cash collateral","Field ""Peringkat agunan"" dan ""Lembaga pemeringkat"" tampil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 23,Field Peringkat tidak muncul bila status bukan Tersedia,Negative,Medium,Functional,Jenis = Dokumen/Cash collateral,1) Ubah Status menjadi Indent,Field Peringkat agunan & Lembaga pemeringkat tidak tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 24,Opsi Lembaga pemeringkat,Positive,Medium,Functional,Field Lembaga tampil,1) Buka dropdown Lembaga pemeringkat,"Opsi: FID, FIN, MIS, PEF, SNP",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 25,Peringkat agunan setelah Lembaga dipilih,Positive,High,Functional,Lembaga = FID,1) Buka dropdown Peringkat agunan,"Opsi: Tidak ada rating, AAA (tertinggi), AA+/AA/AA- (sangat tinggi), A+/A/A- (kuat), BBB+/BBB (memadai) beserta keterangan",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 26,Peringkat agunan sebelum Lembaga dipilih,Negative,High,Functional,Lembaga belum dipilih,1) Klik dropdown Peringkat agunan,"Muncul pesan ""Pilih lembaga pemeringkat terlebih dahulu""",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Informasi umum
+TC - 04 - 27,Tanggal pengikatan wajib bila pengikatan ≠ 06,Negative,High,Functional,Status = Tersedia,"1) Pilih Jenis pengikatan selain 06
+2) Kosongkan Tanggal pengikatan
+3) Simpan","Tanggal pengikatan wajib (tanda *), validasi error muncul",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Pengikatan
+TC - 04 - 28,Tanggal pengikatan opsional bila pengikatan = 06,Positive,High,Functional,Status = Tersedia,"1) Pilih 06 - Belum diikat
+2) Kosongkan Tanggal pengikatan
+3) Simpan","Tanggal pengikatan opsional, tidak ada error",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Pengikatan
+TC - 04 - 29,Status Indent menyembunyikan pengikatan,Positive,High,Functional,Modal terbuka,1) Pilih Status 2 - Indent,Input Jenis pengikatan & Tanggal pengikatan tidak tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Pengikatan
+TC - 04 - 30,Status Tersedia menampilkan pengikatan,Positive,Medium,Functional,Modal terbuka,1) Pilih Status 1 - Tersedia,Input Jenis pengikatan & Tanggal pengikatan tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Pengikatan
+TC - 04 - 31,List kecamatan urut abjad,Positive,Medium,Functional,"Provinsi, kota dipilih",1) Buka dropdown Kecamatan,Daftar berurutan A-Z,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Alamat
+TC - 04 - 32,Sub-location saat parent belum dipilih,Negative,Medium,Functional,Parent belum dipilih,1) Klik dropdown sub-location,Dropdown tidak menampilkan opsi,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Alamat
+TC - 04 - 33,Ubah parent location mereset child,Positive,High,Functional,Parent & child sudah terisi,1) Ubah parent location,Kolom child ter-reset (kosong),ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Alamat
+TC - 04 - 34,Kode pos diisi non-angka,Negative,High,Functional,Modal terbuka,1) Isi Kode pos dengan huruf/simbol,"Alert ""Kode pos wajib diisi dengan angka""",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Alamat
+TC - 04 - 35,Kode pos diisi angka valid,Positive,Medium,Functional,Modal terbuka,1) Isi Kode pos dengan angka,Tidak ada error,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Alamat
+TC - 04 - 36,Tambah data pembanding berhasil,Positive,High,Functional,Jenis agunan Housing,"1) Klik + Data pembanding
+2) Isi data valid
+3) Simpan","Toast ""Berhasil menambahkan data pembanding."" dan data masuk tabel",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 37,Tambah data pembanding gagal,Negative,High,Functional,Simulasikan BE error,1) Simpan data pembanding,"Toast ""Gagal menambahkan data pembanding. Silakan coba lagi nanti.""",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 38,Kolom Action pada tabel,Positive,Medium,Functional,Ada data pembanding,1) Lihat tabel preview,"Action tampil: Mata (detail), Pensil (edit), Trash (hapus)",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 39,Lihat detail (Mata),Positive,Medium,Functional,Ada data pembanding,1) Klik ikon Mata,Detail data pembanding tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 40,Edit data pembanding berhasil,Positive,High,Functional,Ada data pembanding,"1) Klik Pensil
+2) Ubah data
+3) Simpan","Toast ""Berhasil menambahkan data pembanding."" dan data terupdate (teks toast perlu dikonfirmasi, lihat sheet Open Questions)",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 41,Edit data pembanding gagal,Negative,High,Functional,Simulasikan BE error,"1) Klik Pensil
+2) Ubah
+3) Simpan","Toast ""Gagal menyimpan perubahan. Silakan coba lagi nanti.""",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 42,Hapus data pembanding,Positive,Medium,Functional,Ada data pembanding,"1) Klik Trash
+2) Konfirmasi",Data terhapus dari tabel,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 43,Batas 10 record pembanding,Negative,High,Functional,Sudah ada 10 record,1) Coba tambah data ke-11,"Validasi batas maksimum muncul, data tidak bertambah",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data pembanding
+TC - 04 - 44,LPA tersedia: semua field wajib,Positive,High,Functional,LPA = Tersedia (default),"1) Kosongkan Tipe penilaian, Nilai prediksi, Nilai wajar/NJOP, Nilai menurut pelapor, Tanggal penilaian
+2) Simpan",Semua field bertanda * merah dan muncul error wajib,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Penilaian agunan
+TC - 04 - 45,LPA belum tersedia: hanya Nilai prediksi wajib,Positive,High,Functional,LPA = Belum tersedia,"1) Kosongkan semua field kecuali Nilai prediksi
+2) Simpan","Hanya Nilai prediksi bertanda *; field lain opsional, simpan berhasil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Penilaian agunan
+TC - 04 - 46,"LPA belum tersedia, Nilai prediksi kosong",Negative,High,Functional,LPA = Belum tersedia,"1) Kosongkan Nilai prediksi
+2) Simpan",Error wajib pada Nilai prediksi,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Penilaian agunan
+TC - 04 - 47,Tipe penilaian Internal,Positive,High,Functional,Tipe = Internal,"1) Kosongkan Nilai menurut pelapor & Tanggal penilaian menurut pelapor
+2) Simpan",Kedua field wajib dan muncul error,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Penilaian agunan
+TC - 04 - 48,Tipe penilaian KJPP,Positive,High,Functional,Tipe = KJPP,"1) Kosongkan Nilai menurut penilai independen & Nama penilai independen
+2) Simpan","Kedua field wajib; field ""Tanggal penilaian menurut independen"" tampil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Penilaian agunan
+TC - 04 - 49,Sifat agunan Housing,Positive,Medium,Functional,Jenis = Housing,1) Buka Sifat agunan jaminan,Opsi Eligible / Not eligible sesuai Google Sheet,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 50,Sifat agunan Vehicle,Positive,Medium,Functional,Jenis = Kendaraan,1) Buka Sifat agunan jaminan,Opsi sesuai Google Sheet,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 51,Sifat agunan Cash,Positive,Medium,Functional,Jenis = Cash collateral,1) Buka Sifat agunan jaminan,Opsi sesuai Google Sheet,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 52,Cash F09/F10/F11/F15: field informasi,Positive,High,Functional,Jenis = F09/F10/F11/F15,"1) Lihat ""Informasi cash collateral""","Tampil ""Bukti pemilikan"" (wajib) dan pertanyaan ""Apakah agunan tersimpan di Bank Sinarmas?"" (Ya/Tidak)",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 53,Cash jenis lain,Positive,High,Functional,Cash collateral selain F09/F10/F11/F15,1) Lihat form,"Hanya ""Bukti pemilikan""; pertanyaan Bank Sinarmas tidak tampil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 54,CIF default state,Positive,Medium,Functional,"Pilih ""Ya""",1) Lihat field CIF,"Kosong, placeholder ""Masukkan CIF pemilik agunan"", tombol Cek nonaktif",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 55,CIF filled,Positive,Medium,Functional,"Pilih ""Ya""",1) Isi angka (mis. 11111111),Tombol Cek aktif (biru),ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 56,CIF loading,Positive,Low,Functional,CIF terisi,1) Klik Cek,Spinner muncul pada tombol,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 57,CIF ditemukan,Positive,High,Functional,CIF valid,1) Klik Cek,"Centang hijau ""CIF ditemukan"", tombol Ubah, dropdown ""Rekening cash collateral"" muncul",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 58,CIF tidak ditemukan,Negative,High,Functional,CIF tidak valid,1) Klik Cek,"Ikon silang merah ""CIF tidak ditemukan"", tombol Ubah tampil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 59,Edge case: pengecekan CIF gagal sistem,Negative,High,Functional,Simulasikan error sistem,1) Klik Cek,Pop-up peringatan tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 60,Ubah CIF,Positive,High,Functional,CIF sudah ditemukan,"1) Klik Ubah
+2) Isi CIF baru
+3) Cek & simpan",CIF berhasil diubah dan tersimpan,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 61,Agunan tidak tersimpan di Bank Sinarmas,Positive,High,Functional,"Pilih ""Tidak""",1) Lihat form,"Field CIF hilang, muncul input manual ""Instansi penerbit"" (wajib)",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Data tambahan agunan
+TC - 04 - 62,Bucket debitur belum lengkap,Negative,High,Functional,Data debitur belum lengkap,1) Buka Informasi kepemilikan agunan,"Toast oranye muncul, field pemilik dinonaktifkan",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Kepemilikan & error
+TC - 04 - 63,Bukti kepemilikan belum terisi,Negative,Medium,Functional,Field di Data tambahan agunan kosong,1) Buka Informasi kepemilikan,Tampilan sesuai desain kondisi belum terisi,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Kepemilikan & error
+TC - 04 - 64,Gagal simpan dengan banyak error,Negative,High,Functional,Beberapa field error,1) Klik Simpan,Toast merah di atas form berisi daftar seluruh error,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Kepemilikan & error
+TC - 04 - 65,Gagal simpan dengan 1 error,Negative,High,Functional,Hanya 1 field error,1) Klik Simpan,Toast merah dengan 1 baris pesan spesifik,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Kepemilikan & error
+TC - 04 - 66,BE gagal ambil data setelah pilih opsi,Negative,High,Functional,Simulasikan BE gagal,1) Pilih opsi yang memicu pemanggilan BE,"Global error handling tampil, form tetap stabil",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Kepemilikan & error
+TC - 04 - 67,"Baru, tidak menikah: daftar kategori pemilik",Positive,High,Functional,"Perorangan, tidak ada loan existing, tidak menikah",1) Buka Kategori pemilik agunan,"Opsi: 001, 005, 008, 009, 010",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 68,Kategori 001 - Calon debitur,Positive,High,Functional,Kondisi sama dengan TC daftar kategori,1) Pilih 001,Pilihan: Calon debitur dan pasangan calon debitur,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 69,001 tanpa data pemilik agunan,Negative,Medium,Functional,Data pemilik tidak ada,1) Pilih 001,Tampil edge case sesuai desain,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 70,Kategori 005 - Pemilik agunan,Positive,High,Functional,Kondisi sama dengan TC daftar kategori,"1) Pilih 005
+2) Pilih tipe Perseorangan / Badan usaha
+3) Pilih status perkawinan Menikah",Tipe kepemilikan & status perkawinan tampil; bila Menikah muncul Kewarganegaraan pasangan (WNI/WNA),ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 71,Kategori 008 - Vendor,Positive,Medium,Functional,Kondisi sama dengan TC daftar kategori,1) Pilih 008,"Case sama seperti 005; hubungan ""Pemilik sebelumnya"" tersedia",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 72,Kategori 009 - Penjamin (PG),Positive,Medium,Functional,Kondisi sama dengan TC daftar kategori,1) Pilih 009,Tidak ada input Tipe kepemilikan (otomatis Perseorangan),ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 73,009 / 010 tanpa data pemilik,Negative,Medium,Functional,Data pemilik tidak ada,1) Pilih 009 lalu 010,Edge case ditampilkan sesuai desain,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 74,"Debitur existing, tidak menikah",Positive,High,Functional,"Loan existing = Ya, tidak menikah",1) Lihat kategori,Kategori 003 - Debitur,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 75,"Debitur existing, menikah",Positive,High,Functional,"Loan existing = Ya, menikah",1) Lihat kategori,Kategori 010 - Pasangan penjamin; edge case bila data pemilik tidak ada,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur perorangan
+TC - 04 - 76,Baru: 001 - Calon debitur happy flow,Positive,High,Functional,Data debitur terisi & lolos SLIK,1) Pilih 001,Data pemilik terisi otomatis dan bisa dilanjutkan,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 77,005 tipe Perseorangan,Positive,High,Functional,Badan usaha baru,"1) Pilih 005
+2) Tipe = Perseorangan",Form Case 1 (perorangan) tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 78,005 tipe Badan usaha,Positive,High,Functional,Badan usaha baru,"1) Pilih 005
+2) Tipe = Badan usaha",Form Case 2 (badan usaha) tampil,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 79,006 Pengurus perusahaan (kedua tipe),Positive,High,Functional,Badan usaha baru,"1) Pilih 006
+2) Coba tipe Perseorangan & Badan usaha",Form sesuai tipe; edge case bila data pemilik tidak ada,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 80,007 Pemilik perusahaan (kedua tipe),Positive,High,Functional,Badan usaha baru,"1) Pilih 007
+2) Coba kedua tipe",Form sesuai tipe; edge case bila data pemilik tidak ada,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 81,Daftar kategori pemilik badan usaha,Positive,Medium,Functional,Badan usaha,1) Buka Kategori pemilik agunan,"Opsi: 003, 005, 006, 007, 008, 009, 010",ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha
+TC - 04 - 82,Badan usaha existing,Positive,Medium,Functional,Loan existing = Ya,1) Pilih tiap kategori,Form sesuai kategori yang dipilih,ON PROGRESS,NOT TESTED,,,Rivky,,Modul: Debitur badan usaha

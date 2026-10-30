@@ -1,0 +1,72 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4889",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 1",
+  "issueType": "Story",
+  "status": "In SIT",
+  "description": "User Story\n : \nAs an \nAccount Officer (AO)\n, I want the system to check for existing collateral records when I add a new one, \nso that I can choose\n between \nreusing an existing record\n or \ncreating a new one\n to prevent duplicate entries.\nScope \n: \n- Click Button\n- Show Pop Up\n- Search Existing Collaterals\n- New Collaterals vs Load Existing Collaterals\nData Point : \nhttps://docs.google.com/spreadsheets/d/1XjImruERO3TaBZ0mN_sq2cq15QPJHTJYenujNgKWclA/edit?gid=1283138341#gid=1283138341\nFlow : \nAcceptance Criteria\n : \nScenario/ Requirement\nAcceptance Criteria\nMockup\nAdd New Agunan\nGiven \nthe Account Officer is on the \"Collateral Summary\" page of a loan application Then the system must display the \"Tambah Agunan\" button on the screen \nWhen \nthe Account Officer clicks the \"Tambah Agunan\" button \nThen \nthe system must display a pop-up modal \nstepper \nfor new collateral entry And the pop-up must display the mandatory fields required to start the collateral creation process\n\n \nPop Up Modals\nGiven \nat pop-up modal \nstepper When \nAO in Pop Up Modals stepper Then he must follow up stage in stepper which is : \n- Stepper : Searching Existing Agunan (in CLS)\n- Stepper : Show Search Result\n- Stepper : Data Agunan\nStep to Create New Agunan\n- Searching and Selecting an Existing Collateral\nGiven \nthe Account Officer is on Step 1 (Search Existing Agunan) \nof the \"Tambah Agunan\" pop-up modal When \nthe Account Officer selects the option to use an \"Existing Collateral\" \nThen \nthe system must require the user to input the \"Jenis Kode Agunan\" \nAnd \nthe ownership document keywords, user also can input other key likes a kelurahan or desa\nWhen \nthe Account Officer enters the search criteria and triggers the search \nThen \nthe system must display a list of collaterals matching the entered keywords \nAnd \nthe Account Officer can select the matching collateral record from the list\nWhen \nthe result is not found Then System shall show a choice either user can search a new one or create new agunan by use button \n\"Tambah Agunan Baru\"\n\n \nHow to Search\nGiven \nAO input all value in \nSearch Housing Type WHEN \nUse Klik Cari \nTHEN \nSystem will query with : \n- Jenis Agunan (Exact Match)\n- Bukti Kepemilikan (Include Match)\nNote : Jika Value optional kosong, maka pencarian di ignore. Namun apabila ada isinya, maka menggunakan Operator “\nAND\n”\nStep to Create New Agunan\n- create/registers a brand new collaterals\nGiven \nthe Account Officer is on Step 1 (Search Existing Collateral) of the \"Tambah Agunan\" pop-up modal \nWhen \nthe Account Officer decides to add a collateral after not finding that his agunan is does not exist in the system And the Account Officer clicks the \n\"Tambah Agunan Baru\" \nbutton \nThen \nthe system will show to the new collateral data entry form\nNote : \n\"Tambah Agunan Baru\" \nwill show after user cari collaterals\nJika Hasil Pencairan Kosong  : \nJika Hasil Pencarian ada, namun tidak cocok dengan dokumen yang dia punya, sehingga user tetap bisa menekan tombol ‘\ntambah baru’\nHasil Pencairan Error : \nStep to Create New Agunan\n- registers an existing collaterals (From Master agunan at Core Loan System)\nGiven \nthe Account Officer is on Step 1 (Search Existing Collateral) of the \"Tambah Agunan\" pop-up modal \nWhen \nthe Account Officer decides to add a collateral from existing data \nThen \nUser will follow this step : \n- Choose agunan from search Result\n- Click Button Lanjutkan after choose one agunan\nShow list Result : \nAfter Choose one Of Result\nAfter Click Lanjutkan, Agunan Created  Loaded and will continue at Story \n\n \nHow to Calculating existing Loan (When use paripasu)\nWhen \nuser choose agunan from existing data (CLS) \nThen \nsystem HIT service API Agunan to see value of registered at that agunan (Percentage of Paripasu).\nIF There any “sisa” dari paripasu THEN system will use that value for calculation of agunan value\nContoh : \n- di CLS paripasu = Y dan Nilai Paripasu 100 atau . Paripasu = N, maka masuk ke Negative Case (1)\n- di CLS paripasu = Y dan Nilai paripasu < 100. maka user bisa lanjut dengan :\n- - apabila nilai appraisal belum ada, maka nilai agunan tersebut (yang dapat diagunkan adalah (100 - Nilai paripasu)*Nilai predictive\n- apabila nilai agunan menurut pelapor sudah ada, maka nilai agunan tersebut (yang dapat diagunkan adalah (100 - Nilai paripasu) *\n- nilai agunan menurut pelapor\nNegative Case (1) : When Choose an Existing agunan, but the value it self is Used 100%\nGiven \nthe Account Officer is on Step 1 (Search Existing Collateral) of the \"Tambah Agunan\" pop-up modal \nWhen \nthe Account Officer decides to add a collateral from existing data but all values in collaterals is 100% or more is used \nThen System will block so that \nUser cannot continue using this collaterals/agunan\nNegative Case (2) : When Choose an Existing agunan, but it was duplicate from others agunan\nGiven \nthe Account Officer is on Step 1 (Search Existing Collateral) of the \"Tambah Agunan\" pop-up modal \nWhen \nthe Account Officer decides to add a collateral from existing data but actually agunan was already used in this proposal \nThen \nthere will be notfication pop up that user can only choose others agunan\n",
+  "linkedIssues": [
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4758",
+      "summary": "2. [BE, FE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-5454",
+      "summary": "10. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Kepemilikan",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-4890",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CRL-3124",
+      "summary": "CLS View Collateral List",
+      "status": "Done"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CRL-3831",
+      "summary": "CLS GET List Master",
+      "status": "Done"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CRL-3836",
+      "summary": "CLS Inquiry Data Agunan",
+      "status": "Done"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-5420",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Tambahan Agunan non Cash Collateral",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4876",
+      "summary": "[FE][Agunan - Lamos] - Tambah Agunan - Modal Stepper UI & Search Existing Collateral Form",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6018",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5192",
+      "summary": "[FE/Integration] Integrate Search Existing Collateral API from CLS in Bucket Agunan Modal",
+      "status": "In SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

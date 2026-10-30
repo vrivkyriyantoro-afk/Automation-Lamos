@@ -1,0 +1,157 @@
+{
+  "bucket": "agunan",
+  "title": "Agunan",
+  "sidebar": [
+    {
+      "title": "Data Agunan",
+      "status": "Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "Pengikatan agunan ke fasilitas",
+      "status": "Belum Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Data Agunan",
+      "section": "Data agunan",
+      "fields": [
+        {
+          "section": "Data agunan",
+          "subsection": "Daftar agunan (2)",
+          "kind": "button",
+          "label": "Agunan",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 120.000.000",
+          "kind": "button",
+          "label": "Tampilkan informasi lengkap",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "Tampilkan informasi lengkap",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "1",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "1",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "text",
+          "label": "",
+          "required": false,
+          "name": "",
+          "id": "",
+          "key": "",
+          "ariaLabel": "Tampilan per halaman daftar agunan",
+          "placeholder": "",
+          "inputType": "select",
+          "suffix": "Tampilan per halaman",
+          "disabled": false,
+          "testid": "",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "sidebar": "Data Agunan",
+      "section": "Data agunan > [+] Agunan",
+      "trigger": "Agunan",
+      "modal": true,
+      "title": "Tambah agunan",
+      "fields": [
+        {
+          "section": "",
+          "subsection": "Tambah agunan",
+          "kind": "dropdown",
+          "label": "Jenis agunan",
+          "required": true,
+          "key": "collateral-type",
+          "id": "collateral-type-r0",
+          "disabled": false,
+          "value": "Pilih jenis agunan",
+          "testid": "dropdownsearch",
+          "options": [
+            "F041401 - Reksadana",
+            "F0419 - Saham",
+            "F10 - Tabungan",
+            "F11 - Deposito",
+            "F15 - Setoran Jaminan",
+            "F2099 - Aset Keuangan Lainnya",
+            "F2099 - Aset Keuangan Lainnya - AR",
+            "F2099 - Aset Keuangan Lainnya - Bancassurance - Product Melalui Bank Sinarmas",
+            "F2099 - Aset Keuangan Lainnya - Bancassurance - Product non Bank Sinarmas - Q-Investa Link",
+            "F2099 - Aset Keuangan Lainnya - Bancassurance - Product non Bank Sinarmas - Star Investama Premium",
+            "F2099 - Aset Keuangan Lainnya - Bancassurance - Product non Bank Sinarmas - Asuransi Simas Jiwa varian SIP",
+            "F2099 - Aset Keuangan Lainnya - Bancassurance - Product non Bank Sinarmas - Lainnya",
+            "AN020101 - Tanah",
+            "AN02010201 - Gedung/Ruang kantor",
+            "AN02010202 - Gudang",
+            "AN02010203 - Rumah Toko/Rumah Kantor",
+            "AN02010204 - Hotel",
+            "AN02010299 - Properti Komersial Lainnya",
+            "AN02010301 - Rumah",
+            "AN02010302 - Apartemen/Rumah Susun",
+            "AN020202 - Mesin",
+            "AN020202 - Mesin - Excavator",
+            "AN020203 - Kendaraan",
+            "AN020203 - Kendaraan - Dump Truck",
+            "AN020203 - Kendaraan - Crane",
+            "AN020299 - Aset Tetap dan Inventaris Lainnya",
+            "AN020299 - Aset Tetap dan Inventaris Lainnya - Alat Berat Tambang",
+            "AN999901 - Persediaan"
+          ],
+          "hasSearch": true
+        },
+        {
+          "section": "",
+          "subsection": "Tambah agunan",
+          "kind": "text",
+          "label": "Nomor bukti pemilikan",
+          "required": true,
+          "name": "ownershipNumber",
+          "id": "collateral-ownership-number",
+          "key": "collateral-ownership-number",
+          "ariaLabel": "",
+          "placeholder": "Masukkan nomor",
+          "inputType": "text",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "input",
+          "value": ""
+        },
+        {
+          "section": "",
+          "subsection": "Tambah agunan",
+          "kind": "button",
+          "label": "Cari",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "sidebar": "Data Agunan",
+      "section": "Pengikatan agunan ke fasilitas",
+      "fields": []
+    }
+  ]
+}

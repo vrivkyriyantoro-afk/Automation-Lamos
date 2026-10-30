@@ -1,0 +1,102 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4890",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2",
+  "issueType": "Story",
+  "status": "In SIT",
+  "description": "User Story\n : \nAs an \nAccount Officer (AO)\n, I want the system to check for existing collateral records when I add a new one, \nso that I can choose\n between \nreusing an existing record\n or \ncreating a new one\n to prevent duplicate entries.\nScope \n: \n- Step Form Penambahan Data Agunan\n- Definition of Jenis Agunan by CLS\n- Form based of Jenis Agunan by CLS\n- Save to Draft\n- Simpan\nFlow \n: \nAcceptance Criteria\n : \nRequirement\nAcceptance Criteria\nMockup\nMax Entry\nMax entry is X Data Agunan\nIF \nall entry agunan data has reached X data agunan, and user wants to click add \nTHEN \nSystem Will show pop up “Maximum number agunan has been reached, plase ask \nadministrator \nto remove from current data agunan”\nX is parameterize, currently will be set at 100\nStep of entry data agunan\nGiven \nthe Account Officer has selected either \"New Collateral\" or \"Existing Collateral from CLS” \nWhen User selected one method Then\n system displays the 5-step Collateral Data Entry Form:\n- Pengisian Form Informasi Umum Agunan\n- Form Data Tambahan Agunan\n- Pengisian terkait Form Informasi Kepemilikan Agunan\nWith default entry will show \nForm Informasi Umum Agunan\nData Entry\nGiven \nAccount Officer in step of entry data agunan \nWhen \nopen new form to tambah agunan \nThen \nData point will show based \n\n \n\n \nStep Form Informasi Umum Agunan\nWhen \nUser Klik side navigation form indicator on the left bar at “Informasi Umum Agunan” \nThen System \nwill load new form based on \nData Point Step Informasi Umum Agunan\n\n \n\n \nStep Form Data Tambahan Agunan\nWhen \nUser Klik side navigation form indicator on the left bar at “Data Tambahan Agunan” \nThen System \nwill load new form based on \nData Point Step Data Tambahan Agunan\n\n \nStep Form Informasi Kepemilikan\n- When Bucket Identity is Lengkap (ada ceklist button di sebelah label Bucket)\nWhen \nUser Klik side navigation form indicator on the left bar at “Informasi Kepemilikan” and \n'Bucket Identity and Pengecekan' \nis Complete \nThen System \nwill load new form based on \nData Point Step Informasi Kepemilikan\n\n \n\n \nStep Form Informasi Kepemilikan\n- When Bucket Identity is Tidak Lengkap\nWhen \nUser Klik side navigation form indicator on the left bar at “Informasi Kepemilikan” and \n'Bucket Identity and Pengecekan'\n is not Locked \nThen \nSystem will show dialog that user cannot continue to progress untill Bucket Identity dan Pengecekan is Completed\nParalel Form\nWhen \nthe Account Officer clicks on any specific form label on the left panel of the pop-up modal \nThen \nthe system must redirect the user directly to the selected form step immediately And the system must not restrict the order of form completion based on the step sequence\nIndicators Form\nWhen \nthe Account Officer completes all mandatory fields within a form, \nthen \nthe side navigation form indicator on the left must change its status to 'Lengkap'.\nContoh Apabila Form Informasi Umum Agunan dan Distribusi Agunan Sudah Lengkap (Semua Field Mandatory Terpenuhi) : \nWhen Indicator Sudah 'Lengkap' User tetap bisa melakukan edit data \nGiven \nthe Account Officer completes all mandatory fields within a form, \nAnd \nthe side navigation form indicator on the left must change its status to 'Lengkap', \nWhen \nUser Click at Form or by Click Tab Banner Then Form will still can be openned and user still can change the value in thats form\nSave to Draft\nGiven \nthe Account Officer is on any step of the 3-step Collateral Data Entry Form And the Account Officer has partially filled in the required data fields \nWhen \nthe Account Officer clicks the \"Save as Draft\" button \nThen \nthe system \nmust not validate\n and temporarily store the current inputted data And the system must show a success notification \"Draft Saved Successfully\" And the system must allow the user to close or exit the modal without losing the saved progress\nButton “\nSimpan\n”\nGiven \nthe Account Officer is on the \nWhen \nall of the 3-step Collateral Data Entry Form And there are one or more mandatory fields left blank across any of the steps \nThen \nbutton “\nSimpan\n” will show up / enable to click\nFrom \nTo \nFail to submit final due to wrong format of the fields\nGiven \nthe Account Officer is on the final step of the 3-step Collateral Data Entry Form And there are one or more mandatory fields left blank across any of the steps \nWhen \nthe Account Officer clicks the \"Simpan\" button \nThen \nthe system must block the submission process And the system must display an error notification specifying which fields are wrong And the system must show information wich form are  incorrect / incomplete\nSuccessfully submit final when all data is complete\nGiven \nthe Account Officer is on the final step of the 3-step Collateral Data Entry Form And all mandatory fields across all 3 steps have been fully and correctly filled \nWhen \nthe Account Officer clicks the \"Simpan\" button \nThen \nthe system must successfully process and save the collateral data And the system must display a success notification stating \"Penginputan data agunan sudah sesuai\" (Collateral data entry is complete and valid) And the system must close the pop-up modal and refresh the Collateral Summary page\n",
+  "linkedIssues": [
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4758",
+      "summary": "2. [BE, FE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4765",
+      "summary": "22. [BE, FE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4941",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals - Edit data Existing",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-5419",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Umum Agunan",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-5454",
+      "summary": "10. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Kepemilikan",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-4889",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 1",
+      "status": "In Development"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4946",
+      "summary": "[FE, BE] LAMOS LOS SME - Bucket Agunan - Historical Agunan/Collaterals",
+      "status": "Backlog"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4881",
+      "summary": "[FE][agunan - lamos]  – Step 3 UI + Bucket Identity gating + Draft/Submit + Max entry",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4880",
+      "summary": "[FE][agunan - lamos] – Step 2 UI: Data Tambahan Agunan (render datapoints)",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4879",
+      "summary": "[FE][agunan - lamos] - Step 1 UI: Informasi Umum Agunan (render datapoints)",
+      "status": "Done"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4878",
+      "summary": "[FE][Agunan - lamos] - Collateral Add Modal shell + 3-step side-nav + indicators",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6018",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6020",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5193",
+      "summary": "[FE/Integration] Form Integration for Collateral Ownership Information (Informasi Kepemilikan Agunan)",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-6756",
+      "summary": "pilihan opsi  Apakah LPA sudah tersedia?*  jika milih tidak inputan default menjadi  Tipe penilaian \"internal\"",
+      "status": "Done"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

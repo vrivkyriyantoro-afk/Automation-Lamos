@@ -1,0 +1,81 @@
+[
+  {
+    "bucket": "identitas_pengecekan",
+    "title": "Identitas dan Pengecekan",
+    "sidebar": [
+      "Data pribadi [Lengkap]",
+      "Data pribadi tambahan [Lengkap]",
+      "Lokasi & kondisi tempat tinggal [Lengkap]",
+      "Data pekerjaan & keuangan [Belum Lengkap]",
+      "Data kontak darurat [Lengkap]",
+      "Data penjamin [Lengkap]",
+      "Referensi [Sudah diisi (opsional)]",
+      "Pengecekan Dukcapil [Belum dapat diakses]",
+      "Pengecekan DHN DHIB [Belum dapat diakses]",
+      "Pengecekan SLIK [Belum dapat diakses]"
+    ]
+  },
+  {
+    "bucket": "struktur_kredit",
+    "title": "Struktur Kredit",
+    "sidebar": [
+      "Struktur Pengajuan Kredit [Belum Lengkap]",
+      "Ringkasan Pengajuan [Lengkap]"
+    ]
+  },
+  {
+    "bucket": "penilaian_kelayakan",
+    "title": "Penilaian Kelayakan",
+    "sidebar": [
+      "Knock-out criteria [Belum Lengkap]",
+      "General eligibility criteria [Belum Lengkap]",
+      "QCA [Lengkap]"
+    ]
+  },
+  {
+    "bucket": "data_usaha",
+    "title": "Data Usaha",
+    "sidebar": [
+      "Informasi badan usaha [Belum lengkap]",
+      "Aspek usaha [Belum lengkap]",
+      "Trade checking [Belum Lengkap]"
+    ]
+  },
+  {
+    "bucket": "analisa_keuangan",
+    "title": "Analisa Keuangan",
+    "sidebar": [
+      "Analisa Mutasi Rekening [Belum lengkap]",
+      "Analisa Keuangan & Kemampuan Bayar [Belum Lengkap]",
+      "Analisa Kebutuhan [Belum Lengkap]",
+      "Neraca [Belum Lengkap]",
+      "Perubahan Tahunan Piutang [Belum Lengkap]"
+    ]
+  },
+  {
+    "bucket": "legal_risk_compliance",
+    "title": "Legal, Risk, & Compliance",
+    "sidebar": []
+  },
+  {
+    "bucket": "covenant_tbo",
+    "title": "Covenant & TBO",
+    "sidebar": [
+      "Covenant [Belum Lengkap]"
+    ]
+  },
+  {
+    "bucket": "penyimpangan_pihak_terkait",
+    "title": "Penyimpangan & Pihak Terkait",
+    "sidebar": [
+      "Penyimpangan dan Pihak Terkait [Belum Lengkap]"
+    ]
+  },
+  {
+    "bucket": "catatan_anda",
+    "title": "Catatan Anda",
+    "sidebar": [
+      "Catatan Anda [Belum Lengkap]"
+    ]
+  }
+]

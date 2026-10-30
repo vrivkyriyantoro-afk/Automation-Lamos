@@ -1,0 +1,56 @@
+John Doe AO5
+Senior Financing Sales Officer (005 - KCP Cempaka Mas-JKT)
+JD
+Ganti kata sandi
+Keluar
+Pengajuan kredit
+Buat pengajuan kredit
+Buat pengajuan kredit
+Riwayat
+Identitas dan Pengecekan
+Struktur Kredit
+Penilaian Kelayakan
+Data Usaha
+Agunan
+Analisa Keuangan
+Legal, Risk, & Compliance
+Dokumen
+Covenant & TBO
+Penyimpangan & Pihak Terkait
+Catatan Anda
+Data Agunan
+Lengkap
+Pengikatan agunan ke fasilitas
+Perlu input sebagai penyimpangan
+Ada fasilitas yang belum dijamin penuh. Anda dapat melanjutkan pengajuan dengan mengisi penyimpangan atau melengkapi pengikatan agunan ke fasilitas sekarang.
+Data agunan
+Ringkasan
+Total nilai appraisal yang dapat diagunkan
+Rp 1.320.000.000
+Total nilai prediksi yang dapat diagunkan
+Rp 1.900.000.000
+Daftar agunan (2)
+Agunan
+AN02010203 - Rumah Toko/Rumah Kantor
+roxy
+Nilai agunan
+Nilai appraisal yang dapat diagunkan
+Rp 120.000.000
+Tampilkan informasi lengkap
+AN020101 - Tanah
+gbk01
+Nilai agunan
+Nilai appraisal yang dapat diagunkan
+Rp 1.200.000.000
+Tampilkan informasi lengkap
+Menampilkan 1 sampai 2 dari 2 baris
+1
+Tampilan per halaman
+5
+10
+20
+50
+Pengikatan agunan ke fasilitas
+4/11 selesai
+Kirim
+Copyright © 2026 PT Bank Sinarmas Tbk. All rights reserved.

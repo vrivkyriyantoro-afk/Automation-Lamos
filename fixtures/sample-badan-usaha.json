@@ -1,0 +1,87 @@
+{
+  "identitasBadanUsaha": {
+    "bentukBadanUsaha": "PT",
+    "namaBadanUsaha": "PT SINAR MITRA SEJAHTERA",
+    "npwpBadanUsaha": "012839485012000",
+    "npwpFormatted": "01.283.948.5-012.000",
+    "nib": "1238947593847",
+    "bidangUsaha": "Perdagangan Besar dan Distribusi Barang Konsumsi",
+    "sektorEkonomiKbli": "46311 - Perdagangan Besar Beras dan Hasil Bumi",
+    "tanggalMulaiUsaha": "2019-03-15",
+    "lamaUsahaTahun": 5,
+    "lamaUsahaBulan": 6,
+    "teleponKantor": "02145892341",
+    "emailPerusahaan": "admin@sinarmitrasejahtera.co.id",
+    "website": "https://www.sinarmitrasejahtera.co.id"
+  },
+  "legalitas": {
+    "aktaPendirian": {
+      "nomorAkta": "18",
+      "tanggalAkta": "2019-03-10",
+      "namaNotaris": "Bambang Sugiharto, S.H., M.Kn.",
+      "nomorSkKemenkumham": "AHU-0038291.AH.01.01.TAHUN 2019",
+      "tanggalSkKemenkumham": "2019-03-20"
+    },
+    "aktaPerubahanTerakhir": {
+      "nomorAkta": "05",
+      "tanggalAkta": "2023-10-15",
+      "namaNotaris": "Bambang Sugiharto, S.H., M.Kn.",
+      "nomorSkKemenkumham": "AHU-AH.01.03-0094821",
+      "tanggalSkKemenkumham": "2023-10-25"
+    }
+  },
+  "alamatDomisili": {
+    "alamatLengkap": "Jl. Cempaka Putih Raya No. 45, Komplek Perkantoran Graha Sinarmas",
+    "rtRw": "004/007",
+    "provinsi": "DKI JAKARTA",
+    "kotaKabupaten": "KOTA ADM. JAKARTA PUSAT",
+    "kecamatan": "CEMPAKA PUTIH",
+    "kelurahan": "CEMPAKA PUTIH BARAT",
+    "kodePos": "10520",
+    "statusTempatUsaha": "Milik Sendiri",
+    "lamaMenempatiTahun": 5
+  },
+  "pengurusDanPemegangSaham": [
+    {
+      "jabatan": "Direktur Utama",
+      "namaLengkap": "HENDRA WIJAYA SAPUTRA",
+      "nikKtp": "3171011708800002",
+      "npwp": "081293847012000",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "JAKARTA",
+      "tanggalLahir": "1980-08-17",
+      "statusPerkawinan": "Menikah",
+      "namaIbuKandung": "SITI MARYAM",
+      "nomorHp": "081289384729",
+      "email": "hendra.wijaya@gmail.com",
+      "alamatKtp": "Jl. Cempaka Putih Tengah No. 12, RT 002 / RW 005, Jakarta Pusat",
+      "persentaseSaham": 60,
+      "lembarSaham": 600,
+      "nilaiSaham": 600000000
+    },
+    {
+      "jabatan": "Komisaris Utama",
+      "namaLengkap": "RATNA KARTIKA DEWI",
+      "nikKtp": "3171016011830004",
+      "npwp": "083948572012000",
+      "jenisKelamin": "Perempuan",
+      "tempatLahir": "SURABAYA",
+      "tanggalLahir": "1983-11-20",
+      "statusPerkawinan": "Menikah",
+      "namaIbuKandung": "ENDANG LESTARI",
+      "nomorHp": "081398472819",
+      "email": "ratna.kartika@gmail.com",
+      "alamatKtp": "Jl. Cempaka Putih Tengah No. 12, RT 002 / RW 005, Jakarta Pusat",
+      "persentaseSaham": 40,
+      "lembarSaham": 400,
+      "nilaiSaham": 400000000
+    }
+  ],
+  "keuanganDanRekening": {
+    "namaBank": "BANK SINARMAS",
+    "nomorRekening": "0059283741",
+    "namaPemilikRekening": "PT SINAR MITRA SEJAHTERA",
+    "omsetRataRataBulanan": 450000000
+  }
+}
+

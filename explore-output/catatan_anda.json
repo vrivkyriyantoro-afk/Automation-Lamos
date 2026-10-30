@@ -1,0 +1,45 @@
+{
+  "bucket": "catatan_anda",
+  "title": "Catatan Anda",
+  "sidebar": [
+    {
+      "title": "Catatan Anda",
+      "status": "Belum Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Catatan Anda",
+      "section": "Catatan Anda",
+      "fields": [
+        {
+          "section": "Catatan Anda",
+          "subsection": "",
+          "kind": "richtext",
+          "label": "Catatan pengajuan",
+          "required": true,
+          "id": "rich-text-editor",
+          "value": ""
+        },
+        {
+          "section": "Catatan Anda",
+          "subsection": "",
+          "kind": "file",
+          "label": "Lampiran (opsional)",
+          "required": false,
+          "name": "",
+          "id": "attachmentFiles",
+          "key": "attachmentFiles",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "file",
+          "accept": ".pdf,.jpg,.jpeg,.png",
+          "disabled": false,
+          "readOnly": false,
+          "testid": "file-input"
+        }
+      ]
+    }
+  ]
+}

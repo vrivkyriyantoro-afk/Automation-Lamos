@@ -1,0 +1,324 @@
+[1] No. | Nama Parameter |  |  |  | A01 Field | Data Obligation | Data Accessibility | Validate in | Data Type | Maximum Length | Char Type | Rule
+[2] Summary Agunan
+[3]  | Data Agunan | Total Nilai Appraisal |  |  |  | Conditional | Ready Only | NOT VALIDATED | Textfield | money | NUM | SUM (Data Summary Agunan.Nilai Agunan Menurut Pelapor(i))
+[4]  |  | Total Nilai Predictive |  |  |  | Conditional | Ready Only | NOT VALIDATED | Textfield | money | NUM | SUM (Data Summary Agunan.Nilai Agunan Predictive(i))
+[5]  |  | Agunan (i) |  |  |  | Conditional | Conditional | LAMOS | Munculkan apabila ada agunan (i) yang : Simpan (Data Lengkap) -- Validasi minimal 1- dan statusnya harus lengkap (Metode simpan berhasil)
+[6]  |  | Agunan (i) - Final | Icon Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[7]  |  |  | Grouping Agunan CLS |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[8]  |  |  | Jenis Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[9]  |  |  | ID Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[10]  |  |  | Alamat Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[11]  |  |  | Nilai Appraisal Agunan yang dapat digunakan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[12]  |  |  | Nilai Appraisal Agunan |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[13]  |  |  | Nilai Predictive Agunan yang dapat digunakan |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[14]  |  |  | Nilai Predictive |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[15]  |  |  | Struktur Kredit yang terhubung pada Agunan (i) |  |  | Conditional | Conditional | NOT VALIDATED | Munculkan object data ini apabila memang ada agunan yang sudah terikat pada object Struktur Kredit
+[16]  |  |  | Struktur Kredit yang terhubung pada Agunan (i) | Struktur Kredit.Produk |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Struktur Kredit
+[17]  |  |  |  | Struktur Kredit.Jenis Pengajuan |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Struktur Kredit
+[18]  |  |  |  | Struktur Kredit.Jenis Fasilitas |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Struktur Kredit
+[19]  |  |  |  | Struktur Kredit.Pengajuan Plafond |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Struktur Kredit
+[20]  |  | Agunan (i) - Draft |  |  |  | Conditional | Conditional | LAMOS | Munculkan apabila ada agunan (i) yang : Kondisi save as draft. Cek, apabila masih ada yang draft, Form Data Agunan, status = Belum Lengkap
+[21]  |  | Agunan (i) - Draft | Icon Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[22]  |  |  | Grouping Agunan CLS |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[23]  |  |  | Jenis Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[24]  |  |  | UUID Agunan |  |  | Conditional | Hide | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[25]  |  |  | Alamat Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[26]  |  |  | Nilai Appraisal Agunan yang dapat digunakan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Form Agunan (i)
+[27]  |  |  | Nilai Appraisal Agunan |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[28]  |  |  | Nilai Predictive Agunan yang dapat digunakan |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[29]  |  |  | Nilai Predictive |  |  | Conditional | Ready Only | NOT VALIDATED |  |  | Munculkan apabila screen lihat detail
+[30]  | Pengikatan agunan ke fasilitas | Total Nilai Appaisal |  |  |  | Conditional | Ready Only | NOT VALIDATED | Total Nilai Appraisal di Data Agunan
+[31]  |  | Total Nilai Plafon |  |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Total seluruh Plafon di Struktur Kredit
+[32]  |  | Product (i) |  |  |  | Conditional | Conditional | LAMOS | Auto Mapping dari Bucket Struktur Kredit
+[33]  |  | Product Name |  |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Bucket Struktur Kredit sesuai List Product
+[34]  |  | Plafon |  |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping dari Bucket Struktur Kredit sesuai Product
+[35]  |  | Ratio Parameters |  |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Logic tipe agunan dan Produk yang dipilih
+[36]  |  | Banner Covered Status |  |  |  | Conditional | Ready Only | NOT VALIDATED | Logic sesuai thershold batas aman Product yang diajukan sesuai value dari agunannya. Can be implemented by Flag
+[37]  |  | List fasilitas pada Product (i) | Jenis Fasilitas |  |  | Conditional | Ready Only | NOT VALIDATED | Data Fasilitas pada Product (i)
+[38]  |  |  | Tenor Fasilitas |  |  | Conditional | Ready Only | NOT VALIDATED | Data Fasilitas pada Product (i)
+[39]  |  |  | Plafon Fasilitas |  |  | Conditional | Ready Only | NOT VALIDATED | Data Fasilitas pada Product (i)
+[40]  |  |  | Data Agunan (i).Jenis Agunan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Data Agunan (i) yang diikat pada fasilitas ini
+[41]  |  |  | Data Agunan (i).Bukti Kepemilikan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Data Agunan (i) yang diikat pada fasilitas ini
+[42]  |  |  | Data Agunan (i).Nilai Agunan yang dapat diagunkan |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Data Agunan (i) yang diikat pada fasilitas ini
+[43]  |  |  | Data Agunan (i). Nilai Agunan yang diikat ke Fasilitas (Pelaporan BI) |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Data Agunan (i) yang diikat pada fasilitas ini
+[44]  |  |  | Data Agunan (i). Pengaruh arus kas |  |  | Conditional | Ready Only | NOT VALIDATED | Auto Mapping sesuai Data Agunan (i) yang diikat pada fasilitas ini
+[45] Agunan (i) --------------- Flow Tambah / Edit Agunan |  |  |  |  |  |  |  |  |  |  |  |  | Pipeline
+[46]  | Step Name | Sub Step |  | Label Name |  |  |  | Validate in |  |  |  | Rules | Leads | Service Get Collateral From CLS
+[47]  | Search Agunan |  |  | Search Jenis Agunan |  | Mandatory | Show And Editable | CLS - Service Cari Agunan | Dropdown |  |  | Segmen A01 – Agunan, Source this Dropdown, saved value is using code, eg : AN020101. 
+BUT Display Information will also show informational info, eg : AN020101 - Tanah
+[48]  |  |  |  | Jenis Agunan Categorized by CLS |  | Mandatory | Hide | NOT VALIDATED | Dropdown |  |  | Auto Generate dari defiisi tabel Segmen A01 – Agunan, sesuai yang dipilih pada Jenis Agunan
+[49]  |  |  |  | Search Bukti Pemilikian |  | Mandatory | Show And Editable | CLS - Service Cari Agunan | Textfield |  |  | Based on Data Contracs API Search CLS
+[50]  |  |  |  | Search Kota |  | Optional | Conditional | CLS - Service Cari Agunan | Dropdown |  |  | Munculkan apabila Jenis Agunan di CLS adalah Tipe Housing. Based on Data Contracs API Search CLS
+[51]  |  |  |  | Search Kelurahan |  | Optional | Conditional | CLS - Service Cari Agunan | Dropdown |  |  | Munculkan apabila Jenis Agunan di CLS adalah Tipe Housing. Based on Data Contracs API Search CLS
+[52]  |  |  |  | Search No Mesin |  | Optional | Conditional | CLS - Service Cari Agunan | Textfield |  |  | Munculkan apabila Jenis Agunan di CLS adalah Tipe Vehicles. Based on Data Contracs API Search CLS
+[53]  |  |  |  | Search No Rangka |  | Optional | Conditional | CLS - Service Cari Agunan | Textfield |  |  | Munculkan apabila Jenis Agunan di CLS adalah Tipe Vehicles. Based on Data Contracs API Search CLS
+[54]  |  |  |  | Search No Aplikasi |  | Optional | Conditional | CLS - Service Cari Agunan | Textfield |  |  | Munculkan apabila Jenis Agunan di CLS adalah Tipe Cash Collaterals. Based on Data Contracs API Search CLS
+[55]  | Informasi Umum Agunan
+-- 
+Apabila semua mandatory terpenuhi, maka status berubah jadi Lengkap |  |  | UUID Agunan |  | Mandatory | Hide | LAMOS | Textfield |  |  | Auto Generate, Menandakan Kode Uniq per masing-masing agunan yang didaftarkan pada pengajuan. di Generate pada setiap entitas Agunan di LAMOS apabila null (Setiap pertama kali form Informasi Umum di akses karena fungsi "Tambah Agunan"
+[56]  |  |  |  | ID Agunan |  | Conditional | Ready Only | CLS - Service Validasi Data Agunan | Textfield |  |  | Wajib terisi apabila data agunan diload dari Existing Master Agunan di CLS, selain itu opsional
+[57]  |  |  |  | Kode Register Agunan | Kode Register atau Nomor Agunan | Conditional | Hide | CLS* | Textfield |  |  | Mandatory apabila Jenis Transaksi adalah Perpanjangan. Untuk melakukan upload pada Transaksi existing
+[58]  |  |  |  | Jenis Agunan | Kode Jenis Agunan | Mandatory | Ready Only | CLS - Service Validasi Data Agunan | Dropdown |  |  | Auto pipeline from Search Jenis Agunan. or Existing Agunan
+Dropdown sesuai Segmen A01 – Agunan 
+Untuk FE Tampilan dropdown memiliki format : 
+Code - Description , contoh : 
+AN02010301 - Rumah
+F04150299 - Sukuk Lainnya - Cash Collateral
+F04150299 - Sukuk Lainnya - Document
+F2099 - Aset Keuangan Lainnya - Account Receivable
+F2099 - Aset Keuangan Lainnya - Bancassurance
+
+Untuk BE, simpan value Code only. contoh : AN02010301 | Form 3|Data Jaminan|Jenis Jaminan | collateral_lbu_type_code
+[59]  |  |  |  | Jenis Agunan Categorized by CLS |  | Mandatory | Hide | CLS - Service Validasi Data Agunan | Dropdown |  |  | Auto pipeline from Jenis Agunan Categorized by CLS at Step Search Agunan
+[60]  |  |  |  | Status Agunan | Kode Status Agunan | Mandatory | Show And Editable | CLS - Service Validasi Data Agunan | Dropdown |  |  | Dropdown sesuai Segmen A01 – Agunan  : vehicle004
+Untuk FE Tampilan dropdown memiliki format : 
+Code - Description , contoh : 
+1 - Tersedia
+
+Untuk BE, simpan value Code only, contoh : 1 |  | collateral_status_code
+[61]  |  |  |  | Jenis Pengikatan | Kode Jenis Pengikatan | Conditional | Conditional | CLS - Service Validasi Data Agunan | Dropdown |  |  | Dropdown sesuai Segmen A01 – Agunan  : vehicle007
+Untuk FE, Tampilan dropdown memiliki format : 
+Code - Description , contoh : 
+06 - Belum Diikat
+
+Untuk BE, Save Code Only Contoh : 06
+
+Note Conditional : Mandatory dan Munculkan apabila Kode Status Agunan adalah 1 (Tersedia). |  | collateral_binding_code
+[62]  |  |  |  | Tanggal Pengikatan | Tanggal Pengikatan | Conditional | Conditional | CLS - Service Validasi Data Agunan | Datepicker |  |  | Dipilih dari Datepicker dengan format : YYYYMMDD.
+Note Conditional : 
+Munculkan apabila  Kode Status Agunan adalah 1 (Tersedia). 
+Mandatory apabila (Kode Jenis Pengikatan Selain "06 - Belum Diikat") |  | collateral_binding_date
+[63]  |  |  |  | Jenis Segmen Fasilitas | Kode Jenis Segmen Fasilitas | Mandatory | Ready Only | CLS - Service Validasi Data Agunan | Dropdown |  |  | Default : F01
+curl --location --request GET 'http://cls-product-coreloan-sit.devs.banksinarmas.com/api/v1/master-data/regulatory?master=kode_jenis_segmen&order-by=name&order=asc' \
+--header 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f' |  | segment_type_code
+[64]  |  |  |  | Peringkat Agunan | Peringkat Agunan | Optional | Conditional | CLS - Service Validasi Data Agunan | Dropdown |  | Huruf, angka, untuk symbol yang diallow : ( ) _ - + /. | Note Conditional  : tampilkan apabila Jenis Agunan Categorized by CLS adalah (Cash Collateral atau Document) dan Form Kode Status Agunan adalah 1 (Tersedia). Selain itu di Hide
+Dropdown : curl -X 'GET' \
+'http://cls-product-coreloan-dev.devs.banksinarmas.com/api/v1/master-data/regulatory?master=PERINGKAT_AGUNAN' \
+-H 'accept: application/json' \
+-H 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f'
+
+Ambil parameter 'code' |  | collateral_rank
+[65]  |  |  |  | Lembaga Pemeringkat | Lembaga Pemeringkat | Optional | Conditional | CLS - Service Validasi Data Agunan | Dropdown |  | Huruf Saja | Note Conditional  : tampilkan apabila Jenis Agunan Categorized by CLS adalah (Cash Collateral atau Document) dan Form Kode Status Agunan adalah 1 (Tersedia). Selain itu di Hide
+Dropdown : curl -X 'GET' \
+'http://cls-product-coreloan-dev.devs.banksinarmas.com/api/v1/master-data/regulatory?master=PERINGKAT_AGUNAN' \
+-H 'accept: application/json' \
+-H 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f'   -- Filtered
+
+Detail : curl --location --request GET 'http://cls-product-coreloan-sit.devs.banksinarmas.com/api/v1/master-data/regulatory?master=LEMBAGA_PEMERINGKAT' \
+--header 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f'
+
+Ambil parameter 'name' |  | collateral_institute
+[66]  |  |  |  | Diasuransikan | Diasuransikan | Mandatory | Show And Editable | CLS - Service Validasi Data Agunan | Dropdown |  | Huruf Saja | Dropdown : vehicle021 |  | insurance
+[67]  |  |  |  | Paripasu |  | Mandatory | Hide | NOT VALIDATED | Dropdown |  |  | Auto Logic dari Jumlah Transaksi CLS dan Distribusi Agunan,, apabila > 1 THEN set Y, ELSE T
+Dropdown : vehicle018
+[68]  |  |  |  | Kantor Cabang / Agunan di Registrasikan | Kode Kantor Cabang | Mandatory | Show And Editable | CLS - Service Validasi Data Agunan | Dropdown |  |  | pipeline from sesuai kode cabang pinjaman but editable
+Dropdown : 
+curl --location --request GET 'http://cls-product-coreloan-sit.devs.banksinarmas.com/api/v1/master-data/regulatory?master=Ideb_Branch' \
+--header 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f'
+[69]  |  |  |  | Progress Agunan |  | Mandatory | Hide | LAMOS | Dropdown |  |  | Memperlihatkan Status dari Agunan : on Draft, Final, Deleted
+[70]  |  |  |  | Status Pipeline dari Leads |  | Mandatory | Hide | LAMOS | Boolean |  |  | True/False
+[71]  |  |  |  | Status Load From CLS |  | Mandatory | Hide | LAMOS | Boolean |  |  | True/False
+[72]  |  |  |  | Status Integration |  | Mandatory | Hide | LAMOS | Dropdown |  |  | Dropdown: 
+0000 - Still at Draft
+0010 - Successfully Verified at LAMOS Step Pengajuan
+0011 - Successfully Verified at LAMOS Step PK
+0020 - Failed integration to LMS
+0030 - Successfully Integration to LMS
+0040 - Failed integration to CLS
+0050 - Successfully Integration to CLS
+[73]  |  | Alamat Agunan |  | Alamat Lengkap | Alamat Agunan | Mandatory | Ready Only | CLS - Service Validasi Data Agunan | Textarea |  |  | Auto Generate dari : Alamat + ". Rt/Rw : " + Rt + "/" + Rw ". " + " Desa : ". + Desc.Kelurahan + ". Kecamatan : " + Desc.Kecamatan + ". Kota : " + Desc.Kota/Kabupaten + ". Provinsi : " + Desc.Provinsi + ". Kodepos : " + Kodepos
+/ Auto Pipeline |  | address
+[74]  |  |  |  | Alamat |  | Mandatory | Show And Editable | LAMOS | Textfield |  | huruf, angka, Spasi, dan tanda baca & - ' , . ( ) | Spasi huruf angka. tanda baca: & - ' , . ( ) | Form 3|Data Jaminan|Alamat Jaminan
+[75]  |  |  |  | Rt |  | Optional | Show And Editable | LAMOS | Textfield |  |  | Number only, max 4 char, Default : 000 | Form 3|Data Jaminan|Rt
+[76]  |  |  |  | Rw |  | Optional | Show And Editable | LAMOS | Textfield |  |  | Number only, max 4 char, Default : 000 | Form 3|Data Jaminan|Rw
+[77]  |  |  |  | Provinsi |  | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+11        NANGGROE ACEH DARUSSALAMTEST
+12        SUMATERA UTARA
+13        SUMATERA BARAT
+14        RIAU
+15        JAMBI
+dst | Form 3|Data Jaminan|Provinsi
+[78]  |  |  |  | DATI II | Kode Kab/Kota (DATI 2) Lokasi Agunan | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+6407                KAB. KUTAI BARAT
+6408        KAB. KUTAI TIMUR
+6409        KAB. PENAJAM PASER UTARA
+6410        KAB. TANA TIDUNG
+dst | Form 3|Data Jaminan|Kota ? | dati2
+[79]  |  |  |  | Kota |  | Mandatory | Hide | LAMOS | Dropdown |  |  | Get from internal DB DATI II to Kota MST_MASTER_KOTA | Form 3|Data Jaminan|Kota ?
+[80]  |  |  |  | Kecamatan |  | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+120208        PURBA TUA
+120209        SIBORONG-BORONG
+120210        PAGARAN
+120211        PARMONANGAN
+dst | Form 3|Data Jaminan|Kecamatan
+[81]  |  |  |  | Kelurahan |  | Mandatory | Show And Editable | LAMOS | searchfield |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+11010111        UJUNG GUNONG RAYEK
+11010112        UJUNG GUNUNG CUT
+11010113        UJUNG MANGKI
+dst | Form 3|Data Jaminan|Kelurahan | subdistrict
+[82]  |  |  |  | Kodepos |  | Mandatory | Show And Editable | LAMOS | searchfield |  |  | Get from internal MST_KELURAHAN | Form 3|Data Jaminan|Kode Pos
+[83]  |  | Penilaian Agunan | Rincian data Pembanding | Metode Pengecekan Agunan |  | Mandatory | Ready Only | LAMOS | Dropdown |  |  | Set Default : Isi Sendiri
+Dropdown : Isi Sendiri; Inquiry to e-Collval, direct integration to e-Collval
+[84]  |  |  |  | Apakah LPA Sudah Tersedia? |  | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | Ya; Tidak
+[85]  |  |  |  | Apakah agunan tersebut tercantum dalam Negative List BSIM ? |  | Conditional | Show And Editable | LAMOS | Dropdown |  |  | Ya; Tidak
+[86]  |  |  |  | Tipe Penialian |  | Conditional | Show And Editable | LAMOS | Dropdown |  |  | Set Mandatory apabila Apakah LPA Sudah Tersedia? = Ya
+Dropdown : Internal;KJPP
+[87]  |  |  |  | Nilai Predictive |  | Mandatory | Show And Editable | LAMOS | Textfield |  |  | Default : 0, Prefilled with Service Get Predictive Value From e-Collval
+[88]  |  |  |  | Nilai Agunan Wajar/NJOP | Nilai Agunan Sesuai NJOP atau Nilai Wajar | Conditional | Conditional | LAMOS | Textfield |  |  | Mandatory apabila Apakah LPA Sudah Tersedia? = Ya, dan 
+Disable apabila data adalah hasil mapping /  inquiry dari e-collval. |  | njop_value
+[89]  |  |  |  | Nilai Agunan Menurut Pelapor | Nilai Agunan Menurut Pelapor | Conditional | Conditional | LAMOS | Textfield |  |  | Mandatory apabila Apakah LPA Sudah Tersedia? = Ya
+dan Disable apabila data adalah hasil mapping / inquiry dari e-collval. Hide apabila Tipe penilaian = KJPP, namun save data dari data Nilai Agunan Menurut Penilai Independen |  | collateral_report_value
+[90]  |  |  |  | Tanggal Penilaian Menurut Pelapor | Tanggal Penilaian Agunan Menurut Pelapor | Conditional | Conditional | LAMOS | Date Picker |  |  | Mandatory apabila Apakah LPA Sudah Tersedia? = Ya, dan
+Disable apabila data adalah hasil mapping / inquiry dari e-collval. Hide apabila Tipe penilaian = KJPP, namun save data dari data Tanggal Penilaian Menurut Penilai Independen |  | collateral_report_date
+[91]  |  |  |  | Nilai Agunan Menurut Penilai Independen | Nilai Agunan Menurut Penilai Independen | Conditional | Conditional | LAMOS | Textfield |  |  | Mandatory apabila Apakah LPA Sudah Tersedia? = Ya, dan
+Disable apabila data adalah hasil mapping / inquiry. Hide apabila Tipe Penialian = Internal kemudian set null untuk field ini |  | collateral_independent_value
+[92]  |  |  |  | Nama Penilai Independen | Nama Penilai Independen | Conditional | Conditional | LAMOS | Textfield |  |  | Disable apabila data adalah hasil mapping / inquiry. Hide apabila Tipe Penialian = Internal kemudian set null untuk field ini |  | collateral_independent_name
+[93]  |  |  |  | Tanggal Penilaian Menurut Independen | Tanggal Penilaian Agunan Menurut Penilai Independen | Conditional | Conditional | LAMOS | Date Picker |  |  | Disable apabila data adalah hasil mapping / inquiry. Hide apabila Tipe Penialian = Internal kemudian set null untuk field ini |  | collateral_independent_date
+[94]  |  |  |  | Positive Note |  | Optional | Show And Editable | LAMOS | Textfield |  |  | Spasi huruf angka. tanda baca: & - ' , . ( )
+[95]  |  |  |  | Negative Note |  | Conditional | Show And Editable | LAMOS | Textfield |  |  | Mandatory Apabila
+[96]  |  |  | Data Pembanding (i) | Sumber Data Pembanding |  | Mandatory | Show And Editable | NOT VALIDATED | Dropdown |  |  | Dropdown : RT/RW/Ktr. Desa/Kelurahan; Pemasaran; Kantor Lelang/Bank; Perorangan; Agent Properti; Dealer/Showroom; Leasing/Multifinance
+[97]  |  |  |  | Nama |  | Mandatory | Show And Editable | NOT VALIDATED | Textfield
+[98]  |  |  |  | Nilai / Harga Berdasarkan Data Pembanding |  | Mandatory | Show And Editable | NOT VALIDATED | Textfield
+[99]  |  |  |  | Alamat |  | Mandatory | Show And Editable | NOT VALIDATED | Textfield |  |  | Spasi huruf angka. tanda baca: & - ' , . ( )
+[100]  |  |  |  | Rt |  | Optional | Show And Editable | NOT VALIDATED | Textfield |  |  | Number only, max 4 char, Default : 000
+[101]  |  |  |  | Rw |  | Optional | Show And Editable | NOT VALIDATED | Textfield |  |  | Number only, max 4 char, Default : 000
+[102]  |  |  |  | Provinsi |  | Optional | Show And Editable | NOT VALIDATED | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+11        NANGGROE ACEH DARUSSALAMTEST
+12        SUMATERA UTARA
+13        SUMATERA BARAT
+14        RIAU
+15        JAMBI
+dst
+[103]  |  |  |  | Kota / DATI II |  | Mandatory | Show And Editable | NOT VALIDATED | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+6407                KAB. KUTAI BARAT
+6408        KAB. KUTAI TIMUR
+6409        KAB. PENAJAM PASER UTARA
+6410        KAB. TANA TIDUNG
+dst
+[104]  |  |  |  | Kecamatan |  | Optional | Show And Editable | NOT VALIDATED | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+120208        PURBA TUA
+120209        SIBORONG-BORONG
+120210        PAGARAN
+120211        PARMONANGAN
+dst
+[105]  |  |  |  | Kelurahan |  | Optional | Show And Editable | NOT VALIDATED | Dropdown |  |  | curl --location 'https://apisit.banksinarmas.com/internal/master-config-management/v1.0/geo?type=provinces' \
+--header 'X-Gateway-APIKey: 6f8d85b3-e831-4737-ac3f-3fbb97ca6b04' \
+--header 'Content-Type: application/json'
+11010111        UJUNG GUNONG RAYEK
+11010112        UJUNG GUNUNG CUT
+11010113        UJUNG MANGKI
+dst
+[106]  |  |  |  | Kodepos |  | Mandatory | Show And Editable | NOT VALIDATED | Searchfield |  |  | Get from internal MST_KELURAHAN
+[107]  | Data Tambahan Agunan  -- Apabila semua mandatory terpenuhi, maka status berubah jadi Lengkap |  |  | Sifat Agunan Jaminan |  | Mandatory | Show And Editable | CLS - Service Validasi Data Agunan | Dropdown |  |  | Dropdown : vehicle047
+[108]  |  |  |  | Status kredit joint account |  | Mandatory | Ready Only | CLS - Service Validasi Data Agunan | Dropdown |  |  | Jika Jenis Segmen Fasilitas = F01, THEN Set "T", ELSE IF Segmen Fasilitas = F02 2 THEN Set "Y", ELSE editable |  | join_credit
+[109]  |  |  |  | Bukti Kepemilikan |  | Mandatory | Conditional | CLS - Service Validasi Data Agunan | Textfield |  |  | Disable apabila data diload dari CLS |  | collateral_number
+[110]  |  |  |  | Upload FIle Dokumen Kepemilkan (i) |  | Mandatory | Show And Editable | LAMOS | File |  |  | Can Upload File, Max 100 files, perfiles Maximum 50MB
+[111]  |  | IF Data Agunan by CLS = Cash Collateral |  | Apakah Agunan Tersimpan di Bank Sinarmas ? |  | Conditional | Conditional | LAMOS | Radiobutton |  |  | Akan tampil dan mandatory Apabila Kode Jenis Agunan adalah salah satu dari : 
+F09  (GIRO)
+F10  (Tabungan)
+F11  (Deposito)
+F15  (Setoran Jaminan)
+
+Dropdown : Y;T
+[112]  |  |  |  | Intansi Penerbit |  | Optional | Conditional | LAMOS | Textfield |  |  | Munculkan apabila : Dipilih Agunan Tersiman di Bank Sinarmas  = T
+Spasi huruf angka. tanda baca: & - ' , . ( )
+[113]  |  |  |  | CIF pemilik agunan |  | Conditional | Conditional | CLS - Inquiry data CIF and Account | Textfield |  |  | Mandatory dan Tampilkan Apabila Agunan Tersimpan di Bank Sinarmas = Y. Auto Inquiry to Service every change in data in this field |  | cashes.collateral_owner_cif
+[114]  |  |  |  | Rekening Cash Collateral |  | Conditional | Conditional | CLS - Inquiry data CIF and Account | Dropdown |  |  | Mandatory dan Tampilkan Apabila Agunan Tersimpan di Bank Sinarmas = Y. List Dropdown sesuai list product yang dimiliki sesuai CIF. dan difilter sesuai Jenis Agunan Cash Collateral (Giro/Tabungan). 
+Tampilkan sesuai : Nomor Saving Account - Product Saving Account. 
+Apabila Agunan Tidak tersimpan di Bank Sinarmas Maka Tetap Munculkan namun opsional
+[115]  |  |  |  | Nominal |  | Mandatory | Conditional | LAMOS | Textfield |  |  | Disable apabila Kode Jenis Agunan = F11  (Deposito) , else Editable
+[116]  |  |  |  | Bunga |  | Conditional | Conditional | LAMOS | Textfield |  |  | Case 1 : Mandatory dan Tampilkan + Disable (inquiry) Apabila Apakah Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F11 (Deposito)
+Case 2 : Mandatory dan Tampilkan input apabila Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F9, F10 atau F15
+Else  : Tampilkan dan Opsional
+[117]  |  |  |  | Periode Mulai |  | Conditional | Conditional | LAMOS | Date Picker |  |  | Case 1 : Mandatory dan Inquiry sesuai Saving Account yang dipilih apabila Agunan Tersimpan di Bank Sinarmas Y 
+Else  : Tampilkan dan Opsional
+[118]  |  |  |  | Periode Akhir |  | Conditional | Conditional | LAMOS | Date Picker |  |  | Case 1 : Mandatory dan Tampilkan + Disable (inquiry) Apabila Apakah Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F11 (Deposito)
+Else  : Tampilkan dan Opsional
+[119]  |  |  |  | Automatic roll over / ARO |  | Conditional | Conditional | LAMOS | Freetext |  |  | Case 1 : Mandatory dan Tampilkan + Disable (inquiry) Apabila Apakah Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F11 (Deposito)
+Else  : Hide dan Opsional
+[120]  |  |  |  | Tipe Blokir |  | Conditional | Conditional | LAMOS | Dropdown |  |  | Case 1 : Mandatory dan Tampilkan + Disable + set as "04" Apabila Apakah Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F11 (Deposito)
+Else : Hide dan Opsional
+[121]  |  |  |  | Alasan Blokir |  | Conditional | Conditional | LAMOS | Dropdown |  |  | Case 1 : Mandatory dan Tampilkan + Disable + set as "048-TD" Apabila Apakah Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F11 (Deposito)
+Case 2 : Opsional dan Tampilkan Dropdown apabila Agunan Tersimpan di Bank Sinarmas Y dan Kode Jenis Agunan F9, F10 atau F15
+Else : Hide dan Opsional
+[122]  |  |  |  | Acuan Suku Bunga |  | Mandatory | Hide | NOT VALIDATED | Checklist |  |  | True / False, Default False
+[123]  | Informasi Kepemilikan -- Apabila semua mandatory terpenuhi, maka status berubah jadi Lengkap |  |  | Bukti Pemilikan | Bukti Kepemilikan | Conditional | Ready Only | NOT VALIDATED |  |  |  | Auto Mapping From Bukti Kepemilikan at Data Tambahan Agunan
+[124]  |  | SLIK Check |  | Kategori Kepemilikan Agunan |  | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | Dropdown From SLP. 
+001 - Calon Debitur (sesuai jenis pengajuan) -- atau pake ETB/NTB
+002 - Calon Pasangan Debitur (sesuai jenis pengajuan) -- atau pake ETB/NTB
+003 - Debitur  (sesuai jenis pengajuan -- atau pake ETB/NTB
+004 - Pasangan Debitur (sesuai jenis pengajuan) -- atau pake ETB/NTB
+005 - Pemilik Agunan (Penjual Secondary di Consumer)
+006 - Pengurus Perusahaan
+007 - Pemilik Perusahaan
+008 - Vendor
+009 - Penjamin (PG)
+010 - Pasangan Penjamin
+
+curl --location --request GET 'http://cls-product-coreloan-sit.devs.banksinarmas.com/api/v1/master-data/regulatory?master=Ideb_Tipe_Pencarian' \
+--header 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f'  -- untuk 011, 012, 013 didisable
+[125]  |  |  |  | Tipe Kepemilikan Agunan |  | Mandatory | Show And Editable | LAMOS | Dropdown |  |  | Dropdown From SLP; 1 = Individual ; 2 = Badan Usaha 
+curl --location --request GET 'http://cls-product-coreloan-sit.devs.banksinarmas.com/api/v1/master-data/regulatory?master=JENIS_DEBITUR' \
+--header 'X-Gateway-APIKEY: bf259bb47c5cee0a4cd9e2c4d40b4f' | Form 3|Data Jaminan|Pemilik Jaminan
+[126]  |  |  |  | Hubungan dengan Pemilik Agunan |  | Conditional | Conditional | LAMOS | Dropdown |  |  | Dropdown From SLP --- dari source ecollval 
+Milik Sendiri
+Pasangan (Suami / Istri)
+Orang Tua
+Anak
+Pemilik (Pengurus Perusahaan)
+Pemilik Sebelumnya (Jual Beli)
+Pemilik Sebelumnya (Waris)
+Pemilik Sebelumnya (Hibah)
+Penjamin
+[127]  |  |  | Informasi Debitur Perorangan
+Apabila Tipe Kepemilikan Agunan = Perorangan | Pilih Entitas |  | Conditional | Conditional | LAMOS | Dropdown |  |  | Munculkan list dari Bucket Identitas jika Kategori Kepemilikan Agunan selain 005 atau 008
+[128]  |  |  |  | Identity Type |  | Mandatory | Hide | LAMOS | Dropdown |  |  | Default : 1 - KTP
+[129]  |  |  |  | Nomor Identitas |  | Mandatory | Conditional | CLS - Service Validasi Data Agunan | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri
+[130]  |  |  |  | Nama Lengkap | Nama Pemilik Agunan | Mandatory | Conditional | CLS - Service Validasi Data Agunan | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri | if Form 3|Data Jaminan|Jenis Jaminan IS Housing Type THEN Form 3|Data JaminaN|Nama Pemilik Jaminan | collateral_owner_name 
+(Jika Perorangan)
+[131]  |  |  |  | Identity Type Pasangan |  | Conditional | Hide | LAMOS | Dropdown |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri. Munculkan Apabila Pemilik Agunan Menikah
+[132]  |  |  |  | Nomor Identitas Pasangan |  | Conditional | Conditional | LAMOS | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri. Munculkan Apabila Pemilik Agunan Menikah
+[133]  |  |  |  | Nama Pasangan |  | Conditional | Conditional | LAMOS | Datepicker |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri. Munculkan Apabila Pemilik Agunan Menikah
+[134]  |  |  |  | File Upload Identitas |  | Mandatory | Conditional | LAMOS | File |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri. Munculkan Apabila Pemilik Agunan Menikah
+[135]  |  |  |  | File Upload Identitas Pasangan |  | Conditional | Conditional | LAMOS | File |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri. Munculkan Apabila Pemilik Agunan Menikah
+[136]  |  |  | Informasi Debitur Perorangan
+Apabila Tipe Kepemilikan Agunan = Badan Usaha | Pilih Entitas |  | Conditional | Conditional | LAMOS | Dropdown |  |  | Munculkan list dari Bucket Identitas jika Kategori Kepemilikan Agunan selain 005 atau 008
+[137]  |  |  |  | Identity Type |  | Mandatory | Conditional | LAMOS | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else Default : NPWP
+[138]  |  |  |  | Nomor Identitas |  | Mandatory | Show And Editable | LAMOS | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri
+[139]  |  |  |  | Nama Badan Usaha | Nama Pemilik Agunan | Mandatory | Show And Editable | LAMOS | Textfield |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else isi sendiri | if Form 3|Data Jaminan|Jenis Jaminan IS Housing Type THEN Form 3|Data JaminaN|Nama Pemilik Jaminan | collateral_owner_name
+(Jika Badan Usaha)
+[140]  |  |  |  | File NPWP Badan Usaha |  | Mandatory | Conditional | LAMOS | File |  |  | Auto Mapping dan Disable Apabila Pilih Entitas tidak kosong, Else upload sendiri
+[141]  | Fitur Pengikatan Agunan ke Fasilitas | Data Agunan Umum |  | Status Paripasu | Status Paripasu | Mandatory | Hide | CLS - Service Validasi Data Agunan | Dropdown |  |  | Get Logic: Jika Agunan Sudah digunakan atau mau digunakan lebih dari 1 transaksi agunan Then set 'Y' ELSE 'N'
+[142]  |  |  |  | Nilai Agunan yang dapat digunakan (%) |  | Mandatory | Hide | CLS - Service Validasi Data Agunan | Textfield |  |  | Default / Jika Baru : 100%.
+Terdapat Logic apabila agunan inquiry melalui CLS -- nilai pada return di transaksi agunan terdaftar akan dihitung nilai %tase paripasu yang sudah digunakan, Sehingga nilai ini adalah (100%  dikurang dengan total nilai persentase dari seluruh transaksi yang masih aktif yang ada di Master Agunan CLS)
+[143]  |  |  |  | Nilai Agunan (predictive) yang dapat digunakan (Nominal) |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Nilai dalam Nominal yaitu = Nilai Agunan yang dapat digunakan (%) * Hasil Penilaian Predictive
+[144]  |  |  |  | Nilai Agunan (appraisal) yang dapat digunakan (Nominal) |  | Conditional | Ready Only | LAMOS |  |  |  | Nilai dalam Nominal yaitu = Nilai Agunan yang dapat digunakan (%) * Hasil Penilaian Menurut Pelapor
+[145]  |  | Pengikatan ke Produk (i) | Data Produk (i) | Product Name |  | Conditional | Ready Only | LAMOS | Dropdown |  |  | Auto Mapping dari Bucket Struktur Kredit
+[146]  |  |  |  | Jenis Fasilitas |  | Conditional | Ready Only | LAMOS | Dropdown |  |  | Auto Mapping dari Bucket Struktur Kredit
+[147]  |  |  |  | Tenor |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Auto Mapping dari Bucket Struktur Kredit
+[148]  |  |  |  | Total Plafon Product |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Auto Mapping dari Bucket Struktur Kredit
+[149]  |  |  |  | Nilai Agunan yang diikat ke Product ini (Predictive) |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Nominal. diambil dari SUM Dari Semua Data Agunan yang diikat ke product ini, 
+Rumus mencari Nilai Data Suatu Agunan yang diikat ke Product ini =  (Nilai Agunan (predictive) yang dapat digunakan di Data Agunan(i) / Total Jumlah Produk yang menggunakan Data Agunan (i)).
+[150]  |  |  |  | Nilai Agunan yang diikat ke Product ini (Appraisal) |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Nominal. diambil dari SUM Dari Semua Data Agunan yang diikat ke product ini, 
+Rumus mencari Nilai Data Suatu Agunan yang diikat ke Product ini =  (Nilai Agunan (appraisal) yang dapat digunakan di Data Agunan(i) / Total Jumlah Produk yang menggunakan Data Agunan (i)).
+[151]  |  |  |  | Threshold LM |  | Conditional | Conditional | LAMOS | Textfield |  |  | Jika Nilai Agunan Menurut Pelapor ada, maka Rumus = Total Loan Product (i) / Nilai Agunan yang diikat ke Product ini (Appraisal). ELSE Rumus = Total Loan Product (i) / Nilai Agunan yang diikat ke Product ini (predictive)
+[152]  |  |  |  | Threshold LTV |  | Conditional | Conditional | LAMOS | Textfield |  |  | Jika Nilai Agunan Menurut Pelapor ada, maka Rumus = Total Loan Product (i) / Nilai Agunan yang diikat ke Product ini (Appraisal). ELSE Rumus = Total Loan Product (i) / Nilai Agunan yang diikat ke Product ini (predictive)
+[153]  |  |  |  | Threshold CC |  | Conditional | Conditional | LAMOS | Textfield |  |  | Jika Nilai Agunan Menurut Pelapor ada, maka Rumus = Nilai Agunan yang diikat ke Product ini (Appraisal) / Total Loan product (i). ELSE Rumus = Nilai Agunan yang diikat ke Product ini (predictive) /  Total Loan Product (i)
+[154]  |  |  |  | Flag Icon Parameter Loan-Agunan |  | Conditional | Conditional | LAMOS | Textfield |  |  | IF kondisi Ratio Loan to Agunan Terpenuhi, Maka SET "Dijamin Penuh& Aman". ELSE IF kondisi Ratio Loan >0 dan diluar batas threshold, Maka SET "", ELSE "Belum Dijamin"
+[155]  |  |  | Pengikatan Fasilitas (i) | ID Fasilitas (Terpilih) |  | Conditional | Ready Only | LAMOS | Textfield |  |  | Auto Generate, ID Uniq yang dapat merujuk ke fasilitas yang dipilih
+[156]  |  |  |  | Pengaruh Arus Kas |  | Conditional | Conditional | CLS - Service Validasi Data Agunan | Dropdown |  |  | Y/T, Mandatory di integrasi ke CLS
+[157]  |  |  |  | Nilai Agunan yang diikat ke Fasilitas |  | Conditional | Conditional | CLS - Service Validasi Data Agunan | Textfield |  |  | Nilai untuk Pelaporan ke BI, Mandatory di integrasi ke CLS

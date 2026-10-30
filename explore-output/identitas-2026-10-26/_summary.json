@@ -1,0 +1,18 @@
+[
+  {
+    "bucket": "identitas_pengecekan",
+    "title": "Identitas dan Pengecekan",
+    "sidebar": [
+      "Data pribadi [Lengkap]",
+      "Data pribadi tambahan [Lengkap]",
+      "Lokasi & kondisi tempat tinggal [Lengkap]",
+      "Data pekerjaan & keuangan [Belum Lengkap]",
+      "Data kontak darurat [Lengkap]",
+      "Data penjamin [Lengkap]",
+      "Referensi [Sudah diisi (opsional)]",
+      "Pengecekan Dukcapil [Belum dapat diakses]",
+      "Pengecekan DHN DHIB [Belum dapat diakses]",
+      "Pengecekan SLIK [Belum dapat diakses]"
+    ]
+  }
+]

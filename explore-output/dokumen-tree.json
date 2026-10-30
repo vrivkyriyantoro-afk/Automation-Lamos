@@ -1,0 +1,201 @@
+{
+  "uploadArea": {
+    "fileInputs": [
+      {
+        "id": ":r0:",
+        "name": null,
+        "accept": null,
+        "multiple": true,
+        "testid": null,
+        "context": "Silakan upload dokumen yang dibutuhkan untuk pengajuan.Pilih atau seret file ke siniAnda dapat upload hingga 100 dokumen atau gambar dengan ukuran maksimum 50 MB.Pilih fileFilter dokumen baru:SemuaMem"
+      }
+    ],
+    "buttons": [
+      "Semua",
+      "Memiliki kategori0",
+      "Belum ada kategori2",
+      "Simpan Dokumen",
+      "13 dokumensudah memiliki kategori.",
+      "Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi",
+      "Lainnya",
+      "Pengajuan Take Over",
+      "Perpanjangan dan Pengajuan Penambahan Fasilitas",
+      "Dokumen PengajuanPerlu input sebagai penyimpangan/TBO",
+      "Dokumen InternalPerlu input sebagai penyimpangan/TBO",
+      "Dokumen Legalitas UsahaPerlu input sebagai penyimpangan/TBO",
+      "Data KeuanganPerlu input sebagai penyimpangan/TBO",
+      "Dokumen Agunan"
+    ],
+    "comboboxes": [
+      {
+        "id": "data.0.categoryID-r1",
+        "label": "Pilih kategori dokumen"
+      },
+      {
+        "id": "data.1.categoryID-r2",
+        "label": "Pilih kategori dokumen"
+      }
+    ],
+    "headings": [
+      "Kelengkapan dokumen",
+      "13 dokumen",
+      "Dokumen"
+    ],
+    "text": "Dokumen belum lengkap. Anda dapat melanjutkan pengajuan dengan mengisi penyimpangan atau melengkapi dokumen sekarang. Kelengkapan dokumen Silakan upload dokumen yang dibutuhkan untuk pengajuan. Pilih atau seret file ke sini Anda dapat upload hingga 100 dokumen atau gambar dengan ukuran maksimum 50 MB. Pilih file Filter dokumen baru: Semua Memiliki kategori 0 Belum ada kategori 2 2026-09-30_101547.png 142.42 KB Pilih kategori dokumen 2026-09-30_101644.png 143.53 KB Pilih kategori dokumen Simpan Dokumen 13 dokumen sudah memiliki kategori. Dokumen Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi Lainnya Pengajuan Take Over Perpanjangan dan Pengajuan Penambahan Fasilitas Dokumen Pengajuan Perlu input sebagai penyimpangan/TBO Dokumen Internal Perlu input sebagai penyimpangan/TBO Dokumen Pengikatan Agunan Perlu input sebagai penyimpangan/TBO Dokumen Legalitas Usaha Perlu input sebagai penyimpangan/TBO Data Keuangan Perlu input sebagai penyimpangan/TBO Dokumen Agunan Identitas dan Legalitas Debitur Perlu input sebagai penyimpangan/TBO"
+  },
+  "tree": [
+    {
+      "title": "Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi",
+      "note": "",
+      "children": [
+        {
+          "title": "Investasi = Pembelian Asset",
+          "children": [
+            "RAB",
+            "Copy ldentitas Penjual (SLIK Penjual & Pasangan)",
+            "IDEB Penjual & Pasangan",
+            "Surat penawaran (tercantum no hp penjual)",
+            "LPA Atas Aset Yang Akan Dibeli",
+            "Copy Bukti Transfer Bank Pembayaran Down Payment (DP) / Booking Fee",
+            "Foto Aset yang akan dibeli",
+            "Bukti dana Self Financing wajib dilampirkan dan atau disetorkan ke rekening BSIM sebelum akad kredit dan pada saat pencairan BSIM langsung mentransfer dana pencairan bersamaan dengan dana self financing (sejumlah nilai transaksi) ke rekening penjual",
+            "Copy Sertifikat Kepemilikan Atas Aset Yang Akan Dibeli"
+          ],
+          "newFileInputs": 0,
+          "panelText": "Investasi = Pembelian Asset RAB Copy ldentitas Penjual (SLIK Penjual & Pasangan) IDEB Penjual & Pasangan Surat penawaran (tercantum no hp penjual) LPA Atas Aset Yang Akan Dibeli Copy Bukti Transfer Bank Pembayaran Down Payment (DP) / Booking Fee Foto Aset yang akan dibeli Bukti dana Self Financing wajib dilampirkan dan atau disetorkan ke rekening BSIM sebelum akad kredit dan pada saat pencairan BSIM langsung mentransfer dana pencairan bersamaan dengan dana self financing (sejumlah nilai transaksi) ke rekening penjual Copy Sertifikat Kepemilikan Atas Aset Yang Akan Dibeli"
+        },
+        {
+          "title": "Investasi = Renovasi",
+          "children": [
+            "RAB Renovasi yang ditanda tangani cadeb/Kontraktor yang mengerjakan",
+            "Foto Objek Yang Akan Direnovasi (sebelum renovasi)",
+            "Copy Perjanjian Sewa (Mandatory jika Objek yang Akan Direnovasi Atas Nama Pihak Lain)",
+            "Melampirkan Bukti Kepemilikan Asset yang akan direnovasi (jika dijadikan agunan)"
+          ],
+          "newFileInputs": 0,
+          "panelText": "Investasi = Renovasi RAB Renovasi yang ditanda tangani cadeb/Kontraktor yang mengerjakan Foto Objek Yang Akan Direnovasi (sebelum renovasi) Copy Perjanjian Sewa (Mandatory jika Objek yang Akan Direnovasi Atas Nama Pihak Lain) Melampirkan Bukti Kepemilikan Asset yang akan direnovasi (jika dijadikan agunan)"
+        }
+      ],
+      "panelText": "Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi Investasi = Pembelian Asset Investasi = Renovasi",
+      "panelHtml": "<button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full justify-between\"><div class=\"flex flex-col items-start\"><p class=\"text-left\">Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi</p><p class=\"text-xs text-neutral-600\"></p></div><div class=\"flex items-center gap-2 rounded-2xl bg-green-50 text-green-500\"><div class=\"flex size-6 items-center justify-center rounded-full border-emerald-600 bg-emerald-600 text-white\"><svg/></div></div></div></div></button><div class=\" pt-[20px]\"><div class=\"flex flex-col gap-3 py-2 pl-9\"><div class=\"border rounded-[8px] w-full p-5\"><button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full items-center justify-between\"><div class=\"flex justify-center gap-3\"><svg/><div><span>Investasi = Pembelian Asset</span><span class=\"text-red-500\"></span></div></div><div class=\"size-6 rounded-full border border-neutral-300 bg-neutral-200\"></div></div></div></button></div><div class=\"border rounded-[8px] w-full p-5\"><button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full items-center justify-between\"><div class=\"flex justify-center gap-3\"><svg/><div><span>Investasi = Renovasi</span><span class=\"text-red-500\"></span></div></div><div class=\"size-6 rounded-full border border-neutral-300 bg-neutral-200\"></div></div></div></button></div></div></div>"
+    },
+    {
+      "title": "Lainnya",
+      "note": "",
+      "children": [],
+      "panelText": "Lainnya Lainnya",
+      "panelHtml": "<button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full justify-between\"><div class=\"flex flex-col items-start\"><p class=\"text-left\">Lainnya</p><p class=\"text-xs text-neutral-600\"></p></div><div class=\"flex items-center gap-2 rounded-2xl bg-green-50 text-green-500\"><div class=\"flex size-6 items-center justify-center rounded-full border-emerald-600 bg-emerald-600 text-white\"><svg/></div></div></div></div></button><div class=\" pt-[20px]\"><div class=\"flex flex-col gap-3 py-2 pl-9\"><div class=\"border rounded-[8px] w-full p-5\"><button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full items-center justify-between\"><div class=\"flex justify-center gap-3\"><svg/><div><span>Lainnya</span><span class=\"text-red-500\"></span></div></div><div class=\"size-6 rounded-full border border-neutral-300 bg-neutral-200\"></div></div></div></button></div></div></div>"
+    },
+    {
+      "title": "Pengajuan Take Over",
+      "note": "",
+      "children": [
+        {
+          "title": "Semua",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Memiliki kategori0",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Belum ada kategori2",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Simpan Dokumen",
+          "action": true
+        },
+        {
+          "title": "13 dokumensudah memiliki kategori.",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Lainnya",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Pengajuan Take Over",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": "Pengajuan Take Over"
+        },
+        {
+          "title": "Take Over",
+          "children": [
+            "Take Over"
+          ],
+          "newFileInputs": 0,
+          "panelText": "Pengajuan Take Over Take Over"
+        },
+        {
+          "title": "Perpanjangan dan Pengajuan Penambahan Fasilitas",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen PengajuanPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen InternalPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen Pengikatan AgunanPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen Legalitas UsahaPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Data KeuanganPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Dokumen Agunan",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        },
+        {
+          "title": "Identitas dan Legalitas DebiturPerlu input sebagai penyimpangan/TBO",
+          "children": [],
+          "newFileInputs": 0,
+          "panelText": ""
+        }
+      ],
+      "panelText": "Pengajuan Take Over Take Over",
+      "panelHtml": "<button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full justify-between\"><div class=\"flex flex-col items-start\"><p class=\"text-left\">Pengajuan Take Over</p><p class=\"text-xs text-neutral-600\"></p></div><div class=\"flex items-center gap-2 rounded-2xl bg-green-50 text-green-500\"><div class=\"flex size-6 items-center justify-center rounded-full border-emerald-600 bg-emerald-600 text-white\"><svg/></div></div></div></div></button><div class=\" pt-[20px]\"><div class=\"flex flex-col gap-3 py-2 pl-9\"><div class=\"border rounded-[8px] w-full p-5\"><button class=\"w-full\"><div class=\"flex w-full items-start gap-3\"><svg/><div class=\"flex w-full items-center justify-between\"><div class=\"flex justify-center gap-3\"><svg/><div><span>Take Over</span><span class=\"text-red-500\"></span></div></div><div class=\"size-6 rounded-full border border-neutral-300 bg-neutral-200\"></div></div></div></button></div></div></div>"
+    }
+  ],
+  "partial": true
+}

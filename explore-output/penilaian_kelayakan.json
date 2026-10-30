@@ -1,0 +1,221 @@
+{
+  "bucket": "penilaian_kelayakan",
+  "title": "Penilaian Kelayakan",
+  "sidebar": [
+    {
+      "title": "Knock-out criteria",
+      "status": "Belum Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "General eligibility criteria",
+      "status": "Belum Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "QCA",
+      "status": "Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Knock-out criteria",
+      "section": "Knock-out criteria",
+      "fields": [
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "table",
+          "headers": [
+            "No",
+            "Kriteria",
+            "Sumber Informasi",
+            "Pass/fail"
+          ],
+          "rows": 8
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-2-input",
+          "id": "react-select-2-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-2-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-3-input",
+          "id": "react-select-3-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-3-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-4-input",
+          "id": "react-select-4-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-4-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-5-input",
+          "id": "react-select-5-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-5-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-6-input",
+          "id": "react-select-6-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-6-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-7-input",
+          "id": "react-select-7-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-7-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-8-input",
+          "id": "react-select-8-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-8-input\"]"
+        },
+        {
+          "section": "Knock-out criteria",
+          "subsection": "",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-9-input",
+          "id": "react-select-9-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-9-input\"]"
+        }
+      ]
+    },
+    {
+      "sidebar": "Knock-out criteria",
+      "section": "General eligibility criteria",
+      "fields": [
+        {
+          "section": "General eligibility criteria",
+          "subsection": "Overall Result",
+          "kind": "table",
+          "headers": [
+            "No",
+            "Kriteria",
+            "Sumber informasi",
+            "Pass/fail"
+          ],
+          "rows": 4
+        },
+        {
+          "section": "General eligibility criteria",
+          "subsection": "Overall Result",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-10-input",
+          "id": "react-select-10-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-10-input\""
+        },
+        {
+          "section": "General eligibility criteria",
+          "subsection": "Overall Result",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-11-input",
+          "id": "react-select-11-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "options": [],
+          "hasSearch": false
+        },
+        {
+          "section": "General eligibility criteria",
+          "subsection": "Overall Result",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-12-input",
+          "id": "react-select-12-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-12-input\""
+        },
+        {
+          "section": "General eligibility criteria",
+          "subsection": "Overall Result",
+          "kind": "dropdown",
+          "label": "",
+          "required": false,
+          "key": "react-select-13-input",
+          "id": "react-select-13-input",
+          "disabled": false,
+          "value": "",
+          "testid": null,
+          "optionsError": "TimeoutError: locator.click: Timeout 3000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[id=\"react-select-13-input\""
+        }
+      ]
+    },
+    {
+      "sidebar": "Knock-out criteria",
+      "section": "QCA",
+      "fields": []
+    }
+  ]
+}

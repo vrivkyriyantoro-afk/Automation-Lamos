@@ -1,0 +1,82 @@
+{
+  "bucket": "dokumen",
+  "title": "Dokumen",
+  "sidebar": [
+    {
+      "title": "Dokumen",
+      "status": "Perlu input sebagai penyimpangan/TBO",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Dokumen",
+      "section": "Dokumen",
+      "fields": [
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Dokumen Pendukung Untuk Tujuan Modal Kerja/Investasi",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Lainnya",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Pengajuan Take Over",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Perpanjangan dan Pengajuan Penambahan Fasilitas",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Dokumen PengajuanPerlu input sebagai penyimpangan/TBO",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Dokumen InternalPerlu input sebagai penyimpangan/TBO",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Dokumen Legalitas UsahaPerlu input sebagai penyimpangan/TBO",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Data KeuanganPerlu input sebagai penyimpangan/TBO",
+          "disabled": false
+        },
+        {
+          "section": "Dokumen",
+          "subsection": "",
+          "kind": "button",
+          "label": "Dokumen Agunan",
+          "disabled": false
+        }
+      ]
+    }
+  ]
+}

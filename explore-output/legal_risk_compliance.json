@@ -1,0 +1,76 @@
+{
+  "bucket": "legal_risk_compliance",
+  "title": "Legal, Risk, & Compliance",
+  "sidebar": [],
+  "sections": [
+    {
+      "sidebar": "(main)",
+      "section": "Legal memorandum",
+      "fields": [
+        {
+          "section": "Legal memorandum",
+          "subsection": "",
+          "kind": "file",
+          "label": "Pilih atau seret file kesini",
+          "required": false,
+          "name": "",
+          "id": "",
+          "key": "",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "file",
+          "accept": ".pdf,.jpg,.png,.jpeg",
+          "disabled": false,
+          "readOnly": false,
+          "testid": ""
+        }
+      ]
+    },
+    {
+      "sidebar": "(main)",
+      "section": "Opini legal",
+      "fields": [
+        {
+          "section": "Opini legal",
+          "subsection": "",
+          "kind": "file",
+          "label": "Pilih atau seret file kesini",
+          "required": false,
+          "name": "",
+          "id": "",
+          "key": "",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "file",
+          "accept": ".pdf,.jpg,.png,.jpeg",
+          "disabled": false,
+          "readOnly": false,
+          "testid": ""
+        }
+      ]
+    },
+    {
+      "sidebar": "(main)",
+      "section": "Form CSA",
+      "fields": [
+        {
+          "section": "Form CSA",
+          "subsection": "",
+          "kind": "file",
+          "label": "Pilih atau seret file kesini",
+          "required": false,
+          "name": "",
+          "id": "",
+          "key": "",
+          "ariaLabel": "",
+          "placeholder": "",
+          "inputType": "file",
+          "accept": ".pdf,.jpg,.png,.jpeg",
+          "disabled": false,
+          "readOnly": false,
+          "testid": ""
+        }
+      ]
+    }
+  ]
+}

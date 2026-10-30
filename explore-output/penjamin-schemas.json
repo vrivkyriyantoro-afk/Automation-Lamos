@@ -1,0 +1,2299 @@
+{
+  "url": "https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual",
+  "steps": {
+    "0_awal": [
+      {
+        "kind": "heading",
+        "text": "Data Penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Debitur memiliki penjamin?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": true
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "List penjamin"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Tipe penjamin*",
+        "key": "typeGuarantee",
+        "id": "typeGuarantee-r1b",
+        "disabled": false,
+        "value": "Corporate Guarantee"
+      },
+      {
+        "kind": "text",
+        "label": "Nama perusahaan*",
+        "name": "corporateGuarantee.name",
+        "key": "corporateGuarantee.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama perusahaan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "corporateGuarantee.npwp",
+        "key": "corporateGuarantee.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian*",
+        "name": "corporateGuarantee.nomorAktaPendirian",
+        "key": "corporateGuarantee.nomorAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian*",
+        "name": "corporateGuarantee.tanggalAktaPendirian",
+        "key": "corporateGuarantee.tanggalAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.nomorAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.nomorAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian perubahan terakhir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.tanggalAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.tanggalAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor izin berusaha (NIB)*",
+        "name": "corporateGuarantee.nomorIzinBerusaha",
+        "key": "corporateGuarantee.nomorIzinBerusaha_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor izin usaha",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat perusahaan"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "corporateGuarantee.businessAddress.address",
+        "key": "corporateGuarantee.businessAddress.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rt",
+        "key": "corporateGuarantee.businessAddress.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rw",
+        "key": "corporateGuarantee.businessAddress.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK-r1u",
+        "disabled": false,
+        "value": "Pilih provinsi"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK-r1v",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK-r20",
+        "disabled": false,
+        "value": "Pilih kecamatan"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r21",
+        "disabled": false,
+        "value": "Pilih kelurahan"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "corporateGuarantee.businessAddress.postalCode",
+        "key": "corporateGuarantee.businessAddress.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "corporateGuarantee.npwpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "heading",
+        "text": "Data pengurus dan pemegang saham"
+      },
+      {
+        "kind": "heading",
+        "text": "Daftar nama"
+      },
+      {
+        "kind": "button",
+        "label": "Pengurus/Pemegang Saham",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Penjamin",
+        "disabled": false
+      }
+    ],
+    "1_penjamin_ya": [
+      {
+        "kind": "heading",
+        "text": "Data Penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Debitur memiliki penjamin?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": true
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "List penjamin"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Tipe penjamin*",
+        "key": "typeGuarantee",
+        "id": "typeGuarantee-r1b",
+        "disabled": false,
+        "value": "Corporate Guarantee",
+        "options": [
+          "Corporate Guarantee",
+          "Personal Guarantee"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nama perusahaan*",
+        "name": "corporateGuarantee.name",
+        "key": "corporateGuarantee.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama perusahaan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "corporateGuarantee.npwp",
+        "key": "corporateGuarantee.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian*",
+        "name": "corporateGuarantee.nomorAktaPendirian",
+        "key": "corporateGuarantee.nomorAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian*",
+        "name": "corporateGuarantee.tanggalAktaPendirian",
+        "key": "corporateGuarantee.tanggalAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.nomorAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.nomorAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian perubahan terakhir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.tanggalAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.tanggalAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor izin berusaha (NIB)*",
+        "name": "corporateGuarantee.nomorIzinBerusaha",
+        "key": "corporateGuarantee.nomorIzinBerusaha_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor izin usaha",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat perusahaan"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "corporateGuarantee.businessAddress.address",
+        "key": "corporateGuarantee.businessAddress.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rt",
+        "key": "corporateGuarantee.businessAddress.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rw",
+        "key": "corporateGuarantee.businessAddress.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK-r1u",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK-r1v",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK-r20",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r21",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "corporateGuarantee.businessAddress.postalCode",
+        "key": "corporateGuarantee.businessAddress.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "corporateGuarantee.npwpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "heading",
+        "text": "Data pengurus dan pemegang saham"
+      },
+      {
+        "kind": "heading",
+        "text": "Daftar nama"
+      },
+      {
+        "kind": "button",
+        "label": "Pengurus/Pemegang Saham",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Penjamin",
+        "disabled": false
+      }
+    ],
+    "2_perorangan": [
+      {
+        "kind": "heading",
+        "text": "Data Penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Debitur memiliki penjamin?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": true
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "List penjamin"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Tipe penjamin*",
+        "key": "typeGuarantee",
+        "id": "typeGuarantee-r1b",
+        "disabled": false,
+        "value": "Personal Guarantee",
+        "options": [
+          "Corporate Guarantee",
+          "Personal Guarantee"
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "Data pribadi penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Kewarganegaraan*",
+        "options": [
+          {
+            "label": "WNI",
+            "value": "2",
+            "name": "personalGuarantee.nationality",
+            "checked": true
+          },
+          {
+            "label": "WNA",
+            "value": "1",
+            "name": "personalGuarantee.nationality",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nomor KTP*",
+        "name": "personalGuarantee.wni.identityNumber",
+        "key": "personalGuarantee.wni.identityNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor KTP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama lengkap*",
+        "name": "personalGuarantee.name",
+        "key": "personalGuarantee.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama lengkap",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Jenis kelamin*",
+        "key": "personalGuarantee.gender_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.gender_01M483RX7FAQ75Z7MS6BWP6CQK-r29",
+        "disabled": false,
+        "value": "Pilih jenis kelamin",
+        "options": [
+          "Laki-Laki",
+          "Perempuan"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.placeOfBirth",
+        "key": "personalGuarantee.placeOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan tempat lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "",
+        "name": "personalGuarantee.dateOfBirth",
+        "key": "personalGuarantee.dateOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Status perkawinan*",
+        "key": "personalGuarantee.maritalStatus_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.maritalStatus_01M483RX7FAQ75Z7MS6BWP6CQK-r2d",
+        "disabled": false,
+        "value": "Pilih status perkawinan",
+        "options": [
+          "Menikah",
+          "Belum Menikah",
+          "Janda / Duda"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nama gadis ibu kandung*",
+        "name": "personalGuarantee.wni.motherMaidenName",
+        "key": "personalGuarantee.wni.motherMaidenName_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama gadis ibu kandung",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "personalGuarantee.npwp",
+        "key": "personalGuarantee.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor HP*",
+        "name": "personalGuarantee.phoneNumber",
+        "key": "personalGuarantee.phoneNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor HP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat sesuai KTP"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "personalGuarantee.identityAddress.indonesia.address",
+        "key": "personalGuarantee.identityAddress.indonesia.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.identityAddress.indonesia.rt",
+        "key": "personalGuarantee.identityAddress.indonesia.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.identityAddress.indonesia.rw",
+        "key": "personalGuarantee.identityAddress.indonesia.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "personalGuarantee.identityAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK-r2q",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "personalGuarantee.identityAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK-r2r",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "personalGuarantee.identityAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK-r2s",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "personalGuarantee.identityAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r2t",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "personalGuarantee.identityAddress.indonesia.postalCode",
+        "key": "personalGuarantee.identityAddress.indonesia.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat tempat tinggal saat ini"
+      },
+      {
+        "kind": "checkbox",
+        "label": "Sama dengan alamat sesuai KTP"
+      },
+      {
+        "kind": "radio",
+        "label": "Negara*",
+        "options": [
+          {
+            "label": "Indonesia",
+            "value": "1",
+            "name": "personalGuarantee.domicileAddress.country",
+            "checked": true
+          },
+          {
+            "label": "Luar Indonesia",
+            "value": "2",
+            "name": "personalGuarantee.domicileAddress.country",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "personalGuarantee.domicileAddress.indonesia.address",
+        "key": "personalGuarantee.domicileAddress.indonesia.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.domicileAddress.indonesia.rt",
+        "key": "personalGuarantee.domicileAddress.indonesia.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.domicileAddress.indonesia.rw",
+        "key": "personalGuarantee.domicileAddress.indonesia.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "personalGuarantee.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK-r37",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "personalGuarantee.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK-r38",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "personalGuarantee.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK-r39",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "personalGuarantee.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r3a",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "personalGuarantee.domicileAddress.indonesia.postalCode",
+        "key": "personalGuarantee.domicileAddress.indonesia.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "personalGuarantee.wni.ktpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Penjamin",
+        "disabled": false
+      }
+    ],
+    "3_perorangan_menikah": [
+      {
+        "kind": "heading",
+        "text": "Data Penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Debitur memiliki penjamin?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": true
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "List penjamin"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Tipe penjamin*",
+        "key": "typeGuarantee",
+        "id": "typeGuarantee-r1b",
+        "disabled": false,
+        "value": "Personal Guarantee",
+        "options": [
+          "Corporate Guarantee",
+          "Personal Guarantee"
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "Data pribadi penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Kewarganegaraan*",
+        "options": [
+          {
+            "label": "WNI",
+            "value": "2",
+            "name": "personalGuarantee.nationality",
+            "checked": true
+          },
+          {
+            "label": "WNA",
+            "value": "1",
+            "name": "personalGuarantee.nationality",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nomor KTP*",
+        "name": "personalGuarantee.wni.identityNumber",
+        "key": "personalGuarantee.wni.identityNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor KTP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama lengkap*",
+        "name": "personalGuarantee.name",
+        "key": "personalGuarantee.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama lengkap",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Jenis kelamin*",
+        "key": "personalGuarantee.gender_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.gender_01M483RX7FAQ75Z7MS6BWP6CQK-r29",
+        "disabled": false,
+        "value": "Pilih jenis kelamin",
+        "options": [
+          "Laki-Laki",
+          "Perempuan"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.placeOfBirth",
+        "key": "personalGuarantee.placeOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan tempat lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "",
+        "name": "personalGuarantee.dateOfBirth",
+        "key": "personalGuarantee.dateOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Status perkawinan*",
+        "key": "personalGuarantee.maritalStatus_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.maritalStatus_01M483RX7FAQ75Z7MS6BWP6CQK-r2d",
+        "disabled": false,
+        "value": "Menikah",
+        "options": [
+          "Menikah",
+          "Belum Menikah",
+          "Janda / Duda"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nama gadis ibu kandung*",
+        "name": "personalGuarantee.wni.motherMaidenName",
+        "key": "personalGuarantee.wni.motherMaidenName_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama gadis ibu kandung",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "personalGuarantee.npwp",
+        "key": "personalGuarantee.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor HP*",
+        "name": "personalGuarantee.phoneNumber",
+        "key": "personalGuarantee.phoneNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor HP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat sesuai KTP"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "personalGuarantee.identityAddress.indonesia.address",
+        "key": "personalGuarantee.identityAddress.indonesia.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.identityAddress.indonesia.rt",
+        "key": "personalGuarantee.identityAddress.indonesia.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.identityAddress.indonesia.rw",
+        "key": "personalGuarantee.identityAddress.indonesia.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "personalGuarantee.identityAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK-r2q",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "personalGuarantee.identityAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK-r2r",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "personalGuarantee.identityAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK-r2s",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "personalGuarantee.identityAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.identityAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r2t",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "personalGuarantee.identityAddress.indonesia.postalCode",
+        "key": "personalGuarantee.identityAddress.indonesia.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat tempat tinggal saat ini"
+      },
+      {
+        "kind": "checkbox",
+        "label": "Sama dengan alamat sesuai KTP"
+      },
+      {
+        "kind": "radio",
+        "label": "Negara*",
+        "options": [
+          {
+            "label": "Indonesia",
+            "value": "1",
+            "name": "personalGuarantee.domicileAddress.country",
+            "checked": true
+          },
+          {
+            "label": "Luar Indonesia",
+            "value": "2",
+            "name": "personalGuarantee.domicileAddress.country",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "personalGuarantee.domicileAddress.indonesia.address",
+        "key": "personalGuarantee.domicileAddress.indonesia.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.domicileAddress.indonesia.rt",
+        "key": "personalGuarantee.domicileAddress.indonesia.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.domicileAddress.indonesia.rw",
+        "key": "personalGuarantee.domicileAddress.indonesia.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "personalGuarantee.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK-r37",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "personalGuarantee.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK-r38",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "personalGuarantee.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK-r39",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "personalGuarantee.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r3a",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "personalGuarantee.domicileAddress.indonesia.postalCode",
+        "key": "personalGuarantee.domicileAddress.indonesia.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "personalGuarantee.wni.ktpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "heading",
+        "text": "Data pasangan penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Kewarganegaraan*",
+        "options": [
+          {
+            "label": "WNI",
+            "value": "2",
+            "name": "personalGuarantee.spouse.nationality",
+            "checked": true
+          },
+          {
+            "label": "WNA",
+            "value": "1",
+            "name": "personalGuarantee.spouse.nationality",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nomor KTP*",
+        "name": "personalGuarantee.spouse.wni.identityNumber",
+        "key": "personalGuarantee.spouse.wni.identityNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor KTP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama lengkap*",
+        "name": "personalGuarantee.spouse.name",
+        "key": "personalGuarantee.spouse.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama lengkap",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.spouse.placeOfBirth",
+        "key": "personalGuarantee.spouse.placeOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan tempat lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "",
+        "name": "personalGuarantee.spouse.dateOfBirth",
+        "key": "personalGuarantee.spouse.dateOfBirth_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama gadis ibu kandung*",
+        "name": "personalGuarantee.spouse.wni.motherMaidenName",
+        "key": "personalGuarantee.spouse.wni.motherMaidenName_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama gadis ibu kandung",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "personalGuarantee.spouse.npwp",
+        "key": "personalGuarantee.spouse.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor HP*",
+        "name": "personalGuarantee.spouse.phoneNumber",
+        "key": "personalGuarantee.spouse.phoneNumber_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor HP pasangan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat tempat tinggal saat ini"
+      },
+      {
+        "kind": "checkbox",
+        "label": "Sama dengan alamat tempat tinggal penjamin saat ini"
+      },
+      {
+        "kind": "radio",
+        "label": "Negara*",
+        "options": [
+          {
+            "label": "Indonesia",
+            "value": "1",
+            "name": "personalGuarantee.spouse.domicileAddress.country",
+            "checked": true
+          },
+          {
+            "label": "Luar Indonesia",
+            "value": "2",
+            "name": "personalGuarantee.spouse.domicileAddress.country",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "personalGuarantee.spouse.domicileAddress.indonesia.address",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.spouse.domicileAddress.indonesia.rt",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "personalGuarantee.spouse.domicileAddress.indonesia.rw",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.spouse.domicileAddress.indonesia.province_01M483RX7FAQ75Z7MS6BWP6CQK-r42",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.spouse.domicileAddress.indonesia.city_01M483RX7FAQ75Z7MS6BWP6CQK-r43",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.spouse.domicileAddress.indonesia.district_01M483RX7FAQ75Z7MS6BWP6CQK-r44",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "personalGuarantee.spouse.domicileAddress.indonesia.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r45",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "personalGuarantee.spouse.domicileAddress.indonesia.postalCode",
+        "key": "personalGuarantee.spouse.domicileAddress.indonesia.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "personalGuarantee.spouse.wni.ktpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Penjamin",
+        "disabled": false
+      }
+    ],
+    "4_badan_usaha": [
+      {
+        "kind": "heading",
+        "text": "Data Penjamin"
+      },
+      {
+        "kind": "radio",
+        "label": "Debitur memiliki penjamin?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": true
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "List penjamin"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Tipe penjamin*",
+        "key": "typeGuarantee",
+        "id": "typeGuarantee-r1b",
+        "disabled": false,
+        "value": "Corporate Guarantee",
+        "options": [
+          "Corporate Guarantee",
+          "Personal Guarantee"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nama perusahaan*",
+        "name": "corporateGuarantee.name",
+        "key": "corporateGuarantee.name_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nama perusahaan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "corporateGuarantee.npwp",
+        "key": "corporateGuarantee.npwp_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian*",
+        "name": "corporateGuarantee.nomorAktaPendirian",
+        "key": "corporateGuarantee.nomorAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian*",
+        "name": "corporateGuarantee.tanggalAktaPendirian",
+        "key": "corporateGuarantee.tanggalAktaPendirian_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.nomorAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.nomorAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan akta pendirian perubahan terakhir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian perubahan terakhir*",
+        "name": "corporateGuarantee.tanggalAktaPerubahanTerakhir",
+        "key": "corporateGuarantee.tanggalAktaPerubahanTerakhir_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Pilih tanggal",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nomor izin berusaha (NIB)*",
+        "name": "corporateGuarantee.nomorIzinBerusaha",
+        "key": "corporateGuarantee.nomorIzinBerusaha_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan nomor izin usaha",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat perusahaan"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "corporateGuarantee.businessAddress.address",
+        "key": "corporateGuarantee.businessAddress.address_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rt",
+        "key": "corporateGuarantee.businessAddress.rt_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "corporateGuarantee.businessAddress.rw",
+        "key": "corporateGuarantee.businessAddress.rw_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.province_01M483RX7FAQ75Z7MS6BWP6CQK-r4q",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.city_01M483RX7FAQ75Z7MS6BWP6CQK-r4r",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.district_01M483RX7FAQ75Z7MS6BWP6CQK-r4s",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "id": "corporateGuarantee.businessAddress.subdistrict_01M483RX7FAQ75Z7MS6BWP6CQK-r4t",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "corporateGuarantee.businessAddress.postalCode",
+        "key": "corporateGuarantee.businessAddress.postalCode_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "corporateGuarantee.npwpFiles_01M483RX7FAQ75Z7MS6BWP6CQK",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "heading",
+        "text": "Data pengurus dan pemegang saham"
+      },
+      {
+        "kind": "heading",
+        "text": "Daftar nama"
+      },
+      {
+        "kind": "button",
+        "label": "Pengurus/Pemegang Saham",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Penjamin",
+        "disabled": false
+      }
+    ],
+    "5_modal_awal": [
+      {
+        "kind": "heading",
+        "text": "Tambah pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Tipe organ badan usaha*",
+        "options": [
+          {
+            "label": "Perseorangan",
+            "value": "2",
+            "name": "tipeOrganBadanUsaha",
+            "checked": false
+          },
+          {
+            "label": "Badan Usaha",
+            "value": "1",
+            "name": "tipeOrganBadanUsaha",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "dropdown",
+        "label": "Organ badan usaha*",
+        "key": "organBadanUsaha",
+        "id": "organBadanUsaha-r51",
+        "disabled": false,
+        "value": "Pilih tipe organ badan usaha",
+        "options": [
+          "Pemegang Saham",
+          "Pemegang Saham dari Pemegang Saham",
+          "Pengurus",
+          "Pengurus dari Pemegang Saham"
+        ]
+      },
+      {
+        "kind": "button",
+        "label": "Batalkan",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Simpan",
+        "disabled": true
+      }
+    ],
+    "6_modal_perseorangan_wni": [
+      {
+        "kind": "heading",
+        "text": "Tambah pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Tipe organ badan usaha*",
+        "options": [
+          {
+            "label": "Perseorangan",
+            "value": "2",
+            "name": "tipeOrganBadanUsaha",
+            "checked": true
+          },
+          {
+            "label": "Badan Usaha",
+            "value": "1",
+            "name": "tipeOrganBadanUsaha",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "dropdown",
+        "label": "Organ badan usaha*",
+        "key": "organBadanUsaha",
+        "id": "organBadanUsaha-r51",
+        "disabled": false,
+        "value": "Pemegang Saham",
+        "options": [
+          "Pemegang Saham",
+          "Pemegang Saham dari Pemegang Saham",
+          "Pengurus",
+          "Pengurus dari Pemegang Saham"
+        ]
+      },
+      {
+        "kind": "radio",
+        "label": "Kewarganegaraan*",
+        "options": [
+          {
+            "label": "WNI",
+            "value": "2",
+            "name": "perseorangan.nationality",
+            "checked": true
+          },
+          {
+            "label": "WNA",
+            "value": "1",
+            "name": "perseorangan.nationality",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nomor KTP*",
+        "name": "perseorangan.wni.identityNumber",
+        "key": "perseorangan.wni.identityNumber",
+        "placeholder": "Masukkan nomor KTP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama*",
+        "name": "perseorangan.name",
+        "key": "perseorangan.name",
+        "placeholder": "Masukkan nama",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Jenis kelamin*",
+        "key": "perseorangan.gender",
+        "id": "perseorangan.gender-r55",
+        "disabled": false,
+        "value": "Pilih jenis kelamin",
+        "options": [
+          "Laki-Laki",
+          "Perempuan"
+        ]
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal lahir*",
+        "name": "perseorangan.dateOfBirth",
+        "key": "perseorangan.dateOfBirth",
+        "placeholder": "Pilih tanggal lahir",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama gadis ibu kandung",
+        "name": "perseorangan.motherMaidenName",
+        "key": "perseorangan.motherMaidenName",
+        "placeholder": "Masukkan nama gadis ibu kandung",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "NPWP*",
+        "name": "perseorangan.npwp",
+        "key": "perseorangan.npwp",
+        "placeholder": "Masukkan NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Jabatan*",
+        "name": "perseorangan.jobPosition",
+        "key": "perseorangan.jobPosition",
+        "placeholder": "Masukkan jabatan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Negara*",
+        "options": [
+          {
+            "label": "Indonesia",
+            "value": "1",
+            "name": "perseorangan.shareholderAddress.country",
+            "checked": true
+          },
+          {
+            "label": "Luar Indonesia",
+            "value": "2",
+            "name": "perseorangan.shareholderAddress.country",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "perseorangan.shareholderAddress.indonesia.address",
+        "key": "perseorangan.shareholderAddress.indonesia.address",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "perseorangan.shareholderAddress.indonesia.rt",
+        "key": "perseorangan.shareholderAddress.indonesia.rt",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "perseorangan.shareholderAddress.indonesia.rw",
+        "key": "perseorangan.shareholderAddress.indonesia.rw",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "perseorangan.shareholderAddress.indonesia.province",
+        "id": "perseorangan.shareholderAddress.indonesia.province-r5n",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "perseorangan.shareholderAddress.indonesia.city",
+        "id": "perseorangan.shareholderAddress.indonesia.city-r5o",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "perseorangan.shareholderAddress.indonesia.district",
+        "id": "perseorangan.shareholderAddress.indonesia.district-r5p",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "perseorangan.shareholderAddress.indonesia.subdistrict",
+        "id": "perseorangan.shareholderAddress.indonesia.subdistrict-r5q",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "perseorangan.shareholderAddress.indonesia.postalCode",
+        "key": "perseorangan.shareholderAddress.indonesia.postalCode",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Informasi kepemilikan"
+      },
+      {
+        "kind": "text",
+        "label": "Pangsa kepemilikan*",
+        "name": "perseorangan.pangsaKepemilikan",
+        "key": "perseorangan.pangsaKepemilikan",
+        "placeholder": "Masukkan porsi kepemilikan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "perseorangan.wni.ktpFiles",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Batalkan",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Simpan",
+        "disabled": true
+      }
+    ],
+    "7_modal_perseorangan_wna": [
+      {
+        "kind": "heading",
+        "text": "Tambah pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Tipe organ badan usaha*",
+        "options": [
+          {
+            "label": "Perseorangan",
+            "value": "2",
+            "name": "tipeOrganBadanUsaha",
+            "checked": true
+          },
+          {
+            "label": "Badan Usaha",
+            "value": "1",
+            "name": "tipeOrganBadanUsaha",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "dropdown",
+        "label": "Organ badan usaha*",
+        "key": "organBadanUsaha",
+        "id": "organBadanUsaha-r51",
+        "disabled": false,
+        "value": "Pemegang Saham",
+        "options": [
+          "Pemegang Saham",
+          "Pemegang Saham dari Pemegang Saham",
+          "Pengurus",
+          "Pengurus dari Pemegang Saham"
+        ]
+      },
+      {
+        "kind": "radio",
+        "label": "Kewarganegaraan*",
+        "options": [
+          {
+            "label": "WNI",
+            "value": "2",
+            "name": "perseorangan.nationality",
+            "checked": false
+          },
+          {
+            "label": "WNA",
+            "value": "1",
+            "name": "perseorangan.nationality",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Paspor*",
+        "name": "perseorangan.wna.pasporNumber",
+        "key": "perseorangan.wna.pasporNumber",
+        "placeholder": "Masukkan paspor",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Masa berlaku paspor*",
+        "name": "perseorangan.wna.pasporEndDate",
+        "key": "perseorangan.wna.pasporEndDate",
+        "placeholder": "Pilih tanggal paspor",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "KIMS/KITAS",
+        "name": "perseorangan.wna.kimKitasNumber",
+        "key": "perseorangan.wna.kimKitasNumber",
+        "placeholder": "Masukkan KIMS/KITAS",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Masa berlaku KIMS/KITAS",
+        "name": "perseorangan.wna.kimKitasEndDate",
+        "key": "perseorangan.wna.kimKitasEndDate",
+        "placeholder": "Pilih tanggal KIMS/KITAS",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama*",
+        "name": "perseorangan.name",
+        "key": "perseorangan.name",
+        "placeholder": "Masukkan nama",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Jenis kelamin*",
+        "key": "perseorangan.gender",
+        "id": "perseorangan.gender-r55",
+        "disabled": false,
+        "value": "Pilih jenis kelamin",
+        "options": [
+          "Laki-Laki",
+          "Perempuan"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "NPWP",
+        "name": "perseorangan.npwp",
+        "key": "perseorangan.npwp",
+        "placeholder": "Masukkan NPWP",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Jabatan*",
+        "name": "perseorangan.jobPosition",
+        "key": "perseorangan.jobPosition",
+        "placeholder": "Masukkan jabatan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Negara*",
+        "options": [
+          {
+            "label": "Indonesia",
+            "value": "1",
+            "name": "perseorangan.shareholderAddress.country",
+            "checked": true
+          },
+          {
+            "label": "Luar Indonesia",
+            "value": "2",
+            "name": "perseorangan.shareholderAddress.country",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "perseorangan.shareholderAddress.indonesia.address",
+        "key": "perseorangan.shareholderAddress.indonesia.address",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "perseorangan.shareholderAddress.indonesia.rt",
+        "key": "perseorangan.shareholderAddress.indonesia.rt",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "perseorangan.shareholderAddress.indonesia.rw",
+        "key": "perseorangan.shareholderAddress.indonesia.rw",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "perseorangan.shareholderAddress.indonesia.province",
+        "id": "perseorangan.shareholderAddress.indonesia.province-r5n",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "perseorangan.shareholderAddress.indonesia.city",
+        "id": "perseorangan.shareholderAddress.indonesia.city-r5o",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "perseorangan.shareholderAddress.indonesia.district",
+        "id": "perseorangan.shareholderAddress.indonesia.district-r5p",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "perseorangan.shareholderAddress.indonesia.subdistrict",
+        "id": "perseorangan.shareholderAddress.indonesia.subdistrict-r5q",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "perseorangan.shareholderAddress.indonesia.postalCode",
+        "key": "perseorangan.shareholderAddress.indonesia.postalCode",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Informasi kepemilikan"
+      },
+      {
+        "kind": "text",
+        "label": "Pangsa kepemilikan*",
+        "name": "perseorangan.pangsaKepemilikan",
+        "key": "perseorangan.pangsaKepemilikan",
+        "placeholder": "Masukkan porsi kepemilikan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "perseorangan.wna.pasporFiles",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "perseorangan.wna.kimKitasFiles",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Batalkan",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Simpan",
+        "disabled": true
+      }
+    ],
+    "8_modal_badan_usaha": [
+      {
+        "kind": "heading",
+        "text": "Tambah pengurus/pemegang saham"
+      },
+      {
+        "kind": "radio",
+        "label": "Tipe organ badan usaha*",
+        "options": [
+          {
+            "label": "Perseorangan",
+            "value": "2",
+            "name": "tipeOrganBadanUsaha",
+            "checked": false
+          },
+          {
+            "label": "Badan Usaha",
+            "value": "1",
+            "name": "tipeOrganBadanUsaha",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "kind": "dropdown",
+        "label": "Organ badan usaha*",
+        "key": "organBadanUsaha",
+        "id": "organBadanUsaha-r51",
+        "disabled": false,
+        "value": "Pemegang Saham",
+        "options": [
+          "Pemegang Saham",
+          "Pemegang Saham dari Pemegang Saham",
+          "Pengurus",
+          "Pengurus dari Pemegang Saham"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "NPWP Badan usaha*",
+        "name": "badanUsaha.npwp",
+        "key": "badanUsaha.npwp",
+        "placeholder": "Masukkan NPWP badan usaha",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "Nama*",
+        "name": "badanUsaha.name",
+        "key": "badanUsaha.name",
+        "placeholder": "Masukkan nama",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Jenis badan usaha*",
+        "key": "badanUsaha.businessType",
+        "id": "badanUsaha.businessType-r67",
+        "disabled": false,
+        "value": "Pilih jenis badan usaha",
+        "options": [
+          "Perseroan Terbatas",
+          "Persekutuan Comanditer",
+          "Koperasi Toko",
+          "Perusahaan Perseorangan",
+          "Yayasan"
+        ]
+      },
+      {
+        "kind": "text",
+        "label": "Nomor akta pendirian*",
+        "name": "badanUsaha.nomorAktaPendirian",
+        "key": "badanUsaha.nomorAktaPendirian",
+        "placeholder": "Masukkan nomor akta pendirian",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "date",
+        "label": "Tanggal akta pendirian*",
+        "name": "badanUsaha.tanggalAktaPendirian",
+        "key": "badanUsaha.tanggalAktaPendirian",
+        "placeholder": "Pilih tanggal akta pendirian",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "radio",
+        "label": "Ada akta perubahan terakhir?*",
+        "options": [
+          {
+            "label": "Ya",
+            "value": "true",
+            "name": "",
+            "checked": false
+          },
+          {
+            "label": "Tidak",
+            "value": "false",
+            "name": "",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "kind": "heading",
+        "text": "Alamat usaha sesuai NPWP"
+      },
+      {
+        "kind": "text",
+        "label": "Alamat*",
+        "name": "badanUsaha.npwpAddress.address",
+        "key": "badanUsaha.npwpAddress.address",
+        "placeholder": "Masukkan alamat",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "badanUsaha.npwpAddress.rt",
+        "key": "badanUsaha.npwpAddress.rt",
+        "placeholder": "Masukkan RT",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "text",
+        "label": "",
+        "name": "badanUsaha.npwpAddress.rw",
+        "key": "badanUsaha.npwpAddress.rw",
+        "placeholder": "Masukkan RW",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "dropdown",
+        "label": "Provinsi*",
+        "key": "badanUsaha.npwpAddress.province",
+        "id": "badanUsaha.npwpAddress.province-r6i",
+        "disabled": false,
+        "value": "Pilih provinsi",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kota/kabupaten*",
+        "key": "badanUsaha.npwpAddress.city",
+        "id": "badanUsaha.npwpAddress.city-r6j",
+        "disabled": false,
+        "value": "Pilih kota/kabupaten",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kecamatan*",
+        "key": "badanUsaha.npwpAddress.district",
+        "id": "badanUsaha.npwpAddress.district-r6k",
+        "disabled": false,
+        "value": "Pilih kecamatan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "dropdown",
+        "label": "Kelurahan*",
+        "key": "badanUsaha.npwpAddress.subdistrict",
+        "id": "badanUsaha.npwpAddress.subdistrict-r6l",
+        "disabled": false,
+        "value": "Pilih kelurahan",
+        "options": "(wilayah/negara, dilewati)"
+      },
+      {
+        "kind": "text",
+        "label": "Kode pos*",
+        "name": "badanUsaha.npwpAddress.postalCode",
+        "key": "badanUsaha.npwpAddress.postalCode",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Informasi kepemilikan"
+      },
+      {
+        "kind": "text",
+        "label": "Pangsa kepemilikan*",
+        "name": "badanUsaha.pangsaKepemilikan",
+        "key": "badanUsaha.pangsaKepemilikan",
+        "placeholder": "Masukkan porsi kepemilikan",
+        "disabled": false,
+        "value": ""
+      },
+      {
+        "kind": "heading",
+        "text": "Dokumen terkait identitas"
+      },
+      {
+        "kind": "file",
+        "label": "Klik untuk memilih file",
+        "name": "",
+        "key": "badanUsaha.npwpFiles",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Batalkan",
+        "disabled": false
+      },
+      {
+        "kind": "button",
+        "label": "Simpan",
+        "disabled": true
+      }
+    ]
+  },
+  "tipeDropdown": {
+    "kind": "dropdown",
+    "label": "Tipe penjamin*",
+    "key": "typeGuarantee",
+    "id": "typeGuarantee-r1b",
+    "disabled": false,
+    "value": "Corporate Guarantee",
+    "options": [
+      "Corporate Guarantee",
+      "Personal Guarantee"
+    ]
+  },
+  "modalTitle": "Tambah pengurus/pemegang saham\nTipe organ badan usaha*\nPerseorangan\nBadan Usaha\n"
+}

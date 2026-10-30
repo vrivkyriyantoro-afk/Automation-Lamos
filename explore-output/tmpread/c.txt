@@ -1,0 +1,89 @@
+{
+  "_catatan": "Skenario 2: Penjamin Badan Usaha (Corporate Guarantee) dengan 3 pemegang saham: Perseorangan WNI, Perseorangan WNA, Badan Usaha. Data dari user 2026-10-12. Field bertanda _default tidak diberikan user.",
+  "perusahaan": {
+    "namaPerusahaan": "PT Bintang Sejahtera",
+    "npwp": "3578241603710991",
+    "nomorAktaPendirian": "01",
+    "tanggalAktaPendirian": "2015-03-10",
+    "nomorAktaPerubahan": "05",
+    "tanggalAktaPerubahan": "2023-10-15",
+    "nib": "1234567890123",
+    "_default_akta_nib": true,
+    "alamat": {
+      "_default": true,
+      "alamat": "Jl. Cempaka Putih Tengah No. 45",
+      "rt": "005",
+      "rw": "008",
+      "provinsi": "DKI JAKARTA",
+      "kota": "KOTA ADM. JAKARTA PUSAT",
+      "kecamatan": "TANAH ABANG",
+      "kelurahan": "KEBON KACANG",
+      "kodePos": "10240"
+    }
+  },
+  "pemegangSaham": [
+    {
+      "tipe": "Perseorangan",
+      "kewarganegaraan": "WNI",
+      "organ": "Pemegang Saham",
+      "nomorKtp": "3302265910820003",
+      "nama": "PIPIT NILA WARDANI",
+      "tanggalLahir": "1982-10-19",
+      "namaIbuKandung": "WIWIK SRI SUHARTI",
+      "jenisKelamin": "Perempuan",
+      "npwp": "3302265910820003",
+      "_default_npwp": "NPWP tidak diberikan, memakai NIK 16 digit",
+      "jabatan": "Komisaris",
+      "_default_jabatan": true,
+      "pangsaKepemilikan": 40,
+      "_default_pangsa": true,
+      "_tidak_terpetakan": { "nomorHp": "081327595792", "statusPerkawinan": "Menikah" }
+    },
+    {
+      "tipe": "Perseorangan",
+      "kewarganegaraan": "WNA",
+      "organ": "Pemegang Saham",
+      "nomorPaspor": "123331231233",
+      "masaBerlakuPaspor": "2030-01-23",
+      "_default_masaBerlakuPaspor": true,
+      "nama": "ANWAR USMAN",
+      "jenisKelamin": "Laki-Laki",
+      "jabatan": "Komisaris",
+      "_default_jabatan": true,
+      "pangsaKepemilikan": 30,
+      "_default_pangsa": true,
+      "_tidak_terpetakan": { "tempatLahir": "Depok", "tanggalLahir": "1994-01-23", "statusPerkawinan": "Menikah", "jenisDebitur": "individual" }
+    },
+    {
+      "tipe": "Badan Usaha",
+      "organ": "Pemegang Saham",
+      "npwp": "3578241603710992",
+      "nama": "CV Makmur Abadi",
+      "jenisBadanUsaha": "Persekutuan Comanditer",
+      "nomorAktaPendirian": "12",
+      "tanggalAktaPendirian": "2018-06-15",
+      "adaAktaPerubahan": false,
+      "_default_akta": true,
+      "pangsaKepemilikan": 30,
+      "_default_pangsa": true,
+      "_tidak_terpetakan": { "telepon": "81234567891", "email": "admin@makmur.com", "kontak": "Kasiani", "orang": { "nama": "RIKA APRIANTINI", "jenisKelamin": "Laki-Laki", "nik": "3578222901790002", "tanggalLahir": "1979-01-29", "ibuKandung": "TUKINI" } }
+    }
+  ],
+  "alamatPemegangSaham": {
+    "_default": "dipakai untuk semua pemegang saham (alamat tidak diberikan user)",
+    "alamat": "Jl. Kebon Kacang Raya No. 10",
+    "rt": "003",
+    "rw": "004",
+    "provinsi": "DKI JAKARTA",
+    "kota": "KOTA ADM. JAKARTA PUSAT",
+    "kecamatan": "TANAH ABANG",
+    "kelurahan": "KEBON KACANG",
+    "kodePos": "10240"
+  },
+  "_tidak_terpetakan": {
+    "perusahaan.telepon": "81234567890",
+    "perusahaan.email": "kontak@bintang.co.id",
+    "perusahaan.kontak": "HARDIAN SATRIYO",
+    "perusahaan.orang": { "nama": "ABDUL MADJID", "jenisKelamin": "Laki-Laki", "nik": "1571072702470001", "tanggalLahir": "1947-02-27", "ibuKandung": "ARIFAH" }
+  }
+}

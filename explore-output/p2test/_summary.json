@@ -1,0 +1,17 @@
+[
+  {
+    "bucket": "collateral",
+    "title": "Agunan",
+    "sidebar": [
+      "Data Agunan [Belum Lengkap]",
+      "Pengikatan agunan ke fasilitas [Belum Lengkap]"
+    ]
+  },
+  {
+    "bucket": "covenant_tbo",
+    "title": "Covenant & TBO",
+    "sidebar": [
+      "Covenant [Belum Lengkap]"
+    ]
+  }
+]

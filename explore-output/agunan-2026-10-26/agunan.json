@@ -1,0 +1,81 @@
+{
+  "bucket": "agunan",
+  "title": "Agunan",
+  "sidebar": [
+    {
+      "title": "Data Agunan",
+      "status": "Lengkap",
+      "disabled": false
+    },
+    {
+      "title": "Pengikatan agunan ke fasilitas",
+      "status": "Perlu input sebagai penyimpangan",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Data Agunan",
+      "section": "Data agunan",
+      "fields": [
+        {
+          "section": "Data agunan",
+          "subsection": "Daftar agunan (2)",
+          "kind": "button",
+          "label": "Agunan",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 120.000.000",
+          "kind": "button",
+          "label": "Tampilkan informasi lengkap",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "Tampilkan informasi lengkap",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "1",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "button",
+          "label": "1",
+          "disabled": false
+        },
+        {
+          "section": "Data agunan",
+          "subsection": "Rp 1.200.000.000",
+          "kind": "text",
+          "label": "",
+          "required": false,
+          "name": "",
+          "id": "",
+          "key": "",
+          "ariaLabel": "Tampilan per halaman daftar agunan",
+          "placeholder": "",
+          "inputType": "select",
+          "suffix": "Tampilan per halaman",
+          "disabled": false,
+          "testid": "",
+          "value": "10"
+        }
+      ]
+    },
+    {
+      "sidebar": "Data Agunan",
+      "section": "Pengikatan agunan ke fasilitas",
+      "fields": []
+    }
+  ]
+}

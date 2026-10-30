@@ -1,0 +1,107 @@
+John Doe AO5
+Senior Financing Sales Officer (005 - KCP Cempaka Mas-JKT)
+JD
+Ganti kata sandi
+Keluar
+Pengajuan kredit
+Buat pengajuan kredit
+Buat pengajuan kredit
+Riwayat
+Identitas dan Pengecekan
+Struktur Kredit
+Penilaian Kelayakan
+Data Usaha
+Agunan
+Analisa Keuangan
+Legal, Risk, & Compliance
+Dokumen
+Covenant & TBO
+Penyimpangan & Pihak Terkait
+Catatan Anda
+Data Agunan
+Belum Lengkap
+Pengikatan agunan ke fasilitas
+Belum Lengkap
+Data agunan
+Ringkasan
+LPA beberapa agunan masih dalam proses penilaian. Nilai prediksi berikut hanya sebagai acuan sementara.
+Total nilai appraisal yang dapat diagunkan
+Masih menunggu nilai final
+Total nilai prediksi yang dapat diagunkan
+Rp 1.800.234.323
+Daftar agunan (3)
+Agunan
+F041401 - Reksadana
+dasasd
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 234.323
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+AN02010203 - Rumah Toko/Rumah Kantor
+coba
+Nilai agunan
+Nilai appraisal yang dapat diagunkan
+Rp 90.000.000
+Tampilkan informasi lengkap
+AN02010301 - Rumah
+Test123
+Nilai agunan
+Nilai appraisal yang dapat diagunkan
+Rp 90.000.000
+Tampilkan informasi lengkap
+Menampilkan 1 sampai 3 dari 3 baris
+1
+Tampilan per halaman
+5
+10
+20
+50
+Draf agunan (5)
+Data agunan akan ditandai sebagai "lengkap" jika ada minimal satu agunan tersimpan dan tidak ada agunan yang tersimpan sebagai draf.
+AN020203 - Kendaraan
+67
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 1.000.000.000
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+AN020203 - Kendaraan
+123
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 1.000.000.000
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+AN02010302 - Apartemen/Rumah Susun
+emperium
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 1.000.000.000
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+F15 - Setoran Jaminan
+902
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 900.000.000
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+F11 - Deposito
+test
+Nilai agunan
+Nilai prediksi agunan yang dapat diagunkan
+Rp 1.000.000.000
+Masih menunggu nilai final
+Tampilkan informasi lengkap
+Menampilkan 1 sampai 5 dari 5 baris
+1
+Tampilan per halaman
+5
+10
+20
+50
+Pengikatan agunan ke fasilitas
+1/11 selesai
+Kirim
+Copyright © 2026 PT Bank Sinarmas Tbk. All rights reserved.

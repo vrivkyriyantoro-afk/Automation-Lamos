@@ -1,0 +1,74 @@
+{
+  "bucket": "penyimpangan_pihak_terkait",
+  "title": "Penyimpangan & Pihak Terkait",
+  "sidebar": [
+    {
+      "title": "Penyimpangan dan Pihak Terkait",
+      "status": "Belum Lengkap",
+      "disabled": false
+    }
+  ],
+  "sections": [
+    {
+      "sidebar": "Penyimpangan dan Pihak Terkait",
+      "section": "Penyimpangan dan pihak terkait",
+      "fields": [
+        {
+          "section": "Penyimpangan dan pihak terkait",
+          "subsection": "",
+          "kind": "radio",
+          "label": "Apakah ada kondisi yang memerlukan penyimpangan?",
+          "required": true,
+          "options": [
+            {
+              "label": "Ya",
+              "value": "true",
+              "checked": false
+            },
+            {
+              "label": "Tidak",
+              "value": "false",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "section": "Penyimpangan dan pihak terkait",
+          "subsection": "",
+          "kind": "radio",
+          "label": "Apakah debitur terafiliasi pihak terkait?",
+          "required": true,
+          "options": [
+            {
+              "label": "Ya",
+              "value": "true",
+              "checked": false
+            },
+            {
+              "label": "Tidak",
+              "value": "false",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "section": "Penyimpangan dan pihak terkait",
+          "subsection": "",
+          "kind": "text",
+          "label": "Apakah ada kondisi yang memerlukan penyimpangan?",
+          "required": true,
+          "name": "finalBWMKCopyWriting",
+          "id": "finalBWMKCopyWriting",
+          "key": "finalBWMKCopyWriting",
+          "ariaLabel": "finalBWMKCopyWriting",
+          "placeholder": "Otomatis terisi",
+          "inputType": "text",
+          "disabled": true,
+          "readOnly": false,
+          "testid": "input",
+          "value": "Otomatis Terisi"
+        }
+      ]
+    }
+  ]
+}

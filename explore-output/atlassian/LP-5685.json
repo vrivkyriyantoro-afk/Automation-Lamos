@@ -1,0 +1,10 @@
+{
+  "type": "Jira Issue",
+  "key": "LP-5685",
+  "summary": "SLP - LAMOS - Origination SME - Phase 2 - Bucket Agunan",
+  "issueType": "Epic",
+  "status": "In Development",
+  "description": "Bucket Agunan \n\n### Description\nThe Collateral Bucket is designed to capture, manage, and process collateral data used in a loan application. This includes both new collateral submitted as part of the current application and existing collateral that has previously been registered.\nThis bucket will provide capabilities to:\n- Capture collateral data submitted by the debtor.\n- Reuse existing collateral data available in the core loan system.\n- Ensure that collateral data used in the loan origination process is complete, valid, and aligned with the requirements for credit analysis, approval, legal documentation, collateral binding, and downstream system integration.\nThe Collateral Bucket also serves as a key data source to ensure that the relationship between the loan application, credit facility, debtor, and collateral object is properly documented and traceable throughout the origination process.\nMiro Flow : \n\n \nFigma  : \n\n \nMapping Jenis Agunan ke Group Agunan: \nhttps://docs.google.com/spreadsheets/d/1ggnrERlCKhFiZMq975T3ee_YeqbS4C-S8zSq3lC8kkM/edit?gid=1197100659#gid=1197100659\n",
+  "totalChildStories": 0,
+  "childStories": []
+}
