@@ -7,9 +7,9 @@
 Terakhir diperbarui: **2026-10-30**
 
 ### 2026-10-30 — Sanitasi push GitHub: hapus secret dari branch (Copilot SDK in VS Code)
-- Dikerjakan: membersihkan branch `bucketAgunan` dari file `.env` yang terdeteksi sebagai secret oleh GitHub push protection, menambahkan aturan `.env` ke `.gitignore`, dan menyiapkan commit baru tanpa token Figma/Atlassian yang sebelumnya masuk ke commit terakhir.
-- Verifikasi: `git push origin HEAD` -> gagal karena GH013 push protection memblokir secret di `.env`; setelah `git reset --soft HEAD~1`, `git rm --cached -f .env`, dan commit ulang, push berikutnya harus bisa lolos bila file sensitif benar-benar dihilangkan dari history/range branch.
-- Belum selesai / gagal: menunggu validasi final push setelah commit sanitasi selesai.
+- Dikerjakan: membersihkan branch `bucketAgunan` dari file `.env` yang terdeteksi sebagai secret oleh GitHub push protection, menambahkan aturan `.env` ke `.gitignore`, dan membuat commit baru tanpa token Figma/Atlassian yang sebelumnya masuk ke commit terakhir.
+- Verifikasi: `git push origin HEAD` -> berhasil setelah `git reset --soft HEAD~1`, `git rm --cached -f .env`, penambahan `.gitignore`, dan commit ulang. Remote `bucketAgunan` saat ini menunjuk ke commit `f9a166e`.
+- Belum selesai / gagal: -
 - Keputusan user: -
 
 ### 2026-10-29 — Validasi Modul 3 Pengikatan Agunan (Copilot SDK in VS Code)
