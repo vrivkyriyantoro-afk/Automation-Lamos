@@ -980,6 +980,12 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
 
 ## 6. Riwayat
 
+### 2026-11-24 — Cegah `.env` & rahasia ter-push (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan: `.gitignore` diperketat (`.env`, `.env.*`, `*.env`, kecuali `.env.example`); `.env.example` baru (nama variabel saja); hook `.githooks/pre-commit` (blokir file `.env*` ter-stage dan pola `LAMOS_PASSWORD`/`ATLASSIAN_API_TOKEN`/`FIGMA_TOKEN`/`figd_`/`ATATT`/`password: '...'` pada baris yang ditambahkan); `npm run hooks:install` (`git config core.hooksPath .githooks`, perlu dijalankan sekali per clone).
+- Verifikasi: uji nyata hook: stage paksa `.env` -> diblokir; token tertempel di file lain -> diblokir (nilai disamarkan di output); perubahan normal -> lolos. Cek riwayat: `.env` (BASE_URL, LAMOS_USERNAME/PASSWORD, DOC_UPLOAD_DIR) pernah masuk commit awal `84b929e` yang ada di `origin/bucketAgunan` dan `origin/rivky.lamos-bulk-dokumen`; token Atlassian/Figma TIDAK pernah ada di riwayat.
+- Belum selesai / gagal: password LAMOS lama tetap ada di riwayat remote, harus di-rotate. Hook bersifat lokal (tidak ikut clone) dan bisa dilewati `--no-verify`; perlindungan sisi server (GitHub push protection / secret scanning) tidak diatur dari sini.
+- Keputusan user: `.env` jangan sampai ter-push ke GitHub.
+
 ### 2026-11-24 — Hapus kredensial default dari kode (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan: hapus fallback username/password yang tertulis langsung di 13 spec (`process.env.LAMOS_USERNAME || '...'` -> `process.env.LAMOS_USERNAME!`, sama untuk password), mengikuti pola spec lain. Kredensial hanya dari `.env`. Tambah `explore-output/atlassian/S2CML-4981.json` (berisi 3 `apikey` salinan deskripsi Jira) ke `.gitignore`.
 - Verifikasi: grep tidak menemukan sisa password/username default di `tests/ features/ pages/ scripts/ utils/ .claude/`; `playwright --list` tetap 305 test / 89 file. Password SUDAH ada di GitHub: `origin/bucketAgunan` (13 file) dan `origin/rivky.lamos-bulk-dokumen` (5 file).

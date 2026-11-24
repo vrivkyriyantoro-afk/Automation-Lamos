@@ -1,0 +1,22 @@
+#!/bin/sh
+# Blokir commit yang membawa rahasia. Aktifkan: npm run hooks:install
+fail=0
+
+# 1) file .env* (selain .env.example)
+bad=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '(^|/)(\.env($|\.)|[^/]*\.env$)' | grep -vE '(^|/)\.env\.example$')
+if [ -n "$bad" ]; then
+  echo "DIBLOKIR: file env ikut ter-stage:"; echo "$bad" | sed 's/^/  - /'
+  echo "  Lepas dengan: git restore --staged <file>"; fail=1
+fi
+
+# 2) pola rahasia pada baris yang ditambahkan (selain .env.example)
+hits=$(git diff --cached -U0 --no-color -- . ':!.env.example' ':!.githooks' \
+  | grep -E '^\+' | grep -vE '^\+\+\+' \
+  | grep -E '(LAMOS_PASSWORD|ATLASSIAN_API_TOKEN|FIGMA_TOKEN)[[:space:]]*=[[:space:]]*[^[:space:]$]{4,}|figd_[A-Za-z0-9_-]{20,}|ATATT[A-Za-z0-9_=-]{20,}|(password|passwd)[[:space:]]*[:=][[:space:]]*["'"'"'][^"'"'"'$]{4,}["'"'"']' \
+  | grep -vE 'process\.env|WrongPassword|<disembunyikan>' | cut -c1-80)
+if [ -n "$hits" ]; then
+  echo "DIBLOKIR: terdeteksi pola kredensial pada baris yang ditambahkan (dipotong 80 karakter):"
+  echo "$hits" | sed 's/^/  /' | sed -E 's/(=|:)[[:space:]]*["'"'"']?[^[:space:]"'"'"']{3}[^[:space:]"'"'"']*/\1 ***/'
+  echo "  Pakai process.env / .env. Bila ini false positive, commit ulang dengan: git commit --no-verify (hati-hati)."; fail=1
+fi
+exit $fail

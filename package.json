@@ -27,7 +27,8 @@
     "bdd:test": "bddgen -c playwright.bdd.config.ts && playwright test -c playwright.bdd.config.ts --project=chromium",
     "bdd:test:headed": "bddgen -c playwright.bdd.config.ts && playwright test -c playwright.bdd.config.ts --project=chromium --headed",
     "catalog:build": "node scripts/generators/build-catalog.js",
-    "catalog:check": "node scripts/generators/build-catalog.js --check"
+    "catalog:check": "node scripts/generators/build-catalog.js --check",
+    "hooks:install": "git config core.hooksPath .githooks"
   },
   "keywords": [],
   "author": "",
