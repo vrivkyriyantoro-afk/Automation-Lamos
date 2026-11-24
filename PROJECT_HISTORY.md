@@ -971,6 +971,12 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
 
 ## 6. Riwayat
 
+### 2026-11-24 — Fase 2 Agunan: konsolidasi pembuka form ke `AgunanModal` (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan: `pages/buckets/agunan/AgunanModal.ts` (baru, selector dipindah apa adanya). 10 spec memakai `bukaModalTambah` (`openTambahAgunanModal`), 10 spec memakai `bukaFormAgunanBaru` (`navigateToFormAgunanBaru`; `modul4`/`modul5` mempertahankan scroll spesifiknya). Nama fungsi lama dipertahankan sebagai pembungkus tipis, isi test tidak berubah. 10 file: +30 / -369 baris. README `pages/buckets/agunan/` berisi status migrasi dan urutan modul berikutnya.
+- Verifikasi: sebelum mengganti, saya cek salinan identik lewat normalisasi body (open: 10 identik; navigate: 7 identik + varian modul2/4/5 yang hanya beda parameter/tail). `playwright --list` tetap 305 test / 89 file; `catalog:check` up-to-date. TIDAK dijalankan ke SIT.
+- Belum selesai / gagal: field Step 1 (modul2-4) belum ditarik ke page object bertipe (masih selector teks), jadi belum masuk katalog. `navigateToFormAgunanBaru` di `s2cml-4890-negative-rules` dan `s2cml-5420` tidak disatukan (urutan langkah sedikit beda). `helpers/agunanModal.ts` & `greenFlowTanah.ts` belum dimigrasi. Perilaku refactor belum dibuktikan di SIT.
+- Keputusan user: lanjut fase 2 (pilihan 1).
+
 ### 2026-11-24 — Restruktur pages/ jadi sumber locator + katalog + fondasi Gherkin (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan: `pages/` -> `base/`, `controls/`, `buckets/<kebab>/` (import di 126 file + `generate-pages.js` disesuaikan). Hapus 8 `*Page.ts` lama + `index.ts` di identitas (tak diimpor siapa pun, atas izin user); `DataPenjaminPage` -> `buckets/identitas/legacy/` (2 spec masih memakai). Baru: `scripts/generators/build-catalog.js` -> `pages/catalog/{CATALOG.md,catalog.json}` (9 bucket, 34 class, 265 field = sama dengan jumlah getter di source), `pages/README.md`, `pages/buckets/agunan/README.md`. Gherkin: `playwright-bdd@9.2.1`, `playwright.bdd.config.ts`, `features/` (login.feature + steps), script npm `bdd:*` dan `catalog:*`. Aturan "locator hanya di pages/" ditambah ke AGENTS.md.
 - Verifikasi: `playwright --list` tetap 305 test / 89 file; generator tanpa `--force` tidak mengubah file; `catalog:check` up-to-date; `bddgen` + `--list` mengenali 2 skenario berbahasa Indonesia dan semua step ter-resolve.

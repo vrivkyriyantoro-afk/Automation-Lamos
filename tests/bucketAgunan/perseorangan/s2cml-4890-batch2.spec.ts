@@ -1,6 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 import 'dotenv/config';
 import { LoginPage } from '../../../pages/base/LoginPage';
+import { AgunanModal } from '../../../pages/buckets/agunan/AgunanModal';
 
 /**
  * Test Suite: Story S2CML-4890 - Batch 2
@@ -34,46 +35,14 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Batch 2: Advanced 
    * Helper: Buka modal Tambah Agunan
    */
   async function openTambahAgunanModal(page: Page) {
-    const btnTambah = page.getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first();
-    await expect(btnTambah).toBeVisible({ timeout: 45000 });
-    await btnTambah.click();
-
-    const modal = page.locator('div').filter({ has: page.locator('h2:has-text("Tambah agunan")') }).last();
-    await expect(modal).toBeVisible({ timeout: 20000 });
-    return modal;
+    return new AgunanModal(page).bukaModalTambah();
   }
 
   /**
    * Helper: Masuk ke Form Agunan Baru
    */
   async function navigateToFormAgunanBaru(page: Page, jenisKeyword: string = 'Tanah') {
-    await openTambahAgunanModal(page);
-
-    await page.locator('div, button, span').filter({ hasText: /^Pilih jenis agunan$/ }).last().click();
-    const listbox = page.locator('[role="listbox"]:visible, ul:visible').first();
-    await listbox.locator('li button, li').first().waitFor({ timeout: 15000 });
-
-    const targetOption = listbox.locator('li button, li').filter({ hasText: new RegExp(jenisKeyword, 'i') }).first();
-    if (await targetOption.isVisible({ timeout: 3000 }).catch(() => false)) {
-      await targetOption.click();
-    } else {
-      await listbox.locator('li button, li').first().click();
-    }
-
-    const inputNomor = page.locator('input[placeholder*="nomor" i]').first();
-    await inputNomor.fill('NONEXISTENT_DUMMY_CLS_' + Date.now());
-
-    const btnCari = page.locator('button:has-text("Cari")').first();
-    await expect(btnCari).toBeEnabled({ timeout: 10000 });
-    await btnCari.click();
-
-    const btnAgunanBaru = page.locator('button, [role="button"]').filter({ hasText: /Agunan Baru/i }).first();
-    await expect(btnAgunanBaru).toBeVisible({ timeout: 15000 });
-    await btnAgunanBaru.click();
-    await page.waitForTimeout(2000);
-
-    const activeModal = page.locator('div').filter({ has: page.locator('h2:has-text("Tambah agunan")') }).last();
-    return activeModal;
+    return new AgunanModal(page).bukaFormAgunanBaru(jenisKeyword);
   }
   // ponytail: test yang MENULIS data ke SIT (klik draft / submit) hanya jalan bila ALLOW_SIT_WRITE=1.
   const ALLOW_SIT_WRITE = process.env.ALLOW_SIT_WRITE === '1';

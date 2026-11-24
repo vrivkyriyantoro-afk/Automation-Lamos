@@ -3,6 +3,7 @@ import 'dotenv/config';
 import * as fs from 'fs';
 import * as path from 'path';
 import { LoginPage } from '../../../pages/base/LoginPage';
+import { AgunanModal } from '../../../pages/buckets/agunan/AgunanModal';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 2: Informasi Umum Agunan
@@ -29,53 +30,14 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
    * Helper: Buka modal Tambah Agunan (Step 1: Pencarian)
    */
   async function openTambahAgunanModal(page: Page) {
-    const btnTambah = page.getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first();
-    await expect(btnTambah).toBeVisible({ timeout: 45000 });
-    await btnTambah.click();
-
-    const modal = page.locator('div').filter({ has: page.locator('h2:has-text("Tambah agunan")') }).last();
-    await expect(modal).toBeVisible({ timeout: 20000 });
-    return modal;
+    return new AgunanModal(page).bukaModalTambah();
   }
 
   /**
    * Helper: Masuk ke Form Agunan Baru (Step Stepper: Data Agunan)
    */
   async function navigateToFormAgunanBaru(page: Page, jenisKeyword?: string) {
-    const modal = await openTambahAgunanModal(page);
-
-    // 1. Pilih jenis agunan
-    await page.locator('div, button, span').filter({ hasText: /^Pilih jenis agunan$/ }).last().click();
-    const listbox = page.locator('[role="listbox"]:visible, ul:visible').first();
-    await listbox.locator('li button, li').first().waitFor({ timeout: 15000 });
-
-    if (jenisKeyword) {
-      const targetOption = listbox.locator('li button, li').filter({ hasText: new RegExp(jenisKeyword, 'i') }).first();
-      if (await targetOption.isVisible({ timeout: 3000 }).catch(() => false)) {
-        await targetOption.click();
-      } else {
-        await listbox.locator('li button, li').first().click();
-      }
-    } else {
-      await listbox.locator('li button, li').first().click();
-    }
-
-    // 2. Isi nomor bukti fiktif & cari
-    const inputNomor = page.locator('input[placeholder*="nomor" i]').first();
-    await inputNomor.fill('NONEXISTENT_DUMMY_CLS_' + Date.now());
-
-    const btnCari = page.locator('button:has-text("Cari")').first();
-    await expect(btnCari).toBeEnabled({ timeout: 10000 });
-    await btnCari.click();
-
-    // 3. Klik tombol + Agunan Baru
-    const btnAgunanBaru = page.locator('button, [role="button"]').filter({ hasText: /Agunan Baru/i }).first();
-    await expect(btnAgunanBaru).toBeVisible({ timeout: 15000 });
-    await btnAgunanBaru.click();
-    await page.waitForTimeout(2000);
-
-    const activeModal = page.locator('div').filter({ has: page.locator('h2:has-text("Tambah agunan")') }).last();
-    return activeModal;
+    return new AgunanModal(page).bukaFormAgunanBaru(jenisKeyword);
   }
 
   /**
