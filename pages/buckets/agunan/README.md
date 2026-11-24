@@ -19,7 +19,7 @@ dan diverifikasi tiap modul. Selector Agunan tersebar sekitar 1.257 baris di 80 
 ## Sengaja belum disatukan
 - `navigateToFormAgunanBaru` di `s2cml-4890-negative-rules.spec.ts` dan `s2cml-5420.spec.ts`: urutan langkahnya sedikit berbeda
   (mis. jeda 1 dtk setelah klik `+ Agunan`). Perlu dibandingkan dan diverifikasi ke SIT sebelum disatukan.
-- Helper di `tests/bucketAgunan/helpers/` (`agunanModal.ts`, `greenFlowTanah.ts`): masih dipakai 8+ spec.
+- Helper di `tests/bucketAgunan/_shared/` (`agunanModal.ts`, `greenFlowTanah.ts`): masih dipakai 8+ spec.
 
 Setelah modul dipindah ke `pages/buckets/agunan/<Modul>Section.ts` dengan kontrol dari `pages/controls/FormControls.ts`,
 jalankan `npm run catalog:build` agar field-nya masuk katalog. `AgunanModal` belum masuk katalog karena belum memakai kontrol bertipe.

@@ -6,7 +6,7 @@ from openpyxl.utils import get_column_letter
 # TC Matrix S2CML-5905 — Edge Cases Impact From Bucket Identitas.
 # Sumber: vault QA BSM Projects/LAMOS/Agunan/Stories/S2CML-5905/plan.md (status draft).
 # Semua TC mengubah data SIT -> butuh App ID khusus + izin user.
-os.makedirs('exports/test-cases', exist_ok=True)
+os.makedirs('tests/bucketIdentitas/S2CML-5905', exist_ok=True)
 
 PEMILIK = 'Pemilik agunan = pasangan/penjamin yang identitasnya akan hilang. '
 CHK = ('Agunan berstatus Draft; checklist Form Data Agunan hilang; '
@@ -56,7 +56,7 @@ H = ['Test Case ID', 'Tipe Debitur', 'Kelompok / Modul', 'Judul Skenario', 'Tipe
      'Prekondisi', 'Langkah Pengujian', 'Expected Result', 'Referensi Sumber']
 rows = [[c['id'], c['debtor'], c['group'], c['title'], c['type'], c['prio'],
          c['pre'], c['steps'], c['exp'], c['ref']] for c in cases]
-base = 'exports/test-cases/TC_S2CML-5905_Edge_Cases_Bucket_Identitas'
+base = 'tests/bucketIdentitas/S2CML-5905/TC_S2CML-5905_Edge_Cases_Bucket_Identitas'
 
 with open(base + '.csv', 'w', newline='', encoding='utf-8-sig') as f:
     w = csv.writer(f); w.writerow(H); w.writerows(rows)

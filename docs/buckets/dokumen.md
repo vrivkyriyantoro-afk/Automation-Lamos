@@ -7,7 +7,7 @@ Terakhir diperbarui: **2026-11-24** (stub).
 ## Yang diketahui (dari `PROJECT_HISTORY.md` 2.1 dan 2.3)
 - Bucket id `dokumen`, folder page object `pages/buckets/dokumen/` (manual, pohon dokumen parsial).
 - Upload file: `input[type="file"]` dengan **id dinamis** (`:r0:`), bukan `id="ktpFiles"` seperti bucket lain.
-- Spec `tests/bucketDokumen/explore-dokumen.spec.ts` ada (eksplorasi); belum ada flow terverifikasi (registry: "baru lolos typecheck").
+- Spec `tests/bucketDokumen/_umum/explore-dokumen.spec.ts` ada (eksplorasi); belum ada flow terverifikasi (registry: "baru lolos typecheck").
 
 ## Tidak terbukti
 Peta section, rule form, jenis dokumen wajib, gate, kaitan dengan bucket lain.

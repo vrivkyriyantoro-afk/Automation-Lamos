@@ -7,6 +7,16 @@
 
 Terakhir diperbarui: **2026-11-24**
 
+### 2026-11-24 — Rapikan folder: test case + spec digabung per story, hapus file sekali pakai (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan:
+  - Matriks TC (`exports/test-cases/*`) dipindah ke `tests/<bucket>/<story>/` bersama spec story-nya (`git mv`, riwayat terjaga): Agunan 4889, 4890, 4941, 4948, 4949, 5419, 5420, 5445 (CSV saja), 6018 (spec saja), 6020; Identitas 5905 (CSV saja). Folder `perseorangan/` dan `badanUsaha/` dihapus; spec 4890 diganti nama (`-perseorangan`, `-badan-usaha`, `-badan-usaha-kepemilikan`).
+  - `tests/bucketAgunan/helpers` -> `_shared`. Spec lintas story / masih dipakai skill & docs -> `tests/<bucket>/_umum/` (modul2-8, spec isi Identitas & SLIK, spec Dokumen, validate-agunan-dropdown).
+  - Dihapus (`git rm`, persetujuan user): ~35 spec explore/probe sekali pakai di tests/, 11 script di `scripts/jira/`, seluruh `scripts/maintenance/`, `GEMINI.md`, folder kosong `specs/`.
+  - Import & path diperbarui di spec; `scripts/export-tc/export_tc_s2cml_*.py` + `audit_tc_redundancy.py` menulis/membaca folder story; referensi di `AGENTS.md`, `package.json`, `docs/`, `.claude/` disesuaikan.
+- Verifikasi: ✅ `playwright test tests/bucketAgunan --list` = 208 test / 27 file, Dokumen 4/4, explore 1, smoke 27, auth 3; skrip Node: 113 import relatif di `tests/` semuanya ter-resolve; `py_compile` skrip export OK. 🟡 Spec Identitas tidak bisa di-`--list` tanpa env (throw di level modul, perilaku lama); import-nya sudah dicek statis. Tidak ada test dijalankan ke SIT.
+- Belum selesai / gagal: `s2cml-4889.spec.ts` dan `_umum/validate-agunan-dropdown.spec.ts` masih membaca file di `fixtures/sources/` yang sudah dihapus user (commit 77d2cb6) -> akan gagal saat dijalankan sampai ada sumber data pengganti. Referensi path lama di entri riwayat lama sengaja tidak diubah.
+- Keputusan user: struktur `tests/<bucket>/<story>/`; spec tanpa story yang masih dipakai -> `_umum/`; hapus semua file yang tidak direferensikan (daftar disetujui).
+
 ### 2026-11-24 — Tambah MCP Atlassian & Figma di `.mcp.json` (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan:
   - `.mcp.json`: tambah server remote `atlassian` (`https://mcp.atlassian.com/v1/mcp`) dan `figma` (`https://mcp.figma.com/mcp`) di samping `playwright`.

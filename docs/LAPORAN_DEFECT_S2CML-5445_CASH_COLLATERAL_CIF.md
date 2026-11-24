@@ -7,7 +7,7 @@
 **Status:** Open / Ready to Submit to Jira  
 
 Sumber AC: `explore-output/atlassian/S2CML-5445.json` (folder `specs/bucket-agunan/S2CML-5445/` kosong saat audit).  
-Run acuan: Playwright 22-11-2026 pukul 23.08–23.11 (`test-results/bucketAgunan-perseorangan--*`), suite `tests/bucketAgunan/perseorangan/modul7-data-tambahan.spec.ts`.
+Run acuan: Playwright 22-11-2026 pukul 23.08–23.11 (`test-results/bucketAgunan-perseorangan--*`), suite `tests/bucketAgunan/_umum/modul7-data-tambahan.spec.ts`.
 
 ---
 

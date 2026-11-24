@@ -82,7 +82,7 @@ GF-COMMON-LOGIN
 ### GF-COMMON-LOGIN
 - **Status:** LOLOS (dipakai semua suite hijau, mis. 4949 `run-history/2026-11-18T01-45-56-960Z.json`)
 - **Prasyarat:** `.env` berisi `LAMOS_USERNAME`, `LAMOS_PASSWORD`
-- **Langkah:** `new LoginPage(page)` → `goto()` → `login(user, pass)` → `expectLoginSuccess()` | `pages/base/LoginPage.ts`, `tests/bucketAgunan/helpers/agunanModal.ts:13-19`
+- **Langkah:** `new LoginPage(page)` → `goto()` → `login(user, pass)` → `expectLoginSuccess()` | `pages/base/LoginPage.ts`, `tests/bucketAgunan/_shared/agunanModal.ts:13-19`
 - **Catatan:** redirect SSO Kratos + render awal 60–90 detik → `test.setTimeout(180000)` (Gotcha 11). Flaky di `LoginPage.ts:55` (`not.toHaveURL` kratos): TC-4949-08 gagal login (`run-history/2026-11-18T01-45-56-960Z.json`), `login.spec.ts` gagal (`2026-11-13T07-29-29`). Jangan menjalankan dua run SIT paralel.
 
 ### GF-COMMON-BUKA-BUCKET
@@ -100,7 +100,7 @@ GF-COMMON-LOGIN
 - **Status:** LOLOS (2026-11-23, 2 run passed)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET (`identitas_pengecekan`, `debtorType=individual`)
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. 2 penjamin perorangan dari `automation_config.*.xlsx` sheet Leads: TEGAR JATI WICAKSONO (L) + pasangan NENDEN NUGRAHA; ERIN (P) + pasangan RENALDY KUSUMA.
-- **Langkah:** spec `tests/bucketIdentitas/penjamin-menikah-lp-01M83.spec.ts`. Env: `PENJAMIN_COMMIT=1` (tulis ke SIT), `PENJAMIN_ONLY_SPOUSE=<index>` (isi ulang pasangan kartu tertentu), `PENJAMIN_FILE` (file upload). Helper: `pages/buckets/identitas/PenjaminForms.ts`, `pages/controls/FormControls.ts`.
+- **Langkah:** spec `tests/bucketIdentitas/_umum/penjamin-menikah-lp-01M83.spec.ts`. Env: `PENJAMIN_COMMIT=1` (tulis ke SIT), `PENJAMIN_ONLY_SPOUSE=<index>` (isi ulang pasangan kartu tertentu), `PENJAMIN_FILE` (file upload). Helper: `pages/buckets/identitas/PenjaminForms.ts`, `pages/controls/FormControls.ts`.
 - **Bukti:** run 29,6 dtk passed (2 penjamin + pasangan); run 33,5 dtk passed (isi ulang pasangan kartu 2 + verifikasi muat ulang, sidebar "Data penjamin | Lengkap"). Sumber: log run sesi 2026-11-23. Screenshot `penjamin-1.png`, `penjamin-2.png`, `penjamin-akhir.png` di `test-results/bucketIdentitas-penjamin-m-5a9ab-L-NENDEN-dan-ERIN-P-RENALDY-chromium/` (folder tidak ditemukan saat pencatatan; test-results bisa tertimpa).
 - **Gotcha:** autosave section Data Penjamin baru terkirim saat MENINGGALKAN section atau menambah kartu, bukan saat mengetik; verifikasi selalu lewat muat ulang. Data dimuat async (awal: radio kosong, 0 kartu, sidebar sementara "Belum Lengkap"): tunggu data sebelum menghitung kartu.
 - **Konflik:** kartu kosong "Penjamin 4" sempat terlihat di satu sesi, hilang pada muat segar; asal tidak diketahui. Flow lama `GF-IDENTITAS-PENJAMIN-PERORANGAN` (App ID `01M483P7DDHBV41Z5QPV0FM8Q9`, `penjamin-perorangan-menikah.spec.ts`, dry run) tetap tercatat di bagian DITUNDA.
@@ -109,7 +109,7 @@ GF-COMMON-LOGIN
 - **Status:** LOLOS (2026-11-23, run passed 1,3 menit)
 - **Prasyarat:** GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH (2 kartu perorangan dulu)
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. Kartu ke-3 Corporate Guarantee PT Bintang Sejahtera (`fixtures/entities/penjamin-badan-usaha.json`) + pengurus/pemegang saham PIPIT NILA WARDANI (perorangan WNI) dan CV Makmur Abadi (badan usaha).
-- **Langkah:** spec `tests/bucketIdentitas/penjamin-badan-usaha-lp-01M83.spec.ts`; modal "Tambah pengurus/pemegang saham" via `PengurusModal` (`PenjaminForms.ts`).
+- **Langkah:** spec `tests/bucketIdentitas/_umum/penjamin-badan-usaha-lp-01M83.spec.ts`; modal "Tambah pengurus/pemegang saham" via `PengurusModal` (`PenjaminForms.ts`).
 - **Bukti:** jaringan dua `POST .../data_penjamin/<id>/shareholders` = 201; verifikasi setelah muat ulang; sidebar Data penjamin Lengkap. Screenshot `penjamin-3-akhir.png` di `test-results/bucketIdentitas-penjamin-b-94f7e--Guarantee-3-pemegang-saham-chromium/` (folder tidak ditemukan saat pencatatan).
 - **Gotcha:** viewport 1280x1800 (720 terlalu pendek; popup dropdown modal terbuka ke atas dan ditutup scroll otomatis Playwright). Klik di luar form saat menutup datepicker menutup modal: pakai Tab. Tombol dialog/modal tanpa accessible name: pakai CSS + teks, bukan `getByRole`. `Locator.isVisible({timeout})` mengabaikan timeout: pakai `waitFor`. Backend SIT intermiten 500 pada `GET /lossvc/v1/config/dropdowns?type=GUARANTOR_TYPE` dan `type=provinces_lamos` (opsi dropdown kosong).
 - **Konflik:** daftar pengurus/pemegang saham di Pengecekan DHN DHIB memuat HANDHIANTO SURYO KENTJONO (perorangan, Pemegang Saham) yang TIDAK ditambahkan spec; kemungkinan ditambah manual (tidak terbukti).
@@ -119,7 +119,7 @@ GF-COMMON-LOGIN
 - **Dipakai oleh:** Agunan (GF-AGUNAN-STEP3-AUTOFILL-001, S2CML-4948)
 - **Prasyarat:** GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH, GF-IDENTITAS-PENJAMIN-BADAN-USAHA
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z` (perorangan).
-- **Langkah:** spec `tests/bucketIdentitas/identitas-lengkap-01M83.spec.ts` (env `IDENTITAS_SUBMIT=1`; `IDENTITAS_CONFIRM=1` hanya untuk konfirmasi dialog).
+- **Langkah:** spec `tests/bucketIdentitas/_umum/identitas-lengkap-01M83.spec.ts` (env `IDENTITAS_SUBMIT=1`; `IDENTITAS_CONFIRM=1` hanya untuk konfirmasi dialog).
 - **Hasil:** sidebar 8 section Lengkap: Data pribadi, Data pribadi tambahan, Lokasi & kondisi, Data pekerjaan & keuangan, Data kontak darurat, Data penjamin, Referensi (opsional), LBU.
 - **Data dummy (disetujui user):** status tempat tinggal Milik Sendiri; Pengalaman industri 12; telp perusahaan 0211234567; kode pos 10140; kontak darurat BUDI SANTOSO (Saudara Kandung), alamat Gambir/Duri Pulo; LBU = opsi pertama tiap dropdown (1 - Kredit...Direstrukturisasi, S131101L, 01 BUMDes, UM, 10, 3211 Aceh Tamiang). Tanggal lahir debitur 20 Nov 2026 adalah autofill leads (terkunci, JANGAN diubah, arahan user).
 - **Bukti:** sidebar semua Lengkap pada run terakhir sesi; `explore-output/identitas/probe-pengecekan-01M83.json` (snapshot sidebar).
@@ -149,10 +149,10 @@ GF-COMMON-LOGIN
   5. Pilih file, lalu klik teks "Simpan" (exact, `.last()`).
 - **Isi modal (9 baris):** 1 Debitur Agus; 2 Penjamin 1 ERIN; 3 Pasangan RENALDY KUSUMA; 4 Penjamin 2 TEGAR JATI WICAKSONO; 5 Pasangan NENDEN NUGRAHA; 6 Penjamin 3 PT Bintang Sejahtera; 7 Pengurus PIPIT NILA WARDANI; 8 Pengurus HANDHIANTO SURYO KENTJONO; 9 Pengurus CV Makmur Abadi.
 - **Perilaku:** memilih file baru MENAMBAH kartu file di samping yang lama (tidak mengganti); hapus file lama lewat ikon X (button tanpa atribut `title` pada kartu). SIT (ABIDSU) mencocokkan nomor identitas DI DALAM file .txt dengan entitas baris: baris 7 diunggah file ERIN memunculkan error "No ID Entitas 3302265910820003 tidak sesuai dengan ID pada file SLIK Debitur yang diunggah" (screenshot dari user, tidak tersimpan di repo); setelah diganti `NIK_3302265910820003.txt` error hilang.
-- **Hasil terakhir (cek ulang read-only 2026-11-24, `tests/bucketIdentitas/read-slik-status.spec.ts` passed 31 dtk, bukti `explore-output/identitas/slik-status-check.txt`, `test-results/slik-status-check.png`):** baris 1, 2, 3, 5, 6, 8, 9 "Berhasil diimpor". Baris 4 (TEGAR) tetap hanya menampilkan "145.28 KB" tanpa label "Berhasil diimpor" (impor tidak selesai/tidak terbukti). Baris 7 (PIPIT) kembali menampilkan `NIK_3205335802980003.txt` (file ERIN) dengan error "No ID Entitas 3302265910820003 tidak sesuai...": penggantian file lewat fix-slik-pengurus TIDAK tersimpan (atau tertimpa) setelah modal dibuka ulang. Status bucket "Pengecekan SLIK" = Belum Lengkap. Tombol "Kirim" tidak ditekan.
-- **Percobaan hapus-semua-lalu-upload-ulang baris 4 (2026-11-24, `tests/bucketIdentitas/reupload-slik-row.spec.ts` passed 1,1 mnt, bukti `test-results/reupload-1..4-*.png`, `explore-output/identitas/reupload-verifikasi.txt`):** hapus .txt + .pdf, upload `NIK_3373041608960002.txt` + `dummy-identitas.pdf` (199 B), Simpan: kartu langsung menampilkan file baru tetapi tanpa label "Berhasil diimpor"; setelah reload halaman + buka ulang modal, baris 4 kembali ke `document-10mb.pdf` dan .txt tetap tanpa label impor. Kesimpulan (dugaan, belum terbukti): "Simpan" di modal hanya mengubah state sisi klien; perubahan tidak tersimpan ke server sampai ada aksi lain (mis. "Kirim"/simpan bucket) yang belum dicoba. Ini juga menjelaskan baris 7 yang kembali ke file ERIN. PENJELASAN USER (2026-11-24): tombol "Proses file .txt" nonaktif (`disabled:true`, dicek sebelum dan sesudah klik) karena App ID `01M83AP5FKPHB1D3E2QS8P015Z` sudah pernah diproses; pada kasus ini impor tidak bisa diulang, dan perubahan file di modal tidak diproses ke server (itu sebabnya baris 4/7 kembali setelah reload). Untuk menguji impor penuh (tombol biru) perlu App ID baru yang belum pernah diproses. Diulang dengan PDF asli 10 MB (bukan dummy): hasil sama (.txt tanpa label impor; setelah reload tampil `document-10mb.pdf`), jadi ukuran PDF bukan penyebab.
+- **Hasil terakhir (cek ulang read-only 2026-11-24, `tests/bucketIdentitas/_umum/read-slik-status.spec.ts` passed 31 dtk, bukti `explore-output/identitas/slik-status-check.txt`, `test-results/slik-status-check.png`):** baris 1, 2, 3, 5, 6, 8, 9 "Berhasil diimpor". Baris 4 (TEGAR) tetap hanya menampilkan "145.28 KB" tanpa label "Berhasil diimpor" (impor tidak selesai/tidak terbukti). Baris 7 (PIPIT) kembali menampilkan `NIK_3205335802980003.txt` (file ERIN) dengan error "No ID Entitas 3302265910820003 tidak sesuai...": penggantian file lewat fix-slik-pengurus TIDAK tersimpan (atau tertimpa) setelah modal dibuka ulang. Status bucket "Pengecekan SLIK" = Belum Lengkap. Tombol "Kirim" tidak ditekan.
+- **Percobaan hapus-semua-lalu-upload-ulang baris 4 (2026-11-24, `tests/bucketIdentitas/_umum/reupload-slik-row.spec.ts` passed 1,1 mnt, bukti `test-results/reupload-1..4-*.png`, `explore-output/identitas/reupload-verifikasi.txt`):** hapus .txt + .pdf, upload `NIK_3373041608960002.txt` + `dummy-identitas.pdf` (199 B), Simpan: kartu langsung menampilkan file baru tetapi tanpa label "Berhasil diimpor"; setelah reload halaman + buka ulang modal, baris 4 kembali ke `document-10mb.pdf` dan .txt tetap tanpa label impor. Kesimpulan (dugaan, belum terbukti): "Simpan" di modal hanya mengubah state sisi klien; perubahan tidak tersimpan ke server sampai ada aksi lain (mis. "Kirim"/simpan bucket) yang belum dicoba. Ini juga menjelaskan baris 7 yang kembali ke file ERIN. PENJELASAN USER (2026-11-24): tombol "Proses file .txt" nonaktif (`disabled:true`, dicek sebelum dan sesudah klik) karena App ID `01M83AP5FKPHB1D3E2QS8P015Z` sudah pernah diproses; pada kasus ini impor tidak bisa diulang, dan perubahan file di modal tidak diproses ke server (itu sebabnya baris 4/7 kembali setelah reload). Untuk menguji impor penuh (tombol biru) perlu App ID baru yang belum pernah diproses. Diulang dengan PDF asli 10 MB (bukan dummy): hasil sama (.txt tanpa label impor; setelah reload tampil `document-10mb.pdf`), jadi ukuran PDF bukan penyebab.
 - **Varian App ID sudah pernah diproses (tombol "Proses file .txt" nonaktif):** dipindah ke flow **GF-IDENTITAS-PENGECEKAN-SLIK-REUPLOAD** (di bawah), termasuk alur penuh "Hapus semua file" + upload ulang + Proses. Percobaan ganti per baris di atas terbukti TIDAK cukup untuk kondisi itu.
-- **Helper/spec:** `tests/bucketIdentitas/fix-slik-pengurus.spec.ts` (run passed 1,1 mnt, 2026-11-24); `upload-semua-slik.spec.ts` (alur penuh, env PROSES=1); `reupload-slik-row.spec.ts`; `read-slik-status.spec.ts` (read-only).
+- **Helper/spec:** `tests/bucketIdentitas/_umum/fix-slik-pengurus.spec.ts` (run passed 1,1 mnt, 2026-11-24); `upload-semua-slik.spec.ts` (alur penuh, env PROSES=1); `reupload-slik-row.spec.ts`; `read-slik-status.spec.ts` (read-only).
 - **Bukti:** `test-results/slik-kelola.png`, `slik-fix-dialog.png`, `slik-fix-after.png` (test-results bisa tertimpa); `explore-output/identitas/slik-modal.json`.
 - **Gotcha:** `getByRole` tidak menemukan tombol di modal (overlay `aria-hidden`): pakai `getByText` exact. Nama entitas juga muncul di halaman di belakang modal: pakai indeks baris / `.last()`.
 - **Konflik:** (1) modal melabeli ERIN "Penjamin 1" dan TEGAR "Penjamin 2", sedangkan halaman Data penjamin / flow GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH mengurutkan TEGAR dulu lalu ERIN (urutan modal dan halaman berbeda; penyebab tidak terbukti). Pakai nama entitas, bukan nomor "Penjamin N", untuk memilih baris. (2) Nama file di exports ("NIK_...") vs entri halaman baris: validasi hanya berdasarkan isi file, bukan nama file (nama file saja tidak cukup terbukti).
@@ -163,12 +163,12 @@ GF-COMMON-LOGIN
 - **Prasyarat:** GF-IDENTITAS-PENGECEKAN-SLIK-UPLOAD (modal, file mock, pemetaan entitas), GF-IDENTITAS-PENGECEKAN.
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. PDF `C:/Users/V50324/Downloads/document-10mb.pdf` (10.485.760 byte, di luar repo; pakai garis miring biasa, backslash rusak di heredoc). Pemetaan baris -> .txt: 1 Agus `exports/slik/slik-debitur/NIK_3200000000000006.txt`; sisanya di `exports/slik/slik-penjamin/`: 2 ERIN NIK_3205335802980003; 3 RENALDY NIK_3277010909850013; 4 TEGAR NIK_3373041608960002; 5 NENDEN NIK_3211146311760006; 6 PT Bintang NPWP_3578241603710991; 7 PIPIT NIK_3302265910820003; 8 HANDHIANTO NIK_3171030309630002; 9 CV Makmur Abadi NPWP_3578241603710992.
 - **PERINGATAN destruktif:** "Hapus semua file" menghapus semua file SLIK yang sudah diupload, termasuk yang sedang/sudah diproses (data impor lama hilang). Jalankan hanya dengan izin user.
-- **Langkah (terbukti, `tests/bucketIdentitas/upload-semua-slik.spec.ts` passed 3,1 mnt, env PROSES=1):**
+- **Langkah (terbukti, `tests/bucketIdentitas/_umum/upload-semua-slik.spec.ts` passed 3,1 mnt, env PROSES=1):**
   1. Buka modal "Lengkapi file SLIK" (sidebar "Pengecekan SLIK" lalu klik "Klik untuk melengkapi file SLIK").
   2. Klik "Hapus semua file" (exact, `.last()`): konfirmasi "Hapus semua file? Tindakan ini akan menghapus semua file yang sudah diupload, termasuk yang sedang dan sudah selesai diproses." (Batalkan / Hapus File) -> "Hapus File": 9 baris "Belum ada file".
   3. Per baris 1..9: "Kelola file" ke-N; pilih .txt (`Klik untuk pilih file` indeks n-2) dan .pdf (n-1); "Simpan".
   4. Cek "Proses file .txt" aktif (log `PROSES disabled: false`); klik -> modal "Memproses", tombol "Batalkan proses", kartu "Sedang mengimpor..." lalu "Berhasil diimpor" per baris; tunggu menit.
-  5. Verifikasi read-only: `tests/bucketIdentitas/read-slik-status.spec.ts` (output `explore-output/identitas/slik-status-check.txt`).
+  5. Verifikasi read-only: `tests/bucketIdentitas/_umum/read-slik-status.spec.ts` (output `explore-output/identitas/slik-status-check.txt`).
 - **Hasil (baca ulang ~3 mnt setelah Proses):** 8 dari 9 baris "Berhasil diimpor" (baris 4 TEGAR dan 7 PIPIT tanpa error); baris 3 RENALDY masih "Sedang mengimpor...", modal masih "Memproses"; indikator bucket "Lengkap" tanpa "Belum Lengkap". Belum final. Sebelum varian ini: log `PROSES sebelum klik: disabled:true` (run `reupload-slik-row.spec.ts`).
 - **Helper/spec:** `upload-semua-slik.spec.ts` (alur penuh), `reupload-slik-row.spec.ts` (env ROWS, PROSES, PDF; ganti per baris, terbukti tidak cukup saat tombol nonaktif), `read-slik-status.spec.ts`.
 - **Bukti:** `test-results/upload-semua-1..3-*.png`, `upload-semua-2-sebelum-proses.png` (tombol), `explore-output/identitas/upload-semua-verifikasi.txt`, `slik-status-check.txt`, `reupload-verifikasi.txt` (test-results bisa tertimpa).
@@ -179,7 +179,7 @@ GF-COMMON-LOGIN
 - **Status:** LOLOS (2026-11-24, spec read-only, output JSON tersimpan)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET (`identitas_pengecekan`, `debtorType=individual`), data dari GF-IDENTITAS-PENJAMIN-BADAN-USAHA
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. Dipakai oleh: GF-IDENTITAS-PENGECEKAN-SLIK-UPLOAD.
-- **Langkah:** spec `tests/bucketIdentitas/read-data-penjamin.spec.ts`, `read-pengurus-penjamin.spec.ts`, `read-data-debitur.spec.ts`; output `explore-output/identitas/*.json`. Di kolom Tindakan daftar pengurus: ikon pertama = Edit (memunculkan konfirmasi "Edit data ini?"), ikon mata = Detail; mode baca-saja wajib pakai ikon mata.
+- **Langkah:** spec `tests/bucketIdentitas/_umum/read-data-penjamin.spec.ts`, `read-pengurus-penjamin.spec.ts`, `read-data-debitur.spec.ts`; output `explore-output/identitas/*.json`. Di kolom Tindakan daftar pengurus: ikon pertama = Edit (memunculkan konfirmasi "Edit data ini?"), ikon mata = Detail; mode baca-saja wajib pakai ikon mata.
 - **Isi:** debitur Agus NIK 3200000000000006 (tanggal lahir SIT 20 Nov 2026, laki-laki); penjamin TEGAR 3373041608960002 + pasangan NENDEN 3211146311760006; penjamin ERIN 3205335802980003 + pasangan RENALDY 3277010909850013; penjamin Corporate PT Bintang Sejahtera NPWP 3578241603710991; pengurus/pemegang saham: PIPIT NILA WARDANI (perorangan, 3302265910820003, komisaris 40%), CV Makmur Abadi (badan usaha, NPWP 3578241603710992, 30%), HANDHIANTO SURYO KENTJONO (perorangan, 3171030309630002, CTO 4%).
 - **Konflik:** paginasi daftar pengurus menampilkan halaman 1/2/3 tetapi hanya 3 baris di halaman 1 (halaman 2 dan 3 kosong; kemungkinan bug UI SIT, belum diselidiki). HANDHIANTO ada di SIT tetapi tidak ditambahkan spec `penjamin-badan-usaha-lp-01M83.spec.ts`; asal tetap tidak terbukti (sudah dicatat di GF-IDENTITAS-PENJAMIN-BADAN-USAHA).
 
@@ -196,7 +196,7 @@ GF-COMMON-LOGIN
   2. Buka dropdown "Pilih jenis agunan" → pilih opsi (mis. `Tanah`)
   3. Isi `input[placeholder*="nomor" i]` dengan nomor dummy unik
   4. Klik `Cari` (aktif hanya bila jenis + nomor terisi)
-- **Helper:** `tests/bucketAgunan/helpers/agunanModal.ts:25-39`
+- **Helper:** `tests/bucketAgunan/_shared/agunanModal.ts:25-39`
 - **Hasil:** nomor fiktif → "Data tidak ditemukan" + tombol `+ Agunan Baru`.
 - **Konflik:** tombol Cari pernah tetap disabled di `agunanModal.ts:38` (TC-4948-08, 2026-11-17). `s2cml-4889.spec.ts:16` varian BU memakai `DEBITUR_TARGET||01M482…`; bila env diisi, varian BU membuka App ID perorangan.
 
@@ -210,7 +210,7 @@ GF-COMMON-LOGIN
 - **Status:** LOLOS (2026-10-30, TC-4890-01/02/03/11, path lama `tests/bucketAgunan/s2cml-4890.spec.ts`; App ID run itu tidak terbukti)
 - **Prasyarat:** GF-AGUNAN-AGUNAN-BARU
 - **Isi:** default step, status `Belum Lengkap`; Simpan disabled & Simpan draft aktif saat belum lengkap. Field per modul: `modul2-informasi-umum`, `modul3-pengikatan`, `modul4-alamat` (`tests/bucketAgunan/perseorangan/`).
-- **Helper:** `navigateToFormAgunanBaru` di `tests/bucketAgunan/perseorangan/s2cml-4890.spec.ts:43`
+- **Helper:** `navigateToFormAgunanBaru` di `tests/bucketAgunan/S2CML-4890/s2cml-4890-perseorangan.spec.ts:43`
 
 ### GF-AGUNAN-STEP1-DATA-PEMBANDING
 - **Status:** LOLOS (2026-10-30 `modul5-data-pembanding.spec.ts` 4 passed, `PROJECT_HISTORY.md` ~958; 2026-10-31 TC-04-43 1 passed)
@@ -260,7 +260,7 @@ GF-COMMON-LOGIN
 - **Konflik:** label SIT `Individu`/`Non Individu` vs matriks `Perorangan`/`Badan Usaha` (MISMATCH-03). Placeholder PIC terduplikasi (kandidat bug).
 
 ### GF-AGUNAN-BU-STEPPER
-- **Status:** LOLOS (2026-11-01 `tests/bucketAgunan/badanUsaha/s2cml-4890.spec.ts` 2 passed, `explore-output/logs/run-bu-stepper.log`)
+- **Status:** LOLOS (2026-11-01 `tests/bucketAgunan/S2CML-4890/s2cml-4890-badan-usaha.spec.ts` 2 passed, `explore-output/logs/run-bu-stepper.log`)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET (`agunan`, `debtorType=business`)
 - **Data uji:** `01M482PRSVH5ZMTVZX5QH0VDNZ` di-hardcode (`badanUsaha/s2cml-4890.spec.ts:18`)
 - **Langkah:** `navigateToFormAgunanBaru` `badanUsaha/s2cml-4890.spec.ts:47` → 3 step (TC-4890-02 :80), navigasi paralel (TC-4890-03 :106).
@@ -322,5 +322,5 @@ GF-COMMON-LOGIN
 
 ## DITUNDA (fase berikutnya)
 
-- `GF-IDENTITAS-PENJAMIN-PERORANGAN` (untuk App ID `01M83` digantikan GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH): pernah lolos dry run (App ID `01M483P7DDHBV41Z5QPV0FM8Q9`, `tests/bucketIdentitas/penjamin-perorangan-menikah.spec.ts`, `PROJECT_HISTORY.md` ~baris 1220). Didaftarkan penuh saat fase Identitas.
+- `GF-IDENTITAS-PENJAMIN-PERORANGAN` (untuk App ID `01M83` digantikan GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH): pernah lolos dry run (App ID `01M483P7DDHBV41Z5QPV0FM8Q9`, `tests/bucketIdentitas/_umum/penjamin-perorangan-menikah.spec.ts`, `PROJECT_HISTORY.md` ~baris 1220). Didaftarkan penuh saat fase Identitas.
 - Bucket Dokumen: belum ada flow terverifikasi (spec lama baru lolos typecheck).

@@ -29,7 +29,7 @@ Sidebar `aside button`; tiap item menampilkan status "Lengkap"/"Belum Lengkap". 
 | 8 | LBU | (tanpa page object; dummy via spec) | 2026-11-23 |
 | – | Pengecekan Dukcapil / DHN DHIB / SLIK | (tanpa page object) | Dukcapil + DHN DHIB Lengkap; SLIK Belum Lengkap (2026-11-24) |
 
-Bukti: `explore-output/identitas/probe-pengecekan-01M83.json`, `tests/bucketIdentitas/identitas-lengkap-01M83.spec.ts`.
+Bukti: `explore-output/identitas/probe-pengecekan-01M83.json`, `tests/bucketIdentitas/_umum/identitas-lengkap-01M83.spec.ts`.
 Pengecekan Dukcapil/DHN DHIB/SLIK **tidak bisa diklik (disabled) sebelum 8 section Lengkap dan "Lanjutkan" dikonfirmasi** (probe pertama timeout pada item disabled; tidak terbukti ada pesan khusus).
 
 ## 3. Rule form per section

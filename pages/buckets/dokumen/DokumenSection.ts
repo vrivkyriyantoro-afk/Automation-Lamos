@@ -12,7 +12,7 @@ export type FilterStaging = 'Semua' | 'Memiliki kategori' | 'Belum ada kategori'
  *   kategori bertingkat (id `data.<i>.categoryID`, lalu dropdown turunan `data.<i>.*`) -> "Simpan Dokumen".
  * - Collapsible "Dokumen": pohon kebutuhan kategori -> sub-kategori -> slot dokumen + status.
  *
- * Struktur hasil explore: tests/bucketDokumen/explore-dokumen.spec.ts -> explore-output/buckets/dokumen-tree.json
+ * Struktur hasil explore: tests/bucketDokumen/_umum/explore-dokumen.spec.ts -> explore-output/buckets/dokumen-tree.json
  */
 export class DokumenSection extends BucketSection {
   readonly bucket: BucketId = 'dokumen';

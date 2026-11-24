@@ -13,7 +13,7 @@
 
 | Metrik | Hasil | Catatan |
 |---|---|---|
-| Total Test Cases Terdaftar | 15 | Sesuai matriks `exports/test-cases/TC_S2CML-4941_Edit_Agunan_Existing.csv` |
+| Total Test Cases Terdaftar | 15 | Sesuai matriks `tests/bucketAgunan/S2CML-4941/TC_S2CML-4941_Edit_Agunan_Existing.csv` |
 | Eksekusi Lolos (Passed) | 13 | 10 benar terverifikasi eviden, 3 terindikasi *False Positive / Placeholder* |
 | Eksekusi Diskip (Skipped) | 2 | `TC-4941-07` (GAP data Agunan Draft) & `TC-4941-12` (GAP Fasilitas Terikat) |
 | Screenshot Eviden Tersedia | 11 file | Di folder `explore-output/stories/s2cml-4941/` |

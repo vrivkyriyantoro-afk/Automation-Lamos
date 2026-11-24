@@ -9,7 +9,7 @@
 
 **Cara reproduksi eviden:**
 ```bash
-npx playwright test tests/bucketAgunan/eviden-bug-report.spec.ts --project=chromium
+npx playwright test tests/bucketAgunan/_umum/eviden-bug-report.spec.ts --project=chromium
 ```
 Seluruh screenshot di bawah dihasilkan otomatis oleh suite tersebut (4 passed, 1.8m) dan tersimpan di `explore-output/bug/`.
 
@@ -30,7 +30,7 @@ Seluruh response API ditangkap selama interaksi, lalu dibandingkan dengan apa ya
 - **BE mengirim data, FE tidak menampilkan** → defect FE
 - **BE tidak mengirim data sama sekali** → defect BE
 
-Spec penelusuran: `tests/bucketAgunan/explore-fe-vs-be.spec.ts` dan `tests/bucketAgunan/explore-placeholder-source.spec.ts`.
+Spec penelusuran: `tests/bucketAgunan/_umum/explore-fe-vs-be.spec.ts` dan `tests/bucketAgunan/_umum/explore-placeholder-source.spec.ts`.
 
 > **Koreksi atas versi awal laporan ini**: ketiga MISMATCH semula ditulis sebagai "mungkin matriks yang perlu diperbarui". Setelah diverifikasi ke **Acceptance Criteria Jira** (bukan hanya matriks test case), ketiganya bertentangan dengan AC — jadi ketiganya adalah defect yang sah. Lihat kutipan AC pada tiap bagian di bawah.
 
@@ -230,5 +230,5 @@ Seluruh screenshot tersimpan di `explore-output/bug/`:
 | `MISMATCH-02b-kategori-006-tanpa-hubungan.png` | Kategori 006 tanpa dropdown Hubungan |
 | `MISMATCH-03-label-tipe-kepemilikan.png` | Opsi tipe kepemilikan |
 
-Spec penghasil eviden: `tests/bucketAgunan/eviden-bug-report.spec.ts`
-Helper penanda kotak merah: `tests/bucketAgunan/helpers/eviden.ts`
+Spec penghasil eviden: `tests/bucketAgunan/_umum/eviden-bug-report.spec.ts`
+Helper penanda kotak merah: `tests/bucketAgunan/_shared/eviden.ts`

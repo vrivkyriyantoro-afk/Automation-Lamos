@@ -18,7 +18,7 @@ Skill ini MENULIS data ke SIT. Pemanggilan oleh user = izin mengisi data dummy u
 ## 1. Section Identitas (selain penjamin)
 ```powershell
 $env:APPLICATION_ID_IDENTITAS_LENGKAP='<APP_ID>'; $env:SKIP_PENJAMIN='1'
-npx playwright test tests/bucketIdentitas/identitas-lengkap.spec.ts --project=chromium --headed --reporter=line
+npx playwright test tests/bucketIdentitas/_umum/identitas-lengkap.spec.ts --project=chromium --headed --reporter=line
 ```
 Spec mengisi hanya field kosong (dropdown opsi pertama, radio "Tidak", teks yang labelnya dikenal), dan mengisi section pasangan hanya bila ada di sidebar (debitur Menikah). Hasil: sidebar + diagnosa field wajib kosong. Label teks yang tidak dikenal dilaporkan `[TIDAK DIISI, label tak dikenal]`, tidak ditebak: laporkan ke user.
 
@@ -26,9 +26,9 @@ Spec mengisi hanya field kosong (dropdown opsi pertama, radio "Tidak", teks yang
 ```powershell
 $env:APPLICATION_ID_PENJAMIN_LP='<APP_ID>'; $env:PENJAMIN_COMMIT='1'
 # 2a. dua penjamin perorangan Menikah + pasangan (TEGAR+NENDEN, ERIN+RENALDY)
-npx playwright test tests/bucketIdentitas/penjamin-menikah-lp-01M83.spec.ts --project=chromium --headed --reporter=line
+npx playwright test tests/bucketIdentitas/_umum/penjamin-menikah-lp-01M83.spec.ts --project=chromium --headed --reporter=line
 # 2b. penjamin ke-3 badan usaha + pengurus/pemegang saham (PT Bintang Sejahtera, PIPIT, CV Makmur Abadi)
-npx playwright test tests/bucketIdentitas/penjamin-badan-usaha-lp-01M83.spec.ts --project=chromium --headed --reporter=line
+npx playwright test tests/bucketIdentitas/_umum/penjamin-badan-usaha-lp-01M83.spec.ts --project=chromium --headed --reporter=line
 ```
 - Lewati bagian yang sudah ada: kartu yang sudah Corporate dilewati; jika sudah ada 3 kartu lengkap, jangan jalankan ulang tanpa sebab.
 - Jangan ubah data penjamin lain di App ID yang sudah berisi data user.

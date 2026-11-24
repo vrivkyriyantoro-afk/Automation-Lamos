@@ -49,7 +49,7 @@ def norm(s):
 
 # ── muat semua TC ──
 records = []
-for path in sorted(glob.glob(os.path.join(ROOT, 'exports', 'test-cases', 'TC_S2CML-*.csv'))):
+for path in sorted(glob.glob(os.path.join(ROOT, 'tests', 'bucket*', 'S2CML-*', 'TC_S2CML-*.csv'))):
     m = STORY_RE.search(os.path.basename(path))
     story = m.group(1) if m else os.path.basename(path)
     with open(path, encoding='utf-8-sig', newline='') as f:

@@ -7,7 +7,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-os.makedirs('exports/test-cases', exist_ok=True)
+os.makedirs('tests/bucketAgunan/S2CML-5419', exist_ok=True)
 
 test_cases = [{'id': 'TC-5419-01',
   'debtor_type': 'Perorangan & Badan Usaha',
@@ -227,7 +227,7 @@ test_cases = [{'id': 'TC-5419-01',
   'reference': 'Jira S2CML-5419 AC: Detailing External (backend auto-sync)'}]
 
 # ─── EXPORT CSV ──────────────────────────────────────────────────────────
-csv_file_path = os.path.join('exports', 'test-cases', 'TC_S2CML-5419_Detailing_Informasi_Umum.csv')
+csv_file_path = os.path.join('tests', 'bucketAgunan', 'S2CML-5419', 'TC_S2CML-5419_Detailing_Informasi_Umum.csv')
 with open(csv_file_path, mode='w', newline='', encoding='utf-8-sig') as f:
     writer = csv.writer(f)
     writer.writerow([
@@ -259,7 +259,7 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8-sig') as f:
 print(f'✅ CSV berhasil digenerate: {csv_file_path} ({len(test_cases)} Test Cases)')
 
 # ─── EXPORT XLSX ─────────────────────────────────────────────────────────
-xlsx_file_path = os.path.join('exports', 'test-cases', 'TC_S2CML-5419_Detailing_Informasi_Umum.xlsx')
+xlsx_file_path = os.path.join('tests', 'bucketAgunan', 'S2CML-5419', 'TC_S2CML-5419_Detailing_Informasi_Umum.xlsx')
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = 'S2CML-5419'

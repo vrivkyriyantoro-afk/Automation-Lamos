@@ -1,4 +1,4 @@
-// Pohon kebutuhan dokumen hasil explore (tests/bucketDokumen/explore-dokumen.spec.ts -> explore-output/buckets/dokumen-tree.json).
+// Pohon kebutuhan dokumen hasil explore (tests/bucketDokumen/_umum/explore-dokumen.spec.ts -> explore-output/buckets/dokumen-tree.json).
 // PARSIAL: explore baru selesai untuk 3 kategori pertama; kategori lain belum dipetakan sub-kategori/slot-nya.
 
 export interface DokumenNode {

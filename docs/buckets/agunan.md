@@ -8,7 +8,7 @@ Terakhir diperbarui: **2026-11-24** (disusun dari registry `GREEN_FLOWS.md` bagi
 ## 1. Identitas bucket
 
 - Bucket id `agunan` (dulu tercatat `collateral`; alias di `pages/base/BucketSection.ts:18-19`). URL: `.../create?bucket=agunan&debtorType=individual|business`.
-- Page object: `pages/buckets/agunan/` belum berisi page object (lihat README di sana); test memakai helper `tests/bucketAgunan/helpers/agunanModal.ts` dan helper per spec.
+- Page object: `pages/buckets/agunan/` belum berisi page object (lihat README di sana); test memakai helper `tests/bucketAgunan/_shared/agunanModal.ts` dan helper per spec.
 - Varian: **Perorangan** (`01M4F7TNSCSHEDB5G3WTSP7HDY`) dan **Badan Usaha** (`01M482PRSVH5ZMTVZX5QH0VDNZ`). Perilaku keduanya berbeda di Step 3 (lihat 4).
 - Story: epic LP-5685; S2CML-4889 (search), 4890 (form Step 1), 4941 (edit), 4948/4949 (Step 3 kepemilikan), 5419/5420/5445 (Step 1 pembanding, Step 2, cash collateral), 6018 (ikon), 6020 (load latest data).
 
@@ -35,7 +35,7 @@ Bukti: `GF-AGUNAN-TAMBAH-SEARCH`, `GF-AGUNAN-AGUNAN-BARU`, `agunanModal.ts:25-44
 
 ### 3.2 Step 1 Informasi umum
 - Default step; status **Belum Lengkap**. **Simpan disabled** dan **Simpan draft aktif** selama belum lengkap (TC-4890-01/02/03/11). Klik Simpan draft **menulis ke SIT** → hanya di App ID uji dan atas izin user.
-- Field per modul: `tests/bucketAgunan/perseorangan/modul2-informasi-umum`, `modul3-pengikatan`, `modul4-alamat`. Daftar field lengkap tidak diulang di sini (tidak ada probe tersimpan terbaru).
+- Field per modul: `tests/bucketAgunan/_umum/modul2-informasi-umum`, `modul3-pengikatan`, `modul4-alamat`. Daftar field lengkap tidak diulang di sini (tidak ada probe tersimpan terbaru).
 - **Data Pembanding:** tombol `+ Data Pembanding` **disabled setelah 10 record** (TC-04-43, 2026-10-31); jenis Tanah. Hapus pembanding tanpa konfirmasi = defect (`docs/LAPORAN_DEFECT_Hapus_Data_Pembanding.md`).
 - **Penilaian:** radio LPA Ya/Tidak (Gotcha 13); Tipe penilaian Internal/KJPP. Rasio agunan (LTV/CC/LM): rumus di skill lending-domain; defect Sisa Nilai 0 di `docs/LAPORAN_DEFECT_S2CML-4889_Sisa_Nilai_0.md`.
 

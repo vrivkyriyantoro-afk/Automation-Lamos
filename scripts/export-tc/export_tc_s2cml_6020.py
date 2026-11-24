@@ -4,7 +4,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-os.makedirs('exports/test-cases', exist_ok=True)
+os.makedirs('tests/bucketAgunan/S2CML-6020', exist_ok=True)
 
 # ============================================================
 # TC Matrix — S2CML-6020
@@ -168,7 +168,7 @@ headers = [
 ]
 
 # 1. Generate CSV (UTF-8 with BOM for Excel)
-csv_path = os.path.join('exports', 'test-cases', 'TC_S2CML-6020_Load_Latest_Data_Agunan.csv')
+csv_path = os.path.join('tests', 'bucketAgunan', 'S2CML-6020', 'TC_S2CML-6020_Load_Latest_Data_Agunan.csv')
 with open(csv_path, 'w', encoding='utf-8-sig', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(headers)
@@ -180,7 +180,7 @@ with open(csv_path, 'w', encoding='utf-8-sig', newline='') as f:
         ])
 
 # 2. Generate XLSX with styling
-xlsx_path = os.path.join('exports', 'test-cases', 'TC_S2CML-6020_Load_Latest_Data_Agunan.xlsx')
+xlsx_path = os.path.join('tests', 'bucketAgunan', 'S2CML-6020', 'TC_S2CML-6020_Load_Latest_Data_Agunan.xlsx')
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = 'TC S2CML-6020'
