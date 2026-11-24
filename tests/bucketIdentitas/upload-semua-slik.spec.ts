@@ -8,7 +8,7 @@ import { LoginPage } from '../../pages/LoginPage';
 // MENGUBAH DATA SIT: upload .txt + .pdf untuk 9 baris modal "Lengkapi file SLIK" (setelah "Hapus semua file"), lalu opsional klik "Proses file .txt" (PROSES=1).
 const URL = `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${process.env.APP_ID || '01M83AP5FKPHB1D3E2QS8P015Z'}/create?bucket=identitas_pengecekan&debtorType=individual`;
 const PDF = process.env.PDF || 'C:/Users/V50324/Downloads/document-10mb.pdf';
-// Daftar file dari fixtures/slik-entities.json (urut baris modal) di folder DIR (hasil `node scripts/gen-slik.js --out <DIR>`).
+// Daftar file dari fixtures/slik-entities.json (urut baris modal) di folder DIR (hasil `node scripts/generators/gen-slik.js --out <DIR>`).
 const DIR = process.env.DIR || 'exports/slik-auto';
 const ENT = JSON.parse(fs.readFileSync(process.env.ENTITIES || 'fixtures/slik-entities.json', 'utf8')).entities as { type: string; id: string }[];
 const TXT = ENT.map(e => `${DIR}/${e.type}_${e.id}.txt`);

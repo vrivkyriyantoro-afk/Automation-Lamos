@@ -5,7 +5,7 @@ require('dotenv').config();
 /**
  * Script untuk membaca User Story & Acceptance Criteria (AC) dari Jira atau PRD dari Confluence
  * Penggunaan:
- *   node scripts/read-atlassian.js <Jira_URL_atau_IssueKey_atau_Confluence_URL>
+ *   node scripts/jira/read-atlassian.js <Jira_URL_atau_IssueKey_atau_Confluence_URL>
  */
 
 const apiToken = process.env.ATLASSIAN_API_TOKEN;
@@ -21,7 +21,7 @@ const inputUrl = process.argv[2];
 
 if (!inputUrl) {
   console.error('❌ Error: Berikan URL Jira / Confluence atau Issue Key!');
-  console.error('Contoh: node scripts/read-atlassian.js LP-5685');
+  console.error('Contoh: node scripts/jira/read-atlassian.js LP-5685');
   process.exit(1);
 }
 
@@ -164,7 +164,7 @@ async function fetchConfluencePage(pageId) {
 
 async function main() {
   try {
-    const outDir = path.resolve(__dirname, '../explore-output/atlassian');
+    const outDir = path.resolve(__dirname, '../../explore-output/atlassian');
     fs.mkdirSync(outDir, { recursive: true });
 
     let result = null;
@@ -200,7 +200,7 @@ async function main() {
       result.childStories.forEach((st, idx) => {
         console.log(`  ${idx + 1}. [${st.key}] [${st.status}] ${st.summary}`);
       });
-      console.log(`\n💡 Tip: Jalankan 'node scripts/read-atlassian.js <KEY_STORY>' untuk melihat detail & Acceptance Criteria tiap story!`);
+      console.log(`\n💡 Tip: Jalankan 'node scripts/jira/read-atlassian.js <KEY_STORY>' untuk melihat detail & Acceptance Criteria tiap story!`);
     } else {
       console.log(`Deskripsi / Acceptance Criteria:`);
       console.log(result.description || result.body);

@@ -1,22 +1,22 @@
 ﻿import { test, expect, Locator } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../pages/LoginPage';
-import { BucketSection, CreditApplicationForm } from '../pages/components/BucketSection';
-import * as identitas from '../pages/bucketIdentitas/sections';
-import * as strukturKredit from '../pages/bucketStrukturKredit/sections';
-import * as penilaianKelayakan from '../pages/bucketPenilaianKelayakan/sections';
-import * as dataUsaha from '../pages/bucketDataUsaha/sections';
-import * as analisaKeuangan from '../pages/bucketAnalisaKeuangan/sections';
-import * as legalRiskCompliance from '../pages/bucketLegalRiskCompliance/sections';
-import * as covenantTbo from '../pages/bucketCovenantTBO/sections';
-import * as penyimpangan from '../pages/bucketPenyimpanganPihakTerkait/sections';
-import * as catatanAnda from '../pages/bucketCatatanAnda/sections';
+import { LoginPage } from '../../pages/LoginPage';
+import { BucketSection, CreditApplicationForm } from '../../pages/components/BucketSection';
+import * as identitas from '../../pages/bucketIdentitas/sections';
+import * as strukturKredit from '../../pages/bucketStrukturKredit/sections';
+import * as penilaianKelayakan from '../../pages/bucketPenilaianKelayakan/sections';
+import * as dataUsaha from '../../pages/bucketDataUsaha/sections';
+import * as analisaKeuangan from '../../pages/bucketAnalisaKeuangan/sections';
+import * as legalRiskCompliance from '../../pages/bucketLegalRiskCompliance/sections';
+import * as covenantTbo from '../../pages/bucketCovenantTBO/sections';
+import * as penyimpangan from '../../pages/bucketPenyimpanganPihakTerkait/sections';
+import * as catatanAnda from '../../pages/bucketCatatanAnda/sections';
 
 /**
  * Smoke test read-only: setiap locator di page object hasil generate harus ditemukan di aplikasi.
  * Tidak mengisi / menyimpan apa pun.
  *
- *   APPLICATION_ID=<id> npx playwright test tests/sections-locator-smoke.spec.ts --project=chromium
+ *   APPLICATION_ID=<id> npx playwright test tests/smoke/sections-locator-smoke.spec.ts --project=chromium
  */
 const APPLICATION_ID = process.env.APPLICATION_ID || '01M483P7DDHBV41Z5QPV0FM8Q9';
 

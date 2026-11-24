@@ -4,7 +4,7 @@ require('dotenv').config();
  * Probe READ-ONLY: cek issue type apa saja yang tersedia pada project sebuah story,
  * dan field apa saja yang wajib saat membuat issue type tersebut.
  *
- * Penggunaan: node scripts/probe-jira-issuetypes.js S2CML-4948
+ * Penggunaan: node scripts/jira/probe-jira-issuetypes.js S2CML-4948
  */
 
 const apiToken = process.env.ATLASSIAN_API_TOKEN;
@@ -17,7 +17,7 @@ if (!apiToken || !email) {
   process.exit(1);
 }
 if (!issueKey) {
-  console.error('Berikan issue key. Contoh: node scripts/probe-jira-issuetypes.js S2CML-4948');
+  console.error('Berikan issue key. Contoh: node scripts/jira/probe-jira-issuetypes.js S2CML-4948');
   process.exit(1);
 }
 

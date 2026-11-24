@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../pages/LoginPage';
-import { isiStep1Tanah, isiStep2Tanah, statusStep } from './bucketAgunan/helpers/greenFlowTanah';
+import { LoginPage } from '../../pages/LoginPage';
+import { isiStep1Tanah, isiStep2Tanah, statusStep } from '../bucketAgunan/helpers/greenFlowTanah';
 const ID = '01M79GW1XYEQAK97TM803HFY8F';
 test('gf', async ({ page }) => {
   test.setTimeout(200000);

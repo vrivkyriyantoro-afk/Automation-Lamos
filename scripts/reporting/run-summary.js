@@ -1,9 +1,9 @@
 // Ringkas arsip run Playwright di run-history/: jumlah run, durasi, pass/fail.
-// Pakai: node scripts/run-summary.js
+// Pakai: node scripts/reporting/run-summary.js
 const fs = require('fs');
 const path = require('path');
 
-const dir = path.join(__dirname, '..', 'run-history');
+const dir = path.join(__dirname, '..', '..', 'run-history');
 const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : [];
 if (!files.length) { console.log('Belum ada arsip di run-history/. Jalankan test dulu.'); process.exit(0); }
 

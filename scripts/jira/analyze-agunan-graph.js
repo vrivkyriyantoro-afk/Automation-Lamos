@@ -7,7 +7,7 @@ const path = require('path');
  */
 
 const EPIC = 'LP-5685';
-const file = path.resolve(__dirname, `../explore-output/atlassian/graph-${EPIC}.json`);
+const file = path.resolve(__dirname, `../../explore-output/atlassian/graph-${EPIC}.json`);
 const { issues } = JSON.parse(fs.readFileSync(file, 'utf8'));
 const byKey = new Map(issues.map(i => [i.key, i]));
 
@@ -66,7 +66,7 @@ const st = {};
 for (const c of core) st[c.status] = (st[c.status] || 0) + 1;
 for (const [k, v] of Object.entries(st).sort((a, b) => b[1] - a[1])) P(`- ${k}: ${v}`);
 
-const outFile = path.resolve(__dirname, `../explore-output/atlassian/analisa-${EPIC}.md`);
+const outFile = path.resolve(__dirname, `../../explore-output/atlassian/analisa-${EPIC}.md`);
 fs.writeFileSync(outFile, out.join('\n'));
 console.log(out.join('\n'));
 console.log(`\n→ ${outFile}`);

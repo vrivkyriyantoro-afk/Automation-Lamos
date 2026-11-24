@@ -18,9 +18,9 @@
     "test:pengurus:headed": "playwright test tests/bucketIdentitas/input-pengurus-penjamin.spec.ts --headed --project=chromium",
     "test:agunan": "playwright test tests/bucketAgunan/validate-agunan-dropdown.spec.ts --project=chromium",
     "test:agunan:headed": "playwright test tests/bucketAgunan/validate-agunan-dropdown.spec.ts --headed --project=chromium",
-    "spec:new": "node scripts/specify.js",
-    "figma:read": "node scripts/read-figma.js",
-    "atlassian:read": "node scripts/read-atlassian.js",
+    "spec:new": "node scripts/generators/specify.js",
+    "figma:read": "node scripts/readers/read-figma.js",
+    "atlassian:read": "node scripts/jira/read-atlassian.js",
     "test:ui": "playwright test --ui --project=chromium",
     "report": "playwright show-report"
   },

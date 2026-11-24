@@ -10,12 +10,12 @@ Alasan (verifikasi AC Jira 2026-11-02):
 
 Yang dipindah: TC-5420-15 s.d TC-5420-25 (11 TC).
 Hasil:
-- scripts/export_tc_s2cml_5420.py  -> 16 TC murni non-Cash-Collateral, direnomori 01..16
-- scripts/export_tc_s2cml_5445.py  -> generator baru berisi 11 TC pindahan + 8 TC CIF existing
+- scripts/export-tc/export_tc_s2cml_5420.py  -> 16 TC murni non-Cash-Collateral, direnomori 01..16
+- scripts/export-tc/export_tc_s2cml_5445.py  -> generator baru berisi 11 TC pindahan + 8 TC CIF existing
 
 Penggunaan:
-    python -I scripts/split_5420_cash_collateral.py           # dry-run
-    python -I scripts/split_5420_cash_collateral.py --apply   # tulis perubahan
+    python -I scripts/export-tc/split_5420_cash_collateral.py           # dry-run
+    python -I scripts/export-tc/split_5420_cash_collateral.py --apply   # tulis perubahan
 """
 import ast
 import os
@@ -26,7 +26,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 APPLY = '--apply' in sys.argv
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC = os.path.join(ROOT, 'scripts', 'export_tc_s2cml_5420.py')
 
 # TC yang pindah ke 5445

@@ -9,8 +9,8 @@ const path = require('path');
  * TIDAK ada request tulis ke Jira.
  *
  * Untuk benar-benar membuat issue, jalankan dengan flag --commit secara eksplisit:
- *   node scripts/draft-jira-defects.js --commit
- *   node scripts/draft-jira-defects.js --commit --only BUG-01
+ *   node scripts/jira/draft-jira-defects.js --commit
+ *   node scripts/jira/draft-jira-defects.js --commit --only BUG-01
  */
 
 const domain = process.env.ATLASSIAN_DOMAIN || 'bank-sinarmas.atlassian.net';
@@ -266,7 +266,7 @@ async function uploadAttachment(issueKey, filePath) {
     process.exit(1);
   }
 
-  const outDir = path.resolve(__dirname, '../explore-output/jira');
+  const outDir = path.resolve(__dirname, '../../explore-output/jira');
   fs.mkdirSync(outDir, { recursive: true });
 
   // Validasi berkas eviden ada sebelum apa pun dikirim

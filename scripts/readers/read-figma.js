@@ -5,7 +5,7 @@ require('dotenv').config();
 /**
  * Script untuk membaca struktur desain Figma (Node tree, teks, form fields, label)
  * Penggunaan:
- *   node scripts/read-figma.js <Figma_URL_atau_File_Key> [--pages]
+ *   node scripts/readers/read-figma.js <Figma_URL_atau_File_Key> [--pages]
  */
 
 const token = (process.env.FIGMA_TOKEN || '').trim();
@@ -21,7 +21,7 @@ const inputArg = (cliArg || process.env.FIGMA_URL || process.env.FIGMA_FILE_KEY 
 
 if (!inputArg) {
   console.error('❌ Error: Berikan URL Figma atau File Key!');
-  console.error('Contoh: node scripts/read-figma.js "https://www.figma.com/design/xyz123/LAMOS"');
+  console.error('Contoh: node scripts/readers/read-figma.js "https://www.figma.com/design/xyz123/LAMOS"');
   process.exit(1);
 }
 
@@ -149,7 +149,7 @@ async function main() {
     const documentName = figmaJson.name || 'Figma Document';
     const extracted = extractElements(rootNode);
 
-    const outDir = path.resolve(__dirname, '../explore-output/figma');
+    const outDir = path.resolve(__dirname, '../../explore-output/figma');
     fs.mkdirSync(outDir, { recursive: true });
 
     const safeFilename = targetNodeId ? `${fileKey}_node_${targetNodeId.replace(':', '-')}.json` : `${fileKey}.json`;

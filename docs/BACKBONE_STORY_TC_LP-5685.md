@@ -2,9 +2,9 @@
 
 **Tanggal:** 2 November 2026
 **Epic:** [LP-5685](https://bank-sinarmas.atlassian.net/browse/LP-5685) — Bucket Agunan
-**Sumber status:** Jira REST API live (`scripts/crawl-agunan-graph.js`)
+**Sumber status:** Jira REST API live (`scripts/jira/crawl-agunan-graph.js`)
 **Sumber jumlah TC:** kolom `Test Case ID` pada `exports/*.csv`
-**Audit redundansi:** `scripts/audit_tc_redundancy.py`
+**Audit redundansi:** `scripts/export-tc/audit_tc_redundancy.py`
 
 Dokumen ini memetakan **satu skenario = satu story pemilik**, supaya tidak ada test case yang ditulis dua kali di story berbeda.
 
@@ -156,7 +156,7 @@ Tujuh TC ditandai "di luar scope" oleh heuristik kata kunci, tetapi seluruhnya p
 | 2026-11-02 | `TC-4948-17` (judul saja) | — | tetap `S2CML-4948` | Judul & Expected dikoreksi agar cocok isi tes; gating tetap `TC-4890-06` |
 | 2026-11-01 | Modul 2–8 | `S2CML-4889` | `4890` / `4948` / `4949` | Perampingan scope Part 1 |
 
-Skrip migrasi: `scripts/fix-cif-tc-mapping.js`, `scripts/split_5420_cash_collateral.py`, `scripts/dedupe_5445.py`.
+Skrip migrasi: `scripts/export-tc/fix-cif-tc-mapping.js`, `scripts/export-tc/split_5420_cash_collateral.py`, `scripts/export-tc/dedupe_5445.py`.
 
 ---
 
@@ -184,8 +184,8 @@ Skrip migrasi: `scripts/fix-cif-tc-mapping.js`, `scripts/split_5420_cash_collate
 ## 7. Cara Memeriksa Ulang
 
 ```powershell
-node scripts/crawl-agunan-graph.js        # tarik ulang status story dari Jira
-python -I scripts/audit_tc_redundancy.py  # audit ID duplikat, judul mirip, TC nyasar
+node scripts/jira/crawl-agunan-graph.js        # tarik ulang status story dari Jira
+python -I scripts/export-tc/audit_tc_redundancy.py  # audit ID duplikat, judul mirip, TC nyasar
 ```
 
 Jalankan audit setiap kali menambah suite TC baru, sebelum mengekspor ke CSV/Excel.

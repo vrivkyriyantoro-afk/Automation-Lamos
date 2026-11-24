@@ -7,7 +7,7 @@ Mendeteksi:
 3. TC yang kelompok/modulnya tidak cocok dengan scope story pemiliknya.
 
 Penggunaan:
-    python -I scripts/audit_tc_redundancy.py
+    python -I scripts/export-tc/audit_tc_redundancy.py
 """
 import csv
 import glob
@@ -19,7 +19,7 @@ from difflib import SequenceMatcher
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THRESHOLD = 0.72          # kemiripan judul yang dianggap mencurigakan
 
 # Kata kunci yang menandai scope tiap story. Dipakai untuk mendeteksi TC

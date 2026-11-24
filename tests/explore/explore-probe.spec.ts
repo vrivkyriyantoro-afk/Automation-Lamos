@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../pages/LoginPage';
+import { LoginPage } from '../../pages/LoginPage';
 
 const TARGET = 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual';
 

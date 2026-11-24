@@ -14,7 +14,7 @@ Balas dalam Bahasa Indonesia.
 ## Persiapan
 1. Buat folder sesi `evidence/<YYYYMMDD-HHMM>/`.
 2. Pastikan `python -c "import docx, PIL"` berhasil. Kalau gagal, jalankan `pip install python-docx pillow`.
-3. Script `scripts/build_evidence_docx.py` sudah ada di repo ini. Kalau hilang, minta user memulihkannya.
+3. Script `scripts/evidence/build_evidence_docx.py` sudah ada di repo ini. Kalau hilang, minta user memulihkannya.
 4. Pakai tool browser yang bisa menjalankan JavaScript di halaman DAN menyimpan screenshot ke file
    (misalnya Playwright MCP: `browser_navigate`, `browser_click`, `browser_type`, `browser_evaluate`,
    `browser_take_screenshot` dengan `filename`).
@@ -84,7 +84,7 @@ Untuk setiap langkah:
 ```
 
 ## Setelah semua case selesai
-1. Jalankan `python scripts/build_evidence_docx.py evidence/<sesi> --title "<judul dokumen>"`.
+1. Jalankan `python scripts/evidence/build_evidence_docx.py evidence/<sesi> --title "<judul dokumen>"`.
 2. Buka hasilnya sekilas (baca ulang manifest) dan pastikan setiap case punya Expected beserta Hasil.
 3. Laporkan:
    - path file .docx;

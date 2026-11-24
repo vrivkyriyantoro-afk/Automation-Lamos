@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/generate-pages.js
+// AUTO-GENERATED oleh scripts/generators/generate-pages.js
 export * from './AnalisaMutasiRekeningSection';
 export * from './AnalisaKeuanganKemampuanBayarSection';
 export * from './AnalisaKebutuhanSection';

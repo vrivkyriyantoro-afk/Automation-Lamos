@@ -1,16 +1,16 @@
 ﻿/**
  * Generator page object per section dari hasil explore (explore-output/<bucket>.json).
  *
- *   node scripts/generate-pages.js            # tulis file yang belum ada
- *   node scripts/generate-pages.js --force    # timpa file hasil generate sebelumnya
- *   node scripts/generate-pages.js --only=data_usaha,struktur_kredit
+ *   node scripts/generators/generate-pages.js            # tulis file yang belum ada
+ *   node scripts/generators/generate-pages.js --force    # timpa file hasil generate sebelumnya
+ *   node scripts/generators/generate-pages.js --only=data_usaha,struktur_kredit
  *
  * Output: pages/bucket<Nama>/<Section>Section.ts, <Trigger>Modal.ts, dan sections.ts (index).
  */
 const fs = require('fs');
 const path = require('path');
 
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(__dirname, '../..');
 const IN_DIR = path.join(ROOT, process.env.EXPLORE_OUT || 'explore-output');
 const PAGES_DIR = path.join(ROOT, 'pages');
 const FORCE = process.argv.includes('--force');
@@ -226,7 +226,7 @@ function renderClass({ className, dataName, baseClass, bucket, title, sidebarTit
   const classes = [...new Set([...props.map(p => control(p.f).cls), ...rowGroups.flatMap(g => g.items.map(x => control(x.f).cls))])];
   if (hasCriteria) classes.push('CriteriaTable');
   const lines = [];
-  lines.push(`// AUTO-GENERATED oleh scripts/generate-pages.js dari ${source}.`);
+  lines.push(`// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari ${source}.`);
   lines.push(`// Boleh diedit manual; regenerate dengan --force akan menimpa file ini.`);
   lines.push(`import { ${rowGroups.length ? 'Locator, ' : ''}Page } from '@playwright/test';`);
   lines.push(`import { ${baseClass}${baseClass === 'BucketSection' ? ', BucketId' : ''} } from '../components/BucketSection';`);
@@ -363,7 +363,7 @@ function main() {
       writeFile(path.join(dir, `${className}.ts`), content, written);
     }
 
-    const index = '// AUTO-GENERATED oleh scripts/generate-pages.js\n'
+    const index = '// AUTO-GENERATED oleh scripts/generators/generate-pages.js\n'
       + written.map(f => `export * from './${f.replace(/\.ts$/, '')}';`).join('\n') + '\n';
     const indexFile = path.join(dir, 'sections.ts');
     if (!fs.existsSync(indexFile) || FORCE || fs.readFileSync(indexFile, 'utf8').startsWith('// AUTO-GENERATED')) {

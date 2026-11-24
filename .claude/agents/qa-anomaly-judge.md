@@ -20,7 +20,7 @@ Tugas Utama:
    - Bila story tidak memuat kalkulasi, lewati tugas ini dan nyatakan "tidak relevan".
 3. Deteksi Silent Failure & False Positive: Cari test yang lolos padahal UI menampilkan error tersembunyi, toast error, status tidak berubah, data kosong/NaN/undefined, atau field mandatory tidak divalidasi. Periksa juga assert yang terlalu longgar (hanya cek label, bukan nilai).
 4. Laporan Defect Standar BSM: Bila ada bug, buat laporan di `docs/LAPORAN_DEFECT_<STORY>_<DESKRIPSI>.md` dengan struktur baku dari AGENTS.md. Salin ke vault QA BSM (`$QA_BSM_VAULT`, atau `~/Documents/QA BSM`) di `Projects/LAMOS/<Bucket>/` (sesuai bucket story) hanya jika diminta.
-5. Label Defect di Test: Setiap defect baru wajib dipasang pada test terkait lewat `{ annotation: { type: 'defect', description: '<ID defect> (docs/<laporan>.md)' } }` agar `node scripts/run-summary.js` bisa menghitungnya. Jika test-nya belum ada, tulis di laporan bahwa label belum bisa dipasang.
+5. Label Defect di Test: Setiap defect baru wajib dipasang pada test terkait lewat `{ annotation: { type: 'defect', description: '<ID defect> (docs/<laporan>.md)' } }` agar `node scripts/reporting/run-summary.js` bisa menghitungnya. Jika test-nya belum ada, tulis di laporan bahwa label belum bisa dipasang.
 
 Aturan Ketat:
 - Format ID Test Case: TC-<StoryKey>-<NoUrut>.

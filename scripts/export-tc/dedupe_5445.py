@@ -12,8 +12,8 @@ lebih rinci dan mengutip AC Jira:
     TC-5445-16 (field CIF disembunyikan)     /
 
 Penggunaan:
-    python -I scripts/dedupe_5445.py           # dry-run
-    python -I scripts/dedupe_5445.py --apply   # tulis perubahan
+    python -I scripts/export-tc/dedupe_5445.py           # dry-run
+    python -I scripts/export-tc/dedupe_5445.py --apply   # tulis perubahan
 """
 import ast
 import os
@@ -24,7 +24,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 APPLY = '--apply' in sys.argv
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC = os.path.join(ROOT, 'scripts', 'export_tc_s2cml_5445.py')
 
 DROP = {

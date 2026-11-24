@@ -7,7 +7,7 @@ require('dotenv').config();
  * Output: explore-output/atlassian/graph-LP-5685.json
  *
  * Penggunaan:
- *   node scripts/crawl-agunan-graph.js [seedKey...]
+ *   node scripts/jira/crawl-agunan-graph.js [seedKey...]
  */
 
 const apiToken = process.env.ATLASSIAN_API_TOKEN;
@@ -131,7 +131,7 @@ async function main() {
   }
 
   const all = [...nodes.values()].sort((a, b) => a.key.localeCompare(b.key));
-  const outDir = path.resolve(__dirname, '../explore-output/atlassian');
+  const outDir = path.resolve(__dirname, '../../explore-output/atlassian');
   fs.mkdirSync(outDir, { recursive: true });
   const outFile = path.join(outDir, `graph-${EPIC}.json`);
   fs.writeFileSync(outFile, JSON.stringify({ epic: EPIC, total: all.length, issues: all }, null, 2));

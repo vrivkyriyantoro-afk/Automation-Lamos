@@ -5,10 +5,10 @@ require('dotenv').config();
 /**
  * Spec-Kit Generator: Otomatis membuat folder spesifikasi per Jira Story di dalam subfolder bucket terkait
  * Penggunaan:
- *   node scripts/specify.js <Jira_Key_atau_Nama> [nama_bucket]
+ *   node scripts/generators/specify.js <Jira_Key_atau_Nama> [nama_bucket]
  * Contoh:
- *   node scripts/specify.js S2CML-4889 bucket-agunan
- *   node scripts/specify.js S2CML-4890
+ *   node scripts/generators/specify.js S2CML-4889 bucket-agunan
+ *   node scripts/generators/specify.js S2CML-4890
  */
 
 const input = process.argv[2];
@@ -16,7 +16,7 @@ let bucketArg = process.argv[3];
 
 if (!input) {
   console.error('❌ Error: Berikan Issue Key Jira (mis. S2CML-4889) atau nama fitur!');
-  console.error('Contoh: node scripts/specify.js S2CML-4889 bucket-agunan');
+  console.error('Contoh: node scripts/generators/specify.js S2CML-4889 bucket-agunan');
   process.exit(1);
 }
 
@@ -101,12 +101,12 @@ async function main() {
     bucketArg = detectBucket(storyKey) || '';
   }
 
-  const baseSpecsDir = path.resolve(__dirname, '../specs');
+  const baseSpecsDir = path.resolve(__dirname, '../../specs');
   const targetDir = bucketArg 
     ? path.join(baseSpecsDir, bucketArg, storyKey)
     : path.join(baseSpecsDir, storyKey);
 
-  const templateDir = path.resolve(__dirname, '../.specify/templates');
+  const templateDir = path.resolve(__dirname, '../../.specify/templates');
 
   if (fs.existsSync(targetDir)) {
     console.log(`ℹ️ Folder spesifikasi sudah ada di: ${targetDir}. Memperbarui berkas...`);
@@ -114,7 +114,7 @@ async function main() {
     fs.mkdirSync(targetDir, { recursive: true });
   }
 
-  const specRelPath = path.relative(path.resolve(__dirname, '..'), targetDir).replace(/\\/g, '/');
+  const specRelPath = path.relative(path.resolve(__dirname, '../..'), targetDir).replace(/\\/g, '/');
   const testFileName = `${storyKey.toLowerCase()}.spec.ts`;
   const bucketTestFolder = bucketArg ? bucketArg.replace(/^bucket-/, 'bucket').replace(/-([a-z])/g, (_, c) => c.toUpperCase()) : 'bucketAgunan';
 

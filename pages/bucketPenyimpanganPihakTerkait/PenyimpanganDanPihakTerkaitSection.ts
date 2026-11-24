@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/generate-pages.js dari explore-output/penyimpangan_pihak_terkait.json.
+// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari explore-output/penyimpangan_pihak_terkait.json.
 // Boleh diedit manual; regenerate dengan --force akan menimpa file ini.
 import { Page } from '@playwright/test';
 import { BucketSection, BucketId } from '../components/BucketSection';

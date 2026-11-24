@@ -1,7 +1,7 @@
 # Rantai Dependensi Inti (Backbone) — Epic LP-5685 Bucket Agunan
 
 **Tanggal analisa:** 2 November 2026
-**Sumber data:** Jira REST API live via `scripts/crawl-agunan-graph.js`
+**Sumber data:** Jira REST API live via `scripts/jira/crawl-agunan-graph.js`
 **Raw data:** `explore-output/atlassian/graph-LP-5685.json` (435 issue ter-crawl)
 **Epic:** [LP-5685](https://bank-sinarmas.atlassian.net/browse/LP-5685) — SLP - LAMOS - Origination SME - Phase 2 - Bucket Agunan (`In Development`)
 
@@ -258,7 +258,7 @@ Verifikasi AC Jira memastikan seluruh skenario CIF (field CIF muncul bila "tersi
 | Status | `BLOCKED` | `NOT TESTABLE YET` |
 | Status Dokumentasi | `SIT BUILD DISCREPANCY` | `FEATURE NOT DEPLOYED (S2CML-5445 / S2CML-4981 Ready to SIT)` |
 
-File terdampak: `fixtures/TemplateAutomateLamos - Sheet1.csv` (via `scripts/fix-cif-tc-mapping.js`), `tests/bucketAgunan/perseorangan/modul7-data-tambahan.spec.ts`, `specs/bucket-agunan/S2CML-4889/tasks.md`. Spec baru: `specs/bucket-agunan/S2CML-5445/`.
+File terdampak: `fixtures/TemplateAutomateLamos - Sheet1.csv` (via `scripts/export-tc/fix-cif-tc-mapping.js`), `tests/bucketAgunan/perseorangan/modul7-data-tambahan.spec.ts`, `specs/bucket-agunan/S2CML-4889/tasks.md`. Spec baru: `specs/bucket-agunan/S2CML-5445/`.
 
 ### 2. Tiga story pemilik defect berstatus mundur
 
@@ -338,8 +338,8 @@ seluruh Lapis 4 (detailing) → Lapis 5 (submit) → Lapis 6 (summary) → Lapis
 ## Cara Memperbarui Analisa Ini
 
 ```powershell
-node scripts/crawl-agunan-graph.js      # tarik ulang graf dari Jira API
-node scripts/analyze-agunan-graph.js    # hasilkan ringkasan struktur
+node scripts/jira/crawl-agunan-graph.js      # tarik ulang graf dari Jira API
+node scripts/jira/analyze-agunan-graph.js    # hasilkan ringkasan struktur
 ```
 
 Output: `explore-output/atlassian/graph-LP-5685.json` dan `explore-output/atlassian/analisa-LP-5685.md`.

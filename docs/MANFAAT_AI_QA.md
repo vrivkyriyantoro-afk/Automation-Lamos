@@ -134,5 +134,5 @@ Data Pega akan ditambahkan ke dokumen ini setelah ada story yang dikerjakan.
 - Jam manual = jumlah item × asumsi menit per item.
 - Jam dihemat = jam manual × (100% − porsi yang tetap dikerjakan manual).
 - **Belum dihitung:** waktu run test di SIT, dan defect yang ditemukan lewat run otomatis tanpa laporan tertulis. Penyebabnya, hasil run Playwright sebelumnya selalu tertimpa dan tidak diarsipkan.
-- **Mulai 12 Nov 2026:** setiap run diarsipkan ke `run-history/`. Ringkasan jumlah run, durasi, dan pass/fail bisa diambil dengan `node scripts/run-summary.js`, lalu dimasukkan ke dokumen ini setelah data terkumpul beberapa minggu.
+- **Mulai 12 Nov 2026:** setiap run diarsipkan ke `run-history/`. Ringkasan jumlah run, durasi, dan pass/fail bisa diambil dengan `node scripts/reporting/run-summary.js`, lalu dimasukkan ke dokumen ini setelah data terkumpul beberapa minggu.
 - **Defect dari run otomatis:** test yang terkait defect diberi label ID defect (anotasi `defect` di Playwright). Saat test itu gagal di run, `run-summary.js` menghitungnya sebagai defect yang terdeteksi otomatis. Saat ini 9 test sudah berlabel, mencakup 6 temuan dari laporan di `docs/` (BUG-01, MISMATCH-01 s.d 03, DEFECT-4941-01 dan 02).

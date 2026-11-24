@@ -14,7 +14,7 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
 ## 2. Aturan kerja
 
 - **Selector** wajib mengikuti tabel "Konvensi DOM" di `PROJECT_HISTORY.md` (pakai atribut `name`, bukan `id` ber-suffix `-r..`). Kalau menemukan pola DOM baru, tambahkan ke tabel itu.
-- **Page object** hasil generate (diawali `// AUTO-GENERATED`) diubah lewat `scripts/generate-pages.js` lalu regenerate. Jangan diedit manual kecuali header-nya dihapus (file jadi manual).
+- **Page object** hasil generate (diawali `// AUTO-GENERATED`) diubah lewat `scripts/generators/generate-pages.js` lalu regenerate. Jangan diedit manual kecuali header-nya dihapus (file jadi manual).
 - Jangan menimpa / menghapus file buatan user (`pages/bucketIdentitas/*Page.ts`, `pages/bucketDokumen/DocumentBucketPage.ts`) tanpa izin user.
 - Explore aplikasi harus **read-only**: jangan klik `Simpan`, `Kirim`, `Lanjutkan`, `Hapus`, atau upload file di lingkungan SIT kecuali user meminta.
 - Jangan menulis isi `.env` (kredensial) ke file, log, commit, atau prompt.
@@ -110,7 +110,7 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
 npx -y -p typescript@5 tsc --noEmit --strict --target es2022 --module commonjs --moduleResolution node --esModuleInterop --skipLibCheck --types node <files...>
 
 # locator generated vs aplikasi asli (read-only)
-npx playwright test tests/sections-locator-smoke.spec.ts --project=chromium --workers=2
+npx playwright test tests/smoke/sections-locator-smoke.spec.ts --project=chromium --workers=2
 ```
 
 ## 6. Token Optimization (RTK — Rust Token Killer)

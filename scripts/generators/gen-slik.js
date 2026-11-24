@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Generator file SLIK mock (NIK_<nik>.txt / NPWP_<npwp>.txt) dari daftar entitas.
-// Pakai: node scripts/gen-slik.js [--entities fixtures/slik-entities.json] [--out exports/slik-auto] [--force]
+// Pakai: node scripts/generators/gen-slik.js [--entities fixtures/slik-entities.json] [--out exports/slik-auto] [--force]
 // Struktur diklon dari template exports/NIK_3276020602850001.txt (Windows-1252) dan exports/NPWP_3210077012810002.txt (UTF-8).
 // Yang diubah: nomor identitas/NPWP, nama, jenis kelamin, tanggal lahir (NIK); nama, NPWP, pengurus (NPWP).
 // Data fasilitas = salinan template (BUKAN data nyata). File yang sudah ada tidak ditimpa tanpa --force.

@@ -2,7 +2,7 @@
 
 ## 1. Komponen & Berkas yang Disentuh
 - **Page Object**: `pages/[namaBucketFolder]/[PageName].ts`
-  *(Catatan: Jika diawali `// AUTO-GENERATED`, ubah via `scripts/generate-pages.js` atau hapus header jika ingin dikonversi ke manual)*
+  *(Catatan: Jika diawali `// AUTO-GENERATED`, ubah via `scripts/generators/generate-pages.js` atau hapus header jika ingin dikonversi ke manual)*
 - **Test File**: `tests/[namaBucketFolder]/[test-name].spec.ts`
 - **Helpers / Fixtures**: `fixtures/...` (jika ada)
 

@@ -2,7 +2,7 @@ import { Page, Locator, expect } from '@playwright/test';
 
 /**
  * Komponen dasar form LAMOS (design system yang sama dipakai di semua bucket).
- * Selector berdasarkan hasil explore DOM (tests/explore-all-buckets.spec.ts):
+ * Selector berdasarkan hasil explore DOM (tests/explore/explore-all-buckets.spec.ts):
  * - input/textarea          : atribut `name` stabil (react-hook-form), mis. `identityAddress.rt`
  * - dropdown                : [role=combobox][data-testid=dropdownsearch], id `<key>-r<n>` (suffix dinamis)
  *                             opsi di `#<id>-listbox li button`, search di [data-testid=dropdownsearch-input-search]

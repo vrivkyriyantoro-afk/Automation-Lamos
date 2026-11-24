@@ -1,14 +1,14 @@
 ﻿import { test, Page } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../pages/LoginPage';
+import { LoginPage } from '../../pages/LoginPage';
 
 /**
  * Explorer read-only: menelusuri semua bucket (tab) di halaman Buat Pengajuan Kredit,
  * expand setiap section, lalu memetakan field (label, name, tipe, wajib, opsi dropdown).
  * Output: explore-output/<bucket>.json + screenshot (di luar test-results agar tidak terhapus tiap run).
  *
- * Jalankan: EXPLORE_URL=<url> npx playwright test tests/explore-all-buckets.spec.ts --project=chromium
+ * Jalankan: EXPLORE_URL=<url> npx playwright test tests/explore/explore-all-buckets.spec.ts --project=chromium
  */
 const TARGET_URL = process.env.EXPLORE_URL
   || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual';

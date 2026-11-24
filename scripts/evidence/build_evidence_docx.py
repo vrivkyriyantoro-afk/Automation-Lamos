@@ -1,5 +1,5 @@
 """Rakit evidence .docx dari manifest.jsonl hasil capture.
-Pakai: python scripts/build_evidence_docx.py <folder_sesi> [--title T] [--case TC-001] [--maxw 1920] [--out file.docx]"""
+Pakai: python scripts/evidence/build_evidence_docx.py <folder_sesi> [--title T] [--case TC-001] [--maxw 1920] [--out file.docx]"""
 import argparse, io, json, os, re, time
 from docx import Document
 from docx.shared import Pt, RGBColor, Emu

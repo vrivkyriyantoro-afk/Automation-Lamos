@@ -11,12 +11,12 @@ const path = require('path');
  *   (yang berarti build menyimpang dari desain), melainkan NOT TESTABLE YET.
  *
  * Penggunaan:
- *   node scripts/fix-cif-tc-mapping.js          # dry-run, tampilkan perubahan
- *   node scripts/fix-cif-tc-mapping.js --apply  # tulis perubahan
+ *   node scripts/export-tc/fix-cif-tc-mapping.js          # dry-run, tampilkan perubahan
+ *   node scripts/export-tc/fix-cif-tc-mapping.js --apply  # tulis perubahan
  */
 
 const APPLY = process.argv.includes('--apply');
-const FILE = path.resolve(__dirname, '../fixtures/TemplateAutomateLamos - Sheet1.csv');
+const FILE = path.resolve(__dirname, '../../fixtures/TemplateAutomateLamos - Sheet1.csv');
 const TARGET = /^TC-4889-(5[4-9]|6[01])$/;
 
 const NOTE_BY_TC = {
@@ -116,7 +116,7 @@ if (!APPLY) {
   process.exit(0);
 }
 
-const backup = path.resolve(__dirname, `../explore-output/TemplateAutomateLamos-backup-before-cif-fix.csv`);
+const backup = path.resolve(__dirname, `../../explore-output/TemplateAutomateLamos-backup-before-cif-fix.csv`);
 fs.writeFileSync(backup, raw, 'utf8');
 fs.writeFileSync(FILE, toCSV(rows), 'utf8');
 console.log(`✅ Ditulis. Backup: ${backup}`);
