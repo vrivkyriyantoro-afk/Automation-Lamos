@@ -21,8 +21,8 @@ test.describe('Input Data Pengurus dan Pemegang Saham (Perorangan & Badan Usaha)
     // 1. Login SSO
     console.log('[1/5] Login SSO...');
     await loginPage.goto();
-    const validUsername = process.env.LAMOS_USERNAME || 'SMELOS-AO-7@banksinarmas.com';
-    const validPassword = process.env.LAMOS_PASSWORD || 'simaS@123';
+    const validUsername = process.env.LAMOS_USERNAME!;
+    const validPassword = process.env.LAMOS_PASSWORD!;
     await loginPage.login(validUsername, validPassword);
     await loginPage.expectLoginSuccess();
 

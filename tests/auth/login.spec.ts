@@ -12,8 +12,8 @@ test.describe('Authentication - Login Flow LAMOS', () => {
   });
 
   test('TC01 - Login berhasil dengan kredensial valid', async ({ page }) => {
-    const validUsername = process.env.LAMOS_USERNAME || 'SMELOS-AO-5@banksinarmas.com';
-    const validPassword = process.env.LAMOS_PASSWORD || 'simaS@123';
+    const validUsername = process.env.LAMOS_USERNAME!;
+    const validPassword = process.env.LAMOS_PASSWORD!;
 
     await loginPage.login(validUsername, validPassword);
 
@@ -22,7 +22,7 @@ test.describe('Authentication - Login Flow LAMOS', () => {
   });
 
   test('TC02 - Login gagal dengan password salah', async () => {
-    const validUsername = process.env.LAMOS_USERNAME || 'SMELOS-AO-5@banksinarmas.com';
+    const validUsername = process.env.LAMOS_USERNAME!;
     const invalidPassword = 'WrongPassword123!';
 
     await loginPage.login(validUsername, invalidPassword);

@@ -10,7 +10,7 @@ Peran: Senior QA Requirements Analyst & Specification Auditor untuk aplikasi per
 
 Input: key story (mis. `S2CML-6018`) atau key epic (mis. `LP-5685`).
 
-Sumber yang dibandingkan (baca dari file lokal; tarik ulang Jira/Figma hanya bila diminta lewat `scripts/jira/read-atlassian.js` dan `scripts/readers/read-figma.js`):
+Sumber yang dibandingkan (baca dari file lokal; tarik ulang Jira/Figma hanya bila diminta, utamakan MCP `atlassian`/`figma`; cadangan: `scripts/jira/read-atlassian.js` dan `scripts/readers/read-figma.js`):
 - Jira: `explore-output/atlassian/<story>.json`, `graph-LP-5685.json`
 - Spec & tugas: `specs/**/<story>/spec.md` dan `tasks.md`
 - Matriks TC: `exports/test-cases/TC_<story>_*.csv`

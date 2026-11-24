@@ -971,6 +971,12 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
 
 ## 6. Riwayat
 
+### 2026-11-24 — Hapus kredensial default dari kode (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan: hapus fallback username/password yang tertulis langsung di 13 spec (`process.env.LAMOS_USERNAME || '...'` -> `process.env.LAMOS_USERNAME!`, sama untuk password), mengikuti pola spec lain. Kredensial hanya dari `.env`. Tambah `explore-output/atlassian/S2CML-4981.json` (berisi 3 `apikey` salinan deskripsi Jira) ke `.gitignore`.
+- Verifikasi: grep tidak menemukan sisa password/username default di `tests/ features/ pages/ scripts/ utils/ .claude/`; `playwright --list` tetap 305 test / 89 file. Password SUDAH ada di GitHub: `origin/bucketAgunan` (13 file) dan `origin/rivky.lamos-bulk-dokumen` (5 file).
+- Belum selesai / gagal: password lama tetap ada di riwayat git dan di remote; menghapus dari kode tidak cukup. Perlu DIGANTI (rotate) oleh pemilik akun. Rewrite riwayat tidak dilakukan.
+- Keputusan user: pilih menyelesaikan masalah keamanan dulu (pilihan 2).
+
 ### 2026-11-24 — Fase 2 Agunan: konsolidasi pembuka form ke `AgunanModal` (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan: `pages/buckets/agunan/AgunanModal.ts` (baru, selector dipindah apa adanya). 10 spec memakai `bukaModalTambah` (`openTambahAgunanModal`), 10 spec memakai `bukaFormAgunanBaru` (`navigateToFormAgunanBaru`; `modul4`/`modul5` mempertahankan scroll spesifiknya). Nama fungsi lama dipertahankan sebagai pembungkus tipis, isi test tidak berubah. 10 file: +30 / -369 baris. README `pages/buckets/agunan/` berisi status migrasi dan urutan modul berikutnya.
 - Verifikasi: sebelum mengganti, saya cek salinan identik lewat normalisasi body (open: 10 identik; navigate: 7 identik + varian modul2/4/5 yang hanya beda parameter/tail). `playwright --list` tetap 305 test / 89 file; `catalog:check` up-to-date. TIDAK dijalankan ke SIT.

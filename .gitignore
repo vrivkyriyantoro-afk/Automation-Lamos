@@ -17,3 +17,6 @@ evidence/
 # BDD output
 .features-gen/
 playwright-report-bdd/
+
+# Berisi apikey salinan deskripsi Jira, jangan di-commit
+explore-output/atlassian/S2CML-4981.json

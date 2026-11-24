@@ -12,8 +12,8 @@ test.describe('Pengajuan Kredit - Lanjutkan Pengajuan & Bucket Dokumen', () => {
 
     // Langkah 1: Login ke LAMOS
     await loginPage.goto();
-    const validUsername = process.env.LAMOS_USERNAME || 'SMELOS-AO-5@banksinarmas.com';
-    const validPassword = process.env.LAMOS_PASSWORD || 'simaS@123';
+    const validUsername = process.env.LAMOS_USERNAME!;
+    const validPassword = process.env.LAMOS_PASSWORD!;
     await loginPage.login(validUsername, validPassword);
     await loginPage.expectLoginSuccess();
   });

@@ -10,7 +10,7 @@ test('Inspect Document Dropdown Options', async ({ page }) => {
   const creditAppPage = new CreditApplicationPage(page);
 
   await loginPage.goto();
-  await loginPage.login(process.env.LAMOS_USERNAME || 'SMELOS-AO-5@banksinarmas.com', process.env.LAMOS_PASSWORD || 'simaS@123');
+  await loginPage.login(process.env.LAMOS_USERNAME!, process.env.LAMOS_PASSWORD!);
   await loginPage.expectLoginSuccess();
 
   await creditAppPage.navigateFromSidebar();

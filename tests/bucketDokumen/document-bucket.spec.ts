@@ -18,8 +18,8 @@ test.describe('Bucket Dokumen - Otomatisasi Unggah Dokumen Pengajuan Kredit', ()
 
     // 1. Tahap Login & Persiapan
     await loginPage.goto();
-    const validUsername = process.env.LAMOS_USERNAME || 'SMELOS-AO-5@banksinarmas.com';
-    const validPassword = process.env.LAMOS_PASSWORD || 'simaS@123';
+    const validUsername = process.env.LAMOS_USERNAME!;
+    const validPassword = process.env.LAMOS_PASSWORD!;
     await loginPage.login(validUsername, validPassword);
     await loginPage.expectLoginSuccess();
 
