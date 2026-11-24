@@ -3,9 +3,13 @@
 node_modules/
 /test-results/
 /playwright-report/
+/run-history/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
 
 # Local secrets
 .env
+
+# QA evidence output
+evidence/
