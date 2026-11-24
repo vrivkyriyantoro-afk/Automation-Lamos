@@ -868,19 +868,17 @@ scripts/                        # dikelompokkan per fungsi
   evidence/                     # build_evidence_docx.py (evidence .docx dari manifest capture)
   reporting/                    # run-summary.js
   maintenance/                  # utilitas CSV/figma sekali pakai (dump-tc, audit-exports, fetch-figma, dst.)
-  _archive/                     # file .bak
 tests/                          # spec khusus bucket di tests/bucket<Nama>/ (nama folder sama dengan pages/)
   auth/login.spec.ts
-  explore/                      # explore-all-buckets (explorer read-only semua bucket), explore-probe
+  explore/                      # explore-all-buckets (explorer read-only semua bucket)
   smoke/sections-locator-smoke.spec.ts  # verifikasi semua locator generated ditemukan di app (read-only)
-  _scratch/                     # spec sekali pakai (tmp-gf), boleh dihapus
   bucketIdentitas/              # identitas-pengecekan, penjamin-*, data-penjamin-*, input-pengurus-*, explore-pengurus-*, explore-penjamin-*
   bucketDokumen/                # explore-dokumen, explore-mandatory-docs, inspect-doc-dropdowns, document-bucket, bulk-upload-mandatory, credit-application
   bucketAgunan/                 # explore-agunan-dropdown
 fixtures/                       # sources/ (template & sheet data uji), entities/ (JSON penjamin & SLIK), files/ (PDF dummy)
 exports/                        # test-cases/ (TC_*.csv/xlsx), slik/ (NIK_/NPWP_ + slik-*), config/
 explore-output/                 # buckets/ (<bucket>.json/.html/.png, dokumen-tree.json), agunan/ identitas/ bug/ atlassian/ jira/ figma/,
-                                # stories/ (eviden per story), probes/ (file lepas), logs/, _archive/
+                                # stories/ (eviden yang dikutip docs), probes/ (output probe, di-regenerate spec), logs/ (yang dikutip docs), _archive/
 ```
 
 ### 3.1 Pola class hasil generate
@@ -975,6 +973,7 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
   - `explore-output/` -> buckets, stories, probes, logs, _archive (agunan, identitas, bug, atlassian, jira, figma tetap).
   - Tambah `.claude/agents/qa-evidence-runner.md`, `scripts/evidence/build_evidence_docx.py`, `.mcp.json` (Playwright MCP), `evidence/` di `.gitignore`.
 - Verifikasi: `playwright test --list` tetap 309 test / 93 file (sebelum dan sesudah); `node --check` semua script; `run-summary.js`, `audit_tc_redundancy.py`, `audit-exports.js` jalan dari lokasi baru; cek semua path literal di kode menunjuk ke file ada (sisa hanya direktori output runtime). Entri riwayat lama sengaja tidak diubah (path lama di dalamnya historis).
+  - Pembersihan file tak terpakai (atas permintaan user): hapus 248 file di `explore-output/{probes,stories,logs,_archive}`, `scripts/_archive`, `tests/_scratch`, dan 3 spec probe sekali pakai (`explore-probe`, `explore-probe-card-menu`, `explore-probe-existing-agunan`). 34 file yang dikutip `docs/` (eviden story 4941/5445/6018/5419, 4 log) sengaja dipertahankan. `explore-output` 47 MB -> 18 MB.
 - Belum selesai / gagal: tidak ada test dijalankan ke SIT. `pages/` tidak direstruktur (sudah per-bucket; generator & import ratusan spec bergantung padanya). `explore-output/atlassian/S2CML-4981.json` berisi 3 `apikey` dari deskripsi Jira, sengaja tidak di-commit. Playwright MCP belum diuji start.
 - Keputusan user: restruktur penuh scripts/tests/fixtures/exports/explore-output; branch baru `bucketAgunanV1` dengan perubahan terbawa.
 
