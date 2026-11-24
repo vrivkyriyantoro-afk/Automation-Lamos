@@ -1,0 +1,287 @@
+{
+  "fields": {
+    "project": {
+      "key": "S2CML"
+    },
+    "parent": {
+      "key": "S2CML-4949"
+    },
+    "issuetype": {
+      "id": "10015"
+    },
+    "summary": "[Defect] [FE] Placeholder field \"Nomor telepon PIC\" tertulis \"Masukkan nomor HP badan usaha\"",
+    "priority": {
+      "name": "Medium"
+    },
+    "customfield_10155": {
+      "value": "SIT"
+    },
+    "customfield_10275": 1,
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Langkah Reproduksi"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Buka modal \"Tambah agunan\" pada debitur perorangan 01M4F7TNSCSHEDB5G3WTSP7HDY (debtorType=individual)."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Masuk ke Step 3 \"Informasi kepemilikan\"."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Pilih Kategori pemilik agunan = \"005 - Pemilik Anggunan\"."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Pilih Tipe kepemilikan agunan = \"Non Individu\"."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Gulir ke bawah hingga field \"Nomor telepon PIC\"."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Expected Result"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Placeholder field \"Nomor telepon PIC\" berbunyi \"Masukkan nomor telepon PIC\"."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Actual Result"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Placeholder berbunyi \"Masukkan nomor HP badan usaha\" — identik dengan placeholder field \"Nomor HP badan usaha\" yang berada 3 baris di atasnya."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Data Pendukung"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Urutan placeholder yang terbaca dari DOM (input:visible); entri terakhir adalah field Nomor telepon PIC:"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {},
+          "content": [
+            {
+              "type": "text",
+              "text": "[\"Otomatis terisi dari data tambahan agunan\",\"Masukkan nama\",\"Masukkan nomor identitas\",\n \"Masukkan lokasi pendirian badan usaha\",\"Masukkan nomor telepon badan usaha\",\n \"Masukkan nomor HP badan usaha\",\"Masukkan email badan usaha\",\"Masukkan nama PIC\",\n \"Masukkan nomor HP badan usaha\"]"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Layer Penyebab: FRONTEND"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Diverifikasi dengan menangkap seluruh response API selama interaksi: TIDAK ADA satu pun response yang memuat string placeholder tersebut. String-nya hardcode di bundle FE."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Lokasi di bundle: /_next/static/chunks/5970-28b82b8013712c73.js"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {},
+          "content": [
+            {
+              "type": "text",
+              "text": "{id:\"ownership-pic-phone\", name:\"ownership.picPhoneNumber\", label:\"Nomor telepon PIC\",\n labelPosition:\"left\", placeholder:\"Masukkan nomor HP badan usaha\", isPhoneNumber:!0}"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Field name (\"ownership.picPhoneNumber\") dan label (\"Nomor telepon PIC\") sudah benar — hanya nilai placeholder yang ter-copy dari field \"Nomor HP badan usaha\" di atasnya. Perbaikan cukup mengubah satu string di komponen form, tanpa perubahan BE."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Dampak"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pengguna dapat salah mengisi nomor HP badan usaha ke kolom PIC. Tidak memblokir penyimpanan karena field ini opsional (tanpa tanda *)."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Eviden & Reproduksi Otomatis"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Screenshot terlampir (field bermasalah dan field pembandingnya ditandai kotak merah)."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Eviden dapat dihasilkan ulang dengan: npx playwright test tests/bucketAgunan/eviden-bug-report.spec.ts --project=chromium"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

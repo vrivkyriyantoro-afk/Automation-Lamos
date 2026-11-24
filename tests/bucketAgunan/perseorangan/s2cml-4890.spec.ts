@@ -10,9 +10,9 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Karakter: READ-ONLY (Validasi UI Stepper, Parallel Nav, Gating Identitas, & Business Rules tanpa submit final)
  */
 
-const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
+const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M79GW1XYEQAK97TM803HFY8F';
 const TARGET_URL = process.env.EXPLORE_URL
-  || `https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
+  || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
 
 test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, & Form Rules)', () => {
   test.beforeEach(async ({ page }) => {
@@ -91,9 +91,9 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   }
 
   /**
-   * TC - 4890 - 01: Default Step saat Form Terbuka
+   * TC-4890-01: Default Step saat Form Terbuka
    */
-  test('TC-4890-01: Default Step saat Form Terbuka adalah Informasi Umum Agunan dengan status Belum Lengkap', async ({ page }, testInfo) => {
+  test('TC-4890-01: Validasi Default Step saat Form Terbuka', async ({ page }, testInfo) => {
     console.log('Menjalankan TC-4890-01: Default Step saat Form Terbuka');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -118,9 +118,9 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   });
 
   /**
-   * TC - 4890 - 02: Struktur 3-Step Side Navigation
+   * TC-4890-02: Struktur 3-Step Side Navigation
    */
-  test('TC-4890-02: Side navigation kiri menampilkan tepat 3 step berurutan', async ({ page }, testInfo) => {
+  test('TC-4890-02: Validasi Struktur 3-Step Side Navigation', async ({ page }, testInfo) => {
     console.log('Menjalankan TC-4890-02: Struktur 3-Step Side Navigation');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -149,9 +149,9 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   });
 
   /**
-   * TC - 4890 - 03: Navigasi Paralel / Bebas Antar Step
+   * TC-4890-03: Navigasi Paralel / Bebas Antar Step
    */
-  test('TC-4890-03: Navigasi Paralel bebas berpindah ke Step 2 tanpa menyelesaikan Step 1', async ({ page }, testInfo) => {
+  test('TC-4890-03: Validasi Navigasi Paralel / Bebas Antar Step', async ({ page }, testInfo) => {
     console.log('Menjalankan TC-4890-03: Navigasi Paralel Bebas Antar Step');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -185,9 +185,9 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   });
 
   /**
-   * TC - 4890 - 06: Gating Validasi Bucket Identitas (Step 3: Informasi Kepemilikan)
+   * TC-4890-06: Gating Validasi Bucket Identitas (Step 3: Informasi Kepemilikan)
    */
-  test('TC-4890-06: Validasi Gating Step 3 memblokir akses jika Bucket Identitas belum Lengkap', async ({ page }, testInfo) => {
+  test('TC-4890-06: Validasi Akses Step 3 saat Bucket Identitas Belum Lengkap', async ({ page }, testInfo) => {
     console.log('Menjalankan TC-4890-06: Gating Validasi Bucket Identitas');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -207,17 +207,10 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
     const isAlertVisible = await alertGating.isVisible({ timeout: 5000 }).catch(() => false);
     console.log(`[TC-4890-06] Alert Gating Bucket Identitas tampil: ${isAlertVisible}`);
 
-    if (isAlertVisible) {
-      const alertMsg = await alertGating.innerText();
-      console.log(`[TC-4890-06] Pesan Gating: "${alertMsg.replace(/\n/g, ' ')}"`);
-      expect(isAlertVisible).toBeTruthy();
-    } else {
-      // Jika gating ditangani secara disabled button pada Step 3
-      const isStep3Disabled = await step3Btn.isDisabled().catch(() => false);
-      const ariaDisabled = await step3Btn.getAttribute('aria-disabled');
-      console.log(`[TC-4890-06] Status disabled Step 3: isDisabled=${isStep3Disabled}, ariaDisabled=${ariaDisabled}`);
-      expect(isStep3Disabled || ariaDisabled === 'true' || isAlertVisible).toBeTruthy();
-    }
+    // Sesuai CSV/AC: wajib dialog peringatan, bukan sekadar tombol disabled
+    expect(isAlertVisible, 'dialog gating Bucket Identitas harus muncul').toBeTruthy();
+    const alertMsg = await alertGating.innerText();
+    console.log(`[TC-4890-06] Pesan Gating: "${alertMsg.replace(/\n/g, ' ')}"`);
 
     await testInfo.attach('Eviden TC-4890-06: Gating Validasi Bucket Identitas', {
       body: await page.screenshot(),
@@ -226,9 +219,9 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   });
 
   /**
-   * TC - 4890 - 11: Validasi Tombol Simpan Disabled saat Mandatory Belum Lengkap
+   * TC-4890-11: Validasi Tombol Simpan Disabled saat Mandatory Belum Lengkap
    */
-  test('TC-4890-11: Tombol Simpan berstatus disabled dan Simpan sebagai draft aktif saat form belum lengkap', async ({ page }, testInfo) => {
+  test('TC-4890-11: Validasi Tombol Simpan Disabled saat Mandatory Belum Lengkap', async ({ page }, testInfo) => {
     console.log('Menjalankan TC-4890-11: Tombol Simpan Disabled & Draft Aktif');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -256,10 +249,10 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
   });
 
   /**
-   * TC - 4890 - 14: Default Tipe Penilaian saat LPA = "Tidak" (S2CML-6756)
+   * LEGACY-4890-14: Default Tipe Penilaian saat LPA = "Tidak" (S2CML-6756)
    */
-  test('TC-4890-14: Opsi "Apakah LPA sudah tersedia? = Tidak" default Tipe Penilaian menjadi "Internal"', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC-4890-14: Default Tipe Penilaian Internal saat LPA = Tidak');
+  test('LEGACY-4890-14: Validasi Default Tipe Penilaian saat LPA = "Tidak"', async ({ page }, testInfo) => {
+    console.log('Menjalankan LEGACY-4890-14: Default Tipe Penilaian Internal saat LPA = Tidak');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // 1. Pilih Status Agunan = Tersedia agar seksi Penilaian agunan muncul di layar
@@ -290,11 +283,11 @@ test.describe('S2CML-4890: Bucket Agunan - Add Agunan Part 2 (Stepper, Gating, &
     // 5. Verifikasi dropdown / input Tipe Penilaian menjadi "Internal"
     const tipePenilaianField = page.locator('div').filter({ hasText: /^Tipe penilaian/i }).first();
     const tipeText = await tipePenilaianField.innerText();
-    console.log(`[TC-4890-14] Text Tipe Penilaian setelah LPA Tidak: "${tipeText.replace(/\n/g, ' ')}"`);
+    console.log(`[LEGACY-4890-14] Text Tipe Penilaian setelah LPA Tidak: "${tipeText.replace(/\n/g, ' ')}"`);
 
     expect(tipeText.toLowerCase()).toContain('internal');
 
-    await testInfo.attach('Eviden TC-4890-14: Default Tipe Penilaian Internal saat LPA Tidak', {
+    await testInfo.attach('Eviden LEGACY-4890-14: Default Tipe Penilaian Internal saat LPA Tidak', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });

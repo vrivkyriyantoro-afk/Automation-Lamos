@@ -1,0 +1,75 @@
+{
+  "cif": "(dari .env)",
+  "calls": [
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=METODE_PENGECEKAN_AGUNAN&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":1286,\"type\":\"METODE_PENGECEKAN_AGUNAN\",\"code\":\"1\",\"value\":\"Isi sendiri\",\"segment\":\"SME\",\"createdAt\":\"2026-09-05T19:55:56.851124Z\",\"updatedAt\":null},{\"id\":1287,\"type\":\"METODE_PENGECEKAN_AGUNAN\",\"code\":\"2\",\"value\":\"Inquiry ke e-Collval\",\"segment\":\"SME\",\"createdAt\":\"2026-09-05T19:55:56.851124Z\",\"updatedAt\":null},{\"id\":1288,\"type\":\"METODE_PENGECEKAN_AGUNAN\",\"code\":\"3\",\"value\":\"Direct integration to e-Collval\",\"segment\":\"SME\",\"createdAt\":\"2026-09-05T19:55:56.851124Z\",\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":1,\"sort\":\"\",\"total_rows\":3,\"total_pages\":1}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=provinces_lamos&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"provinces\",\"code\":\"11\",\"value\":\"Aceh\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"51\",\"value\":\"Bali\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"36\",\"value\":\"Banten\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"17\",\"value\":\"Bengkulu\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"34\",\"value\":\"Daerah Istimewa Yogyakarta\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"31\",\"value\":\"DKI Jakarta\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"75\",\"value\":\"Gorontalo\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"15\",\"value\":\"Jambi\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"32\",\"value\":\"Jawa Barat\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"33\",\"value\":\"Jawa Tengah\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"35\",\"value\":\"Jawa Timur\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"61\",\"value\":\"Kalimantan Barat\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"provinces\",\"code\":\"63\",\"value\":\"Kalimantan Selatan\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=KODE_JENIS_SEGMEN&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F01\",\"value\":\"Kredit\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F02\",\"value\":\"Kredit Join\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F03\",\"value\":\"Surat Berharga\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F04\",\"value\":\"Irrevocable LC\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F05\",\"value\":\"Bank Garansi\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"KODE_JENIS_SEGMEN\",\"code\":\"F06\",\"value\":\"Fasilitas Lainnya\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":0,\"sort\":\"\",\"total_rows\":0,\"total_pages\":0}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=STATUS_AGUNAN&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"STATUS_AGUNAN\",\"code\":\"1\",\"value\":\"Tersedia\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"STATUS_AGUNAN\",\"code\":\"2\",\"value\":\"Indent\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":0,\"sort\":\"\",\"total_rows\":0,\"total_pages\":0}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=JENIS_PENGIKATAN&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"01\",\"value\":\"Hak Tanggungan\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"02\",\"value\":\"Gadai\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"03\",\"value\":\"Fidusia\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"04\",\"value\":\"Surat Kuasa Membebankan Hak Tanggungan (SKMHT)\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"05\",\"value\":\"Cessie\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"06\",\"value\":\"Belum Diikat\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"JENIS_PENGIKATAN\",\"code\":\"99\",\"value\":\"Lainnya\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":0,\"sort\":\"\",\"total_rows\":0,\"total_pages\":0}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=IDEB_BRANCH&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"000\",\"value\":\"All Branch\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"001\",\"value\":\"KPNO\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"002\",\"value\":\"KC Jakarta - Thamrin\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"003\",\"value\":\"KCP Zainul Arifin\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"004\",\"value\":\"KC Jakarta L Avenue\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"005\",\"value\":\"KCP Jakarta Cempaka Mas\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"006\",\"value\":\"KC Mangga Dua\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"007\",\"value\":\"KC Tanah Abang\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"008\",\"value\":\"KCP Samanhudi\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"009\",\"value\":\"KCP\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"010\",\"value\":\"KCP Kelapa Gading\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\",\"code\":\"011\",\"value\":\"KCP Bumi Serpong Damai\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"Ideb_Branch\""
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=TIPE_PENILAIAN&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":1289,\"type\":\"TIPE_PENILAIAN\",\"code\":\"1\",\"value\":\"Internal\",\"segment\":\"SME\",\"createdAt\":\"2026-09-05T19:55:56.851124Z\",\"updatedAt\":null},{\"id\":1290,\"type\":\"TIPE_PENILAIAN\",\"code\":\"2\",\"value\":\"KJPP\",\"segment\":\"SME\",\"createdAt\":\"2026-09-05T19:55:56.851124Z\",\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":1,\"sort\":\"\",\"total_rows\":2,\"total_pages\":1}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=LEMBAGA_PEMERINGKAT&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"FID\",\"value\":\"Fitch Rating Indonesia\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"FIN\",\"value\":\"Fitch Rating International\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"MIS\",\"value\":\"Moodys Investor Service\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"PEF\",\"value\":\"Pefindo\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"SNP\",\"value\":\"Standard and Poors\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"LEMBAGA_PEMERINGKAT\",\"code\":\"-\",\"value\":\"tidak ada lembaga pemeringkat\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":0,\"sort\":\"\",\"total_rows\":0,\"total_pages\":0}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=vehicle047&segment=SME&limit=1000",
+      "status": 200,
+      "req": "",
+      "body": "{\"statusCode\":200,\"responseMessage\":\"OK\",\"data\":[{\"id\":0,\"type\":\"vehicle047\",\"code\":\"1\",\"value\":\"Eligible\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null},{\"id\":0,\"type\":\"vehicle047\",\"code\":\"2\",\"value\":\"Non Eligible\",\"segment\":\"SME\",\"createdAt\":null,\"updatedAt\":null}],\"pagination\":{\"limit\":1000,\"page\":0,\"sort\":\"\",\"total_rows\":0,\"total_pages\":0}}"
+    },
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/cif?number=2307403&jenisAgunanCode=F15",
+      "status": 200,
+      "req": "",
+      "body": "{\"data\":{\"accounts\":[{\"accountNumber\":\"0034964181\",\"accountOwnerName\":\"KOPSA MITRA PRIMA SERASI\",\"accountType\":\"Giro Sinarmas IDR - Corporate\",\"blockReason\":{\"code\":\"001-CA\",\"name\":\"001-CA\"},\"blockType\":{\"code\":\"\",\"name\":\"\"},\"jenisAgunanCode\":\"F15\"},{\"accountNumber\":\"0036173319\",\"accountOwnerName\":\"KOPSA MITRA PRIMA SERASI\",\"accountType\":\"Escrow Loan\",\"blockReason\":{\"code\":\"004-CA\",\"name\":\"004-CA\"},\"blockType\":{\"code\":\"\",\"name\":\"\"},\"jenisAgunanCode\":\"F15\"}]},\"responseMessage\":\"OK\",\"statuscode\":200}\n"
+    }
+  ]
+}

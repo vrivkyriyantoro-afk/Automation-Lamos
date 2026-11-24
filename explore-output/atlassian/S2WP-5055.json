@@ -1,0 +1,18 @@
+{
+  "type": "Jira Issue",
+  "key": "S2WP-5055",
+  "summary": "[FE][Lamos] Bucket Agunan > Edge Cases Impact From Bucket Identitas",
+  "issueType": "Task",
+  "status": "Done",
+  "description": "Logic system\n\nwhen\n Melakukan edit yang dapat mempengaruhi entitas seseorang menjadi hilang : Ganti Status dari Menikah jadi tidak Menikah\n\nImpact ke Bucket Agunan\n, Apabila pemilik agunan adalah seseorang yang identitasnya hilang di Bucket Identitas dan Pengecekan maka :\n- Agunan berubah menjadi draft\n- Agunan yang sudah dimapping ke suatu product akan terlepas\n- Checklist pada Form Data Agunan hilang\n- Jika Bucket Agunan sebelumnya lengkap (punya checklist), checklist akan hilang\n- Form pengikatan agunan ke fasilitas bergantung pada kondisi agunan; jika Struktur Kredit terpengaruh sehingga tidak memiliki agunan, checklist juga akan hilang\n\nwhen\n Menghapus suatu entitas di Bucket Identitas dan Pengecekan\n\nImpact ke Bucket Agunan\n, Apabila pemilik agunan adalah seseorang yang identitasnya hilang di Bucket Identitas dan Pengecekan maka :\n- Agunan berubah menjadi draft\n- Agunan yang sudah dimapping ke suatu product akan terlepas\n- Checklist pada Form Data Agunan hilang\n- Jika Bucket Agunan sebelumnya lengkap (punya checklist), checklist akan hilang\n- Form pengikatan agunan ke fasilitas bergantung pada kondisi agunan; jika Struktur Kredit terpengaruh sehingga tidak memiliki agunan, checklist juga akan hilang\n",
+  "linkedIssues": [
+    {
+      "relation": "Relates",
+      "key": "S2CML-5905",
+      "summary": "4. LAMOS LOS SME - Bucket Agunan > Edge Cases Impact From Bucket Identitas",
+      "status": "In SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

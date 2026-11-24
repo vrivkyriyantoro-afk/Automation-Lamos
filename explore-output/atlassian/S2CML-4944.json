@@ -1,0 +1,48 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4944",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals, Soft Delete Data Existing",
+  "issueType": "Story",
+  "status": "Done",
+  "description": "User Story\n :\nSebagai User AO saya ingin dapat menghapus Agunan yang sudah saya input karena kesalahan yang saya lakukan\nScope \n: \n- Munculkan Menu / Fungsi untuk hapus agunan\n- Pop up Screen untuk memastikan agunan yang dipilih akan dihapus\n- Service untuk melakukan hapus agunan terpilih\n- Flagging Untuk Agunan-agunan yang dihapus\nAcceptance Criteria : \nRequirement\nAcceptance Criteria\nMockup\nView available action menu options for a collateral record\nGiven \nthe Account Officer is on the \"Collateral Summary\" page \nWhen \nthe Account Officer clicks on the \"Titik 3\" (three-dot context menu) icon on a specific collateral object \nThen \nthe system must display a dropdown list with exactly three options:\n- Lihat Details\n- Edit Agunan\n- Hapus Agunan\nChoose Hapus Agunan\nWhen \nthe Account Officer clicks on “Hapus Agunan” \nThen \nwil show pop up modals that ask the user that he really wants to delete this record : \n- When \nthe Account Officer clicks the \"Hapus\" button \nThen \nthe system must execute a \"Soft Delete\" by updating the record status to inactive in the database \nAnd \nthe system must not permanently erase the data row from the system backend \nAnd \nthe system must close the pop-up modal \nAnd \nthe refreshed Collateral Summary page must no longer display the deleted collateral object\n- When \nthe Account Officer clicks the \"Batalkan\" button \nThen \nthe system must close the pop-up modal immediately \nAnd \nthe system must make no changes to the database \nAnd \nthe collateral object must remain visible and unchanged on the Collateral Summary page\n",
+  "linkedIssues": [
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4758",
+      "summary": "2. [BE, FE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4946",
+      "summary": "[FE, BE] LAMOS LOS SME - Bucket Agunan - Historical Agunan/Collaterals",
+      "status": "Backlog"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4991",
+      "summary": "18. [FE,BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Logic Submit Cek Kelengkapan Data Agunan (& Impact ke Handling Icon Banner at Bucket Agunan)",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-4940",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals - Lihat Details",
+      "status": "In Development"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4840",
+      "summary": "[FE] [Agunan - lamos] - Actions delete agunan",
+      "status": "Done"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6018",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan",
+      "status": "In SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

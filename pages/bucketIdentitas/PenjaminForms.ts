@@ -58,6 +58,25 @@ async function fillDate(root: Locator, name: string, iso: string, index = 0) {
   await el.fill(toDisplayDate(iso));
   await el.press('Enter');
   await el.press('Escape').catch(() => {});
+  // Popup kalender kadang tetap terbuka (terbukti 2026-11-23 pada tanggal akta perubahan) dan menutupi dropdown di bawahnya.
+  const popup = root.page().locator('.react-datepicker__month-container');
+  // Tutup bertahap: tunggu -> Tab (blur) -> fokus ulang + Escape + Tab. JANGAN klik di luar form: di modal pemegang saham
+  // klik di latar belakang menutup modalnya (terbukti 2026-11-23, field berikutnya jadi 'not attached to the DOM').
+  const hidden = (ms: number) => popup.first().waitFor({ state: 'hidden', timeout: ms }).then(() => true).catch(() => false);
+  if (!(await hidden(2000))) {
+    await el.press('Tab').catch(() => {});
+    if (!(await hidden(2500))) {
+      await el.focus().catch(() => {});
+      await el.press('Escape').catch(() => {});
+      await el.press('Tab').catch(() => {});
+      if (!(await hidden(3000))) {
+        // Terakhir: klik label field tanggal itu sendiri (masih di dalam form/modal, jadi tidak menutup modal)
+        const label = el.locator('xpath=ancestor::*[.//*[@data-testid="input-label"]][1]').locator('[data-testid="input-label"]').first();
+        await label.click({ timeout: 3000 }).catch(() => {});
+        await hidden(3000);
+      }
+    }
+  }
 }
 
 /** Radio berdasarkan atribut name + teks opsi (lebih stabil daripada label grup) */
@@ -356,7 +375,23 @@ export class PengurusModal {
 
   private async base(tipe: 'Perseorangan' | 'Badan Usaha', organ: OrganBadanUsaha) {
     await checkRadio(this.root, 'tipeOrganBadanUsaha', tipe);
-    await dropdown(this.root, 'organBadanUsaha').select(organ);
+    // Pilih organ langsung dari daftar (4 opsi, tanpa mengetik di kolom search): probe 2026-11-23 membuktikan daftar
+    // muncul normal saat dibuka, sedangkan Dropdown.select (ketik search) tidak menemukan opsinya di modal ini.
+    const cb = dropdown(this.root, 'organBadanUsaha').locator;
+    await cb.scrollIntoViewIfNeeded();
+    await this.page.waitForTimeout(1500); // klik langsung setelah modal dirender tertelan (probe dengan jeda 1,5 dtk berhasil)
+    const opsi = this.page.locator('[role="listbox"][data-testid="dropdownsearch-content"]:visible')
+      .locator('li button').filter({ hasText: new RegExp(`^\\s*${escapeRegex(organ)}\\s*$`) }).first();
+    for (let t = 0; t < 4; t++) {
+      if ((await cb.getAttribute('aria-expanded')) !== 'true') await cb.click();
+      // isVisible() mengabaikan timeout -> pakai waitFor, kalau tidak Escape menutup daftar yang baru akan muncul
+      if (await opsi.waitFor({ state: 'visible', timeout: 5000 }).then(() => true).catch(() => false)) break;
+      await this.page.keyboard.press('Escape');
+      await this.page.waitForTimeout(1000);
+    }
+    await opsi.waitFor({ state: 'visible', timeout: 10000 });
+    await opsi.click();
+    await expect(cb).toHaveAttribute('aria-expanded', 'false');
   }
 
   async fillPerseoranganWni(d: PengurusWniData) {

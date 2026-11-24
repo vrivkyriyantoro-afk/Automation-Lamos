@@ -1,0 +1,132 @@
+[
+  {
+    "id": "0:1",
+    "name": "Cover",
+    "childCount": 1
+  },
+  {
+    "id": "1489:307938",
+    "name": "⏰ Changelog (Read me!)",
+    "childCount": 1
+  },
+  {
+    "id": "1718:49755",
+    "name": "UI Component (‼️read me‼️)",
+    "childCount": 1
+  },
+  {
+    "id": "1489:307940",
+    "name": "-----",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307939",
+    "name": "ℹ About",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307941",
+    "name": "🟢 = Design Done",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307942",
+    "name": "🟠 = Design On Progress",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307943",
+    "name": "⚫️ = Design unused",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307945",
+    "name": "-----",
+    "childCount": 0
+  },
+  {
+    "id": "605:358110",
+    "name": "🟢 Phase 2.0 (done/ready to dev)",
+    "childCount": 0
+  },
+  {
+    "id": "1510:366877",
+    "name": "↳ ✅  Bucket agunan - Landing page only",
+    "childCount": 3
+  },
+  {
+    "id": "1493:561863",
+    "name": "↳ ✅ Bucket agunan - Tambah agunan",
+    "childCount": 1
+  },
+  {
+    "id": "1779:223204",
+    "name": "↳ ✅ Tampilan bucket agunan di halaman detail",
+    "childCount": 1
+  },
+  {
+    "id": "1474:356789",
+    "name": "↳ ✅ 6C - Collateral & Capacity",
+    "childCount": 3
+  },
+  {
+    "id": "1510:199682",
+    "name": "-----",
+    "childCount": 0
+  },
+  {
+    "id": "1510:155335",
+    "name": "🟠 Phase 2.0 (on progress)",
+    "childCount": 0
+  },
+  {
+    "id": "2463:434325",
+    "name": "↳ ⏳ FPPA",
+    "childCount": 18
+  },
+  {
+    "id": "1:2",
+    "name": "-------",
+    "childCount": 0
+  },
+  {
+    "id": "1489:307944",
+    "name": "⚫️  UNUSED",
+    "childCount": 0
+  },
+  {
+    "id": "1102:564797",
+    "name": "↳ AO PK (comment only)",
+    "childCount": 0
+  },
+  {
+    "id": "605:358108",
+    "name": "-----",
+    "childCount": 0
+  },
+  {
+    "id": "605:358109",
+    "name": "⚙️ Designer tools (dont mind this)",
+    "childCount": 0
+  },
+  {
+    "id": "2426:783815",
+    "name": "Component",
+    "childCount": 3
+  },
+  {
+    "id": "397:179449",
+    "name": "↳ Komponen agunan",
+    "childCount": 41
+  },
+  {
+    "id": "140:167437",
+    "name": "↳ Archives",
+    "childCount": 107
+  },
+  {
+    "id": "1:12",
+    "name": "↳ Sandbox",
+    "childCount": 51
+  }
+]

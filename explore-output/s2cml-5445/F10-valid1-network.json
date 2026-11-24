@@ -1,0 +1,12 @@
+{
+  "cif": "(dari .env)",
+  "calls": [
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/cif?number=2307403&jenisAgunanCode=F10",
+      "status": 200,
+      "req": "",
+      "body": "{\"data\":{\"accounts\":[]},\"responseMessage\":\"OK\",\"statuscode\":200}\n"
+    }
+  ]
+}

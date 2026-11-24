@@ -1,0 +1,10 @@
+◇ injected env (7) from .env
+
+Running 1 test using 1 worker
+
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-07 Opsi Status Perkawinan: ["Menikah","Belum Menikah","Janda / Duda"]
+  ok 1 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan (20.7s)
+
+  1 passed (23.9s)

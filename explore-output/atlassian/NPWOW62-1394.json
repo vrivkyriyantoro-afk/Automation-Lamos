@@ -1,0 +1,42 @@
+{
+  "type": "Jira Issue",
+  "key": "NPWOW62-1394",
+  "summary": "SLP - LAMOS - Origination SME Phase 2",
+  "issueType": "Enhancement",
+  "status": "In Development",
+  "description": "Following the completion of \nLAMOS Phase 1\n, which primarily established the foundational \nUser Access Management (UAM)\n capabilities, \nPhase 2\n will focus on enabling the end-to-end SME loan origination and credit approval process within LAMOS.\nThe scope will cover the journey from \nloan application submission by the Account Officer (AO)\n, including customer, facility, and \ncollateral information\n, followed by \nTeam Leader (TL) review\n, \nCredit Analysis by the Credit Analyst (CA)\n, and ultimately \nCredit Committee approval\n. Collateral-related capabilities, which were previously planned under a separate phase, will be incorporated into Phase 2 to ensure that collateral information is available as an integral part of the credit assessment and approval process.\nIn parallel, Phase 2 must consider the impact and alignment with \nProject Falcon\n, a credit transformation initiative supported by McKinsey, particularly across its key components: \nSmartCA\n, \nBank Statement Analyzer (BSA)\n, and \nCredit Underwriting Engine (CUE)\n. These capabilities may introduce changes to the credit analysis process, data requirements, assessment methodology, underwriting rules, and user responsibilities between AO and CA. Therefore, LAMOS Phase 2 needs to accommodate the relevant Falcon requirements while maintaining a seamless and controlled origination workflow from AO submission through Credit Committee decision.\nProcesses occurring after credit approval—including \nAO Offering Letter (AO OL)\n, \nAO Credit Agreement / Perjanjian Kredit (AO PK)\n, fulfillment of \nPre-Disbursement requirements\n, and subsequent loan booking and disbursement activities—will be addressed in the \nfollowing phases\n of LAMOS implementation.\nDescription\nLink\nPRD LAMOS\n\n \nTSD LAMOS\n\n \nTSD ABIDSU\n\n \nTSD CRE (CUE + Gec Knock Out)\n\n \n",
+  "linkedIssues": [
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "NPWOW62-1228",
+      "summary": "SLP - LAMOS - Origination SME Phase 1 ",
+      "status": "Ready for Deployment"
+    },
+    {
+      "relation": "Blocks",
+      "key": "NPWOW62-1409",
+      "summary": "SLP - LAMOS - Origination KPR Phase 1",
+      "status": "On Hold"
+    },
+    {
+      "relation": "Blocks",
+      "key": "NPWOW62-1401",
+      "summary": "SLP - T24 Migration - Pencairan + IDEB SLIK",
+      "status": "In Development"
+    },
+    {
+      "relation": "Blocks",
+      "key": "NPWOW62-1386",
+      "summary": "SLP - E-Collval",
+      "status": "In Development"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "NPWOW62-1384",
+      "summary": "Single Lending Platform",
+      "status": "Requirement Complete"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

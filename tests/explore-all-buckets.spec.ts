@@ -11,7 +11,7 @@ import { LoginPage } from '../pages/LoginPage';
  * Jalankan: EXPLORE_URL=<url> npx playwright test tests/explore-all-buckets.spec.ts --project=chromium
  */
 const TARGET_URL = process.env.EXPLORE_URL
-  || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual';
+  || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual';
 const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output';
 const ONLY_BUCKETS = (process.env.EXPLORE_BUCKETS || '').split(',').filter(Boolean);
 

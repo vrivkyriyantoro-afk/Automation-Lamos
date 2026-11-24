@@ -1,0 +1,58 @@
+﻿Test Case ID,Tipe Debitur,Kelompok / Modul,Judul Skenario,Tipe,Prioritas,Prekondisi,Langkah Pengujian,Expected Result,Referensi Sumber,Status
+TC-4948-01,Perorangan & Badan Usaha,Kategori Kepemilikan Agunan,Validasi Opsi Dropdown Debitur Perorangan dan Badan Usaha,Positive,Critical,"Sample 1: Debitur Perorangan (ID: 01M4F7TNSCSHEDB5G3WTSP7HDY) belum memiliki fasilitas aktif di Bank Sinarmas, Belum Menikah, dan memiliki penjamin.
+Sample 2: Debitur Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ) sudah memiliki fasilitas aktif di Bank Sinarmas dan memiliki penjamin.","1. Buka modal Tambah Agunan → masuk Step 3 Informasi Kepemilikan
+2. Klik dropdown ""Kategori Kepemilikan Agunan""
+3. Catat seluruh opsi yang tampil
+4. Ulangi untuk Sample 2 (Badan Usaha)","Sample 1 (Perorangan): 001 - Calon Debitur, 005 - Pemilik Agunan, 008 - Vendor, 009 - Penjamin (PG) tampil; 002 tidak tampil (belum menikah); 003/004 tidak tampil (belum ada fasilitas aktif); 006/007 tidak tampil; 010 tampil hanya jika penjamin berstatus Menikah.
+Sample 2 (Badan Usaha): opsi debitur sesuai fasilitas aktif, 006 dan 007 tampil, 009 tampil.","S2CML-4948 AC-1 | ID lama: 01, 02, 03, 04, 05",PASSED
+TC-4948-02,Perorangan & Badan Usaha,Kategori Kepemilikan Agunan,"Validasi System Memberi Notif bahwa Entitas Tidak Tersedia (Pasangan Debitur, Penjamin PG, Pasangan Penjamin, Pengurus & Pemilik Perusahaan)",Negative,High,"Bucket Identitas status Lengkap. Data uji tanpa entitas terkait di Bucket Identitas & Pengecekan:
+- Perorangan belum menikah / data pasangan belum ada (kategori 002)
+- Perorangan tidak memiliki penjamin, Apakah Debitur Memiliki Penjamin = Tidak (kategori 009)
+- Badan Usaha belum memiliki data Pengurus & Pemegang Saham (kategori 006)
+User berada di Step 3 Informasi Kepemilikan.","1. Masuk Step 3: Informasi Kepemilikan
+2. Pilih kategori sesuai data uji: ""002 - Calon Pasangan Debitur"", ""009 - Penjamin (PG)"", atau ""006 - Pengurus Perusahaan""
+3. Untuk kategori 009 dan 006, klik dropdown ""Nama""
+4. Amati respons sistem dan isi dropdown Nama","Sistem menampilkan notifikasi bahwa entitas tidak tersedia / belum terdaftar di Bucket Identitas & Pengecekan:
+- 002: ""Entitas Calon Pasangan Debitur tidak tersedia""; form tidak dapat dilanjutkan sebelum data pasangan diisi.
+- 009: ""Data penjamin tidak tersedia""; dropdown Nama kosong atau form diblokir.
+- 006: ""Data Pengurus Perusahaan belum tersedia""; dropdown Nama kosong atau menampilkan placeholder peringatan.","S2CML-4948 AC-2 | ID lama: 06, 07, 08 (notif)",PASSED
+TC-4948-03,Perorangan & Badan Usaha,Kategori Kepemilikan Agunan,Validasi Kategori Kepemilikan Agunan: Calon Debitur Perorangan dan Badan Usaha,Positive,Critical,"Bucket Identitas status Lengkap. Debitur Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ) sudah memiliki fasilitas aktif di Bank Sinarmas.
+
+Bucket Identitas status Lengkap. Debitur Perorangan (ID: 01M4F7TNSCSHEDB5G3WTSP7HDY) belum memiliki fasilitas aktif di Bank Sinarmas.","1. Masuk Step 3 pada pengajuan Perorangan
+2. Pilih ""001 - Calon Debitur"" dan amati Nama Lengkap & Nomor KTP; coba edit manual
+3. Masuk Step 3 pada pengajuan Badan Usaha
+4. Pilih kategori debitur (desain: ""003 - Debitur"") dan amati field terisi otomatis","- Perorangan 001: Nama Lengkap & NIK terisi otomatis (mis. MUNAWAROH / 3209244711730001), read-only. Backend: Tipe Kepemilikan = Perorangan, Hubungan = Milik Sendiri, Status = Milik.
+- Badan Usaha: Nama Badan Usaha & NPWP/nomor legalitas terisi otomatis. Backend: Tipe Kepemilikan = Badan Usaha, Hubungan = Milik Sendiri, Status = Milik.","S2CML-4948 AC-4 | ID lama: 08 (bagian 001), 09, 11, 13, 19",PASSED
+TC-4948-04,Perorangan,Kategori Kepemilikan Agunan,Validasi Kategori Kepemilikan Agunan saat Dipilih Pasangan Debitur atau Pasangan Calon Debitur,Positive,High,Bucket Identitas status Lengkap. Debitur Perorangan (ID: 01M4F7TNSCSHEDB5G3WTSP7HDY) belum memiliki fasilitas aktif di Bank Sinarmas. Untuk kategori 002: debitur berstatus Menikah dan data pasangan terisi di Bucket Identitas. User berada di Step 3.,"1. Masuk Step 3: Informasi Kepemilikan
+2. Pilih ""002 - Calon Pasangan Debitur"" (atau ""004 - Pasangan Debitur"" bila ada fasilitas aktif)
+3. Amati field Nama Lengkap dan Nomor KTP
+4. Coba edit manual kedua field","Nama Lengkap & NIK terisi otomatis data pasangan, read-only. Backend: Tipe Kepemilikan = Perorangan, Hubungan = Pasangan (Suami/Istri), Status = Kepemilikan Bersama.","S2CML-4948 AC-4 & AC-5 | ID lama: 08 (bagian 002), 12",PASSED
+TC-4948-05,Badan Usaha,Kategori Kepemilikan Agunan,Validasi Kategori Kepemilikan Agunan saat Dipilih Pengurus Perusahaan atau Pemilik Perusahaan,Positive,High,"[Skenario 1 — eks TC-4948-09]
+Bucket Identitas status Lengkap. Debitur Badan Usaha memiliki minimal 2 pengurus terdaftar di Bucket Identitas & Pengecekan.
+
+[Skenario 2 — eks TC-4948-16]
+Bucket Identitas status Lengkap. Debitur Badan Usaha memiliki minimal 1 pengurus terdaftar di Bucket Identitas & Pengecekan. User berada di Step 3.","1. Masuk Step 3: Informasi Kepemilikan
+2. Pilih Kategori ""006 - Pengurus Perusahaan""
+3. Klik dropdown ""Nama"" dan amati daftar yang muncul
+4. Pilih salah satu pengurus
+5. Amati field detail yang terisi","Dropdown Nama menampilkan daftar pengurus sesuai data Pengurus & Pemegang Saham di Bucket Identitas & Pengecekan; jumlah item = jumlah pengurus terdaftar.
+Setelah pengurus dipilih:
+- ""Nama Lengkap"" terisi nama pengurus
+- ""Nomor KTP / NIK"" terisi NIK pengurus
+- Dropdown ""Hubungan dengan Debitur"" menampilkan semua opsi (dipilih manual)
+Backend menetapkan: Hubungan dengan Debitur (McKinsey) = Perusahaan, Status Kepemilikan = Kepemilikan Bersama.",S2CML-4948 AC-3 & AC-5 | ID lama: 06,PASSED
+TC-4948-06,Perorangan,Kategori Kepemilikan Agunan,Validasi Kategori Kepemilikan Agunan saat Dipilih Penjamin (PG) atau Pasangan Penjamin,Positive,High,"[Skenario 1]
+[Skenario 1 — eks TC-4948-10]
+Bucket Identitas status Lengkap. Debitur Perorangan memiliki minimal 1 penjamin terdaftar di Bucket Identitas & Pengecekan (Apakah Debitur Memiliki Penjamin = Ya).
+
+[Skenario 2 — eks TC-4948-14]
+Bucket Identitas status Lengkap. Debitur Perorangan memiliki minimal 1 penjamin terdaftar. User berada di Step 3, sudah memilih kategori 009.
+
+[Skenario 2]
+Bucket Identitas status Lengkap. Debitur Perorangan memiliki penjamin berjenis Perorangan. Skenario A: penjamin berstatus Menikah dan data pasangan penjamin tersedia di Bucket Identitas. Skenario B: penjamin berstatus Belum Menikah.","1. Masuk Step 3: Informasi Kepemilikan
+2. Pilih Kategori ""009 - Penjamin (PG)"", klik dropdown ""Nama"", amati daftar, lalu pilih satu penjamin
+3. Amati field detail yang terisi
+4. Pilih Kategori ""010 - Pasangan Penjamin"", klik dropdown ""Nama"", amati daftar (termasuk keterangan pasangan dari siapa), lalu pilih satu nama
+5. Untuk penjamin Belum Menikah, pastikan opsi 010 tidak ada di dropdown","- 009: dropdown Nama berisi daftar penjamin dari Bucket Identitas; setelah dipilih Nama Lengkap & NIK terisi. Backend: Hubungan (McKinsey) = Penjamin, Status = Milik pihak ketiga.
+- 010: dropdown Nama menampilkan ""Pasangan dari [Nama Penjamin]""; setelah dipilih Nama & NIK pasangan terisi. Backend: Status = Milik pihak ketiga.
+- Penjamin Belum Menikah: opsi 010 tidak tampil.","S2CML-4948 AC-3 & AC-5 | ID lama: 07, 10",PASSED

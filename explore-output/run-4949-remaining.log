@@ -1,0 +1,114 @@
+◇ injected env (7) from .env
+
+Running 7 tests using 1 worker
+
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-12 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  ok 1 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-12: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (25.1s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-13 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  ok 2 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-13: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (19.3s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-14 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  x  3 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (21.6s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-15 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  x  4 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-15: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (23.0s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC17 buttons: ["||JD|<div class=\"flex size-[35px] items-center justify-center rounded-full bg-info-70","|text-button||<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/sv","|text-button|Riwayat|<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/sv","||Data Agunan\nBelum Lengkap|<div class=\"flex size-6 items-center justify-center rounded-full border-2 border","||Pengikatan agunan ke fasilitas\nBelum Lengkap|<div class=\"flex size-6 items-center justify-center rounded-full border-2 border","Buka panduan singkat agunan|||<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3","|filled-button|Agunan|<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 2","icon button|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","||Tampilkan informasi lengkap|<span class=\"text-sm font-medium text-blue-600 hover:text-blue-700\">Tampilkan in","icon button|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","||Tampilkan informasi lengkap|<span class=\"text-sm font-medium text-blue-600 hover:text-blue-700\">Tampilkan in","first button|first-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","prev button|prev-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","page button|page-button-pagination|1|1","next button|next-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","last button|last-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","icon button|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","||Tampilkan informasi lengkap|<span class=\"text-sm font-medium text-blue-600 hover:text-blue-700\">Tampilkan in","first button|first-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","prev button|prev-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","page button|page-button-pagination|1|1","next button|next-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","last button|last-button-pagination||<svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","Buka menu aksi|||<svg viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"s","|filled-button|Kirim|Kirim","icon button|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","icon-button|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","close modal|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","||Informasi umum agunan\nBelum Lengkap|<div class=\"flex size-6 items-center justify-center rounded-full border-2 border","||Data tambahan agunan\nBelum Lengkap|<div class=\"flex size-6 items-center justify-center rounded-full border-2 border","||Informasi kepemilikan\nBelum Lengkap|<div class=\"flex size-6 items-center justify-center rounded-full border-2 border","Clear|dropdownsearch-clear||<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 2","Clear|dropdownsearch-clear||<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 2","Hapus file slik_hapus.pdf|||<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w","|text-button|Kembali|<span class=\"flex items-center gap-2\"><svg viewBox=\"0 0 16 16\" fill=\"none\" xmlns","|outlined-button|Simpan sebagai draft|Simpan sebagai draft","|filled-button|Simpan|Simpan"]
+  x  5 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:116:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload (24.6s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  ok 6 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:132:7 › S2CML-4949: sisa TC SLIK › TC-4949-19: File SLIK > 50MB ditolak (23.1s)
+[RETRY] Form login belum termuat sempurna, reload...
+  ok 7 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:144:7 › S2CML-4949: sisa TC SLIK › TC-4949-20: Batas maksimal 20 file SLIK (42.9s)
+
+
+  1) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+
+    Error: opsi /penjamin/i harus ada
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+       99 |       console.log(`${id} opsi Hubungan:`, JSON.stringify(opsi));
+      100 |       for (const p of pola) {
+    > 101 |         expect(opsi.some(o => p.test(o)), `opsi ${p} harus ada`).toBeTruthy();
+          |                                                                  ^
+      102 |       }
+      103 |       await listboxOption(page, pola[0]).click();
+      104 |       await closeModal(page);
+        at C:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:101:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\error-context.md
+
+  2) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-15: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+
+    Error: opsi /pemilik sebelumnya.*jual beli/i harus ada
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+       99 |       console.log(`${id} opsi Hubungan:`, JSON.stringify(opsi));
+      100 |       for (const p of pola) {
+    > 101 |         expect(opsi.some(o => p.test(o)), `opsi ${p} harus ada`).toBeTruthy();
+          |                                                                  ^
+      102 |       }
+      103 |       await listboxOption(page, pola[0]).click();
+      104 |       await closeModal(page);
+        at C:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:101:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-63582-itur-tersedia-dapat-dipilih-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-63582-itur-tersedia-dapat-dipilih-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-63582-itur-tersedia-dapat-dipilih-chromium\error-context.md
+
+  3) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:116:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload 
+
+    TimeoutError: locator.click: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /hapus|delete|remove/i }).first()
+
+
+      122 |     console.log('TC17 buttons:', JSON.stringify(await page.locator('button:visible').evaluateAll(e => e.map(b => (b.getAttribute('aria-label') || '') + '|' + (b.getAttribute('data-testid') || '') + '|' + b.innerText.trim() + '|' + b.innerHTML.slice(0, 80)))));
+      123 |     await page.screenshot({ path: 'explore-output/tc-4949-17-probe.png', fullPage: true });
+    > 124 |     await page.getByRole('button', { name: /hapus|delete|remove/i }).first().click({ timeout: 5000 });
+          |                                                                              ^
+      125 |     // Konfirmasi bila muncul modal
+      126 |     const konfirmasi = page.getByRole('button', { name: /^(ya|hapus|konfirmasi)/i }).last();
+      127 |     if (await konfirmasi.isVisible({ timeout: 2000 }).catch(() => false)) await konfirmasi.click();
+        at C:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:124:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\error-context.md
+
+  3 failed
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:95:9 › S2CML-4949: sisa TC SLIK › TC-4949-15: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:116:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload 
+  4 passed (4.6m)

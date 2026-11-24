@@ -1,0 +1,24 @@
+﻿Test Case ID,Tipe Debitur,Kelompok / Modul,Judul Skenario,Tipe,Prioritas,Prekondisi,Langkah Pengujian,Expected Result,Referensi Sumber
+TC-5905-01,Perorangan,Tanpa Impact,Validasi tambah entitas di Bucket Identitas tidak mengubah Bucket Agunan,Positive,High,Application punya agunan Final/Draft. Catat status & checklist agunan.,"1. Buka Bucket Identitas dan Pengecekan
+2. Tambah entitas baru dan simpan
+3. Buka Bucket Agunan","Status agunan, checklist Form Data Agunan, dan checklist Bucket Agunan sama seperti sebelum tambah entitas.",S2CML-5905 AC-1
+TC-5905-02,Perorangan,Tanpa Impact,Validasi edit data entitas tanpa ganti entitas tidak mengubah Bucket Agunan,Positive,High,Sama dengan TC-01. Entitas existing tidak berubah status pernikahan.,"1. Buka Bucket Identitas dan Pengecekan
+2. Edit data non-kritis entitas (mis. alamat) dan simpan
+3. Buka Bucket Agunan",Status agunan dan seluruh checklist tidak berubah.,S2CML-5905 AC-2
+TC-5905-03,Perorangan,Entitas Hilang,Validasi ganti status Menikah → Tidak Menikah mengubah agunan milik pasangan menjadi Draft dan menghilangkan checklist Form Data Agunan & Bucket Agunan,Positive,Critical,Pemilik agunan = pasangan/penjamin yang identitasnya akan hilang. Penjamin berstatus Menikah. Agunan Final dan Bucket Agunan lengkap (ada checklist).,"1. Buka Bucket Identitas dan Pengecekan
+2. Ubah status penjamin dari Menikah ke Tidak Menikah dan simpan
+3. Buka Bucket Agunan
+4. Periksa status agunan dan checklist",Agunan berstatus Draft; checklist Form Data Agunan hilang; checklist Bucket Agunan (sebelumnya lengkap) hilang.,"S2CML-5905 AC-3, AC-5, AC-7, AC-8"
+TC-5905-04,Perorangan,Entitas Hilang,Validasi hapus entitas pemilik agunan mengubah agunan menjadi Draft dan menghilangkan checklist Form Data Agunan & Bucket Agunan,Positive,Critical,Pemilik agunan = pasangan/penjamin yang identitasnya akan hilang. Agunan Final dan Bucket Agunan lengkap (ada checklist).,"1. Buka Bucket Identitas dan Pengecekan
+2. Hapus entitas pemilik agunan
+3. Buka Bucket Agunan
+4. Periksa status agunan dan checklist",Agunan berstatus Draft; checklist Form Data Agunan hilang; checklist Bucket Agunan (sebelumnya lengkap) hilang.,"S2CML-5905 AC-4, AC-5, AC-7, AC-8"
+TC-5905-05,Perorangan,Pengikatan Fasilitas,Validasi checklist Pengikatan Agunan ke Fasilitas hilang bila Struktur Kredit jadi tanpa agunan,Positive,High,Pemilik agunan = pasangan/penjamin yang identitasnya akan hilang. Agunan satu-satunya yang terikat ke fasilitas; checklist Pengikatan ada.,"1. Hapus entitas pemilik agunan (atau ganti status Menikah → Tidak Menikah)
+2. Buka Form Pengikatan Agunan ke Fasilitas / Struktur Kredit
+3. Periksa checklist",Struktur Kredit tanpa agunan; checklist Pengikatan hilang.,S2CML-5905 AC-9
+TC-5905-06,Perorangan,Entitas Hilang,Validasi hapus entitas yang bukan pemilik agunan tidak mengubah agunan,Negative,High,"Ada entitas B yang bukan pemilik agunan mana pun. Agunan milik entitas A, status Final.","1. Buka Bucket Identitas dan Pengecekan
+2. Hapus entitas B
+3. Buka Bucket Agunan",Agunan milik entitas A tetap Final; checklist tidak berubah.,S2CML-5905 Negative (turunan AC-4)
+TC-5905-07,Perorangan,Pengikatan Fasilitas,Validasi checklist Pengikatan tetap bila Struktur Kredit masih punya agunan lain,Negative,Medium,Pemilik agunan = pasangan/penjamin yang identitasnya akan hilang. Struktur Kredit punya agunan lain (milik entitas lain) yang terikat ke fasilitas.,"1. Hapus entitas pemilik agunan pertama
+2. Buka Form Pengikatan Agunan ke Fasilitas / Struktur Kredit
+3. Periksa checklist",Agunan pertama terlepas dari pengikatan; checklist Pengikatan tetap ada karena agunan lain masih terikat.,S2CML-5905 AC-9 (boundary)

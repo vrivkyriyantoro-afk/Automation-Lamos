@@ -1,0 +1,54 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-5420",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Tambahan Agunan non Cash Collateral",
+  "issueType": "Task",
+  "status": "In SIT",
+  "description": "Task\nPembuatan Form Informasi Tambahan Data  Agunan Beserta Fungsionalitasnya\nUmum\nRequirement\nAcceptance Criteria\nMockup/Samples\nEntry Data Point\nGiven Tampilan Form 2 Data Tambahan Agunan\nWHEN User masuk kedalam Form 2 Data Tambahan Agunan\nTHEN user dapat melakukan input data berdasarkan data point yang sudah ditetapkan sesuai dengan logic mandatory, conditional ataupun opsional\n\nCheck at Column B Called : \nData Tambahan Agunan\n \nHidden Entry Point Data\nGiven Tampilan Form 2 Data Tambahan Agunan\nWHEN User masuk kedalam Form 2 Data Tambahan Agunan\nTHEN data point untuk kebutuhan bantuan tidak perlu dimunculkan namun tetap ada sebagai data di BE ataupun FE untuk kebutuhan kedepan\nConditional Hidden Entry Point Data\nGiven Tampilan Form 2 Data Tambahan Agunan\nWHEN User masuk kedalam Form 2 Data Tambahan Agunan\nTHEN ada point yang sifatnya harus di kosongkan dalam kondisi tertentu, sehingga apa bila data tersebut harus kosong maka data tersebut tidak perlu ditampilkan pada screen\nGiven at Form 2 Data Tambahan Agunan and Tipe Jenis Agunan by CLS = Vehicle/Housing/Document\nRequirement\nAcceptance Criteria\nMockup/Samples\nPre-Condition at Form 2 - Data Tambahan Agunan\nGiven Jenis Agunan Criteria by CLS is Vehicle or Housing or Document When User Click Form 2 - Data Tambahan Agunan THEN System will show information of Field : \n- Sifat Agunan Jaminan (Dropdown)\n- Status Kredit Join (Default to  Tidak)\n- Bukti Kepemilikan\n- Files to Upload Bukti Kepemilikan\nUpload Files\nFile Can be Uploaded More Than 1, Maximum is 100\nFile Size per file is 50MB\nUser can review a file that uploaded by click that file\nUser can remove a file if they feel wrong file uploaded\n",
+  "linkedIssues": [
+    {
+      "relation": "Relates",
+      "key": "S2CRL-3831",
+      "summary": "CLS GET List Master",
+      "status": "Done"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-5419",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Umum Agunan",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-4889",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 1",
+      "status": "In Development"
+    },
+    {
+      "relation": "Cloners",
+      "key": "S2CML-5454",
+      "summary": "10. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Kepemilikan",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-4983",
+      "summary": "21. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-6019",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4880",
+      "summary": "[FE][agunan - lamos] – Step 2 UI: Data Tambahan Agunan (render datapoints)",
+      "status": "Ready to SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

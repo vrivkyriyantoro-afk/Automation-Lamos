@@ -1,0 +1,11 @@
+◇ injected env (9) from .env
+
+Running 1 test using 1 worker
+
+◇ injected env (0) from .env
+
+[1/1] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:122:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-07: Pilih 009 - Penjamin tanpa data penjamin terdaftar
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:122:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-07: Pilih 009 - Penjamin tanpa data penjamin terdaftar
+TC-4948-07 dropdownNamaKosong=true adaNotif=false
+
+  1 passed (27.1s)

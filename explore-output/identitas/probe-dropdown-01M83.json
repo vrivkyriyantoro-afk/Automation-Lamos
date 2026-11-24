@@ -1,0 +1,120 @@
+{
+  "tambahan": {
+    "cbs": [
+      {
+        "id": "lastEducation-r1f",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Pilih pendidikan terakhir",
+        "placeholderTid": "Pilih pendidikan terakhir"
+      }
+    ],
+    "exp": null
+  },
+  "pekerjaan": {
+    "cbs": [
+      {
+        "id": "job-r1g",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Akuntan",
+        "placeholderTid": "Akuntan"
+      },
+      {
+        "id": "companySector-r1j",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "PERBANKAN",
+        "placeholderTid": "PERBANKAN"
+      },
+      {
+        "id": "otherIncome-r1r",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Keluarga memiliki usaha lain yang mengha",
+        "placeholderTid": "Keluarga memiliki usaha lain yang menghasilkan pemasukan yang lebih besar dibandingkan dengan pemasukan pemohon"
+      },
+      {
+        "id": "companyProvinceCode-r24",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "DKI Jakarta",
+        "placeholderTid": "DKI Jakarta"
+      },
+      {
+        "id": "companyCityCode-r25",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Jakarta Pusat, Wil. Kota",
+        "placeholderTid": "Jakarta Pusat, Wil. Kota"
+      },
+      {
+        "id": "companyDistrictCode-r26",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Gambir",
+        "placeholderTid": "Gambir"
+      },
+      {
+        "id": "companySubDistrictCode-r27",
+        "disabled": "false",
+        "expanded": "false",
+        "visible": true,
+        "text": "Duri Pulo",
+        "placeholderTid": "Duri Pulo"
+      }
+    ],
+    "exp": {
+      "value": "",
+      "disabled": false,
+      "type": "text",
+      "max": "",
+      "maxLength": -1
+    }
+  },
+  "lbu": [
+    {
+      "id": "lbu-credit-nature-r2a",
+      "visible": true,
+      "text": "Pilih sifat kredit",
+      "disabled": "false"
+    },
+    {
+      "id": "lbu-debtor-group-r2b",
+      "visible": true,
+      "text": "Pilih golongan debitur",
+      "disabled": "false"
+    },
+    {
+      "id": "lbu-legal-entity-r2c",
+      "visible": true,
+      "text": "Pilih sandi bentuk badan hukum",
+      "disabled": "false"
+    },
+    {
+      "id": "lbu-debtor-category-r2d",
+      "visible": true,
+      "text": "Pilih kategori debitur",
+      "disabled": "false"
+    },
+    {
+      "id": "lbu-portfolio-category-r2e",
+      "visible": true,
+      "text": "Pilih kategori portfolio",
+      "disabled": "false"
+    },
+    {
+      "id": "lbu-dati-ii-r2f",
+      "visible": true,
+      "text": "Pilih Sandi Dati II",
+      "disabled": "false"
+    }
+  ]
+}

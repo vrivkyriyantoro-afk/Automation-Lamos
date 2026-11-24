@@ -1,0 +1,80 @@
+[
+  {
+    "label": "sebelum klik",
+    "modalOpen": 1,
+    "texts": []
+  },
+  {
+    "label": "t+500ms",
+    "modalOpen": 1,
+    "texts": []
+  },
+  {
+    "net": "PUT",
+    "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/sme/loans/01M4F7TNSCSHEDB5G3WTSP7HDY/forms/collaterals",
+    "status": 200
+  },
+  {
+    "label": "t+1000ms",
+    "modalOpen": 1,
+    "texts": []
+  },
+  {
+    "label": "t+1500ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+2000ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+2500ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+3000ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+3500ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+4000ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+4500ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+5000ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+5500ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "label": "t+6000ms",
+    "modalOpen": 0,
+    "texts": []
+  },
+  {
+    "added": [
+      "AN020101 - Tanah\n\nNilai agunan\n\nNilai prediksi agunan yang dapat diagunkan\n\nRp 0\n\nMasih menunggu nilai final\nTampilkan informasi lengkap",
+      "Jenis pengikatan*\nPilih jenis pengikatan",
+      "Tanggal pengikatan*",
+      "Pengajuan berhasil disimpan sebagai draf."
+    ]
+  }
+]

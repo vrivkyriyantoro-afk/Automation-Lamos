@@ -5,13 +5,13 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4889 - Modul 4: Alamat Agunan
  * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
- * Cakupan Test Cases: TC - 04 - 31 s.d. TC - 04 - 35
+ * Cakupan Test Cases: TC-5419-08 s.d. TC-5419-11
  * Karakter: READ-ONLY (Validasi UI, Cascading Location Dropdowns, Reset Behavior, & Postal Code Validation)
  */
 
 const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const TARGET_URL = process.env.EXPLORE_URL
-  || `https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
+  || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
 
 test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
   test.beforeEach(async ({ page }) => {
@@ -103,10 +103,10 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
   }
 
   /**
-   * TC - 04 - 32: Sub-location saat parent belum dipilih
+   * TC-5419-09: Sub-location saat parent belum dipilih
    */
-  test('TC - 04 - 32: Sub-location tidak dapat dipilih / tidak ada opsi saat parent belum dipilih', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 32: Sub-location saat parent belum dipilih');
+  test('TC-5419-09: Sub-location tidak dapat dipilih / tidak ada opsi saat parent belum dipilih', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-09: Sub-location saat parent belum dipilih');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // Pastikan Provinsi belum dipilih
@@ -124,14 +124,14 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     const isKotaDisabled = await kotaTrigger.isDisabled().catch(() => false);
     const isKecamatanDisabled = await kecamatanTrigger.isDisabled().catch(() => false);
 
-    console.log(`[TC-04-32] Status isDisabled: Kota=${isKotaDisabled}, Kecamatan=${isKecamatanDisabled}`);
+    console.log(`[TC-5419-09] Status isDisabled: Kota=${isKotaDisabled}, Kecamatan=${isKecamatanDisabled}`);
 
     if (!isKotaDisabled) {
       await kotaTrigger.click();
       await page.waitForTimeout(1000);
       const listbox = page.locator('[role="listbox"]:visible, ul:visible');
       const itemCount = await listbox.locator('li:not(.sticky)').count();
-      console.log(`[TC-04-32] Jumlah opsi Kota saat Provinsi kosong: ${itemCount}`);
+      console.log(`[TC-5419-09] Jumlah opsi Kota saat Provinsi kosong: ${itemCount}`);
       // Dropdown tidak menampilkan opsi atau menampilkan pesan parent belum dipilih
       expect(itemCount === 0 || !await listbox.isVisible().catch(() => false)).toBeTruthy();
       // Tutup kembali dropdown bila terbuka
@@ -140,26 +140,26 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
       expect(isKotaDisabled).toBeTruthy();
     }
 
-    await testInfo.attach('Eviden TC-04-32: Sub-location Saat Parent Belum Dipilih', {
+    await testInfo.attach('Eviden TC-5419-09: Sub-location Saat Parent Belum Dipilih', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 31: List kecamatan urut abjad
+   * TC-5419-08: List kecamatan urut abjad
    */
-  test('TC - 04 - 31: List dropdown Kecamatan berurutan secara alfabetis (A-Z)', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 31: List kecamatan urut abjad');
+  test('TC-5419-08: List dropdown Kecamatan berurutan secara alfabetis (A-Z)', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-08: List kecamatan urut abjad');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // 1. Pilih Provinsi (misal DKI JAKARTA atau opsi pertama)
     const provSelected = await selectLocationDropdown(page, /Pilih provinsi/i, 'DKI');
-    console.log(`[TC-04-31] Provinsi dipilih: ${provSelected}`);
+    console.log(`[TC-5419-08] Provinsi dipilih: ${provSelected}`);
 
     // 2. Pilih Kota (misal JAKARTA PUSAT atau opsi pertama)
     const kotaSelected = await selectLocationDropdown(page, /Pilih kota/i);
-    console.log(`[TC-04-31] Kota dipilih: ${kotaSelected}`);
+    console.log(`[TC-5419-08] Kota dipilih: ${kotaSelected}`);
 
     // 3. Buka dropdown Kecamatan
     const kecamatanTrigger = page.locator('[role="combobox"]').filter({ hasText: /Pilih kecamatan/i }).first();
@@ -171,7 +171,7 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
 
     const rawTexts = await listbox.locator('li:not(.sticky) button, li:not(.sticky)').allInnerTexts();
     const cleanKecamatan = rawTexts.map(t => t.trim()).filter(t => t && t !== 'Clear' && !t.includes('Pilih'));
-    console.log(`[TC-04-31] Ditemukan ${cleanKecamatan.length} opsi Kecamatan:`, cleanKecamatan.slice(0, 5));
+    console.log(`[TC-5419-08] Ditemukan ${cleanKecamatan.length} opsi Kecamatan:`, cleanKecamatan.slice(0, 5));
 
     expect(cleanKecamatan.length).toBeGreaterThan(1);
 
@@ -183,30 +183,30 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     await listbox.locator('li:not(.sticky) button, li:not(.sticky)').first().click();
     await page.waitForTimeout(1000);
 
-    await testInfo.attach('Eviden TC-04-31: List Kecamatan Urut Abjad', {
+    await testInfo.attach('Eviden TC-5419-08: List Kecamatan Urut Abjad', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 33: Ubah parent location mereset child
+   * TC-5419-10: Ubah parent location mereset child
    */
-  test('TC - 04 - 33: Mengubah parent location otomatis me-reset field child (Kota & Kecamatan)', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 33: Ubah parent location mereset child');
+  test('TC-5419-10: Mengubah parent location otomatis me-reset field child (Kota & Kecamatan)', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-10: Ubah parent location mereset child');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // 1. Pilih Provinsi pertama
     const prov1 = await selectLocationDropdown(page, /Pilih provinsi/i, 'DKI');
-    console.log(`[TC-04-33] Provinsi awal: ${prov1}`);
+    console.log(`[TC-5419-10] Provinsi awal: ${prov1}`);
 
     // 2. Pilih Kota
     const kota1 = await selectLocationDropdown(page, /Pilih kota/i);
-    console.log(`[TC-04-33] Kota awal: ${kota1}`);
+    console.log(`[TC-5419-10] Kota awal: ${kota1}`);
 
     // 3. Pilih Kecamatan
     const kec1 = await selectLocationDropdown(page, /Pilih kecamatan/i);
-    console.log(`[TC-04-33] Kecamatan awal: ${kec1}`);
+    console.log(`[TC-5419-10] Kecamatan awal: ${kec1}`);
 
     // 4. Ubah Provinsi ke provinsi lain (misal JAWA BARAT)
     const provTrigger = page.locator('[role="combobox"]').filter({ hasText: new RegExp(prov1, 'i') }).first();
@@ -216,7 +216,7 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     await listbox.locator('li button, li').first().waitFor({ timeout: 10000 });
     const otherProv = listbox.locator('li:not(.sticky) button, li:not(.sticky)').filter({ hasNotText: new RegExp(prov1, 'i') }).first();
     const prov2 = (await otherProv.innerText()).trim();
-    console.log(`[TC-04-33] Mengubah Provinsi ke: ${prov2}`);
+    console.log(`[TC-5419-10] Mengubah Provinsi ke: ${prov2}`);
     await otherProv.click();
     await page.waitForTimeout(1500);
 
@@ -229,22 +229,22 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
 
     const textKotaAfter = await kotaTriggerAfter.innerText();
     const textKecAfter = await kecTriggerAfter.innerText();
-    console.log(`[TC-04-33] Setelah ubah parent: Kota="${textKotaAfter}", Kecamatan="${textKecAfter}"`);
+    console.log(`[TC-5419-10] Setelah ubah parent: Kota="${textKotaAfter}", Kecamatan="${textKecAfter}"`);
 
     expect(textKotaAfter).toContain('Pilih kota');
     expect(textKecAfter).toContain('Pilih kecamatan');
 
-    await testInfo.attach('Eviden TC-04-33: Ubah Parent Reset Child Location', {
+    await testInfo.attach('Eviden TC-5419-10: Ubah Parent Reset Child Location', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 34: Kode pos diisi non-angka
+   * TC-5419-11a: Kode pos diisi non-angka
    */
-  test('TC - 04 - 34: Validasi Kode Pos jika diisi huruf/simbol non-angka', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 34: Kode pos diisi non-angka');
+  test('TC-5419-11a: Validasi Kode Pos jika diisi huruf/simbol non-angka', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-11a: Kode pos diisi non-angka');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     const inputKodePos = page.locator('input[placeholder*="kode pos" i]').first();
@@ -256,7 +256,7 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     await page.waitForTimeout(1000);
 
     const val = await inputKodePos.inputValue();
-    console.log(`[TC-04-34] Nilai input Kode Pos setelah diisi "ABC!@#": "${val}"`);
+    console.log(`[TC-5419-11a] Nilai input Kode Pos setelah diisi "ABC!@#": "${val}"`);
 
     // Validasi:
     // Format 1: Sistem memblokir karakter non-angka via masking sehingga value tetap kosong ""
@@ -264,20 +264,20 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     const errorMsg = page.locator('text=/kode pos wajib diisi dengan angka|hanya.*angka|format tidak valid/i').first();
     const hasErrorAlert = await errorMsg.isVisible().catch(() => false);
 
-    console.log(`[TC-04-34] Masking blocked input: ${val === ''}, Alert error visible: ${hasErrorAlert}`);
+    console.log(`[TC-5419-11a] Masking blocked input: ${val === ''}, Alert error visible: ${hasErrorAlert}`);
     expect(val === '' || hasErrorAlert).toBeTruthy();
 
-    await testInfo.attach('Eviden TC-04-34: Validasi Kode Pos Non Angka', {
+    await testInfo.attach('Eviden TC-5419-11a: Validasi Kode Pos Non Angka', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 35: Kode pos diisi angka valid
+   * TC-5419-11b: Kode pos diisi angka valid
    */
-  test('TC - 04 - 35: Input Kode Pos dengan angka valid lolos tanpa error', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 35: Kode pos diisi angka valid');
+  test('TC-5419-11b: Input Kode Pos dengan angka valid lolos tanpa error', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-11b: Kode pos diisi angka valid');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     const inputKodePos = page.locator('input[placeholder*="kode pos" i]').first();
@@ -289,14 +289,14 @@ test.describe('S2CML-4889: Modul 4 - Alamat Agunan', () => {
     await page.waitForTimeout(1000);
 
     const val = await inputKodePos.inputValue();
-    console.log(`[TC-04-35] Nilai input Kode Pos valid: "${val}"`);
+    console.log(`[TC-5419-11b] Nilai input Kode Pos valid: "${val}"`);
     expect(val).toBe('10110');
 
     // Verifikasi tidak ada error validasi
     const errorMsg = page.locator('text=/kode pos wajib diisi dengan angka|format tidak valid/i');
     await expect(errorMsg).toHaveCount(0);
 
-    await testInfo.attach('Eviden TC-04-35: Validasi Kode Pos Angka Valid', {
+    await testInfo.attach('Eviden TC-5419-11b: Validasi Kode Pos Angka Valid', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });

@@ -1,0 +1,189 @@
+<title>Manfaat AI untuk QA LAMOS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: laporan satu kolom; ringkasan angka di atas, kalkulator asumsi yang bisa diubah, lalu kualitatif dan Pega */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --fg:#17202b; --muted:#5b6675; --line:#dde2e8;
+  --accent:#0b6e6e; --accent-soft:#e1f1f0; --warn:#9a5b00; --warn-soft:#fbf0dc;
+  --f-display:"Space Grotesk",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11161c; --surface:#18202a; --fg:#e6ebf0; --muted:#97a3b1; --line:#2a3542;
+  --accent:#4fc2bd; --accent-soft:#163334; --warn:#e3a54a; --warn-soft:#33260f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11161c; --surface:#18202a; --fg:#e6ebf0; --muted:#97a3b1; --line:#2a3542;
+  --accent:#4fc2bd; --accent-soft:#163334; --warn:#e3a54a; --warn-soft:#33260f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 var(--f-body)}
+.wrap{max-width:920px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:2rem} h2{font-size:1.35rem} h3{font-size:1rem}
+p{margin:0;max-width:68ch}
+.eyebrow{font:500 .75rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+section{display:grid;gap:16px}
+header{display:grid;gap:10px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:grid;gap:2px}
+.tile b{font:700 1.9rem var(--f-display);font-variant-numeric:tabular-nums}
+.tile span{font-size:.85rem;color:var(--muted)}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.n{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tfoot td{font-weight:600;background:var(--accent-soft)}
+input[type=number]{width:5.5em;font:inherit;font-family:var(--f-mono);padding:3px 6px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--fg);text-align:right}
+input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.note{background:var(--warn-soft);color:var(--fg);border-left:3px solid var(--warn);padding:10px 14px;font-size:.88rem;border-radius:0 6px 6px 0}
+.result{display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline}
+.result b{font:700 2.2rem var(--f-display);color:var(--accent);font-variant-numeric:tabular-nums}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.q{display:grid;gap:6px;padding-top:12px;border-top:2px solid var(--accent)}
+.q p{font-size:.92rem}
+code{font-family:var(--f-mono);font-size:.85em;background:var(--accent-soft);padding:1px 5px;border-radius:3px}
+.pill{display:inline-block;font:500 .72rem var(--f-mono);padding:2px 8px;border-radius:99px;background:var(--warn-soft);color:var(--warn);letter-spacing:.04em}
+ul{margin:0;padding-left:1.2em;display:grid;gap:6px;max-width:68ch}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">QA Automation · Bank Sinarmas · per 12 Nov 2026</div>
+  <h1>Manfaat AI Assistant dalam Proses Testing LAMOS dan Pega</h1>
+  <p class="muted">Data kuantitatif dihitung dari repo <code>Automation-Lamos</code> dan riwayat kerja 8 Okt – 12 Nov 2026. Estimasi waktu memakai asumsi yang bisa diubah langsung di halaman ini.</p>
+</header>
+
+<section>
+  <div class="eyebrow">LAMOS · Kuantitatif</div>
+  <h2>Output yang sudah dihasilkan</h2>
+  <div class="tiles">
+    <div class="tile"><b>9</b><span>Story Jira Bucket Agunan diuji (epic LP-5685)</span></div>
+    <div class="tile"><b>162</b><span>Test case resmi di matriks CSV/XLSX</span></div>
+    <div class="tile"><b>192</b><span>Test Playwright otomatis di 66 file spec</span></div>
+    <div class="tile"><b>54</b><span>File Page Object (reusable)</span></div>
+    <div class="tile"><b>5</b><span>Defect terdokumentasi di 4 laporan format BSM</span></div>
+    <div class="tile"><b>18</b><span>Hari kerja tercatat di riwayat proyek</span></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Story</th><th>Topik</th><th class="n">TC</th></tr></thead>
+    <tbody>
+      <tr><td>S2CML-4889</td><td>Bucket Agunan (reuse agunan CLS)</td><td class="n">19</td></tr>
+      <tr><td>S2CML-4890</td><td>Add Agunan Part 2</td><td class="n">25</td></tr>
+      <tr><td>S2CML-4941</td><td>Edit Agunan Existing</td><td class="n">12</td></tr>
+      <tr><td>S2CML-4948</td><td>Informasi Kepemilikan</td><td class="n">20</td></tr>
+      <tr><td>S2CML-4949</td><td>Informasi Kepemilikan, identitas baru</td><td class="n">20</td></tr>
+      <tr><td>S2CML-5419</td><td>Detailing Informasi Umum</td><td class="n">30</td></tr>
+      <tr><td>S2CML-5420</td><td>Data Tambahan Agunan</td><td class="n">16</td></tr>
+      <tr><td>S2CML-5445</td><td>Data Tambahan Cash Collateral</td><td class="n">14</td></tr>
+      <tr><td>S2CML-6020</td><td>Load Latest Data Agunan</td><td class="n">6</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total</td><td class="n">162</td></tr></tfoot>
+  </table></div>
+</section>
+
+<section>
+  <div class="eyebrow">LAMOS · Estimasi waktu</div>
+  <h2>Berapa jam kerja manual yang tergantikan</h2>
+  <p class="note"><strong>Estimasi, bukan hasil ukur.</strong> Menit per item dan porsi kerja yang tetap manual adalah asumsi standar. Ubah angkanya sesuai pengalaman tim, hasil di bawah ikut berubah.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Aktivitas</th><th class="n">Jumlah</th><th class="n">Menit/item manual</th><th class="n">Jam manual</th></tr></thead>
+    <tbody id="rows"></tbody>
+    <tfoot><tr><td colspan="3">Total jam jika dikerjakan manual</td><td class="n" id="tot">0</td></tr></tfoot>
+  </table></div>
+  <div class="result">
+    <div><label for="keep">Porsi kerja yang tetap dilakukan QA (review, koreksi, run SIT):</label> <input type="number" id="keep" value="35" min="0" max="100"> %</div>
+  </div>
+  <div class="result">
+    <div><b id="saved">0</b> <span class="muted">jam dihemat</span></div>
+    <div><b id="days">0</b> <span class="muted">hari kerja (8 jam)</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">LAMOS · Kualitatif</div>
+  <h2>Dampak pada kualitas dan cara kerja</h2>
+  <div class="grid2">
+    <div class="q"><h3>Cakupan test lebih lengkap</h3><p>Acceptance criteria Jira dipecah jadi TC positive, negative, dan boundary per kelompok modul. Contoh: S2CML-5419 punya 30 TC dari satu story.</p></div>
+    <div class="q"><h3>Redundansi terdeteksi lintas story</h3><p>TC yang tumpang tindih antar story bisa dicek cepat. Contoh: 4 TC S2CML-6020 dihapus (10 menjadi 6) karena duplikat TC-4941 atau di luar scope, sisanya di-renumber konsisten di test, spec, dan export.</p></div>
+    <div class="q"><h3>Laporan defect siap kirim</h3><p>Defect ditulis dengan langkah reproduksi, expected vs actual, eviden, dan dugaan layer (FE/BE). Contoh: nilai appraisal Rp 0 di S2CML-4889, tombol mengambang menutupi nominal di S2CML-4941.</p></div>
+    <div class="q"><h3>Eviden konsisten</h3><p>Setiap langkah test menghasilkan screenshot sesuai butir langkah di CSV, sehingga eviden SIT seragam dan mudah diaudit.</p></div>
+    <div class="q"><h3>Pengetahuan tidak hilang</h3><p>Konvensi DOM, gotcha SIT (mis. redirect SSO 60–90 detik), dan keputusan user tercatat di riwayat proyek. Anggota tim atau agent baru bisa langsung melanjutkan.</p></div>
+    <div class="q"><h3>Kode test lebih mudah dirawat</h3><p>Page Object dan helper dipakai ulang di banyak suite. Perubahan UI cukup diperbaiki di satu tempat.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">LAMOS · Sinkronisasi requirement</div>
+  <h2>Requirement dari Jira, Figma, dan test case tetap selaras</h2>
+  <div class="tiles">
+    <div class="tile"><b>435</b><span>Tiket epic LP-5685 dipetakan beserta relasinya</span></div>
+    <div class="tile"><b>162</b><span>TC diaudit silang antar 9 story</span></div>
+    <div class="tile"><b>0</b><span>ID TC duplikat setelah audit</span></div>
+    <div class="tile"><b>9</b><span>Story In SIT / Ready to SIT terdeteksi belum punya TC</span></div>
+  </div>
+  <div class="grid2">
+    <div class="q"><h3>Satu peta untuk seluruh epic</h3><p>Status dan relasi 435 tiket dipetakan, jadi QA tahu story mana yang jadi dasar story lain sebelum menulis TC.</p></div>
+    <div class="q"><h3>Status TC ikut status Jira</h3><p>S2CML-4765 berstatus Dropped dan digantikan S2CML-6020, sehingga TC disusun untuk story yang benar.</p></div>
+    <div class="q"><h3>Pasangan BE dan FE tersambung</h3><p>S2CML-4941 (BE) dihubungkan dengan S2WP-5065 (FE), sehingga satu TC menguji keduanya.</p></div>
+    <div class="q"><h3>Celah coverage terlihat lebih awal</h3><p>S2CML-6018 (Summary Agunan), hub terbesar epic dengan 30 koneksi, terdeteksi belum punya TC saat sudah In SIT.</p></div>
+    <div class="q"><h3>Desain Figma dicocokkan</h3><p>Ikon kartu agunan di SIT dibandingkan dengan desain Figma untuk S2CML-6018.</p></div>
+    <div class="q"><h3>Perubahan tersebar konsisten</h3><p>Saat requirement berubah, ID TC, script test, spec, dan file export diperbarui bersamaan.</p></div>
+  </div>
+  <h3>Sub-agent pendukung</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Sub-agent</th><th>Fungsi</th></tr></thead>
+    <tbody>
+      <tr><td><code>qa-spec-auditor</code></td><td>Menyelaraskan informasi dari semua sumber requirement: membandingkan field, label, opsi, stepper, dan state UI antara Jira, Figma, dan PRD. Menilai kelengkapan AC, mencari celah logika, memberi verdict kesiapan dan daftar pertanyaan ke BA/PO.</td></tr>
+      <tr><td><code>qa-anomaly-judge</code></td><td>Mengaudit hasil test terhadap AC dan spec, mendeteksi false positive dan salah hitung rasio, membuat laporan defect format BSM. Pemakaian pertama: S2CML-4941.</td></tr>
+      <tr><td><code>qa-explorer</code></td><td>Exploratory testing terstruktur, mencatat dugaan defect dengan langkah, URL, dan bukti.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Dibuat 12 Nov 2026 dan berlaku untuk story Bucket Agunan mana pun. Modul non-agunan atau Pega perlu penyesuaian path. Belum ada laporan audit dari <code>qa-spec-auditor</code>, jadi belum ada angka.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Pega</div>
+  <h2>Pega <span class="pill">BELUM DIMULAI</span></h2>
+  <p>Belum ada data pengujian Pega, jadi belum ada angka. Alur yang sama bisa diterapkan saat proyek Pega dimulai, misalnya untuk tahap underwriting di Pega MSME, KPR, dan SCF:</p>
+  <ul>
+    <li>Menyusun TC dari story Jira Pega dengan format matriks yang sama seperti LAMOS.</li>
+    <li>Membuat script Playwright untuk alur case Pega yang berulang.</li>
+    <li>Menulis laporan defect dengan standar yang sama, supaya laporan LAMOS dan Pega seragam.</li>
+  </ul>
+  <p class="muted">Angka Pega bisa ditambahkan ke halaman ini setelah ada story yang dikerjakan.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Metodologi</div>
+  <ul class="muted">
+    <li>Story, TC, test, Page Object, dan laporan defect dihitung langsung dari file di repo.</li>
+    <li>Hari kerja = jumlah tanggal unik di riwayat proyek (8 Okt – 12 Nov 2026).</li>
+    <li>Jam manual = jumlah × menit per item asumsi. Jam dihemat = jam manual × (100% − porsi yang tetap manual).</li>
+    <li>Belum dihitung: waktu run test di SIT dan defect yang ditemukan lewat run otomatis tanpa laporan tertulis.</li>
+  </ul>
+</section>
+</div>
+
+<script>
+const items=[
+  ["Menyusun test case dari AC Jira",162,15],
+  ["Menulis script test Playwright",192,45],
+  ["Membuat Page Object",54,60],
+  ["Menulis laporan defect",5,45],
+  ["Menyusun spec & matriks per story",9,120],
+];
+const rows=document.getElementById('rows');
+rows.innerHTML=items.map((it,i)=>`<tr><td>${it[0]}</td><td class="n">${it[1]}</td><td class="n"><label class="muted" for="m${i}" hidden>Menit ${it[0]}</label><input type="number" id="m${i}" min="0" value="${it[2]}"></td><td class="n" id="h${i}"></td></tr>`).join('');
+const fmt=n=>n.toLocaleString('id-ID',{maximumFractionDigits:1});
+function calc(){
+  let tot=0;
+  items.forEach((it,i)=>{const h=it[1]*(+document.getElementById('m'+i).value||0)/60;tot+=h;document.getElementById('h'+i).textContent=fmt(h)});
+  const keep=Math.min(100,Math.max(0,+document.getElementById('keep').value||0));
+  const saved=tot*(1-keep/100);
+  document.getElementById('tot').textContent=fmt(tot);
+  document.getElementById('saved').textContent=fmt(saved);
+  document.getElementById('days').textContent=fmt(saved/8);
+}
+document.addEventListener('input',calc);calc();
+</script>

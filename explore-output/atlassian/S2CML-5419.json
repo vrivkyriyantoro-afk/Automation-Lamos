@@ -1,0 +1,48 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-5419",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Umum Agunan",
+  "issueType": "Task",
+  "status": "Ready to SIT",
+  "description": "Task  \nPembuatan Form Informasi Umum Agunan Beserta Fungsionalitasnya\nRequirement/Story\nAcceptance Criteria\nMockup\nEntry Point Data \nGiven Tampilan Form 1 Informasi Agunan\nWHEN User masuk kedalam Form 1 Informasi Agunan\nTHEN user dapat melakukan input data berdasarkan data point yang sudah ditetapkan sesuai dengan logic mandatory, conditional ataupun opsional\n\n \nCheck at Column B Called : \nInformasi Umum Agunan\nHidden Entry Point Data\nGiven Tampilan Form 1 Informasi Agunan\nWHEN User masuk kedalam Form 1 Informasi Agunan\nTHEN data point untuk kebutuhan bantuan tidak perlu dimunculkan namun tetap ada sebagai data di BE ataupun FE untuk kebutuhan kedepan\nConditional Hidden Entry Point Data\nGiven Tampilan Form 1 Informasi Agunan\nWHEN User masuk kedalam Form 1 Informasi Agunan\nTHEN ada data point yang sifatnya harus di kosongkan dalam kondisi tertentu, sehingga apa bila data tersebut harus kosong maka data tersebut tidak perlu ditampilkan pada screen\nPre Condition - Pilihan Search Existing Agunan\nGiven Pada saat stepper 1 untuk search agunan, User sudah pasti memilih Jenis Agunan\nWHEN user decides to Create New or Load From Existing Agunan\nTHEN field Jenis Agunan will disable at Form Informasi Umum Agunan\nSo That User Cannot do extreme changes impacted to UI\nUntuk user apabila usernya sering melakukan kesalahan karena lupa atau salah pilih Jenis Agunan\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan\nWHEN user decides to changes Jenis Agunan karena kesalahan input\nTHEN user can Click button ‘Kembali’\nSO THAT he can choose new Jenis Agunan as his hopes\nCek kiri bawah di modal\nDetailing Jenis Pengikatan\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan dan fokus ke field Jenis Pengikatan\nWhen User set Jenis Pengikatan = ‘Belum diikat’\nThen Tanggal Pengikatan will became Optional\nElse it wil became Mandatory\nBelum diikat : \nSelain Belum Diikat, ex Hak Tanggungan : \nDetailing antara Jenis Agunan by CLS dan juga Status Agunan\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan dan fokus ke field Peringkat Agunan dan Lembaga Pemeringkat Agunan\nWhen User Set Jenis Agunan by CLS is Cash Collateral or Document And Status Agunan is 1 - Tersedia\nThen Field Peringkat Agunan dan Lembaga Pemeringkat Agunan will show up\nDetailing Apabila dipilih Jenis Penailaian adalah Internal\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan dan fokus ke field Jenis Penilaian Agunan\nWhen User Set jenis Penilaian Agunan adalah Internal\nThen Field Nilai Agunan / Nilai Wajar, Nilai Agunan Menurut Pelapor dan Tanggal Penilaian agunan menurut Pelapor will show up\nDetailing Apabila dipilih Jenis Penailaian adalah External\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan dan fokus ke field Jenis Penilaian Agunan\nWhen User Set jenis Penilaian Agunan adalah External\nThen Field Nilai Agunan / Nilai Wajar, Nilai Agunan menurut hasil penilaian independen, Nama Intansi Penilai Independen dan Tanggal Penilaian menurut Penilai Independen will show up\nAND\nWhen User mengisi field tersebut Then \n- field Nilai Agunan Menurut Pelapor (yang tidak muncul di FE, namun dibelakang akan tetap di set nilainya untuk kebutuhan data di BE) akan ter set otomatis sesuai data yang diisi pada field Nilai Agunan menurut hasil penilaian independen\n- field Tanggal Penilaian agunan menurut Pelapor  (yang tidak muncul di FE, namun dibelakang akan tetap di set nilainya untuk kebutuhan data di BE) akan ter set otomatis sesuai data yang diisi pada field Tanggal Penilaian menurut Penilai Independen\nLogic Penentuan apakah butuh Data Pembanding atau tidak\nGiven UI sudah mengisi semua data kecuali Data Pembanding Masih Kosong\nWHEN User set Jenis Agunan\nTHEN Back End will check rules apakah agunan ini membutuhkan data pembanding atau tidak (parameterize)\n- IF BE Return value is null THEN dont show button ‘tambah data pembanding’\n- IF BE Return value is 0 THEN show button ‘tambah data pembanding’\n- IF BE return value is > 0 THEN system will verified if data pembanding number does not match or smaller then system will who pop up messages for user added new ‘data pembanding’\nNotes : saat ini untuk Product SME itu masih 0, Namun mungkin ada kebutuhan untuk product lain misalnya KPR Primary = 1, dan MSME = 3. harapanya ini dapat parameterize sesuai product dan jenis agunan yang di apply\nPOP up Modal Data Pembanding\nGiven UI sudah ada pada tampilan Form 1 Informasi Umum Agunan dan fokus ke part Data Pembanding\nWHEN user klick button data pembanding\nThen new modals will show up so that user can input data pembanding\n",
+  "linkedIssues": [
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-4890",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2",
+      "status": "In Development"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-5665",
+      "summary": "11. [FE,BE] LAMOS LOS SME - Bucket Agunan - Data Agunan - Form Informasi Umum Agunan > Input Data Hasil Penilaian Agunan",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CRL-3831",
+      "summary": "CLS GET List Master",
+      "status": "Done"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-5420",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Tambahan Agunan non Cash Collateral",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5061",
+      "summary": "[FE][Lamos] Agunan - master informations from backend",
+      "status": "Done"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5062",
+      "summary": "[FE][Lamos] Agunan - logic pengisian Detailing Form Informasi Umum Agunan ",
+      "status": "Done"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

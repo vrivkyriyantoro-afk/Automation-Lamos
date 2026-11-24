@@ -1,0 +1,234 @@
+◇ injected env (9) from .env
+
+Running 28 tests using 1 worker
+
+◇ injected env (0) from .env
+
+[1/28] [chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:31:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-01: Kategori pemilik perusahaan 006 & 007 tampil, opsi pasangan perorangan tidak
+[chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:31:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-01: Kategori pemilik perusahaan 006 & 007 tampil, opsi pasangan perorangan tidak
+TC-4890-BU-01 Opsi kategori badan usaha: ["001 - Calon Debitur","005 - Pemilik Anggunan","006 - Pengurus Perusahaan","007 - Pemilik Perusahaan","008 - Vendor","009 - Penjamin","010 - Pasangan Penjamin"]
+
+[2/28] [chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:55:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-02: Kategori debitur badan usaha memetakan nama BU, NPWP & nomor legalitas
+[chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:55:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-02: Kategori debitur badan usaha memetakan nama BU, NPWP & nomor legalitas
+TC-4890-BU-02 kode kategori debitur di SIT: 001 (expected desain: 003)
+
+TC-4890-BU-02 Inputs: [{"placeholder":"Otomatis terisi dari data tambahan agunan","value":"","disabled":true,"readOnly":false},{"placeholder":"-","value":"PT Bintang Sejahtera","disabled":true,"readOnly":false},{"placeholder":"-","value":"3578241603710991","disabled":true,"readOnly":false}]
+
+[3/28] [chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:90:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-03: Kategori 006 tanpa data pengurus terdaftar memunculkan peringatan
+[chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:90:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-BU-03: Kategori 006 tanpa data pengurus terdaftar memunculkan peringatan
+TC-4890-BU-03 Comboboxes setelah pilih 006: ["006 - Pengurus Perusahaan","Individu","Pilih nama"]
+
+TC-4890-BU-03 adaDropdownNama=true opsiNama=["123331231233 - 123331231233"]
+
+TC-4890-BU-03 adaPeringatan=false
+
+TC-4890-BU-03 GAP prekondisi -> App ID ini SUDAH punya 1 pengurus terdaftar, kondisi "tanpa pengurus" tidak dapat diuji. Butuh App ID badan usaha tanpa pengurus di Bucket Identitas.
+
+[4/28] [chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:136:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-11: Tombol Simpan disabled saat field mandatory belum lengkap
+[chromium] › tests\bucketAgunan\s2cml-4890-badan-usaha.spec.ts:136:7 › S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan › TC-4890-11: Tombol Simpan disabled saat field mandatory belum lengkap
+TC-4890-11 kondisi awal -> disabled=true aria-disabled=null
+
+TC-4890-11 setelah pilih kategori 006 -> Simpan tetap disabled
+
+[5/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:31:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-01: Opsi dropdown debitur perorangan tanpa fasilitas aktif, belum menikah, tanpa penjamin
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:31:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-01: Opsi dropdown debitur perorangan tanpa fasilitas aktif, belum menikah, tanpa penjamin
+TC-4948-01 Opsi kategori: [
+  '001 - Calon Debitur',
+  '002 - Pasangan Calon Debitur',
+  '005 - Pemilik Anggunan',
+  '008 - Vendor',
+  '009 - Penjamin',
+  '010 - Pasangan Penjamin'
+]
+
+TC-4948-01 GAP prekondisi -> 002=true 009=true 010=true (butuh App ID belum menikah & tanpa penjamin untuk assert penuh)
+
+[6/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:60:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-03: Opsi dropdown debitur perorangan dengan fasilitas aktif BSB
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:60:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-03: Opsi dropdown debitur perorangan dengan fasilitas aktif BSB
+TC-4948-03 Opsi kategori: [
+  '001 - Calon Debitur',
+  '002 - Pasangan Calon Debitur',
+  '005 - Pemilik Anggunan',
+  '008 - Vendor',
+  '009 - Penjamin',
+  '010 - Pasangan Penjamin'
+]
+
+TC-4948-03 GAP prekondisi -> butuh App ID dengan fasilitas aktif BSB. Aktual: 001=true 003=false
+
+[7/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:81:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-04: Opsi dropdown debitur badan usaha (006 & 007 wajib muncul)
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:81:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-04: Opsi dropdown debitur badan usaha (006 & 007 wajib muncul)
+TC-4948-04 Opsi kategori badan usaha: [
+  '001 - Calon Debitur',
+  '005 - Pemilik Anggunan',
+  '006 - Pengurus Perusahaan',
+  '007 - Pemilik Perusahaan',
+  '008 - Vendor',
+  '009 - Penjamin',
+  '010 - Pasangan Penjamin'
+]
+
+TC-4948-04 MISMATCH desain -> expected 003 - Debitur; aktual 001=true 003=false
+
+[8/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:107:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-05: Opsi 006 & 007 tidak muncul pada debitur perorangan
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:107:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-05: Opsi 006 & 007 tidak muncul pada debitur perorangan
+TC-4948-05 Opsi kategori perorangan: [
+  '001 - Calon Debitur',
+  '002 - Pasangan Calon Debitur',
+  '005 - Pemilik Anggunan',
+  '008 - Vendor',
+  '009 - Penjamin',
+  '010 - Pasangan Penjamin'
+]
+
+[9/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:122:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-07: Pilih 009 - Penjamin tanpa data penjamin terdaftar
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:122:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-07: Pilih 009 - Penjamin tanpa data penjamin terdaftar
+TC-4948-07 dropdownNamaKosong=true adaNotif=false
+
+[10/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:147:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-08: Pilih 006 - Pengurus Perusahaan tanpa data pengurus terdaftar
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:147:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-08: Pilih 006 - Pengurus Perusahaan tanpa data pengurus terdaftar
+TC-4948-08 Opsi nama pengurus: ["123331231233 - 123331231233"]
+
+TC-4948-08 adaNotif=false
+
+TC-4948-08 GAP prekondisi -> App ID ini punya 1 pengurus terdaftar. Butuh App ID badan usaha tanpa data Pengurus & Pemegang Saham untuk assert penuh.
+
+[11/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:183:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-09: Dropdown Nama terisi dari list Pengurus Perusahaan (Bucket Identitas)
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:183:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-09: Dropdown Nama terisi dari list Pengurus Perusahaan (Bucket Identitas)
+TC-4948-09 List pengurus dari Bucket Identitas: ["123331231233 - 123331231233"]
+
+TC-4948-09 GAP prekondisi -> hanya 1 pengurus terdaftar; expected mensyaratkan minimal 2 untuk verifikasi jumlah item.
+
+[12/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:213:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-11: Pilih 001 - Calon Debitur auto-fill Nama Lengkap & NIK
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:213:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-11: Pilih 001 - Calon Debitur auto-fill Nama Lengkap & NIK
+TC-4948-11 Inputs: [{"placeholder":"Otomatis terisi dari data tambahan agunan","value":"","disabled":true,"readOnly":false},{"placeholder":"-","value":"MUNAWAROH","disabled":true,"readOnly":false},{"placeholder":"-","value":"3209244711730001","disabled":true,"readOnly":false}]
+
+[13/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:245:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-13: Badan usaha auto-fill Nama Badan Usaha & nomor legalitas
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:245:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-13: Badan usaha auto-fill Nama Badan Usaha & nomor legalitas
+TC-4948-13 kategori debitur yang tersedia di SIT: 001 (expected desain: 003)
+
+TC-4948-13 Inputs: [{"placeholder":"Otomatis terisi dari data tambahan agunan","value":"","disabled":true,"readOnly":false},{"placeholder":"-","value":"PT Bintang Sejahtera","disabled":true,"readOnly":false},{"placeholder":"-","value":"3578241603710991","disabled":true,"readOnly":false}]
+
+[14/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:278:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-15: Pilih 010 - Pasangan Penjamin menampilkan keterangan pasangan dari siapa
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:278:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-15: Pilih 010 - Pasangan Penjamin menampilkan keterangan pasangan dari siapa
+TC-4948-15 adaDropdownNama=true opsiNama=["ERIN (pasangan dari MULYADI) - 3205335802980003"]
+
+[15/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:314:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-16: Pilih 006 - Pengurus Perusahaan & Nama auto-fill detail pengurus
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:314:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-16: Pilih 006 - Pengurus Perusahaan & Nama auto-fill detail pengurus
+TC-4948-16 Opsi pengurus: ["123331231233 - 123331231233"]
+
+TC-4948-16 Field setelah pilih pengurus: [{"placeholder":"-","value":"123331231233","disabled":true,"readOnly":false}]
+
+TC-4948-16 Comboboxes: ["006 - Pengurus Perusahaan","Individu","123331231233 - 123331231233"]
+
+TC-4948-16 MISMATCH desain -> dropdown "Hubungan dengan Debitur" tidak dirender pada kategori 006 di SIT. Combobox aktual: ["006 - Pengurus Perusahaan","Individu","123331231233 - 123331231233"]
+
+[16/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:362:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-17: Step 3 ter-gate saat bucket identitas belum lengkap
+  1) [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:362:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-17: Step 3 ter-gate saat bucket identitas belum lengkap 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.fill: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first()
+
+
+       at ..\pages\LoginPage.ts:25
+
+      23 |
+      24 |   async login(username: string, password: string) {
+    > 25 |     await this.usernameInput.fill(username);
+         |                              ^
+      26 |     await this.passwordInput.fill(password);
+      27 |     await this.loginButton.click();
+      28 |   }
+        at LoginPage.login (C:\Users\V50324\Documents\automation-lamos\pages\LoginPage.ts:25:30)
+        at loginAndOpen (C:\Users\V50324\Documents\automation-lamos\tests\bucketAgunan\helpers\agunanModal.ts:16:15)
+        at C:\Users\V50324\Documents\automation-lamos\tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:364:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4948-in-e42bd-ket-identitas-belum-lengkap-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4948-in-e42bd-ket-identitas-belum-lengkap-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4948-in-e42bd-ket-identitas-belum-lengkap-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4948-in-e42bd-ket-identitas-belum-lengkap-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\bucketAgunan-s2cml-4948-in-e42bd-ket-identitas-belum-lengkap-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+◇ injected env (0) from .env
+
+[17/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:390:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-18: Opsi 010 - Pasangan Penjamin tidak muncul saat penjamin belum menikah
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:390:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-18: Opsi 010 - Pasangan Penjamin tidak muncul saat penjamin belum menikah
+TC-4948-18 Opsi kategori: ["001 - Calon Debitur","002 - Pasangan Calon Debitur","005 - Pemilik Anggunan","008 - Vendor","009 - Penjamin","010 - Pasangan Penjamin"]
+
+TC-4948-18 009=true 010=true
+
+TC-4948-18 GAP prekondisi -> butuh App ID dengan penjamin perorangan berstatus Belum Menikah untuk assert penuh. Aktual: 009=true 010=true
+
+[18/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:417:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-19: Data auto-fill 001 bersifat read-only
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:417:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-19: Data auto-fill 001 bersifat read-only
+TC-4948-19 Field auto-fill: [{"placeholder":"-","value":"MUNAWAROH","disabled":true,"readOnly":false},{"placeholder":"-","value":"3209244711730001","disabled":true,"readOnly":false}]
+
+[19/28] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:438:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-20: Ganti kategori me-reset data auto-fill sebelumnya
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:438:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-20: Ganti kategori me-reset data auto-fill sebelumnya
+TC-4948-20 Auto-fill setelah 001: ["MUNAWAROH","3209244711730001"]
+
+TC-4948-20 Field terisi setelah ganti ke 005: []
+
+TC-4948-20 Comboboxes setelah 005: ["005 - Pemilik Anggunan","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+[20/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:42:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-01: Form dinamis saat memilih kategori 005 - Pemilik Agunan
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:42:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-01: Form dinamis saat memilih kategori 005 - Pemilik Agunan
+TC-4949-01 Comboboxes: ["005 - Pemilik Anggunan","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+[21/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:69:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-02: Form dinamis saat memilih kategori 008 - Vendor
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:69:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-02: Form dinamis saat memilih kategori 008 - Vendor
+TC-4949-02 Comboboxes: ["008 - Vendor","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+[22/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:94:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-03: Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:94:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-03: Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi
+TC-4949-03 Opsi Tipe Kepemilikan: ["Individu","Non Individu"]
+
+TC-4949-03 MISMATCH desain -> expected "Perorangan"/"Badan Usaha"; aktual "Individu"/"Non Individu"
+
+[23/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:123:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-04: Kelengkapan field form SLIK tipe Perorangan (Individu)
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:123:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-04: Kelengkapan field form SLIK tipe Perorangan (Individu)
+TC-4949-04 Labels: ["Bukti kepemilikan*","Nama*","Nomor identitas*","Pilih File","Pilih File"]
+
+[24/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan
+TC-4949-07 Opsi Status Perkawinan: ["Menikah","Belum Menikah","Janda / Duda"]
+
+[25/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:193:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-08: Kelengkapan field form SLIK tipe Badan Usaha (Non Individu)
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:193:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-08: Kelengkapan field form SLIK tipe Badan Usaha (Non Individu)
+TC-4949-08 Labels: ["Bukti kepemilikan*","Nama*","Nomor identitas*","Lokasi pendirian badan usaha","Nomor telepon badan usaha","Nomor HP badan usaha","Email badan usaha","Nama PIC","Nomor telepon PIC","Pilih File"]
+
+TC-4949-08 Inputs: ["Otomatis terisi dari data tambahan agunan","Masukkan nama","Masukkan nomor identitas","Masukkan lokasi pendirian badan usaha","Masukkan nomor telepon badan usaha","Masukkan nomor HP badan usaha","Masukkan email badan usaha","Masukkan nama PIC","Masukkan nomor HP badan usaha"]
+
+[26/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:242:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-09: Opsi dropdown Jenis Badan Usaha
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:242:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-09: Opsi dropdown Jenis Badan Usaha
+TC-4949-09 Opsi Jenis Badan Usaha: ["Perseroan Terbatas","Persekutuan Comanditer","Koperasi Toko","Perusahaan Perseorangan","Yayasan"]
+
+[27/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:266:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-11: Ganti tipe Perorangan ke Badan Usaha me-reset form SLIK
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:266:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-11: Ganti tipe Perorangan ke Badan Usaha me-reset form SLIK
+TC-4949-11 Sebelum ganti tipe: [{"placeholder":"Masukkan nama","value":"UJI RESET SLIK","disabled":false,"readOnly":false},{"placeholder":"Masukkan nomor identitas","value":"1234567890123456","disabled":false,"readOnly":false}]
+
+TC-4949-11 Sesudah ganti tipe: []
+
+[28/28] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:306:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-18: Tombol Simpan disabled saat field mandatory SLIK belum lengkap
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:306:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-18: Tombol Simpan disabled saat field mandatory SLIK belum lengkap
+TC-4949-18 Simpan disabled=true aria-disabled=null
+
+  1 failed
+    [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:362:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-17: Step 3 ter-gate saat bucket identitas belum lengkap 
+  27 passed (12.8m)

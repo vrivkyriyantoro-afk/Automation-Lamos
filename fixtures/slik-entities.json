@@ -1,0 +1,19 @@
+{
+  "_catatan": "Entitas modal 'Lengkapi file SLIK' untuk App ID 01M83AP5FKPHB1D3E2QS8P015Z (urut baris modal). Nilai diambil dari halaman SIT (spec read-*), bukan dikarang. type NIK/NPWP menentukan template.",
+  "entities": [
+    { "row": 1, "label": "Debitur", "type": "NIK", "id": "3200000000000006", "name": "AGUS", "gender": "L", "dob": "20261120" },
+    { "row": 2, "label": "Penjamin 1", "type": "NIK", "id": "3205335802980003", "name": "ERIN", "gender": "P", "dob": "19971226" },
+    { "row": 3, "label": "Pasangan penjamin", "type": "NIK", "id": "3277010909850013", "name": "RENALDY KUSUMA", "gender": "L", "dob": "19850909" },
+    { "row": 4, "label": "Penjamin 2", "type": "NIK", "id": "3373041608960002", "name": "TEGAR JATI WICAKSONO", "gender": "L", "dob": "19960816" },
+    { "row": 5, "label": "Pasangan penjamin", "type": "NIK", "id": "3211146311760006", "name": "NENDEN NUGRAHA", "gender": "P", "dob": "19751123" },
+    { "row": 6, "label": "Penjamin 3 (badan usaha)", "type": "NPWP", "id": "3578241603710991", "name": "PT BINTANG SEJAHTERA",
+      "pengurus": [
+        { "name": "PIPIT NILA WARDANI", "id": "3302265910820003", "gender": "P", "posisi": "PEMILIK - Komisaris", "persen": "40" },
+        { "name": "CV MAKMUR ABADI", "id": "3578241603710992", "gender": "", "posisi": "PEMILIK - Pemegang Saham (Badan Usaha)", "persen": "30" },
+        { "name": "HANDHIANTO SURYO KENTJONO", "id": "3171030309630002", "gender": "L", "posisi": "PEMILIK - Pemegang Saham", "persen": "4" }
+      ] },
+    { "row": 7, "label": "Pengurus", "type": "NIK", "id": "3302265910820003", "name": "PIPIT NILA WARDANI", "gender": "P", "dob": "19821019" },
+    { "row": 8, "label": "Pengurus", "type": "NIK", "id": "3171030309630002", "name": "HANDHIANTO SURYO KENTJONO", "gender": "L", "dob": "19630903" },
+    { "row": 9, "label": "Pengurus (badan usaha)", "type": "NPWP", "id": "3578241603710992", "name": "CV MAKMUR ABADI" }
+  ]
+}

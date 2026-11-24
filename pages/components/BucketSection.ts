@@ -6,6 +6,7 @@ export type BucketId =
   | 'struktur_kredit'
   | 'penilaian_kelayakan'
   | 'data_usaha'
+  | 'agunan'
   | 'collateral'
   | 'analisa_keuangan'
   | 'legal_risk_compliance'
@@ -13,6 +14,10 @@ export type BucketId =
   | 'covenant_tbo'
   | 'penyimpangan_pihak_terkait'
   | 'catatan_anda';
+
+function normalizeBucketId(bucket: BucketId): BucketId {
+  return bucket === 'collateral' ? 'agunan' : bucket;
+}
 
 /**
  * Navigasi halaman "Buat pengajuan kredit": tab bucket + sidebar section.
@@ -22,8 +27,9 @@ export class CreditApplicationForm {
   constructor(readonly page: Page) {}
 
   static url(applicationId: string, bucket: BucketId, debtorType: 'individual' | 'corporate' | string = 'individual') {
-    const base = (process.env.BASE_URL || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/').replace(/\/?$/, '/');
-    return `${base}lamos/credit-application/${applicationId}/create?bucket=${bucket}&debtorType=${debtorType}`;
+    const base = (process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/').replace(/\/?$/, '/');
+    const normalizedBucket = normalizeBucketId(bucket);
+    return `${base}lamos/credit-application/${applicationId}/create?bucket=${normalizedBucket}&debtorType=${debtorType}`;
   }
 
   async goto(applicationId: string, bucket: BucketId, debtorType = 'individual') {
@@ -31,10 +37,13 @@ export class CreditApplicationForm {
     await this.waitReady();
   }
 
-  /** Pindah bucket lewat tab (id tab = id bucket) */
+  /** Pindah bucket lewat tab (id tab = id bucket). Legacy bucket `collateral` maps to `agunan` for compatibility. */
   async openBucket(bucket: BucketId) {
-    await this.page.locator(`[role="tab"][id="${bucket}"]`).click();
-    await expect(this.page).toHaveURL(new RegExp(`bucket=${bucket}`));
+    const normalizedBucket = normalizeBucketId(bucket);
+    const tab = this.page.locator(`[role="tab"][id="${normalizedBucket}"]`)
+      .or(this.page.locator(`[role="tab"][id="${bucket}"]`));
+    await tab.first().click();
+    await expect(this.page).toHaveURL(new RegExp(`bucket=${normalizedBucket}`));
     await this.waitReady();
   }
 

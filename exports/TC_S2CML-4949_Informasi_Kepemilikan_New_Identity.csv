@@ -1,0 +1,87 @@
+﻿Test Case ID,Tipe Debitur,Kelompok / Modul,Judul Skenario,Tipe,Prioritas,Prekondisi,Langkah Pengujian,Expected Result,Referensi Sumber
+TC-4949-01,Perorangan & Badan Usaha,Render Dinamis Kategori 005 & 008,"Validasi Tampilan Form Dinamis saat Memilih Kategori ""005 - Pemilik Agunan""",Positive,Critical,User berada di Step 3: Informasi Kepemilikan Agunan pada modal Tambah Agunan Baru. Bucket Identitas dan Pengecekan berstatus Lengkap.,"1. Klik dropdown Kategori Kepemilikan Agunan pada Step 3
+2. Pilih opsi ""005 - Pemilik Agunan""
+3. Periksa field baru yang muncul di bawah dropdown Kategori","Sistem secara dinamis merender form isian pemilik agunan baru yang memuat:
+1. Dropdown ""Tipe Kepemilikan"" (opsi: Perorangan / Badan Usaha)
+2. Dropdown ""Hubungan dengan Debitur""
+3. Card/section Form SLIK Check data pemilik agunan.
+Otomasi inquiry SLIK dinonaktifkan (hidden) dan dialihkan ke form data mandatory SLIK & upload manual.",S2CML-4949 AC: Triggering Dropdown List & Kondisi Kategori 005
+TC-4949-02,Perorangan & Badan Usaha,Render Dinamis Kategori 005 & 008,"Validasi Tampilan Form Dinamis saat Memilih Kategori ""008 - Vendor""",Positive,High,User berada di Step 3: Informasi Kepemilikan Agunan pada modal Tambah Agunan Baru.,"1. Klik dropdown Kategori Kepemilikan Agunan pada Step 3
+2. Pilih opsi ""008 - Vendor""
+3. Periksa elemen form dinamis yang dirender di layar","Sistem merender komponen yang identik dengan kategori 005:
+1. Dropdown Tipe Kepemilikan (Perorangan / Badan Usaha)
+2. Dropdown Hubungan dengan Debitur
+3. Form SLIK Check untuk verifikasi kelayakan vendor baru.",S2CML-4949 AC: Kondisi Kategori 008 - Vendor
+TC-4949-03,Perorangan & Badan Usaha,Render Dinamis Kategori 005 & 008,Validasi Opsi Dropdown Tipe Kepemilikan pada Kategori 005 & 008,Positive,High,"User sudah memilih Kategori ""005 - Pemilik Agunan"" atau ""008 - Vendor"". Dropdown Tipe Kepemilikan telah muncul.","1. Klik dropdown ""Tipe Kepemilikan""
+2. Periksa daftar opsi yang tersedia pada listbox","Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi:
+- Perorangan
+- Badan Usaha
+User dapat memilih salah satu tipe kepemilikan tersebut.",S2CML-4949 AC: Tipe Kepemilikan Dropdown
+TC-4949-04,Perorangan & Badan Usaha,Form SLIK Check — Tipe Perorangan,"Validasi Kelengkapan Field Form SLIK saat Memilih Tipe Kepemilikan ""Perorangan""",Positive,Critical,Kategori Kepemilikan telah dipilih 005 atau 008. User berada di Step 3.,"1. Pada dropdown Tipe Kepemilikan, pilih ""Perorangan""
+2. Amati form input SLIK Check yang muncul di bawahnya
+3. Periksa tanda mandatory (*) pada masing-masing label field","Form SLIK Check Perorangan menampilkan field:
+- Nama Lengkap: Mandatory (bertanda *)
+- Nomor Identitas / NIK KTP: Mandatory (bertanda *)
+- Upload Dokumen File KTP: Mandatory (bertanda *)
+- Jenis Kelamin: Opsional (tanpa *)
+- Tempat / Tanggal Lahir: Opsional (tanpa *)
+- Status Perkawinan: Opsional (tanpa *)",S2CML-4949 AC: Tipe Kepemilikan Perorangan Mandatory & Optional
+TC-4949-05,Perorangan & Badan Usaha,Form SLIK Check — Tipe Perorangan,Validasi Input Format NIK 16 Digit Angka pada Form SLIK Perorangan,Positive,High,Tipe Kepemilikan Perorangan telah dipilih. Field Nomor Identitas/NIK tampil.,"1. Isi field Nomor Identitas dengan 16 digit angka valid (misal: 3201011205900001)
+2. Blur field / pindah fokus ke field lain",Input NIK diterima oleh sistem tanpa pesan error validasi format. Field bernilai tepat 16 karakter angka.,S2CML-4949 Data Point: Nomor Identitas Perorangan
+TC-4949-06,Perorangan & Badan Usaha,Form SLIK Check — Tipe Perorangan,Validasi Upload Dokumen KTP Pemilik Agunan Berhasil,Positive,High,Form SLIK Check Perorangan aktif. Komponen upload file KTP tersedia.,"1. Klik area upload dokumen KTP atau seret file ktp_sample.jpg / ktp.pdf
+2. Tunggu proses staging/upload selesai
+3. Periksa status file yang ter-upload","File KTP berhasil terunggah, nama file muncul pada preview kartu upload, dan terdapat tombol aksi untuk melihat (preview) atau menghapus file KTP.",S2CML-4949 AC: File KTP Mandatory
+TC-4949-07,Perorangan & Badan Usaha,Form SLIK Check — Tipe Perorangan,Validasi Opsi Dropdown Status Perkawinan pada SLIK Perorangan,Positive,Medium,Form SLIK Check Perorangan aktif.,"1. Klik dropdown ""Status Perkawinan""
+2. Periksa daftar pilihan status perkawinan","Dropdown memuat pilihan master status perkawinan standar (""Belum Menikah"", ""Menikah"", ""Cerai Hidup / Janda / Duda"") sesuai master data Bucket Debitur.",S2CML-4949 AC: Status Perkawinan Opsional
+TC-4949-08,Perorangan & Badan Usaha,Form SLIK Check — Tipe Badan Usaha,"Validasi Kelengkapan Field Form SLIK saat Memilih Tipe Kepemilikan ""Badan Usaha""",Positive,Critical,Kategori Kepemilikan telah dipilih 005 atau 008. User berada di Step 3.,"1. Pada dropdown Tipe Kepemilikan, pilih ""Badan Usaha""
+2. Amati struktur form SLIK Check Badan Usaha yang muncul di layar
+3. Periksa tanda bintang mandatory (*)","Form SLIK Check Badan Usaha menampilkan field:
+- Nama Badan Usaha: Mandatory (bertanda *)
+- Nomor Identitas (NPWP / NIB): Mandatory (bertanda *)
+- Jenis Badan Usaha: Dropdown pilihan (PT, CV, dll.)
+- Lokasi Pendirian Badan Usaha: Opsional (tanpa *)
+- Nomor Telepon Badan Usaha: Opsional (tanpa *)
+- Nomor HP Badan Usaha: Opsional (tanpa *)
+- Email Badan Usaha: Opsional (tanpa *)
+- Nama PIC: Opsional (tanpa *)
+- Nomor Telp PIC: Opsional (tanpa *)",S2CML-4949 AC: Tipe Kepemilikan Badan Usaha Mandatory & Optional
+TC-4949-09,Perorangan & Badan Usaha,Form SLIK Check — Tipe Badan Usaha,Validasi Opsi Dropdown Jenis Badan Usaha pada Form SLIK Badan Usaha,Positive,High,Tipe Kepemilikan Badan Usaha aktif pada Form SLIK.,"1. Klik dropdown ""Jenis Badan Usaha""
+2. Periksa seluruh opsi entitas hukum pada listbox","Dropdown menampilkan opsi badan hukum yang lengkap:
+Perseroan Terbatas (PT), Commanditaire Vennootschap (CV), Firma, Koperasi, Yayasan, dll., sesuai referensi master entitas legalitas LAMOS.",S2CML-4949 Data Point: Jenis Badan Usaha
+TC-4949-10,Perorangan & Badan Usaha,Form SLIK Check — Tipe Badan Usaha,Validasi Pengisian Informasi PIC Badan Usaha,Positive,Medium,Tipe Kepemilikan Badan Usaha aktif.,"1. Isi field ""Nama PIC"" dengan teks (misal: ""Budi Santoso"")
+2. Isi field ""Nomor Telp PIC"" dengan format nomor handphone valid (misal: ""081234567890"")
+3. Periksa respons field input",Data kontak PIC berhasil tersimpan pada form tanpa validasi error karena bersifat opsional pendukung.,S2CML-4949 AC: Data PIC Badan Usaha
+TC-4949-11,Perorangan & Badan Usaha,Form SLIK Check — Tipe Badan Usaha,Validasi Pergantian Tipe Kepemilikan dari Perorangan ke Badan Usaha Me-reset Form,Positive,High,User telah mengisi data pada Form SLIK Perorangan (Nama & NIK terisi).,"1. Ganti pilihan dropdown Tipe Kepemilikan dari ""Perorangan"" menjadi ""Badan Usaha""
+2. Amati perubahan form input di layar",Form SLIK Perorangan tertutup dan digantikan oleh Form SLIK Badan Usaha. Nilai isian sebelumnya otomatis ter-reset bersih dan field baru siap menerima isian badan usaha.,S2CML-4949 AC: Dynamic Form Switch & State Consistency
+TC-4949-12,Perorangan & Badan Usaha,Auto-Mapping SmartCA & McKinsey,"Validasi Auto-Mapping saat Hubungan dengan Debitur Dipilih ""Milik Sendiri""",Positive,High,Kategori 005/008 aktif. User berada di field Hubungan dengan Debitur.,"1. Klik dropdown ""Hubungan dengan Debitur""
+2. Pilih ""Milik Sendiri""
+3. Amati penetapan parameter di sistem backend / UI","Sistem secara otomatis menetapkan pemetaan SmartCA/McKinsey:
+- Status Kepemilikan (SmartCA): ""Milik""
+- Hubungan dengan Debitur (McKinsey): ""Debitur Sendiri""
+Sesuai tabel mapping resmi LAMOS to SmartCA.",S2CML-4949 Table Reff Mapping Baris 1
+TC-4949-13,Perorangan & Badan Usaha,Auto-Mapping SmartCA & McKinsey,"Validasi Auto-Mapping saat Hubungan dengan Debitur Dipilih ""Pasangan (Suami / Istri)""",Positive,High,Kategori 005/008 aktif.,"1. Buka dropdown ""Hubungan dengan Debitur""
+2. Pilih ""Pasangan (Suami / Istri)""
+3. Amati penetapan parameter","Sistem secara otomatis menetapkan pemetaan SmartCA/McKinsey:
+- Status Kepemilikan (SmartCA): ""Kepemilikan Bersama""
+- Hubungan dengan Debitur (McKinsey): ""Pasangan""",S2CML-4949 Table Reff Mapping Baris 2
+TC-4949-14,Perorangan & Badan Usaha,Auto-Mapping SmartCA & McKinsey,Validasi Auto-Mapping Hubungan Pihak Ketiga (Orang Tua / Anak / Perusahaan / Penjamin),Positive,High,Kategori 005/008 aktif.,"1. Pilih opsi hubungan: ""Orang Tua"", ""Anak"", ""Pemilik (Pengurus Perusahaan)"", atau ""Penjamin""
+2. Amati penetapan Status Kepemilikan pada sistem","Seluruh opsi tersebut secara otomatis memetakan:
+- Status Kepemilikan (SmartCA): ""Milik pihak ketiga""
+- Hubungan McKinsey disesuaikan (Orang Tua -> Orang Tua, Anak -> Anak, Perusahaan -> Perusahaan, Penjamin -> Penjamin).",S2CML-4949 Table Reff Mapping Baris 3-8
+TC-4949-15,Perorangan & Badan Usaha,Auto-Mapping SmartCA & McKinsey,Validasi Auto-Mapping Pemilik Sebelumnya (Jual Beli / Waris / Hibah),Positive,Medium,Kategori 005/008 aktif.,"1. Pilih opsi hubungan: ""Pemilik Sebelumnya (Jual Beli)"", ""Pemilik Sebelumnya (Waris)"", atau ""Pemilik Sebelumnya (Hibah)""
+2. Amati penetapan Status Kepemilikan","Sistem memetakan secara otomatis:
+- Status Kepemilikan: ""Dalam proses pemindahan pemilik""
+- Hubungan dengan Debitur (McKinsey): ""Lainnya""",S2CML-4949 Table Reff Mapping Baris 9-11
+TC-4949-16,Perorangan & Badan Usaha,Upload File SLIK PDF Manual,Validasi Upload File SLIK PDF Manual Berhasil,Positive,Critical,Kategori 005 atau 008 telah dipilih. Bagian upload file SLIK PDF tampil di form.,"1. Klik tombol / dropzone upload file SLIK PDF
+2. Unggah berkas dokumen PDF valid (ukuran < 50MB)
+3. Tunggu proses upload selesai
+4. Amati daftar file terunggah","File PDF berhasil terunggah dan tampil dalam list file SLIK. Menampilkan nama file, ukuran file, tombol ""Lihat"" (view) untuk crosscheck dokumen, dan tombol ikon tempat sampah ""Hapus"" (delete).",S2CML-4949 AC: Setup Upload File SLIK PDF
+TC-4949-17,Perorangan & Badan Usaha,Upload File SLIK PDF Manual,Validasi Fitur Hapus File SLIK PDF yang Telah Di-upload,Positive,High,Minimal 1 file dokumen SLIK PDF telah berhasil di-upload.,"1. Klik ikon / tombol ""Hapus"" pada baris dokumen SLIK yang sudah ter-upload
+2. Konfirmasi penghapusan bila muncul modal konfirmasi
+3. Amati daftar file dokumen",File dokumen SLIK terhapus dari daftar upload staging. Slot upload kembali berkurang dan file tidak lagi tercatat pada form kepemilikan.,S2CML-4949 AC: User can remove/delete files
+TC-4949-18,Perorangan & Badan Usaha,Validasi Form & Negative Cases,Validasi Tombol Simpan Disabled saat Field Mandatory SLIK Perorangan Belum Lengkap,Negative,Critical,"Kategori 005/008 dipilih dengan Tipe Kepemilikan Perorangan. Field Nama dan NIK masih kosong, atau File KTP belum diunggah.","1. Biarkan field mandatory Nama / NIK kosong atau jangan upload file KTP
+2. Periksa status tombol ""Simpan"" di bagian footer modal","Tombol ""Simpan"" berstatus disabled (aria-disabled=""true""). Sistem memblokir proses simpan final agunan sampai seluruh field mandatory SLIK terpenuhi.",S2CML-4949 AC & S2CML-4890 AC-11 Gating Simpan
+TC-4949-19,Perorangan & Badan Usaha,Validasi Form & Negative Cases,Validasi Penolakan Upload Dokumen SLIK Melebihi Batas Maksimal 50MB,Negative,High,Area upload dokumen SLIK PDF tampil di layar.,"1. Coba unggah berkas PDF dengan ukuran melebihi 50MB (misal: file 55MB)
+2. Amati respons sistem dan notifikasi","Sistem menolak file tersebut, proses upload dibatalkan, dan muncul pesan error validasi ukuran: ""Ukuran file melebihi batas maksimum 50MB"".",S2CML-4949 AC: Maximum per file - 50MB
+TC-4949-20,Perorangan & Badan Usaha,Validasi Form & Negative Cases,Validasi Batas Maksimal Kuota Upload Dokumen SLIK Sebanyak 20 File,Negative,High,User telah berhasil mengunggah sebanyak 20 file dokumen SLIK PDF.,"1. Coba lakukan upload file dokumen SLIK ke-21
+2. Amati tombol upload dan notifikasi sistem",Tombol upload menjadi disabled atau sistem menampilkan alert peringatan bahwa batas maksimal upload file (20 file) telah tercapai. File ke-21 tidak dapat ditambahkan.,"S2CML-4949 AC: Max File uploaded - 20 file, no pagination"

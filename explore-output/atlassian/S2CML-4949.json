@@ -1,0 +1,48 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4949",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan - Form Infromasi Kepemilikan Agunan > Setup Form Informasi Kepemilikan Agunan, New Data Identitas (Not in Bucket Identitas dan Pengecekan)",
+  "issueType": "Story",
+  "status": "Ready to SIT",
+  "description": "User Story \n: \nDuring the Collateral data entry process, if the Collateral Owner’s entity is new then user can input entity data to complete data mandatory for SLIK Checking\nData Point : \nhttps://docs.google.com/spreadsheets/d/1XjImruERO3TaBZ0mN_sq2cq15QPJHTJYenujNgKWclA/edit?gid=1283138341#gid=1283138341\nScope \n: \n- Logic apabila dipilih \nKondisi Kategori Pemilikan\n adalah 005-Pemilik Agunan, atau 008-Vendor\n- Logic Pengisian data Mandatory for SLIK Checking\n- Integration to CRE for SLIK Checking\nAcceptance Criteria : \nScenario / Requirement\nAcceptance Criteria\nMockup / Data Sample\nTriggering Dropdown List on Form Informasi Kepemilikan Agunan\nReffer to \n\n  same Scenario\nKondisi Kategori Pemilikan dipilih 005-Pemilik Agunan, atau 008-Vendor\nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nthe Account Officer selects \"\nKategori Kepemilikan = Pemilik Agunan or Vendor\n\" from the Kategori Kepemilikan dropdown \nThen \nthe system must dynamically display three additional mandatory fields and one form on the screen:\n- Tipe Kepemilikan, Dropdown : Perorangan / Badan Usaha\n- Hubungan Dengan Debitur , Dropdown :  Need Choose One, Based on Dropdown\n- Form SLIK Check Based on Tipe Kepemilikan.\n- - Tipe Kepemilikan Perorangan :\n- - Nama Mandatory\n- Nomor Identitas - Mandatory\n- Jenis Kelamin Opsional\n- Tempat Tanggal Lahir Opsional\n- Status Perkawinan Opsional\n- File KTP - Mandatory\n- Tipe Kepemilikan Badan Usaha\n- - Nama Badan Usaha Mandatory\n- Jenis Badan Usaha\n- Nomor Identitas Mandatory\n- Lokasi Pendirian Badan Usaha (Opsional)\n- Nomor Telepon Badan Usaha\n- (Opsional)\n- Nomor HP Badan Usaha\n- (Opsional)\n- Email Badan Usaha\n- (Opsional)\n- Nama PIC (Opsional)\n- Nomor Telp PIC (Opsional)\nNote :  All information Data will follow at Bucket Debitur\nTipe Perorangan\nTipe Badan Usaha\nAuto Mapping Value Needed for CUE (Based on McKinsey)\nGiven \nuser Choose Hubungan Kepemilikan dengan Debitur \nTHEN System \nWill set Value of Hubungan Kepemilikan Debitur (McKinsey) And Status Kepemilikan\nmapping reffer to <<\nTable Reff Mapping From LAMOS to SmartCA Field>>\nUpload File PDF Manually (MVP)\nWhen user choose Kategori Pemilik as Pemilik Agunan or Vendor Then Automation Check SLIK will disable (Hidden) and Changes to Upload File SLIK Instead (And Can be more than one)\nSetup Upload File\nMaximum per file - 50MB\nMax File uploaded - 20 file, no pagination\nAfter File Uploaded, user can click at file to view open file that uploaded to xcheck file\nUser can remove / delete files that has been uploaded if the files \nTable Reff Mapping From LAMOS to SmartCA Field\nStatus Kepemilikan (SmartCA)\nHubungan dengan Debitur (SmartCA)\nHubungan dengan Debitur (e-Collval)\nMilik\nDebitur Sendiri\nMilik Sendiri\nKepemilikan Bersama\nPasangan\nPasangan (Suami / Istri)\nMilik pihak ketiga\nOrang Tua\nOrang Tua\nMilik pihak ketiga\nAnak\nAnak\nMilik pihak ketiga\nSaudara Kandung\n-\nMilik pihak ketiga\nAnggota Keluarga\n-\nMilik pihak ketiga\nPerusahaan\nPemilik (Pengurus Perusahaan)\nMilik pihak ketiga\nPenjamin\n-\nDalam proses pemindahan pemilik\nLainnya\nPemilik Sebelumnya (Jual Beli)\nDalam proses pemindahan pemilik\nLainnya\nPemilik Sebelumnya (Waris)\nDalam proses pemindahan pemilik\nLainnya\nPemilik Sebelumnya (Hibah)\n",
+  "linkedIssues": [
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4983",
+      "summary": "21. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-4406",
+      "summary": "[BE] LAMOS LOS SME - Create Form Pengajuan - Form Debitur - Pengecekan Badan Usaha - Part 1",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-3553",
+      "summary": "[BE] LAMOS LOS SME - Create Form Pengajuan - Form Debitur - Pengecekan Perorangan",
+      "status": "Done"
+    },
+    {
+      "relation": "Finish-to-Finish link (WBSGantt)",
+      "key": "S2CML-5454",
+      "summary": "10. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Kepemilikan",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6019",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4993",
+      "summary": "[FE][Lamos] Bucket agunan - Bucket Identity - New User",
+      "status": "Ready to SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

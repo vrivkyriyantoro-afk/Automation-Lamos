@@ -8,15 +8,16 @@ require('dotenv').config();
  *   node scripts/read-figma.js <Figma_URL_atau_File_Key> [--pages]
  */
 
-const token = process.env.FIGMA_ACCESS_TOKEN;
+const token = (process.env.FIGMA_TOKEN || '').trim();
 
 if (!token) {
-  console.error('❌ Error: FIGMA_ACCESS_TOKEN belum diset di .env!');
+  console.error('❌ Error: FIGMA_TOKEN belum diset di .env!');
   process.exit(1);
 }
 
-const inputArg = process.argv[2] || process.env.FIGMA_FILE_KEY;
 const isListPages = process.argv.includes('--pages');
+const cliArg = process.argv.slice(2).find(a => a !== '--pages');
+const inputArg = (cliArg || process.env.FIGMA_URL || process.env.FIGMA_FILE_KEY || '').trim();
 
 if (!inputArg) {
   console.error('❌ Error: Berikan URL Figma atau File Key!');

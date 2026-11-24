@@ -17,7 +17,7 @@ test.describe('Eksplorasi Detail Form Pengurus/Pemegang Saham', () => {
     await loginPage.login(validUsername, validPassword);
     await loginPage.expectLoginSuccess();
 
-    const targetUrl = 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M47GJH55ZVDRE8EB7NXZ2D6W/create?bucket=identitas_pengecekan&debtorType=individual';
+    const targetUrl = 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M47GJH55ZVDRE8EB7NXZ2D6W/create?bucket=identitas_pengecekan&debtorType=individual';
     await page.goto(targetUrl, { waitUntil: 'networkidle' });
     await page.waitForTimeout(3000);
 

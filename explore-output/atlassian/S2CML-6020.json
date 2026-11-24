@@ -1,0 +1,36 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-6020",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan",
+  "issueType": "Story",
+  "status": "In SIT",
+  "description": "Load Existing Data (Collaterals)\nAs an \nAccount Officer (AO)\n, I want the system to automatically retrieve and display existing collateral information when I access the Bucket Agunan, so that  I don't have to re-enter data that has been previously captured, ensuring data consistency and saving processing time.\nTask \n: \n- Memastikan apabila data-data yang sudah di draft ataupun simpan, jika user memilih pindah ke bucket lain - data tersebut masih ada untuk masih dapat dilakukan edit apabila dibutuhkan\nAcceptance Criteria : \nRequirement\nAC Condition\nDesign / Mockup / Datapoint\nPre-Load Data at Bucket Agunan\nGiven \nthe user has inputted asset data into the \"Bucket Agunan\" And the user has triggered the \"Save as Draft\" or \"Simpan\" action \nWhen \nthe user navigates away to access another bucket screen \nThen \nthe system must retain all the previously inputted data in the \"Bucket Agunan\" without any data loss And when the user clicks back to return to the \"Bucket Agunan\" screen Then the system must display all the intact draft data exactly as previously saved\n\n \n",
+  "linkedIssues": [
+    {
+      "relation": "Cloners",
+      "key": "S2CML-4765",
+      "summary": "22. [BE, FE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4758",
+      "summary": "2. [BE, FE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6018",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan",
+      "status": "Done"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4890",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2",
+      "status": "In Development"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

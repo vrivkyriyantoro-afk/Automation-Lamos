@@ -1,0 +1,63 @@
+﻿Test Case ID,Tipe Debitur,Kelompok / Modul,Judul Skenario,Tipe,Prioritas,Prekondisi,Langkah Pengujian,Expected Result,Referensi Sumber
+TC-4889-01,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Modal dan Urutan Stepper saat Klik Tambah Agunan,Positive,Medium,Modal Tambah Agunan belum dibuka.,Klik tombol Tambah Agunan. 2. Periksa tampilan modal. 3. Periksa nama dan urutan stepper.,Modal terbuka dengan urutan stepper Pencarian → Hasil Pencarian → Data Agunan.,Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685 Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889
+TC-4889-02,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Pencarian ketika Jenis Kode Agunan Belum Dipilih,Positive,High,Tersedia data Nomor Bukti Kepemilikan untuk diinput.,"Klik Tambah Agunan.
+2. Biarkan Jenis Kode Agunan belum dipilih.
+3. Isi Nomor Bukti Kepemilikan.
+4. Coba lakukan pencarian menggunakan tombol Cari.",Sistem tidak memproses pencarian sebelum Jenis Kode Agunan dipilih. Bentuk validasi mengikuti spesifikasi UI yang disepakati.,Jira S2CML-4889
+TC-4889-03,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Pencarian ketika Seluruh Field Optional Kosong,Positive,High,Tersedia agunan di CLS yang memenuhi kriteria wajib pencarian.,"1. Klik Tambah Agunan.
+2. Pilih Jenis Kode Agunan.
+3. Isi Nomor Bukti Kepemilikan menggunakan data uji yang tersedia di CLS.
+4. Biarkan seluruh field optional kosong.
+5. Klik Cari dan periksa hasilnya.",Pencarian diproses menggunakan kriteria wajib saja. Field optional kosong diabaikan dan tidak menghalangi data yang memenuhi kriteria wajib untuk ditampilkan.,Jira S2CML-4889
+TC-4889-04,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Pencarian Ulang setelah Data Agunan Tidak Ditemukan,Positive,Medium,Tersedia dua set kriteria: satu tidak memiliki kecocokan di CLS dan satu memiliki kecocokan.,"1. Isi Jenis Agunan, Bukti Kepemilikan, dan opsional Kecamatan/Kelurahan.
+2. Klik Cari.","Sistem query dengan Jenis Agunan (Exact Match), Bukti Kepemilikan (Include Match), Kecamatan (Exact Match), Kelurahan (Exact Match); field kosong diabaikan, field terisi digabung dengan operator AND.",Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685 Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889
+TC-4889-05,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Tombol Tambah Agunan Baru Sebelum dan Sesudah Pencarian,Positive,High,Modal belum dibuka dan pencarian belum dilakukan pada sesi modal yang akan diuji.,"Klik Tambah Agunan.
+2. Periksa keberadaan tombol Tambah Agunan Baru sebelum pencarian.
+3. Isi seluruh kriteria wajib.
+4. Klik Cari.
+5. Periksa kembali keberadaan tombol Tambah Agunan Baru.",Tombol Tambah Agunan Baru tidak ditampilkan sebelum pencarian dan ditampilkan setelah pencarian dilakukan.,Jira S2CML-4889
+TC-4889-06,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Tambah Agunan Baru ketika Hasil Pencarian Kosong,Positive,High,Tersedia kriteria pencarian yang tidak memiliki kecocokan di CLS.,"Isi kriteria wajib menggunakan data yang tidak tersedia di CLS.
+2. Klik Cari.
+3. Pastikan hasil pencarian kosong.
+4. Klik Tambah Agunan Baru.",Sistem membuka form input agunan baru.,Jira S2CML-4889
+TC-4889-07,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Tambah Agunan Baru ketika Hasil Pencarian Ada tetapi Tidak Sesuai Dokumen,Positive,High,Tersedia hasil pencarian di CLS yang tidak sesuai dengan dokumen agunan yang akan diajukan.,"Siapkan dokumen agunan yang berbeda dari data hasil pencarian.
+2. Isi kriteria wajib dan klik Cari hingga terdapat hasil.
+3. Bandingkan hasil pencarian dengan dokumen yang disiapkan.
+4. Tanpa memilih data existing, klik Tambah Agunan Baru.",AO tetap dapat membuka form input agunan baru meskipun hasil pencarian tersedia.,Jira S2CML-4889
+TC-4889-08,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Reuse Agunan Existing yang Memenuhi Syarat hingga Data Agunan Dimuat,Positive,High,"Tersedia agunan existing dengan Paripasu = Y, penggunaan <100%, dan belum digunakan pada pengajuan yang sama.","Siapkan agunan existing dengan Paripasu = Y, penggunaan <100%, dan belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Klik Lanjutkan.
+5. Bandingkan data yang dimuat dengan agunan yang dipilih.",Sistem mengizinkan proses dilanjutkan dan memuat data agunan existing yang dipilih untuk proses pada Part 2.,Jira S2CML-4889
+TC-4889-09,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Sistem Memblokir Reuse Agunan Existing dengan Paripasu = N,Positive,High,Tersedia agunan existing dengan Paripasu = N dan belum digunakan pada pengajuan yang sama.,"Siapkan agunan existing dengan Paripasu = N yang belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Coba lanjutkan proses reuse.",Sistem tidak mengizinkan AO melanjutkan reuse agunan dengan Paripasu = N.,Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685 Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889
+TC-4889-10,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Sistem Memblokir Reuse Agunan Existing dengan Persentase Penggunaan Lebih dari 100%,Negative,High,"Tersedia data uji agunan existing dengan Paripasu = Y, penggunaan >100%, dan belum digunakan pada pengajuan yang sama.","Siapkan agunan existing dengan Paripasu = Y dan persentase penggunaan >100% yang belum digunakan pada pengajuan yang sama.
+2. Cari agunan tersebut.
+3. Pilih agunan dari hasil pencarian.
+4. Coba lanjutkan proses reuse.",Sistem memblokir reuse agunan dengan persentase penggunaan >100%.,Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685 Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889
+TC-4889-11,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Pengambilan Persentase Paripasu dari CLS saat Memilih Agunan Existing,Negative,High,Tersedia agunan dengan persentase penggunaan yang diketahui di CLS. Tester memiliki akses network/log untuk memeriksa respons API.,"Siapkan agunan existing dengan persentase penggunaan yang diketahui di CLS.
+2. Cari dan pilih agunan tersebut.
+3. Periksa respons API melalui network atau log yang tersedia.
+4. Cocokkan identitas agunan dan persentase pada respons dengan data uji CLS.
+5. Periksa penggunaan persentase tersebut pada validasi atau kalkulasi sistem.",Identitas dan persentase penggunaan sesuai data CLS. Sistem menggunakan persentase tersebut sebagai dasar validasi ketersediaan dan kalkulasi sisa nilai agunan.,Epic: https://bank-sinarmas.atlassian.net/browse/LP-5685 Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4889
+TC-4889-12,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Penolakan Penambahan Agunan Existing yang Sudah Digunakan pada Pengajuan yang Sama,Positive,High,Agunan existing sudah tercatat pada pengajuan yang sedang diuji. Agunan memiliki Paripasu = Y dan penggunaan <100% agar pengujian fokus pada duplikasi.,"Cari agunan yang sudah tercatat pada pengajuan tersebut.
+2. Pilih agunan yang sama.
+3. Coba lanjutkan proses penambahan.
+4. Periksa notifikasi dan daftar agunan pengajuan",Sistem menampilkan notifikasi bahwa AO harus memilih agunan lain. Agunan yang sama tidak ditambahkan kembali ke pengajuan.,Jira S2CML-4889
+TC-4889-13,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Sistem Memblokir Reuse Agunan Existing dengan Penggunaan Tepat 100%,Positive,High,"Tersedia agunan existing dengan Paripasu = Y, penggunaan 100%, dan belum digunakan pada pengajuan yang sama.","Cari agunan sesuai data uji.
+2. Pilih agunan tersebut.
+3. Coba lanjutkan proses melalui tombol Lanjutkan.",Sistem memblokir reuse karena seluruh nilai agunan sudah digunakan.,Jira S2CML-4889
+TC-4889-14,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Sistem Memblokir Reuse Agunan Existing dengan Paripasu = N,Positive,High,Tersedia agunan existing dengan Paripasu = N dan belum digunakan pada pengajuan yang sama.,"Cari agunan sesuai data uji.
+2. Pilih agunan tersebut.
+3. Coba lanjutkan proses melalui tombol Lanjutkan.",Sistem memblokir reuse sehingga AO tidak dapat melanjutkan penggunaan agunan tersebut.,Jira S2CML-4889
+TC-4889-15,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,"Validasi Permutasi filter ""cari agunan""",Positive,High,User di halaman pencarian agunan,"1) Isi filter dengan berbagai kombinasi (satu filter, dua filter, semua filter)
+2) Klik Cari",Hasil sesuai kombinasi filter yang dipilih,Modul: Search agunan
+TC-4889-16,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Field mandatory pada pencarian,Negative,High,Halaman pencarian terbuka,"1) Kosongkan field mandatory
+2) Klik Cari","Validasi muncul pada field wajib, pencarian tidak dijalankan",Modul: Search agunan
+TC-4889-17,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Time out saat memilih agunan,Negative,High,Hasil pencarian tampil; simulasikan time out,"1) Pilih salah satu agunan
+2) Sistem time out","Muncul pesan error yang sesuai, user bisa mencoba lagi, tidak ada data tersimpan setengah jalan",Modul: Search agunan
+TC-4889-18,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Agunan tanpa sisa nilai wajar,Negative,High,Agunan dengan sisa nilai wajar = 0,1) Pilih agunan tersebut,Agunan tidak bisa dipilih / muncul pesan bahwa tidak ada sisa nilai wajar,Modul: Search agunan
+TC-4889-19,Perorangan & Badan Usaha,Modul 1: Search Agunan & CLS Paripasu,Validasi Agunan sudah ditambahkan di pengajuan ini,Negative,High,Agunan sudah ada di pengajuan,"1) Cari agunan yang sama
+2) Pilih","Muncul penanda/pesan agunan telah ditambahkan, tidak bisa ditambahkan ulang",Modul: Search agunan

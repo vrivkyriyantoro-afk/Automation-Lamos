@@ -8,7 +8,7 @@ import { LoginPage } from '../../pages/LoginPage';
  * Tidak klik "Cari" / simpan. Output: explore-output/agunan/jenis-agunan.json
  */
 const TARGET = process.env.EXPLORE_URL
-  || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M482PRSVH5ZMTVZX5QH0VDNZ/create?bucket=agunan&debtorType=business';
+  || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M482PRSVH5ZMTVZX5QH0VDNZ/create?bucket=agunan&debtorType=business';
 
 test('probe opsi Jenis agunan', async ({ page }) => {
   test.setTimeout(180000);

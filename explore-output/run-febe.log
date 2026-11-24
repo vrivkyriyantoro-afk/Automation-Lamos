@@ -1,0 +1,58 @@
+◇ injected env (9) from .env
+
+Running 3 tests using 1 worker
+
+◇ injected env (0) from .env
+
+[1/3] [chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:55:5 › FE-vs-BE 01: kode kategori 001 vs 003 pada debitur Badan Usaha
+[chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:55:5 › FE-vs-BE 01: kode kategori 001 vs 003 pada debitur Badan Usaha
+FE merender opsi: ["001 - Calon Debitur","005 - Pemilik Anggunan","006 - Pengurus Perusahaan","007 - Pemilik Perusahaan","008 - Vendor","009 - Penjamin","010 - Pasangan Penjamin"]
+
+
+########## RESPONSE memuat kategori kepemilikan ##########
+
+
+[200] https://los-fe-coreloan-sit.devs.banksinarmas.com/lossvc/v1/sme/loans/01M482PRSVH5ZMTVZX5QH0VDNZ/forms/collaterals?status=FINAL&page=1&limit=10
+
+{"data":{"collaterals":[{"appraisedValue":120000000,"groupingJenis":"HOUSING","id":"01M4Z5RHWRV7Q4MR44230AMF3Q","isEligibleForProduct":true,"jenis":{"code":"AN02010203","name":"Rumah Toko/Rumah Kantor"},"ownershipProof":"roxy","pemilikAgunan":"","predictiveValue":900000000,"remainingAppraisedValue":120000000,"remainingPredictiveValue":900000000,"status":"FINAL"},{"appraisedValue":1200000000,"groupingJenis":"HOUSING","id":"01M4Z5BV05CNYW1ERBYZ5VWGF8","isEligibleForProduct":true,"jenis":{"code":"AN020101","name":"Tanah"},"ownershipProof":"gbk01","pemilikAgunan":"","predictiveValue":1000000000,"remainingAppraisedValue":1200000000,"remainingPredictiveValue":1000000000,"status":"FINAL"}],"summary":{"totalRemainingAppraisedValue":{"status":"COMPLETE","value":1320000000},"totalRemainingPredictiveValue":1900000000}},"page":{"limit":10,"page_number":1,"page_size":2,"total":2},"responseMessage":"Success","statusCode":"200"}
+
+
+
+[200] https://los-fe-coreloan-sit.devs.banksinarmas.com/lossvc/v1/sme/loans/01M482PRSVH5ZMTVZX5QH0VDNZ/dropdowns?type=ownerCategory
+
+{"data":[{"code":"001","name":"Calon Debitur"},{"code":"005","name":"Pemilik Anggunan"},{"code":"006","name":"Pengurus Perusahaan"},{"code":"007","name":"Pemilik Perusahaan"},{"code":"008","name":"Vendor"},{"code":"009","name":"Penjamin"},{"code":"010","name":"Pasangan Penjamin"}],"responseMessage":"OK","statusCode":200}
+
+
+[2/3] [chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:75:5 › FE-vs-BE 02: dropdown Hubungan dengan debitur pada kategori 006
+[chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:75:5 › FE-vs-BE 02: dropdown Hubungan dengan debitur pada kategori 006
+Combobox pada 005: ["005 - Pemilik Anggunan","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+Combobox pada 006: ["006 - Pengurus Perusahaan","Individu","123331231233 - 123331231233"]
+
+
+########## RESPONSE setelah pilih 006 ##########
+
+TIDAK ADA response yang memuat pola /hubungan|relation|relationship/i
+
+URL yang tertangkap (1):
+
+  [200] https://los-fe-coreloan-sit.devs.banksinarmas.com/lossvc/v1/sme/loans/01M482PRSVH5ZMTVZX5QH0VDNZ/dropdowns?type=shareholderPengurusPerseorangan
+
+[3/3] [chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:105:5 › FE-vs-BE 03: label tipe kepemilikan Individu vs Perorangan
+[chromium] › tests\bucketAgunan\explore-fe-vs-be.spec.ts:105:5 › FE-vs-BE 03: label tipe kepemilikan Individu vs Perorangan
+FE merender label tipe kepemilikan: ["Individu","Non Individu"]
+
+
+########## RESPONSE memuat label tipe kepemilikan ##########
+
+
+[200] https://los-fe-coreloan-sit.devs.banksinarmas.com/lossvc/v1/sme/loans/01M22NAB4RXT92Y56AJ5VBQT75/buckets
+
+{"data":[{"formGroup":[{"forms":[{"id":"data_pribadi","isRequired":true,"name":"Data Pribadi","status":"completed"},{"id":"data_pribadi_tambahan","isRequired":true,"name":"Data Pribadi Tambahan","status":"completed"},{"id":"lokasi_tempat_tinggal","isRequired":true,"name":"Lokasi \u0026 Kondisi Tempat Tinggal","status":"completed"},{"id":"data_pekerjaan","isRequired":true,"name":"Data Pekerjaan \u0026 Keuangan","status":"completed"},{"id":"data_pribadi_pasangan","isRequired":true,"name":"Data Pribadi Pasangan","status":"completed"},{"id":"data_pekerjaan_pasangan","isRequired":true,"name":"Data Pekerjaan Pasangan","status":"completed"},{"id":"kontak_darurat","isRequired":true,"name":"Data Kontak Darurat","status":"completed"},{"id":"data_penjamin","isRequired":true,"name":"Data Penjamin","status":"completed"},{"id":"referensi","isRequired":false,"name":"Referensi","status":"complete_optional"}],"name":"Identitas"},{"forms":[{"id":"dukcapil","isRequired":true,"name":"Pengecekan Dukcapil","status":"completed"},{"id":"dhn_dhib","isRequired":true,"name":"Pengecekan DHN DHIB","status":"completed"},{"id":"slik","isRequired":true,"name":"Pengecekan SLIK","status":"completed"}],"name":"Pengecekan"}],"id":"identitas_pengecekan","name":"Identitas dan Pengecekan","status":"completed"},{"formGroup":[{"forms":[{"id":"struktur_kredit","isRequired":true,"name":"Struktur Pengajuan Kredit","status":"completed"},{"id":"fasilitas_kredit","isRequired":false,"name":"Fasilitas Kredit \u0026 Obligor","status":"empty_optional"},{"id":"ringkasan_pengajuan","isRequired":true,"name":"Ringkasan Pengajuan","status":"completed"}],"name":""}],"id":"struktur_kredit","name":"Struktur Kredit","status":"completed"},{"formGroup":[{"forms":[{"id":"informasi_badan_usaha","isRequired":true,"name":"Informasi Badan Usaha","status":"completed"},{"id":"aspek_usaha","isRequired":true,"name":"Aspek Usaha","status":"completed"},{"id":"trade_checking","isRequired":true,"name":"Trade Checking","status":"completed"}],"name":""}],"id":"data_usaha","name":"Data Usaha","status":"completed"},{"formGroup":[{"forms":[{"id":"data_agunan","isRequired":true,"name":"Data Agunan","status":"completed"},{"id":"pengikatan_agunan_ke_fasilitas","isRequired":true,"name":"Pengikatan agunan ke fasilitas","status":"completed"}],"name":""}],"id":"agunan","name":"Agunan","status":"completed"},{"formGroup":[{"forms":[{"id":"analisa_mutasi_rekening","isRequired":false,"name":"Analisa Mutasi Rekening","status":"empty_optional"},{"
+
+
+[200] https://los-fe-coreloan-sit.devs.banksinarmas.com/lossvc/v1/config/dropdowns?type=JENIS_DEBITUR&segment=SME&limit=1000
+
+{"statusCode":200,"responseMessage":"OK","data":[{"id":0,"type":"JENIS_DEBITUR","code":"1","value":"Individu","segment":"SME","createdAt":null,"updatedAt":null},{"id":0,"type":"JENIS_DEBITUR","code":"2","value":"Non Individu","segment":"SME","createdAt":null,"updatedAt":null}],"pagination":{"limit":1000,"page":0,"sort":"","total_rows":0,"total_pages":0}}
+
+  3 passed (1.4m)

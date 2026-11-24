@@ -1,0 +1,283 @@
+[
+  {
+    "step": "Step 1 Informasi umum (awal)",
+    "text": "Tambah agunan",
+    "combos": [
+      {
+        "label": "Isi sendiri",
+        "current": "Isi sendiri",
+        "options": []
+      },
+      {
+        "label": "AN020101 - Tanah",
+        "current": "AN020101 - Tanah",
+        "options": []
+      },
+      {
+        "label": "Status agunan*",
+        "current": "Pilih status agunan",
+        "options": [
+          "1 - Tersedia",
+          "2 - Indent"
+        ]
+      },
+      {
+        "label": "Jenis pengikatan*",
+        "current": "Pilih jenis pengikatan",
+        "options": []
+      },
+      {
+        "label": "Jenis segmen fasilitas*",
+        "current": "Pilih jenis segmen fasilitas",
+        "options": [
+          "Kredit",
+          "Kredit Join",
+          "Surat Berharga",
+          "Irrevocable LC",
+          "Bank Garansi",
+          "Fasilitas Lainnya"
+        ]
+      },
+      {
+        "label": "Kantor cabang/agunan diregistrasikan*",
+        "current": "Pilih kantor cabang",
+        "options": [
+          "All Branch",
+          "KPNO",
+          "KC Jakarta - Thamrin",
+          "KCP Zainul Arifin",
+          "KC Jakarta L Avenue",
+          "KCP Jakarta Cempaka Mas",
+          "KC Mangga Dua",
+          "KC Tanah Abang",
+          "KCP Samanhudi",
+          "KCP",
+          "KCP Kelapa Gading",
+          "KCP Bumi Serpong Damai",
+          "KC Bandung Abdul Rivai",
+          "KCP Bandung Jamika",
+          "KC Surabaya Diponegoro",
+          "KC Medan Mangkubumi",
+          "KC Cirebon",
+          "KC Manado",
+          "KC Pekanbaru Riau",
+          "KC Yogyakarta",
+          "KC Jambi Hayam WuruK",
+          "KC Makasar",
+          "KC Denpasar Tantular Renon",
+          "KC Semarang Gang Tengah",
+          "KC Purwokerto"
+        ]
+      },
+      {
+        "label": "Provinsi*",
+        "current": "Pilih provinsi",
+        "options": []
+      },
+      {
+        "label": "Kota lokasi agunan atau Dati 2*",
+        "current": "Pilih kota/kabupaten",
+        "options": []
+      },
+      {
+        "label": "Kecamatan*",
+        "current": "Pilih kecamatan",
+        "options": [
+          "No results found"
+        ]
+      },
+      {
+        "label": "Kelurahan/desa*",
+        "current": "Pilih kelurahan",
+        "options": []
+      },
+      {
+        "label": "Tipe penilaian*",
+        "current": "Pilih tipe penilaian",
+        "options": []
+      }
+    ],
+    "inputs": [
+      {
+        "label": "Tanggal pengikatan*",
+        "type": "text",
+        "placeholder": "Pilih tanggal pengikatan",
+        "disabled": false
+      },
+      {
+        "label": "Ya",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Tidak",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Keterangan",
+        "type": "textarea",
+        "placeholder": "Masukkan keterangan",
+        "disabled": false
+      },
+      {
+        "label": "Kode pos*",
+        "type": "text",
+        "placeholder": "Masukkan kode pos",
+        "disabled": false
+      },
+      {
+        "label": "RT/RW",
+        "type": "text",
+        "placeholder": "Masukkan RT",
+        "disabled": false
+      },
+      {
+        "label": "",
+        "type": "text",
+        "placeholder": "Masukkan RW",
+        "disabled": false
+      },
+      {
+        "label": "Alamat*",
+        "type": "text",
+        "placeholder": "Masukkan alamat",
+        "disabled": false
+      },
+      {
+        "label": "Alamat lengkap*",
+        "type": "textarea",
+        "placeholder": "Otomatis terisi",
+        "disabled": true
+      },
+      {
+        "label": "Ya",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Tidak",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Ya",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Tidak",
+        "type": "radio",
+        "placeholder": "",
+        "disabled": false
+      },
+      {
+        "label": "Rp",
+        "type": "text",
+        "placeholder": "Masukkan nominal",
+        "disabled": false
+      },
+      {
+        "label": "Rp",
+        "type": "text",
+        "placeholder": "Masukkan nominal",
+        "disabled": false
+      },
+      {
+        "label": "Rp",
+        "type": "text",
+        "placeholder": "Masukkan nominal",
+        "disabled": false
+      },
+      {
+        "label": "Tanggal penilaian agunan menurut pelapor*",
+        "type": "text",
+        "placeholder": "Pilih tanggal",
+        "disabled": false
+      },
+      {
+        "label": "Catatan positif",
+        "type": "textarea",
+        "placeholder": "Tuliskan catatan positif agunan",
+        "disabled": false
+      },
+      {
+        "label": "Catatan negatif",
+        "type": "textarea",
+        "placeholder": "Tuliskan catatan negatif agunan",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "step": "Step 2 Data tambahan",
+    "text": "Tambah agunan",
+    "combos": [
+      {
+        "label": "Sifat agunan jaminan*",
+        "current": "Pilih sifat agunan jaminan",
+        "options": [
+          "Eligible",
+          "Non Eligible"
+        ]
+      },
+      {
+        "label": "Tidak",
+        "current": "Tidak",
+        "options": []
+      }
+    ],
+    "inputs": [
+      {
+        "label": "Bukti pemilikan*",
+        "type": "text",
+        "placeholder": "Masukkan bukti pemilikan",
+        "disabled": false
+      }
+    ]
+  },
+  {
+    "step": "Step 3 Informasi kepemilikan",
+    "text": "Tambah agunan",
+    "combos": [
+      {
+        "label": "Kategori pemilik agunan*",
+        "current": "Pilih kategori pemilik agunan",
+        "options": [
+          "001 - Calon Debitur",
+          "005 - Pemilik Anggunan",
+          "006 - Pengurus Perusahaan",
+          "007 - Pemilik Perusahaan",
+          "008 - Vendor",
+          "009 - Penjamin",
+          "010 - Pasangan Penjamin"
+        ]
+      }
+    ],
+    "inputs": [
+      {
+        "label": "Bukti kepemilikan*",
+        "type": "text",
+        "placeholder": "Otomatis terisi dari data tambahan agunan",
+        "disabled": true
+      },
+      {
+        "label": "Kategori pemilik agunan*",
+        "type": "text",
+        "placeholder": "Pilih kategori pemilik agunan",
+        "disabled": false
+      },
+      {
+        "label": "001 - Calon Debitur",
+        "type": "text",
+        "placeholder": "Cari...",
+        "disabled": false
+      }
+    ]
+  }
+]

@@ -19,7 +19,7 @@ test.describe('Eksplorasi Modal Input Pengurus dan Pemegang Saham', () => {
     await loginPage.expectLoginSuccess();
 
     // 2. Navigasi ke URL target
-    const targetUrl = 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M47GJH55ZVDRE8EB7NXZ2D6W/create?bucket=identitas_pengecekan&debtorType=individual';
+    const targetUrl = 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M47GJH55ZVDRE8EB7NXZ2D6W/create?bucket=identitas_pengecekan&debtorType=individual';
     console.log(`[2/4] Navigasi ke ${targetUrl}`);
     await page.goto(targetUrl, { waitUntil: 'networkidle' });
     await page.waitForTimeout(3000);

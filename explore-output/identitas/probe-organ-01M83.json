@@ -1,0 +1,26 @@
+{
+  "combobox": {
+    "ada": 1,
+    "id": "organBadanUsaha-r6k",
+    "text": "Pilih tipe organ badan usaha",
+    "disabled": "false"
+  },
+  "listboxes": [
+    {
+      "id": "organBadanUsaha-r6k-listbox",
+      "testid": "dropdownsearch-content",
+      "visible": true,
+      "text": "Pemegang Saham\nPemegang Saham dari Pemegang Saham\nPengurus\nPengurus dari Pemegang Saham",
+      "html": "<div id=\"organBadanUsaha-r6k-listbox\" role=\"listbox\" data-side=\"top\" data-testid=\"dropdownsearch-content\" class=\"mt-1 rounded border border-neutral-200 bg-white shadow-md\" style=\"width: 718px;\"><ul class=\"max-h-64 overflow-y-auto overscroll-contain text-sm\" style=\"max-height: 138px;\"><li class=\"\"><button type=\"button\" class=\"flex w-full items-center px-4 py-3 text-left cursor-pointer hover:bg-neutral-100/70\"><span class=\"flex flex-col gap-0.5\"><span>Pemegang Saham</span></span></button></li><li class=\"\"><button type=\"button\" class=\"flex w-full items-center px-4 py-3 text-left cursor-pointer ho"
+    }
+  ],
+  "expanded": "true",
+  "searchInput": [
+    {
+      "tag": "INPUT",
+      "readOnly": false,
+      "disabled": false
+    }
+  ],
+  "network": []
+}

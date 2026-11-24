@@ -1,0 +1,48 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4948",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan - Form Informasi Kepemilikan Agunan > Setup Form Informasi Kepemilikan Agunan Load From Bucket Identity",
+  "issueType": "Story",
+  "status": "Ready to SIT",
+  "description": "User Story \n: \nDuring the Collateral data entry process, if the Collateral Owner’s entity has already been defined in the 'Bucket Debitur', the system shall automatically fetch this owner information. The system must then load the corresponding SLIK credit check results based on that pre-existing data. However, if the system detects that the loaded SLIK result has already expired, it must automatically trigger a new SLIK inquiry request.\nData Point : \nhttps://docs.google.com/spreadsheets/d/1XjImruERO3TaBZ0mN_sq2cq15QPJHTJYenujNgKWclA/edit?gid=1283138341#gid=1283138341\nScope \n: \n- Pilihan\n Kondisi Kategori Pemilikan\n berdasarkan \nSLIK (Dropdown Value)\n- Fungsi Fetch data dari Bucket Debitur untuk menampilkan informasi Debitur – MVP hanya Nama Lengkap dan NIK\nMap Pilihan Dropdown\nDropdown Kategori Kepemilikan Agunan\nLogic dimunculkan\n001 - Calon Debitur\nMunculkan Apabila Debitur tidak memiliki Fasilitas aktif di Bank Sinarmas pada saat pengajuan – ini bisa dilihat dari Struktur Kredit - part Exposure\n002 - Calon Pasangan Debitur\nMunculkan Apabila Debitur tidak memiliki Fasilitas aktif di Bank Sinarmas pada saat pengajuan – ini bisa dilihat dari Struktur Kredit - part Exposure\n003 - Debitur\nMunculkan Apabila Debitur sudah memiliki Fasilitas aktif di Bank Sinarmas pada saat pengajuan – ini bisa dilihat dari Struktur Kredit - part Exposure\n004 - Pasangan Debitur\nMunculkan Apabila Debitur sudah memiliki Fasilitas aktif di Bank Sinarmas pada saat pengajuan – ini bisa dilihat dari Struktur Kredit - part Exposure\n005 - Pemilik Agunan\nSelalu dimunculkan\n006 - Pengurus Perusahaan\nMunculkan apabila Jenis Debitur adalah Badan Usaha\n007 - Pemilik Perusahaan\nMunculkan apabila Jenis Debitur adalah Badan Usaha\n008 - Vendor\nSelalu dimunculkan\n009 - Penjamin (PG)\nMunculkan apabila pada Bucket Debitur, pertanyaan terkait “Apakah Debitur Memiliki Penjamin” dijawab “Ya”\n010 - Pasangan Penjamin\nMunculkan apabila pada Bucket Debitur, pertanyaan terkait “Apakah Debitur Memiliki Penjamin” dijawab “Ya”, Kode Golongan Penjamin adalah “Perorangan” dan Statusnya adalah Menikah\nAcceptance Criteria\nRequirement/Scope\nAcceptance Criteria\nMockup\nTriggering Dropdown List on Form Informasi Kepemilikan Agunan \nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nClick at Dropdown “\nKategori Kepemilikan Agunan\n” \nThen System \nShall show dropdown list based on Tables “\nMap Pilihan Dropdown\n”\nSample 1 \n: Debitur Adalah Perorangan yang belum memiliki fasilitas aktif di bank Sinarmas dan Belum Menikah dan Memiliki Penjamin\nSample 2 : Debitur Adalah Badan Usaha yang sudah memiliki fasilitas aktif di Bank Sinarmas dan Memiliki Penjamin\nBE will always give FE all dropdown, need case if FE cannot handle logic to disable based on logic\nGiven \nBucket Identitas dan Pengecekan status sudah lengkap dan User berada di Proses Tambah Agunan di \nForm 3 - Informasi Kepemilikan When \nUser Choose Field \nKategori Kepemilikan\n is : \n- Pasangan Debitur, or\n- Pengurus Perusahaan, or\n- Pemilik Perusahaan, or\n- Penjamin (PG) or\n- Pasangan Penjamin\nWhile \nThat entity is not available in Bucket Identitas & Pengecekan \nThen \nsystem will give notif message that entity is not available\nCreating List Entity/Identity that Loaded From Bucket Identitas dan Pengecekan\nGiven \nBucket Identitas dan Pengecekan status sudah lengkap dan User berada di Proses Tambah Agunan di Form 3 - Informasi Kepemilikan Dan dipilih Kriteria adalah Pengurus Perusahaan, Pemilik Perusahaan, Penjamin dan atau Pasangan Penjamin\nWhen \nUser klik Dropdown at \nNama THEN \nSystem Will Show Dropdown list based on Filter Name Category\nTriggering Kategori Kepemilikan Agunan Pada saat dipilih adalah Debitur, Calon Debitur\nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nuser choose “\nKategori Kepemilikan Agunan\n” is Debitur or Calon Debitur \nThen System Shall fetch data Debitur from Bucket Debitur: \n- Nama Lengkap\n- Nomor KTP\nAnd Set at BE  \n- Tipe Kepimilikan Agunan (Individu / non Individu) - Individu\n- Hubungan dengan Debitur : Milik Sendiri\n- Hubungan dengan Debitur (McKinsey) : Debitur Sendiri\n- Status Kepemilikan : Milik\n- Calon debitur perorangan:\n- \n- Calon deibtur badan usaha:\n- \n- Debitur perorangan:\n- \n- Debitur badan usaha:\n- \nTriggering Kategori Kepemilikan Agunan Pada saat dipilih adalah Pasangan Debitur atau Pasangan Calon Debitur\nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nuser choose “\nKategori Kepemilikan Agunan\n” is Pasangan Debitur or Pasangan Calon Debitur \nThen System Shall fetch data Pasangan Debitur from Bucket Debitur: \n- Nama Lengkap\n- Nomor KTP\ndan set di BE : \n- Tipe Kepimilikan Agunan (Individu /non Individu) - Individu\n- Hubungan dengan Debitur : Pasangan (Suami/Istri)\n- Hubungan dengan Debitur (McKinsey) : Pasangan\n- Status Kepemilikan : Kepemilikan Bersama\n- Pasangan calon debitur:\n- \n- \n- Pasangan debitur:\n- \nTriggering Kategori Kepemilikan Agunan Pada saat dipilih adalah Pengurus Perusahaan, atau Pemilik Perusahaan\nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nuser choose “\nKategori Kepemilikan Agunan\n” is Pengurus Perusahaan \nThen System Shall fetch List Data Name from \nPengurus dan Pemegang Saham Object at\n Bucket Debitur, AND \nAfter user choose the list, then system shall fetch detail data from that Pengurus dan Pemegang Saham Object : \n- Nama Lengkap\n- Nomor KTP\ndan set : \n- Tipe Kepimilikan Agunan (Individu /non Individu) - << sesuai Tipe organ badan usaha >>\n- Hubungan dengan Debitur : Show All Dropdown, Need Choose One Based on Dropdown\n- Hubungan dengan Debitur (McKinsey) : Perusahaan\n- Status Kepemilikan : Kepemilikan Bersama\n- Default state:\n- \n- Dropdown pengurus perusahaan:\n- \n- After choose name:\n- \nTriggering Kategori Kepemilikan Agunan Pada saat dipilih adalah\n \nPenjamin (PG) atau Pasangan Penjamin\nGiven \nthe Account Officer is on Step 3 \"Informasi Kepemilikan Agunan\" \nWhen \nuser choose “\nKategori Kepemilikan Agunan\n” is Penjamin or Pasangan Penjamin \nThen System Shall fetch List Data Name from \nPenjamin (PG) and/or Pasangan Penjamin Object at\n Bucket Debitur, AND \nAfter user choose the list, then system shall fetch detail data from that information \n- Nama Lengkap\n- Nomor KTP\ndan set : \n- Tipe Kepimilikan Agunan (Individu /non Individu) - << Sesuai Tipe Penjamin >>\n- Hubungan dengan Debitur : Show All Dropdown, Need Choose One Based on Dropdown\n- Hubungan dengan Debitur (McKinsey) : Penjamin\n- Status Kepemilikan : Milik pihak ketiga\nIF kategori kepemilikan == Penjamin:\n- Default state:\n- \n- Show list penjamin:\n- \n- Penjamin selected:\n- \nIF kategori kepemilikan == Pasangan Penjamin:\n- Default state:\n- \n- List pasangan penjamin (disebutkan juga pasangan dari siapa):\n- \n- Pasangan penjamin selected:\n- \n",
+  "linkedIssues": [
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4983",
+      "summary": "21. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-3553",
+      "summary": "[BE] LAMOS LOS SME - Create Form Pengajuan - Form Debitur - Pengecekan Perorangan",
+      "status": "Done"
+    },
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-4406",
+      "summary": "[BE] LAMOS LOS SME - Create Form Pengajuan - Form Debitur - Pengecekan Badan Usaha - Part 1",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Finish-to-Finish link (WBSGantt)",
+      "key": "S2CML-5454",
+      "summary": "10. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Kepemilikan",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4992",
+      "summary": "[FE][Lamos] Bucket agunan - Bucket Identity - Existing identity",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-6019",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Tambah Agunan Part Logic Submit Cek Kelengkapan Data Agunan (Definition of Done Bucket Agunan at Step 1)",
+      "status": "In SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

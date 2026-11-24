@@ -19,7 +19,7 @@ export class CreditApplicationPage {
   }
 
   async goto() {
-    const rawBaseUrl = process.env.BASE_URL || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/';
+    const rawBaseUrl = process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/';
     const baseUrl = rawBaseUrl.endsWith('/') ? rawBaseUrl : `${rawBaseUrl}/`;
     const targetUrl = new URL('lamos/credit-application', baseUrl).toString();
     await this.page.goto(targetUrl);

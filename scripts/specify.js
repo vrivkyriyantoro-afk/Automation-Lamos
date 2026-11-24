@@ -137,7 +137,7 @@ ${jiraData.description || '(Tidak ada deskripsi di Jira)'}
 Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas wajib memiliki assertion di file test.
 
 ## 4. Prekondisi & Lingkungan Pengujian
-- **Lingkungan**: SIT (\`https://los-fe-coreloan-sit.devs.banksinarmas.com/\`)
+- **Lingkungan**: SIT (\`https://los-fe-lamos-sit.devs.banksinarmas.com/\`)
 - **Autentikasi**: SSO Kratos (\`pages/LoginPage.ts\`)
 - **Keamanan**: READ-ONLY saat eksplorasi awal.
 `;

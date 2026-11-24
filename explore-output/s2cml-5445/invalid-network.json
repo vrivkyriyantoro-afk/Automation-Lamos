@@ -1,0 +1,12 @@
+{
+  "cif": "99999999",
+  "calls": [
+    {
+      "method": "GET",
+      "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lossvc/v1/cif?number=99999999&jenisAgunanCode=F11",
+      "status": 400,
+      "req": "",
+      "body": "{\"errorCode\":2000,\"errorMessage\":\"Request cannot be fulfilled. Please check your request body.\",\"responseMessage\":\"Bad Request\",\"statusCode\":400}\n"
+    }
+  ]
+}

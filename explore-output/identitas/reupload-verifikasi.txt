@@ -1,0 +1,211 @@
+Lengkapi file SLIK
+
+Format file yang diterima berupa .txt dan .pdf
+
+No
+	
+Entitas
+	
+File .txt
+	
+File .pdf
+	
+
+
+1
+	
+
+Debitur : Agus
+
+	
+NIK_3200000000000006.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+2
+	
+
+Penjamin 1 : ERIN
+
+	
+NIK_3205335802980003.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+3
+	
+
+Pasangan penjamin : RENALDY KUSUMA
+
+	
+NIK_3277010909850013.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+4
+	
+
+Penjamin 2 : TEGAR JATI WICAKSONO
+
+	
+NIK_3373041608960002.txt
+
+145.28 KB
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+5
+	
+
+Pasangan penjamin : NENDEN NUGRAHA
+
+	
+NIK_3211146311760006.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+6
+	
+
+Penjamin 3 : PT Bintang Sejahtera
+
+	
+NPWP_3578241603710991.txt
+
+Berhasil diimpor
+
+	
+	
+
+Kelola file
+
+
+
+7
+	
+
+Pengurus dan pemegang saham : PIPIT NILA WARDANI
+
+	
+NIK_3205335802980003.txt
+
+Error dari ABIDSU
+No ID Entitas 3302265910820003 tidak sesuai dengan ID pada file SLIK Debitur yang diunggah
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+8
+	
+
+Pengurus dan pemegang saham : HANDHIANTO SURYO KENTJONO
+
+	
+NIK_3171030309630002.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+9
+	
+
+Pengurus dan pemegang saham : CV Makmur Abadi
+
+	
+NPWP_3578241603710992.txt
+
+Berhasil diimpor
+
+	
+document-10mb.pdf
+
+10 MB
+
+	
+
+Kelola file
+
+
+
+	
+	
+	
+	
+Hapus semua file
+
+Catatan :
+
+Nama file .txt yang didapatkan dari PBK / C.Ops tidak boleh diubah, karena akan digunakan sebagai parameter untuk verifikasi.
+Setiap file .txt harus berisi tab Fasilitas, Agunan, atau Penjamin. Per tab dibatasi hingga 1.000 baris, data akan ditambahkan sesuai urutan antrian.
+Proses file .txt

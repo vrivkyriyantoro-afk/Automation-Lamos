@@ -1,0 +1,11 @@
+◇ injected env (9) from .env
+
+Running 1 test using 1 worker
+
+◇ injected env (0) from .env
+
+[1/1] [chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:362:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-17: Step 3 ter-gate saat bucket identitas belum lengkap
+[chromium] › tests\bucketAgunan\s2cml-4948-informasi-kepemilikan.spec.ts:362:7 › S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill › TC-4948-17: Step 3 ter-gate saat bucket identitas belum lengkap
+TC-4948-17 GAP -> peringatan/dialog terdeteksi: []
+
+  1 passed (22.6s)

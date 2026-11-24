@@ -1,0 +1,30 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-5905",
+  "summary": "4. LAMOS LOS SME - Bucket Agunan > Edge Cases Impact From Bucket Identitas",
+  "issueType": "Task",
+  "status": "In SIT",
+  "description": "Secnario Perubahan di Bucket Identitas Pengecekan (WHEN)\nAcceptance Criteria (THEN)\nTambah Entitas di Bucket Identitas dan Pengecekan\nTidak ada Impact apapun ke Bucket Agunan\nEdit Entitas\nEdit Data Namun tidak mengganti Entitas\nTidak ada Impact apapun ke Bucket Agunan\nMelakukan edit yang dapat mempengaruhi entitas seseorang menjadi hilang : Ganti Status dari Menikah jadi tidak Menikah\nImpact ke Bucket Agunan\n, Apabila pemilik agunan adalah seseorang yang identitasnya hilang di Bucket Identitas dan Pengecekan maka :\n- Agunan akan berubah menjadi Draft\n- Agunan tersebut apabila sudah di mapping ke suatu product akan terlepas\n- Form Data Agunan akan hilang checklist nya\n- Apabila Bucket Agunan sebelumnya sudah Lengkap (punya checklist) Maka akan hilang checklistnya\n- Form Pengikatan Agunan ke Fasilitas tergantung kondisi dari Agunan tersebut, apabila ada impact ke Struktur Kredit menjadi tidak memiliki agunan maka akan hilang juga checklistnya\nMenghapus suatu entitas di Bucket Identitas dan Pengecekan\nImpact ke Bucket Agunan\n, Apabila pemilik agunan adalah seseorang yang identitasnya hilang di Bucket Identitas dan Pengecekan maka :\n- Agunan akan berubah menjadi Draft\n- Agunan tersebut apabila sudah di mapping ke suatu product akan terlepas\n- Form Data Agunan akan hilang checklist nya\n- Apabila Bucket Agunan sebelumnya sudah Lengkap (punya checklist) Maka akan hilang checklistnya\n- Form Pengikatan Agunan ke Fasilitas tergantung kondisi dari Agunan tersebut, apabila ada impact ke Struktur Kredit menjadi tidak memiliki agunan maka akan hilang juga checklistnya\n",
+  "linkedIssues": [
+    {
+      "relation": "Cause",
+      "key": "S2CML-4758",
+      "summary": "2. [BE, FE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan ",
+      "status": "Dropped"
+    },
+    {
+      "relation": "Cause",
+      "key": "S2CML-6018",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Summary Agunan",
+      "status": "Done"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5055",
+      "summary": "[FE][Lamos] Bucket Agunan > Edge Cases Impact From Bucket Identitas",
+      "status": "Done"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

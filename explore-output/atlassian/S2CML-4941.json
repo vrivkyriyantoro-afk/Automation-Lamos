@@ -1,0 +1,36 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-4941",
+  "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals - Edit data Existing",
+  "issueType": "Story",
+  "status": "Ready to SIT",
+  "description": "User Story\n \nAs an \nAccount Officer (AO)\n, I want to be able to \nReview collateral records \nso when\n i found faulty\n in data I can \nmake changes\n or \nresume progress\n from a previously saved draft or finnaly saved data\nScope : \n- Pembuatan titik 3 di object agunan (at Agunan Final and/or Agunan Draft)\n- Fungsi pilih Edit Data Agunan data Umum\nAcceptance Criteria\nRequirement/function\nAccepance Criteria\nMockup\nView available action menu options for a collateral record\n\n \nFunsgi Edit Data Agunan \nGiven \nthe Account Officer Berada di Bucket Agunan, kemudian mengklik  \"Titik 3\" menu dari suatu object / Data Agunan (Yang masih Draft ataupun sudah lengkap) \nWhen \nthe Account Officer pilih \"\nUbah\n\" \nThen \nthe system will open pop modal Form dengan data sudah ter-prefilled sesuai kondisi data agunan terakhir \nEdge Cases Edit Data Agunan di Agunan yang statusnya sudah 'FINAL'\nGiven \nAO di Bucket Agunan Data Agunan\nWHEN Choose to \nEdit Agunan, padahal Agunannya status sudah Final\nTHEN \npada saat AO masuk ke halaman Form, \nButton Save to Draft ter-disable \nuntuk mencegah agunan yang statusnya sudah \nFinal \nkembali ke \nDraft\nMengupdate Hasil Penilaian Agunan ataupun Nilai Predictive pada Suatu Agunan yang sudah terikat ke Fasilitas\nGiven \nAO di Bucket Agunan Data Agunan dan Edit Data Agunan yang sudah termapping ke fasilitas (product)\nWHEN User Klik Simpan \nuntuk melakukan perubahan data dan melakukan perubahan data : Nilai Prediktif dan atau Nilai Agunan Menurut Pelapor\nTHEN \nSystem akan menghitung ulang : \n- Total Nilai Prediktif\n- Total Nilai Appraisal\n- Total Nilai Prediktif yang dapat digunakan\n- Total Nilai Appraisal yang dapat digunakan\n- Rasio CC,LTV, LM di product/kredit yang pakai agunan ini\n",
+  "linkedIssues": [
+    {
+      "relation": "Relates",
+      "key": "S2CML-4940",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals - Lihat Details",
+      "status": "In Development"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-4890",
+      "summary": "[BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2",
+      "status": "In SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-5065",
+      "summary": "[FE][Lamos] Agunan - Edit functions",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Impacted",
+      "key": "S2CML-5665",
+      "summary": "11. [FE,BE] LAMOS LOS SME - Bucket Agunan - Data Agunan - Form Informasi Umum Agunan > Input Data Hasil Penilaian Agunan",
+      "status": "In SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

@@ -1,0 +1,24 @@
+{
+  "type": "Jira Issue",
+  "key": "S2CML-5445",
+  "summary": "9. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals - Detailing Form Informasi Tambahan Agunan - Cash Collaterals",
+  "issueType": "Task",
+  "status": "Ready to SIT",
+  "description": "Given at Form 2 Data Tambahan Agunan and Tipe Jenis Agunan = F09 - Giro,  F10 - Tabungan, F11 - Deposito, F15 - Setoran Jaminan\nRequirement\nAcceptance Criteria\nMockup/Samples\nTerkati Pilihan Apakah agunan tersimpan di Bank Sinarmas?\nWhen User belum memilih status agunan cash collateral di Bank Sinarmas atau Bukan, Then pilihan bawahnya belum akan muncul (hidden)\n \nWhen User memilih agunan tersedia di bank sinarmas, Then akan muncul field CIF , dan Field lain belum akan muncul\n- IF Nasabah adalah ETB Then CIF akan otomatis terisi sesuai dengan CIF Debitur dari Nasabah, namun masih bisa di ubah apabila dibutuhkan\n- IF Nasabah adalah ETB Then CIF akan free input\nWhen User sudah mengisi Field CIF dan Pilih Cek Then  System akan melakukan validasi ke System \nInquiry Account\n- Jika Gagal akan muncul notif CIF gagal ditemukan\n- Jika Berhasil Field List Account akan muncul dalam bentuk Dropdown List\nWhen User memilih agunan tidak tersedia di bank sinarmas, Then : \n- Intansi :  freeinput and editable\n- Nominal : freeinput and editable\n- Bunga : freeinput and editable\n- Periode (Mulai dan Akhir) : freeinput and editable\n- ARO : set null and hide\n- Tipe Blokir : set null and hide\n- Alasan Blokir : set null and hide\nAfter CIF inputted / value has changes\nWhen user has do any action yang berimpact kepada data CIF Then, system will do inquiry check list account rek of that CIF yang akan berimpact pada list Saving Account yang dipilih\nSaat button upload di klik\nAccount ist \nGiven Setelah user menginput CIF dan List Account Berubah WHEN Jenis Agunan is Deposito THEN System will Filter list Account berdasarkan productnya hanya deposito\nELSE When Jenis Agunan is Giro THEN System will only show Filter list account berdasarkan productnya hanya GIRO/PRK\nELse Show Jenis Agunan adalah Tabungan THEN System nly show Filter list account berdasarkan productnya hanya tabungan\nElse show all product\nAgunan F11 - Deposito dan action setelah memilih salah satu account deposito\nWhen User choose one of list account deposito Then System will Connect to Service Get Deposito ACCOUNT AND SET  information of : \n- Nominal : sesuai dengan rek.deposito yang dipilih, disabled\n- Bunga : sesuai dengan rek.deposito yang dipilih, disabled\n- Periode (Mulai dan Akhir) : sesuai dengan rek.deposito yang dipilih, disabled\n- ARO : load sesuai dengan rek.deposito dipilih, disabled\n- Tipe Blokir : set as 04 then disabled\n- Alasan Blokir :  set as \"048-TD\", then disabled\nAgunan adalah : F09 - Giro,  F10 - Tabungan, F15 - Setoran Jaminan\nWhen User choose one of list account deposito Then System will Connect to Service Get Deposito ACCOUNT AND SET information of : \n- Nominal : sesuai dengan rek yang dipilih, but editable\n- Bunga : sesuai dengan rek yang dipilih, but editable\n- Periode (Mulai dan Akhir) : editable\n- ARO : set null and hide\n- Tipe Blokir : set null and hide\n- Alasan Blokir : set null and hide\nGiven at Form 2 Data Tambahan Agunan and Tipe Jenis Agunan by CLS = Cash Collaterals dan Jenis Agunan selain F09 - Giro,  F10 - Tabungan, F11 - Deposito, F15 - Setoran Jaminan\nRequirement\nAcceptance Criteria\nMockup/Samples\nFirst Load UI Screen \nGiven Jenis Agunan \n \nselain F09 - Giro,  F10 - Tabungan, F11 - Deposito, F15 - Setoran Jaminan\nWhen User load form Data Tambahan Then\n- Nominal : freeinput and editable\n- Bunga : freeinput and editable\n- Periode (Mulai dan Akhir) : freeinput and editable\n- ARO : set null and hide\n- Tipe Blokir : set null and hide\n- Alasan Blokir : set null and hide\n \n",
+  "linkedIssues": [
+    {
+      "relation": "Hierarchy link (WBSGantt)",
+      "key": "S2CML-4981",
+      "summary": "12. [FE, BE] LAMOS LOS SME - Bucket Agunan - Data Agunan - Form Data Tambahan Agunan > Automation get Deposito, Giro, dan Tabungan by CIF",
+      "status": "Ready to SIT"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2WP-4880",
+      "summary": "[FE][agunan - lamos] – Step 2 UI: Data Tambahan Agunan (render datapoints)",
+      "status": "Ready to SIT"
+    }
+  ],
+  "totalChildStories": 0,
+  "childStories": []
+}

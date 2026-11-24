@@ -1,0 +1,129 @@
+{
+  "steps": [
+    {
+      "ph": "Pilih jenis segmen fasilitas",
+      "total": 6,
+      "first30": [
+        "Kredit",
+        "Kredit Join",
+        "Surat Berharga",
+        "Irrevocable LC",
+        "Bank Garansi",
+        "Fasilitas Lainnya"
+      ],
+      "chosen": "Kredit"
+    },
+    {
+      "ph": "Pilih kantor cabang",
+      "total": 353,
+      "first30": [
+        "All Branch",
+        "KPNO",
+        "KC Jakarta - Thamrin",
+        "KCP Zainul Arifin",
+        "KC Jakarta L Avenue",
+        "KCP Jakarta Cempaka Mas",
+        "KC Mangga Dua",
+        "KC Tanah Abang",
+        "KCP Samanhudi",
+        "KCP",
+        "KCP Kelapa Gading",
+        "KCP Bumi Serpong Damai",
+        "KC Bandung Abdul Rivai",
+        "KCP Bandung Jamika",
+        "KC Surabaya Diponegoro",
+        "KC Medan Mangkubumi",
+        "KC Cirebon",
+        "KC Manado",
+        "KC Pekanbaru Riau",
+        "KC Yogyakarta",
+        "KC Jambi Hayam WuruK",
+        "KC Makasar",
+        "KC Denpasar Tantular Renon",
+        "KC Semarang Gang Tengah",
+        "KC Purwokerto",
+        "KC Pontianak",
+        "KC Malang",
+        "KC Jayapura",
+        "KC Lampung Ikan Hiu",
+        "KCP Manggis"
+      ],
+      "chosen": "KCP Jakarta Cempaka Mas"
+    },
+    {
+      "ph": "Pilih provinsi",
+      "total": 39,
+      "first30": [
+        "Aceh",
+        "Bali",
+        "Banten",
+        "Bengkulu",
+        "Daerah Istimewa Yogyakarta",
+        "DKI Jakarta",
+        "Gorontalo",
+        "Jambi",
+        "Jawa Barat",
+        "Jawa Tengah",
+        "Jawa Timur",
+        "Kalimantan Barat",
+        "Kalimantan Selatan",
+        "Kalimantan Tengah",
+        "Kalimantan Timur",
+        "Kalimantan Utara",
+        "Kep. Bangka Belitung",
+        "Kepulauan Riau",
+        "Lainnya",
+        "Lampung",
+        "Maluku",
+        "Maluku Utara",
+        "Nusa Tenggara Barat",
+        "Nusa Tenggara Timur",
+        "Papua",
+        "Papua Barat",
+        "Papua Barat Daya",
+        "Papua Pegunungan",
+        "Papua Selatan",
+        "Papua Tengah"
+      ],
+      "chosen": "DKI Jakarta"
+    },
+    {
+      "ph": "Pilih kota",
+      "total": 6,
+      "first30": [
+        "Jakarta Barat, Wil. Kota",
+        "Jakarta Pusat, Wil. Kota",
+        "Jakarta Selatan, Wil. Kota",
+        "Jakarta Timur, Wil. Kota",
+        "Jakarta Utara, Wil. Kota",
+        "Kepulauan Seribu, Wil"
+      ],
+      "chosen": "Jakarta Pusat, Wil. Kota"
+    },
+    {
+      "ph": "Pilih kecamatan",
+      "total": 8,
+      "first30": [
+        "Cempaka Putih",
+        "Gambir",
+        "Johar Baru",
+        "Kemayoran",
+        "Menteng",
+        "Sawah Besar",
+        "Senen",
+        "Tanah Abang"
+      ],
+      "chosen": "Cempaka Putih"
+    },
+    {
+      "ph": "Pilih kelurahan",
+      "total": 3,
+      "first30": [
+        "Cempaka Putih Barat",
+        "Cempaka Putih Timur",
+        "Rawasari"
+      ],
+      "chosen": "Cempaka Putih Barat"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+Jenis Agunan ,Kode Jenis Agunan,Jenis Agunan
+Housing (Properti),AN020101,Tanah
+Housing (Properti),AN02010201,Gedung/Ruang kantor
+Housing (Properti),AN02010202,Gudang
+Housing (Properti),AN02010203,Rumah Toko/Rumah Kantor
+Housing (Properti),AN02010204,Hotel
+Housing (Properti),AN02010299,Properti Komersial Lainnya
+Housing (Properti),AN02010301,Rumah
+Housing (Properti),AN02010302,Apartemen/Rumah Susun
+"Vehicle, Engine & Alat Berat",AN020202,Mesin
+"Vehicle, Engine & Alat Berat",AN020203,Kendaraan (Kendaraan Bermotor)
+"Vehicle, Engine & Alat Berat",AN020299,Aset Tetap dan Inventaris Lainnya (termasuk Alat Berat Tambang)
+"Vehicle, Engine & Alat Berat",AN0205,Pesawat Udara
+"Vehicle, Engine & Alat Berat",AN0206,Kapal Laut/Transportasi Air
+Document / Aset Keuangan,F041401,Reksadana
+Document / Aset Keuangan,F0419,Saham
+Document / Aset Keuangan,F2099,Aset Keuangan Lainnya (termasuk Piutang Usaha / AR & Bancassurance)
+Cash Collateral,F09,Giro
+Cash Collateral,F10,Tabungan
+Cash Collateral,F11,Deposito
+Cash Collateral,F15,Setoran Jaminan

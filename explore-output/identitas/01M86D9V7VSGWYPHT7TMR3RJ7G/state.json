@@ -1,0 +1,644 @@
+{
+  "url": "https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M86D9V7VSGWYPHT7TMR3RJ7G/create?bucket=identitas_pengecekan&debtorType=individual",
+  "sections": [
+    {
+      "name": "Data pribadi\nLengkap",
+      "fields": [
+        {
+          "label": "Nomor KTP*",
+          "value": "6471081003002827",
+          "disabled": true,
+          "error": "*"
+        },
+        {
+          "label": "Nama lengkap*",
+          "value": "JOKO WIBOWO",
+          "disabled": true,
+          "error": "*"
+        },
+        {
+          "label": "Jenis kelamin*",
+          "value": "Laki-Laki",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Tempat & tanggal lahir*",
+          "value": "BALIKPAPAN",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Status perkawinan*",
+          "value": "Menikah",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Nama gadis ibu kandung*",
+          "value": "HANI WIJAYA",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "NPWP*",
+          "value": "1111111111111111",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nomor HP*",
+          "value": "087862203580",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Apakah debitur merupakan nasabah Bank Sinarmas*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Alamat*",
+          "value": "JL. TEST NO. 1",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "RT / RW*",
+          "value": "001",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Provinsi*",
+          "value": "DKI Jakarta",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kota/kabupaten*",
+          "value": "Jakarta Pusat, Wil. Kota",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kecamatan*",
+          "value": "Cempaka Putih",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kelurahan*",
+          "value": "Cempaka Putih Barat",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kode pos*",
+          "value": "10520",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Alamat*",
+          "value": "JL. TEST NO. 1",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "RT / RW*",
+          "value": "001",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Provinsi*",
+          "value": "DKI Jakarta",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kota/kabupaten*",
+          "value": "Jakarta Pusat, Wil. Kota",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kecamatan*",
+          "value": "Cempaka Putih",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kelurahan*",
+          "value": "Cempaka Putih Barat",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kode pos*",
+          "value": "10520",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Status tempat tinggal*",
+          "value": "Pilih status",
+          "disabled": null,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data pribadi tambahan\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Jumlah keluarga inti sesuai KK*",
+          "value": "2",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Pisah harta*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kasus pidana / penipuan*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Akta nikah tersedia*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Pendidikan terakhir*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Lokasi & kondisi tempat tinggal\nLengkap",
+      "fields": [
+        {
+          "label": "Lokasi tempat tinggal*",
+          "value": "Lokasi tempat tinggal tidak pernah terkena banjirKondisi tempat tinggal*Rumah te",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kondisi tempat tinggal*",
+          "value": "Lokasi tempat tinggal*Lokasi tempat tinggal tidak pernah terkena banjirRumah ter",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kondisi lingkungan sekitar tempat tinggal*",
+          "value": "Lokasi tempat tinggal*Lokasi tempat tinggal tidak pernah terkena banjirKondisi t",
+          "disabled": null,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data pekerjaan & keuangan\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Pekerjaan*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nama perusahaan / usaha*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Bidang usaha*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Pengalaman di industri terkait*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "No. Telepon Perusahaan*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Lama bekerja/usaha*",
+          "value": "18",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kepemilikan usaha*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kepemilikan tempat usaha*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Margin bersih*",
+          "value": "0",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Jumlah karyawan*",
+          "value": "0",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Joint Income?",
+          "value": "true",
+          "disabled": false,
+          "error": null
+        },
+        {
+          "label": "Sumber pemasukan lainnya",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Memiliki pinjaman di Bank/Fintech/BPR/Multifinance?*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Memiliki tabungan di Bank/BPR?*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Alamat perusahaan / usaha*",
+          "value": "JL. TEST NO. 1",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "RT / RW*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Provinsi*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kota/kabupaten*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kecamatan*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kelurahan*",
+          "value": "TOKO KELONTONG BERKAH",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kode pos*",
+          "value": "10520",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data pribadi pasangan\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Kewarganegaraan*",
+          "value": "WNI",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nomor KTP*",
+          "value": "6471095901998668",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nama lengkap*",
+          "value": "CITRA PERMANA",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Tempat & tanggal lahir*",
+          "value": "BALIKPAPAN",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nama gadis ibu kandung*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "NPWP*",
+          "value": "1111111111111111",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nomor HP*",
+          "value": "085226164395",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Negara*",
+          "value": "indonesia",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Alamat*",
+          "value": "JL. TEST NO. 1",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "RT / RW*",
+          "value": "001",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Provinsi*",
+          "value": "DKI Jakarta",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kota/kabupaten*",
+          "value": "Jakarta Pusat, Wil. Kota",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kecamatan*",
+          "value": "Cempaka Putih",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kelurahan*",
+          "value": "Cempaka Putih Barat",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kode pos*",
+          "value": "10520",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data pekerjaan pasangan\nLengkap",
+      "fields": [
+        {
+          "label": "Pekerjaan pasangan*",
+          "value": "USAHA TEST",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nama perusahaan*",
+          "value": "USAHA TEST",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data kontak darurat\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Nama lengkap*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Hubungan keluarga*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Nomor HP*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "No. Telepon Rumah",
+          "value": "",
+          "disabled": false,
+          "error": null
+        },
+        {
+          "label": "Alamat*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "RT / RW*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Provinsi*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kota/kabupaten*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kecamatan*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kelurahan*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        },
+        {
+          "label": "Kode pos*",
+          "value": "",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Data penjamin\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Debitur memiliki penjamin?*",
+          "value": "true",
+          "disabled": false,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Referensi\nSudah diisi (opsional)",
+      "fields": [
+        {
+          "label": "Tipe Referensi",
+          "value": "",
+          "disabled": false,
+          "error": null
+        },
+        {
+          "label": "Nomor Telpon Referensi",
+          "value": "",
+          "disabled": false,
+          "error": null
+        },
+        {
+          "label": "Notes referensi",
+          "value": "",
+          "disabled": false,
+          "error": null
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "LBU\nBelum Lengkap",
+      "fields": [
+        {
+          "label": "Sifat kredit*",
+          "value": "Pilih sifat kreditGolongan debitur*Pilih golongan debiturSandi bentuk badan huku",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Golongan debitur*",
+          "value": "Sifat kredit*Pilih sifat kreditPilih golongan debiturSandi bentuk badan hukum*Pi",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Sandi bentuk badan hukum*",
+          "value": "Sifat kredit*Pilih sifat kreditGolongan debitur*Pilih golongan debiturPilih sand",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kategori debitur*",
+          "value": "Sifat kredit*Pilih sifat kreditGolongan debitur*Pilih golongan debiturSandi bent",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Kategori portfolio*",
+          "value": "Sifat kredit*Pilih sifat kreditGolongan debitur*Pilih golongan debiturSandi bent",
+          "disabled": null,
+          "error": "*"
+        },
+        {
+          "label": "Sandi Dati II*",
+          "value": "Sifat kredit*Pilih sifat kreditGolongan debitur*Pilih golongan debiturSandi bent",
+          "disabled": null,
+          "error": "*"
+        }
+      ],
+      "main": ""
+    },
+    {
+      "name": "Pengecekan Dukcapil\nBelum dapat diakses",
+      "error": "locator.click: Test timeout of 300000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('aside button').nth(10)\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"button\" class=\"flex min-h-16 w-full items-center gap-4 rounded border px-4 py-2.5 text-left relative overflow-hidden border-neutra"
+    },
+    {
+      "name": "Pengecekan DHN DHIB\nBelum dapat diakses",
+      "error": "locator.click: Target page, context or browser has been closed"
+    },
+    {
+      "name": "Pengecekan SLIK\nBelum dapat diakses",
+      "error": "locator.click: Target page, context or browser has been closed"
+    },
+    {
+      "name": "",
+      "error": "locator.click: Target page, context or browser has been closed"
+    }
+  ],
+  "bucketNav": "John Doe AO5\nSenior Financing Sales Officer (005 - KCP Cempaka Mas-JKT)\nJD\nGanti kata sandi\nKeluar\nPengajuan kredit\nBuat pengajuan kredit\nBuat pengajuan kredit\nRiwayat\nIdentitas dan Pengecekan\nStruktur Kredit\nPenilaian Kelayakan\nData Usaha\nAgunan\nAnalisa Keuangan\nLegal, Risk, & Compliance\nDokumen\nCovenant & TBO\nPenyimpangan & Pihak Terkait\nCatatan Anda\n1\nIdentitas\nData pribadi\nLengkap\nData pribadi tambahan\nBelum Lengkap\nLokasi & kondisi tempat tinggal\nLengkap\nData pekerjaan & keuangan\nBelum Lengkap\nData pribadi pasangan\nBelum Lengkap\nData pekerjaan pasangan\nLengkap\nData kontak darurat\nBelum Lengkap\nData penjamin\nBelum Lengkap\nReferensi\nSudah diisi (opsional)\nLBU\nBelum Lengkap\n2\nPengecekan\nPengecekan Dukcapil\nBelum dapat diakses\nPengecekan DHN DHIB\nBelum dapat diakses\nPengecekan SLIK\nBelum dapat diakses\nData pribadi\nNomor KTP*\nNama lengkap*\nJenis kelamin*\nLaki-Laki\nTempat & tanggal lahir*\nStatus perkawinan*\nMenikah\nNama gadis ibu kandung*\nNPWP*\nNomor HP*\nApakah debitur merupakan nasabah Bank Sinarmas*\nYa\nTidak\nAlamat sesuai KTP\nAlamat*\nRT / RW*\nProvinsi*\nDKI Jakarta\nKota/kabupaten*\nJakarta Pusat, Wil. Kota\nKecamatan*\nCempaka Putih\nKelurahan*\nCempaka Putih Barat\nKode pos*\nAlamat tempat tinggal saat ini\nSama dengan alamat sesuai KTP\nAlamat*\nRT / RW*\nProvinsi*\nDKI Jakarta\nKota/kabupaten*\nJakarta Pusat, Wil. Kota\nKecamatan*\nCempaka Putih\nKelurahan*\nCempaka Putih Barat\nKode pos*\nStatus tempat tinggal*\nPilih status\n\nDokument terkait identitas\n\nFoto KTP*\nPilih File\nFormat file berupa PNG, JPG, JPEG, atau PDF dengan ukuran maksimum 50 MB.\n\n2026-11-20_134932.png\n\n81.46 KB\n\nForm Aplikasi Kredit*\nPilih File\nFormat file berupa PNG, JPG, JPEG, atau PDF dengan ukuran maksimum 50 MB.\n\n2026-11-20_143120.png\n\n121.59 KB\n\nData pribadi tambahan\nLokasi & kondisi tempat tinggal\nData pekerjaan & Keuangan\nData pribadi pasangan\nData pekerjaan pasangan\nData kontak darurat\nData Penjamin\nReferensi\nLBU\nLanjutkan\n1/11 selesai\nKirim\nCopyright © 2026 PT Bank Sinarmas Tbk. All rights reserved.",
+  "sidebar": [
+    "Data pribadi\nLengkap",
+    "Data pribadi tambahan\nBelum Lengkap",
+    "Lokasi & kondisi tempat tinggal\nLengkap",
+    "Data pekerjaan & keuangan\nBelum Lengkap",
+    "Data pribadi pasangan\nBelum Lengkap",
+    "Data pekerjaan pasangan\nLengkap",
+    "Data kontak darurat\nBelum Lengkap",
+    "Data penjamin\nBelum Lengkap",
+    "Referensi\nSudah diisi (opsional)",
+    "LBU\nBelum Lengkap",
+    "Pengecekan Dukcapil\nBelum dapat diakses",
+    "Pengecekan DHN DHIB\nBelum dapat diakses",
+    "Pengecekan SLIK\nBelum dapat diakses",
+    ""
+  ]
+}

@@ -19,7 +19,7 @@ test.describe('Eksplorasi & Otomasi Form Data Penjamin', () => {
     await loginPage.expectLoginSuccess();
 
     // 2. Akses halaman
-    const targetUrl = 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M47F0YVNQHW3NZC59V3ZFR1Y/create?bucket=identitas_pengecekan&debtorType=individual';
+    const targetUrl = 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M47F0YVNQHW3NZC59V3ZFR1Y/create?bucket=identitas_pengecekan&debtorType=individual';
     console.log(`[2/4] Navigasi ke ${targetUrl}`);
     await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(5000);

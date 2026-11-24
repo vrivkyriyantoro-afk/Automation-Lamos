@@ -5,13 +5,13 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4889 - Modul 3: Pengikatan Agunan
  * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
- * Cakupan Test Cases: TC - 04 - 27 s.d. TC - 04 - 30
+ * Cakupan Test Cases: TC-5419-03, TC-5419-04
  * Karakter: READ-ONLY (Validasi UI, Mandatory Marker, & Dynamic Conditional Field tanpa submit)
  */
 
 const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const TARGET_URL = process.env.EXPLORE_URL
-  || `https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
+  || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
 
 test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
   test.beforeEach(async ({ page }) => {
@@ -112,10 +112,10 @@ test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
   }
 
   /**
-   * TC - 04 - 30: Status Tersedia menampilkan form pengikatan
+   * TC-5419-04b: Status Tersedia menampilkan form pengikatan
    */
-  test('TC - 04 - 30: Status Tersedia menampilkan field Jenis Pengikatan & Tanggal Pengikatan', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 30: Status Tersedia menampilkan pengikatan');
+  test('TC-5419-04b: Status Tersedia menampilkan field Jenis Pengikatan & Tanggal Pengikatan', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-04b: Status Tersedia menampilkan pengikatan');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // Pilih Status Agunan = Tersedia
@@ -128,19 +128,19 @@ test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
     await expect(labelJenisPengikatan).toBeVisible({ timeout: 10000 });
     await expect(labelTanggalPengikatan).toBeVisible({ timeout: 10000 });
 
-    console.log('[TC-04-30] Field Jenis Pengikatan & Tanggal Pengikatan berhasil tampil pada Status Tersedia.');
+    console.log('[TC-5419-04b] Field Jenis Pengikatan & Tanggal Pengikatan berhasil tampil pada Status Tersedia.');
 
-    await testInfo.attach('Eviden TC-04-30: Status Tersedia Menampilkan Pengikatan', {
+    await testInfo.attach('Eviden TC-5419-04b: Status Tersedia Menampilkan Pengikatan', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 29: Status Indent menyembunyikan pengikatan
+   * TC-5419-04a: Status Indent menyembunyikan pengikatan
    */
-  test('TC - 04 - 29: Status Indent menyembunyikan field Jenis Pengikatan & Tanggal Pengikatan', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 29: Status Indent menyembunyikan pengikatan');
+  test('TC-5419-04a: Status Indent menyembunyikan field Jenis Pengikatan & Tanggal Pengikatan', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-04a: Status Indent menyembunyikan pengikatan');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // Pilih Status Agunan = Indent
@@ -153,19 +153,19 @@ test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
     await expect(labelJenisPengikatan).toHaveCount(0);
     await expect(labelTanggalPengikatan).toHaveCount(0);
 
-    console.log('[TC-04-29] Field Pengikatan berhasil tersembunyi pada Status Indent.');
+    console.log('[TC-5419-04a] Field Pengikatan berhasil tersembunyi pada Status Indent.');
 
-    await testInfo.attach('Eviden TC-04-29: Status Indent Menyembunyikan Pengikatan', {
+    await testInfo.attach('Eviden TC-5419-04a: Status Indent Menyembunyikan Pengikatan', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 27: Tanggal pengikatan wajib bila jenis pengikatan ≠ 06
+   * TC-5419-03b: Tanggal pengikatan wajib bila jenis pengikatan ≠ 06
    */
-  test('TC - 04 - 27: Tanggal pengikatan wajib bila jenis pengikatan ≠ 06 (Belum diikat)', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 27: Tanggal pengikatan wajib bila pengikatan ≠ 06');
+  test('TC-5419-03b: Tanggal pengikatan wajib bila jenis pengikatan ≠ 06 (Belum diikat)', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-03b: Tanggal pengikatan wajib bila pengikatan ≠ 06');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // 1. Pilih Status Tersedia
@@ -173,27 +173,27 @@ test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
 
     // 2. Pilih Jenis Pengikatan selain 06
     const selectedText = await selectJenisPengikatan(page, 'non-06');
-    console.log(`[TC-04-27] Memilih jenis pengikatan: ${selectedText}`);
+    console.log(`[TC-5419-03b] Memilih jenis pengikatan: ${selectedText}`);
 
     // 3. Verifikasi tanda wajib / asterisk (*) pada label Tanggal Pengikatan
     const labelTanggalPengikatan = page.locator('label, span, div').filter({ hasText: /^Tanggal pengikatan/i }).first();
     await expect(labelTanggalPengikatan).toBeVisible({ timeout: 10000 });
     const labelFullText = await labelTanggalPengikatan.innerText();
     
-    console.log(`[TC-04-27] Label Tanggal Pengikatan text="${labelFullText}"`);
+    console.log(`[TC-5419-03b] Label Tanggal Pengikatan text="${labelFullText}"`);
     expect(labelFullText).toContain('*');
 
-    await testInfo.attach('Eviden TC-04-27: Tanggal Pengikatan Wajib (Non-06)', {
+    await testInfo.attach('Eviden TC-5419-03b: Tanggal Pengikatan Wajib (Non-06)', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 28: Tanggal pengikatan opsional bila jenis pengikatan = 06 (Belum diikat)
+   * TC-5419-03a: Tanggal pengikatan opsional bila jenis pengikatan = 06 (Belum diikat)
    */
-  test('TC - 04 - 28: Tanggal pengikatan opsional bila jenis pengikatan = 06 - Belum diikat', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 28: Tanggal pengikatan opsional bila pengikatan = 06');
+  test('TC-5419-03a: Tanggal pengikatan opsional bila jenis pengikatan = 06 - Belum diikat', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-03a: Tanggal pengikatan opsional bila pengikatan = 06');
     await navigateToFormAgunanBaru(page, 'Tanah');
 
     // 1. Pilih Status Tersedia
@@ -201,17 +201,17 @@ test.describe('S2CML-4889: Modul 3 - Pengikatan Agunan', () => {
 
     // 2. Pilih Jenis Pengikatan = 06 / Belum diikat
     const selectedText = await selectJenisPengikatan(page, '06|Belum diikat');
-    console.log(`[TC-04-28] Memilih jenis pengikatan: ${selectedText}`);
+    console.log(`[TC-5419-03a] Memilih jenis pengikatan: ${selectedText}`);
 
     // 3. Verifikasi apakah label Tanggal Pengikatan opsional (tidak ada tanda bintang *)
     const labelTanggalPengikatan = page.locator('label, span, div').filter({ hasText: /^Tanggal pengikatan/i }).first();
     const labelFullText = await labelTanggalPengikatan.innerText();
 
-    console.log(`[TC-04-28] Label Tanggal Pengikatan text="${labelFullText}"`);
+    console.log(`[TC-5419-03a] Label Tanggal Pengikatan text="${labelFullText}"`);
     // Bila opsional, asteriks tidak ada pada label
     expect(labelFullText.includes('*')).toBeFalsy();
 
-    await testInfo.attach('Eviden TC-04-28: Tanggal Pengikatan Opsional (06 Belum Diikat)', {
+    await testInfo.attach('Eviden TC-5419-03a: Tanggal Pengikatan Opsional (06 Belum Diikat)', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });

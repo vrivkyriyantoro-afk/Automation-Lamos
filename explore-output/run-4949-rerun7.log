@@ -1,0 +1,92 @@
+◇ injected env (7) from .env
+
+Running 7 tests using 1 worker
+
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-02 Comboboxes: ["008 - Vendor","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+  ok 1 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:69:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-02: Form dinamis saat memilih kategori 008 - Vendor (20.5s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-03 Opsi Tipe Kepemilikan: ["Individu","Non Individu"]
+TC-4949-03 MISMATCH desain -> expected "Perorangan"/"Badan Usaha"; aktual "Individu"/"Non Individu"
+  ok 2 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:94:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-03: Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi (18.7s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-07 Opsi Status Perkawinan: []
+  x  3 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan (17.8s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-07 Opsi Status Perkawinan: []
+  x  4 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan (retry #1) (19.3s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-09 Opsi Jenis Badan Usaha: ["Perseroan Terbatas","Persekutuan Comanditer","Koperasi Toko","Perusahaan Perseorangan","Yayasan"]
+  ok 5 [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:242:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-09: Opsi dropdown Jenis Badan Usaha (21.0s)
+[RETRY] Form login belum termuat sempurna, reload...
+  ok 6 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:68:7 › S2CML-4949: sisa TC SLIK › TC-4949-06: Upload dokumen KTP berhasil (20.4s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-12 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  ok 7 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-12: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (20.4s)
+[RETRY] Form login belum termuat sempurna, reload...
+TC-4949-14 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  ok 8 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (20.2s)
+
+
+  1) [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan 
+
+    Error: dropdown Status perkawinan harus punya opsi
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      183 |     console.log('TC-4949-07 Opsi Status Perkawinan:', JSON.stringify(opsi));
+      184 |
+    > 185 |     expect(opsi.length, 'dropdown Status perkawinan harus punya opsi').toBeGreaterThan(0);
+          |                                                                        ^
+      186 |     expect(opsi.some(o => /belum menikah|lajang/i.test(o)), 'harus ada opsi belum menikah').toBeTruthy();
+      187 |     expect(opsi.some(o => /^menikah/i.test(o)), 'harus ada opsi menikah').toBeTruthy();
+      188 |
+        at C:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:185:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium\error-context.md
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: dropdown Status perkawinan harus punya opsi
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      183 |     console.log('TC-4949-07 Opsi Status Perkawinan:', JSON.stringify(opsi));
+      184 |
+    > 185 |     expect(opsi.length, 'dropdown Status perkawinan harus punya opsi').toBeGreaterThan(0);
+          |                                                                        ^
+      186 |     expect(opsi.some(o => /belum menikah|lajang/i.test(o)), 'harus ada opsi belum menikah').toBeTruthy();
+      187 |     expect(opsi.some(o => /^menikah/i.test(o)), 'harus ada opsi menikah').toBeTruthy();
+      188 |
+        at C:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:185:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-33ae0-awinan-pada-SLIK-Perorangan-chromium-retry1\error-context.md
+
+  1 failed
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan 
+  6 passed (2.8m)

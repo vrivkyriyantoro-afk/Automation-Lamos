@@ -1,0 +1,25 @@
+◇ injected env (9) from .env
+
+Running 2 tests using 1 worker
+
+◇ injected env (0) from .env
+
+[1/2] [chromium] › tests\bucketAgunan\badanUsaha\s2cml-4890.spec.ts:80:7 › S2CML-4890: Navigasi Stepper Agunan - Debitur Badan Usaha › TC-4890-02: Side navigation menampilkan tepat 3 step berurutan pada Debitur Badan Usaha
+[chromium] › tests\bucketAgunan\badanUsaha\s2cml-4890.spec.ts:80:7 › S2CML-4890: Navigasi Stepper Agunan - Debitur Badan Usaha › TC-4890-02: Side navigation menampilkan tepat 3 step berurutan pada Debitur Badan Usaha
+[TC-4890-02] Menjalankan pengujian pada Debitur Badan Usaha: 01M482PRSVH5ZMTVZX5QH0VDNZ
+
+[TC-4890-02] Step 1: "Informasi umum agunan Belum Lengkap"
+
+[TC-4890-02] Step 2: "Data tambahan agunan Belum Lengkap"
+
+[TC-4890-02] Step 3: "Informasi kepemilikan Belum Lengkap"
+
+[2/2] [chromium] › tests\bucketAgunan\badanUsaha\s2cml-4890.spec.ts:106:7 › S2CML-4890: Navigasi Stepper Agunan - Debitur Badan Usaha › TC-4890-03: Navigasi paralel bebas antar step pada Debitur Badan Usaha
+[chromium] › tests\bucketAgunan\badanUsaha\s2cml-4890.spec.ts:106:7 › S2CML-4890: Navigasi Stepper Agunan - Debitur Badan Usaha › TC-4890-03: Navigasi paralel bebas antar step pada Debitur Badan Usaha
+[TC-4890-03] Menjalankan pengujian pada Debitur Badan Usaha: 01M482PRSVH5ZMTVZX5QH0VDNZ
+
+[TC-4890-03] Form Step 2 aktif tanpa menyelesaikan Step 1: true
+
+[TC-4890-03] Kembali ke Step 1 berhasil: true
+
+  2 passed (44.7s)

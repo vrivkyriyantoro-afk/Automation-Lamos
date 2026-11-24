@@ -1,0 +1,49 @@
+◇ injected env (9) from .env
+
+Running 9 tests using 1 worker
+
+◇ injected env (0) from .env
+
+[1/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:42:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-01: Form dinamis saat memilih kategori 005 - Pemilik Agunan
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:42:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-01: Form dinamis saat memilih kategori 005 - Pemilik Agunan
+TC-4949-01 Comboboxes: ["005 - Pemilik Anggunan","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+[2/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:69:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-02: Form dinamis saat memilih kategori 008 - Vendor
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:69:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-02: Form dinamis saat memilih kategori 008 - Vendor
+TC-4949-02 Comboboxes: ["008 - Vendor","Pilih tipe kepemilikan agunan","Pilih hubungan dengan debitur"]
+
+[3/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:94:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-03: Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:94:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-03: Dropdown Tipe Kepemilikan menampilkan tepat 2 opsi
+TC-4949-03 Opsi Tipe Kepemilikan: ["Individu","Non Individu"]
+
+TC-4949-03 MISMATCH desain -> expected "Perorangan"/"Badan Usaha"; aktual "Individu"/"Non Individu"
+
+[4/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:123:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-04: Kelengkapan field form SLIK tipe Perorangan (Individu)
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:123:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-04: Kelengkapan field form SLIK tipe Perorangan (Individu)
+TC-4949-04 Labels: ["Bukti kepemilikan*","Nama*","Nomor identitas*","Pilih File","Pilih File"]
+
+[5/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:168:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-07: Opsi dropdown Status Perkawinan pada SLIK Perorangan
+TC-4949-07 Opsi Status Perkawinan: ["Menikah","Belum Menikah","Janda / Duda"]
+
+[6/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:193:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-08: Kelengkapan field form SLIK tipe Badan Usaha (Non Individu)
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:193:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-08: Kelengkapan field form SLIK tipe Badan Usaha (Non Individu)
+TC-4949-08 Labels: ["Bukti kepemilikan*","Nama*","Nomor identitas*","Lokasi pendirian badan usaha","Nomor telepon badan usaha","Nomor HP badan usaha","Email badan usaha","Nama PIC","Nomor telepon PIC","Pilih File"]
+
+TC-4949-08 Inputs: ["Otomatis terisi dari data tambahan agunan","Masukkan nama","Masukkan nomor identitas","Masukkan lokasi pendirian badan usaha","Masukkan nomor telepon badan usaha","Masukkan nomor HP badan usaha","Masukkan email badan usaha","Masukkan nama PIC","Masukkan nomor HP badan usaha"]
+
+[7/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:242:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-09: Opsi dropdown Jenis Badan Usaha
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:242:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-09: Opsi dropdown Jenis Badan Usaha
+TC-4949-09 Opsi Jenis Badan Usaha: ["Perseroan Terbatas","Persekutuan Comanditer","Koperasi Toko","Perusahaan Perseorangan","Yayasan"]
+
+[8/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:266:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-11: Ganti tipe Perorangan ke Badan Usaha me-reset form SLIK
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:266:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-11: Ganti tipe Perorangan ke Badan Usaha me-reset form SLIK
+TC-4949-11 Sebelum ganti tipe: [{"placeholder":"Masukkan nama","value":"UJI RESET SLIK","disabled":false,"readOnly":false},{"placeholder":"Masukkan nomor identitas","value":"1234567890123456","disabled":false,"readOnly":false}]
+
+TC-4949-11 Sesudah ganti tipe: []
+
+[9/9] [chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:306:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-18: Tombol Simpan disabled saat field mandatory SLIK belum lengkap
+[chromium] › tests\bucketAgunan\s2cml-4949-slik-new-identity.spec.ts:306:7 › S2CML-4949: Form SLIK Check & New Data Identitas › TC-4949-18: Tombol Simpan disabled saat field mandatory SLIK belum lengkap
+TC-4949-18 Simpan disabled=true aria-disabled=null
+
+  9 passed (4.4m)

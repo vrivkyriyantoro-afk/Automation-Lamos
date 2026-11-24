@@ -14,7 +14,7 @@ import { LoginPage } from '../../pages/LoginPage';
  * Jalankan: npx playwright test tests/bucketIdentitas/explore-penjamin-schemas.spec.ts --project=chromium
  */
 const APPLICATION_ID = process.env.APPLICATION_ID || '01M483P7DDHBV41Z5QPV0FM8Q9';
-const BASE = (process.env.BASE_URL || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/').replace(/\/?$/, '/');
+const BASE = (process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/').replace(/\/?$/, '/');
 const TARGET_URL = `${BASE}lamos/credit-application/${APPLICATION_ID}/create?bucket=identitas_pengecekan&debtorType=individual`;
 const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output';
 const SECTION_SEL = '[data-explore="penjamin"]';

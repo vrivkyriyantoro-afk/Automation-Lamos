@@ -96,12 +96,19 @@ export class Dropdown {
     await this.locator.click();
     const search = this.locator.locator('[data-testid="dropdownsearch-input-search"]');
     if (typeof option === 'string' && await search.isVisible().catch(() => false)) {
-      await search.fill(option);
+      // Kolom search kadang terlihat tapi tidak bisa diisi (terbukti 2026-11-23 di modal pemegang saham) -> lewati, jangan menggantung
+      await search.fill(option, { timeout: 3000 }).catch(() => {});
     }
     const listbox = await this.listbox();
     const matcher = typeof option === 'string' ? new RegExp(`^\\s*${escapeRegex(option)}\\s*$`, 'i') : option;
-    const item = listbox.locator('li:not(.sticky) button').filter({ hasText: matcher }).first();
-    await item.waitFor({ state: 'visible', timeout: 15000 });
+    let item = listbox.locator('li:not(.sticky) button').filter({ hasText: matcher }).first();
+    // id listbox bisa berubah setelah klik (rerender) -> fallback ke listbox yang sedang terbuka
+    const found = await item.waitFor({ state: 'visible', timeout: 8000 }).then(() => true).catch(() => false);
+    if (!found) {
+      item = this.page.locator('[role="listbox"][data-testid="dropdownsearch-content"]:visible').last()
+        .locator('li:not(.sticky) button').filter({ hasText: matcher }).first();
+      await item.waitFor({ state: 'visible', timeout: 15000 });
+    }
     await item.click();
     await expect(this.locator).toHaveAttribute('aria-expanded', 'false');
   }

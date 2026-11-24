@@ -1,0 +1,397 @@
+◇ injected env (7) from .env
+
+Running 11 tests using 1 worker
+
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   1 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:56:7 › S2CML-4949: sisa TC SLIK › TC-4949-05: NIK 16 digit angka diterima tanpa error (1.1m)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   2 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:68:7 › S2CML-4949: sisa TC SLIK › TC-4949-06: Upload dokumen KTP berhasil (1.1m)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   3 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:76:7 › S2CML-4949: sisa TC SLIK › TC-4949-10: Isi Nama PIC & nomor telepon PIC badan usaha (36.7s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   4 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-12: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (33.5s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   5 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-13: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (25.8s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x   6 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (1.5m)
+◇ injected env (0) from .env
+TC-4949-15 opsi Hubungan: ["Anak","Milik Sendiri","Orang Tua","Pasangan (Suami/Istri)","Pemilik/Pengurus Perusahaan","Pemilik Sebelumnya (Hibah)","Pemilik Sebelumnya (Jual/Beli)","Pemilik Sebelumnya (Waris)"]
+  ok  7 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-15: Opsi Hubungan dengan Debitur tersedia & dapat dipilih (39.5s)
+[RETRY] Form login belum termuat sempurna, reload...
+  ok  8 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:109:7 › S2CML-4949: sisa TC SLIK › TC-4949-16: Upload SLIK PDF manual berhasil (29.4s)
+[RETRY] Form login belum termuat sempurna, reload...
+  x   9 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:117:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload (1.0m)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x  10 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:132:7 › S2CML-4949: sisa TC SLIK › TC-4949-19: File SLIK > 50MB ditolak (6.0s)
+◇ injected env (0) from .env
+[RETRY] Form login belum termuat sempurna, reload...
+  x  11 [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:144:7 › S2CML-4949: sisa TC SLIK › TC-4949-20: Batas maksimal 20 file SLIK (1.4m)
+
+
+  1) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:56:7 › S2CML-4949: sisa TC SLIK › TC-4949-05: NIK 16 digit angka diterima tanpa error 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /.*(access-sit|auth-broker|kratos).*/i
+    Received string: "https://access-sit.banksinarmas.com/login/form?return_to=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fauth-broker%2Foidc%2Fauthorize%3Fclient_id%3Dory-kratos%26redirect_uri%3Dhttps%253A%252F%252Faccess-sit.banksinarmas.com%252Fapi%252Fpublic%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Fiiam-auth-broker%26response_type%3Dcode%26scope%3Dopenid%2Bemail%26state%3D0a10bf52836ea1ea4cefa8a075ac4d3fd960121064c6ac34bd484f668cf6b405640704381a106969616d2d617574682d62726f6b6572"
+    Timeout: 60000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 60000ms
+        120 × locator resolved to <html lang="id">…</html>
+            - unexpected value "https://access-sit.banksinarmas.com/login/form?return_to=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fauth-broker%2Foidc%2Fauthorize%3Fclient_id%3Dory-kratos%26redirect_uri%3Dhttps%253A%252F%252Faccess-sit.banksinarmas.com%252Fapi%252Fpublic%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Fiiam-auth-broker%26response_type%3Dcode%26scope%3Dopenid%2Bemail%26state%3D0a10bf52836ea1ea4cefa8a075ac4d3fd960121064c6ac34bd484f668cf6b405640704381a106969616d2d617574682d62726f6b6572"
+
+
+       at ..\pages\LoginPage.ts:55
+
+      53 |     } else {
+      54 |       // Tunggu hingga dialihkan kembali ke aplikasi LAMOS (Kratos SSO redirect butuh waktu hingga 60 detik)
+    > 55 |       await expect(this.page).not.toHaveURL(/.*(access-sit|auth-broker|kratos).*/i, { timeout: 60000 });
+         |                                   ^
+      56 |       await this.page.waitForLoadState('domcontentloaded');
+      57 |     }
+      58 |   }
+        at LoginPage.expectLoginSuccess (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:55:35)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:17:15)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:58:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1080c--angka-diterima-tanpa-error-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1080c--angka-diterima-tanpa-error-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-1080c--angka-diterima-tanpa-error-chromium\error-context.md
+
+  2) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:68:7 › S2CML-4949: sisa TC SLIK › TC-4949-06: Upload dokumen KTP berhasil 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /.*(access-sit|auth-broker|kratos).*/i
+    Received string: "https://access-sit.banksinarmas.com/api/public/self-service/methods/oidc/callback/iiam-auth-broker?code=ory_ac_-bIe80gUpwpebDCGO-artbSx2FggyJmLKGzjHFRCmeU.kICRlMvaWNE7KL8ft7_8eofhhf_cHqUkboXHSNm-5Qc&scope=openid+email&state=0a1038752304ae8342cc8353ec6c9e17ddd812100a2fc3a1dce740eb94c0e68f01debdfe1a106969616d2d617574682d62726f6b6572"
+    Timeout: 60000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 60000ms
+        5 × locator resolved to <html lang="id">…</html>
+          - unexpected value "https://access-sit.banksinarmas.com/login/form?return_to=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fauth-broker%2Foidc%2Fauthorize%3Fclient_id%3Dory-kratos%26redirect_uri%3Dhttps%253A%252F%252Faccess-sit.banksinarmas.com%252Fapi%252Fpublic%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Fiiam-auth-broker%26response_type%3Dcode%26scope%3Dopenid%2Bemail%26state%3D0a1038752304ae8342cc8353ec6c9e17ddd812100a2fc3a1dce740eb94c0e68f01debdfe1a106969616d2d617574682d62726f6b6572"
+        - waiting for "https://access-sit.banksinarmas.com/api/auth-broker/oidc/authorize?client_id=ory-kratos&redirect_uri=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fpublic%2Fself-service%2Fmethods%2Foidc%2Fcallbac…" navigation to finish...
+        - navigated to "https://access-sit.banksinarmas.com/api/public/self-service/methods/oidc/callback/iiam-auth-broker?code=ory_ac_-bIe80gUpwpebDCGO-artbSx2FggyJmLKGzjHFRCmeU.kICRlMvaWNE7KL8ft7_8eofhhf_cHqUkboXHSNm-5Qc&…"
+        115 × locator resolved to <html>…</html>
+            - unexpected value "https://access-sit.banksinarmas.com/api/public/self-service/methods/oidc/callback/iiam-auth-broker?code=ory_ac_-bIe80gUpwpebDCGO-artbSx2FggyJmLKGzjHFRCmeU.kICRlMvaWNE7KL8ft7_8eofhhf_cHqUkboXHSNm-5Qc&scope=openid+email&state=0a1038752304ae8342cc8353ec6c9e17ddd812100a2fc3a1dce740eb94c0e68f01debdfe1a106969616d2d617574682d62726f6b6572"
+
+
+       at ..\pages\LoginPage.ts:55
+
+      53 |     } else {
+      54 |       // Tunggu hingga dialihkan kembali ke aplikasi LAMOS (Kratos SSO redirect butuh waktu hingga 60 detik)
+    > 55 |       await expect(this.page).not.toHaveURL(/.*(access-sit|auth-broker|kratos).*/i, { timeout: 60000 });
+         |                                   ^
+      56 |       await this.page.waitForLoadState('domcontentloaded');
+      57 |     }
+      58 |   }
+        at LoginPage.expectLoginSuccess (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:55:35)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:17:15)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:70:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-0888e-Upload-dokumen-KTP-berhasil-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-0888e-Upload-dokumen-KTP-berhasil-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-0888e-Upload-dokumen-KTP-berhasil-chromium\error-context.md
+
+  3) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:76:7 › S2CML-4949: sisa TC SLIK › TC-4949-10: Isi Nama PIC & nomor telepon PIC badan usaha 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first()
+    Expected: visible
+    Timeout: 30000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first() with timeout 30000ms
+      - waiting for locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first()
+        - waiting for "https://access-sit.banksinarmas.com/503" navigation to finish...
+        - navigated to "https://access-sit.banksinarmas.com/503"
+
+
+       at ..\pages\LoginPage.ts:44
+
+      42 |       await this.page.reload({ waitUntil: 'domcontentloaded' });
+      43 |     }
+    > 44 |     await expect(this.usernameInput).toBeVisible({ timeout: 30000 });
+         |                                      ^
+      45 |     await this.usernameInput.fill(username);
+      46 |     await this.passwordInput.fill(password);
+      47 |     await this.loginButton.click();
+        at LoginPage.login (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:44:38)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:16:3)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:78:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-2146c-mor-telepon-PIC-badan-usaha-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-2146c-mor-telepon-PIC-badan-usaha-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-2146c-mor-telepon-PIC-badan-usaha-chromium\error-context.md
+
+  4) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-12: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first()
+    Expected: visible
+    Timeout: 30000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first() with timeout 30000ms
+      - waiting for locator('input[type="text"], input[name="username"], input[name="email"], #username, #email').first()
+
+
+       at ..\pages\LoginPage.ts:44
+
+      42 |       await this.page.reload({ waitUntil: 'domcontentloaded' });
+      43 |     }
+    > 44 |     await expect(this.usernameInput).toBeVisible({ timeout: 30000 });
+         |                                      ^
+      45 |     await this.usernameInput.fill(username);
+      46 |     await this.passwordInput.fill(password);
+      47 |     await this.loginButton.click();
+        at LoginPage.login (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:44:38)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:16:3)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:98:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-b25f6-itur-tersedia-dapat-dipilih-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-b25f6-itur-tersedia-dapat-dipilih-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-b25f6-itur-tersedia-dapat-dipilih-chromium\error-context.md
+
+  5) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-13: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  locator('button:has-text("Cari")').first()
+    Expected: enabled
+    Received: disabled
+    Timeout:  10000ms
+
+    Call log:
+      - Expect "toBeEnabled" locator('button:has-text("Cari")').first() with timeout 10000ms
+      - waiting for locator('button:has-text("Cari")').first()
+        23 × locator resolved to <button disabled aria-label="" type="submit" data-testid="filled-button" class="h-10 text-white flex items-center justify-center gap-2 rounded px-4 font-medium transition duration-300 ease-linear disabled:text-neutral-500 mb-6 w-38 bg-primary-700 hover:bg-primary-700 disabled:bg-neutral-300">…</button>
+           - unexpected value "disabled"
+
+
+       at bucketAgunan\helpers\agunanModal.ts:38
+
+      36 |
+      37 |   const btnCari = page.locator('button:has-text("Cari")').first();
+    > 38 |   await expect(btnCari).toBeEnabled({ timeout: 10000 });
+         |                         ^
+      39 |   await btnCari.click();
+      40 |
+      41 |   const btnAgunanBaru = page.locator('button, [role="button"]').filter({ hasText: /Agunan Baru/i }).first();
+        at openStep3Kepemilikan (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:38:25)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:35:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:98:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-d2d6b-itur-tersedia-dapat-dipilih-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-d2d6b-itur-tersedia-dapat-dipilih-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-d2d6b-itur-tersedia-dapat-dipilih-chromium\error-context.md
+
+  6) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /.*(access-sit|auth-broker|kratos).*/i
+    Received string: "https://www.ory.com/docs/kratos/fallback/login?flow=55c56b37-fec1-4284-acc8-5b88c5f0df15"
+    Timeout: 60000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 60000ms
+        4 × locator resolved to <html lang="id">…</html>
+          - unexpected value "https://access-sit.banksinarmas.com/login/form?return_to=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fauth-broker%2Foidc%2Fauthorize%3Fclient_id%3Dory-kratos%26redirect_uri%3Dhttps%253A%252F%252Faccess-sit.banksinarmas.com%252Fapi%252Fpublic%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Fiiam-auth-broker%26response_type%3Dcode%26scope%3Dopenid%2Bemail%26state%3D0a1055c56b37fec14284acc85b88c5f0df151210aa35424aecb14177a56b1bd57540ea851a106969616d2d617574682d62726f6b6572"
+        - waiting for "https://access-sit.banksinarmas.com/api/auth-broker/oidc/authorize?client_id=ory-kratos&redirect_uri=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fpublic%2Fself-service%2Fmethods%2Foidc%2Fcallbac…" navigation to finish...
+        - navigated to "https://www.ory.com/docs/kratos/fallback/login?flow=55c56b37-fec1-4284-acc8-5b88c5f0df15"
+        14 × locator resolved to <html lang="en" dir="ltr" data-theme="light" data-has-hydrated="false" data-theme-choice="light" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-kratos/fallback/login">…</html>
+           - unexpected value "https://www.ory.com/docs/kratos/fallback/login?flow=55c56b37-fec1-4284-acc8-5b88c5f0df15"
+        96 × locator resolved to <html lang="en" dir="ltr" data-theme="light" data-has-hydrated="true" data-theme-choice="light" data-rh="lang,dir,class,data-has-hydrated" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-kratos/fallback/login">…</html>
+           - unexpected value "https://www.ory.com/docs/kratos/fallback/login?flow=55c56b37-fec1-4284-acc8-5b88c5f0df15"
+
+
+       at ..\pages\LoginPage.ts:55
+
+      53 |     } else {
+      54 |       // Tunggu hingga dialihkan kembali ke aplikasi LAMOS (Kratos SSO redirect butuh waktu hingga 60 detik)
+    > 55 |       await expect(this.page).not.toHaveURL(/.*(access-sit|auth-broker|kratos).*/i, { timeout: 60000 });
+         |                                   ^
+      56 |       await this.page.waitForLoadState('domcontentloaded');
+      57 |     }
+      58 |   }
+        at LoginPage.expectLoginSuccess (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:55:35)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:17:15)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:98:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-1b089-itur-tersedia-dapat-dipilih-chromium\error-context.md
+
+  7) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:117:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first()
+    Expected: visible
+    Timeout: 45000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first() with timeout 45000ms
+      - waiting for getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first()
+
+
+       at bucketAgunan\helpers\agunanModal.ts:27
+
+      25 | export async function openStep3Kepemilikan(page: Page, prefix = 'EXPLORE') {
+      26 |   const btnTambah = page.getByRole('button', { name: /Agunan/ }).filter({ hasText: /^\s*Agunan\s*$/ }).first();
+    > 27 |   await expect(btnTambah).toBeVisible({ timeout: 45000 });
+         |                           ^
+      28 |   await btnTambah.click();
+      29 |
+      30 |   await page.locator('div, button, span').filter({ hasText: /^Pilih jenis agunan$/ }).last().click();
+        at openStep3Kepemilikan (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:27:27)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:35:29)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:119:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-a90b6-IK-PDF-yang-sudah-di-upload-chromium\error-context.md
+
+  8) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:132:7 › S2CML-4949: sisa TC SLIK › TC-4949-19: File SLIK > 50MB ditolak 
+
+    Error: page.reload: net::ERR_ABORTED; maybe frame was detached?
+    Call log:
+      - waiting for navigation until "domcontentloaded"
+
+
+       at ..\pages\LoginPage.ts:42
+
+      40 |     if (!isVisible) {
+      41 |       console.warn('[RETRY] Form login belum termuat sempurna, reload...');
+    > 42 |       await this.page.reload({ waitUntil: 'domcontentloaded' });
+         |                       ^
+      43 |     }
+      44 |     await expect(this.usernameInput).toBeVisible({ timeout: 30000 });
+      45 |     await this.usernameInput.fill(username);
+        at LoginPage.login (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:42:23)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:16:3)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:134:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-e7021-9-19-File-SLIK-50MB-ditolak-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-e7021-9-19-File-SLIK-50MB-ditolak-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-e7021-9-19-File-SLIK-50MB-ditolak-chromium\error-context.md
+
+  9) [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:144:7 › S2CML-4949: sisa TC SLIK › TC-4949-20: Batas maksimal 20 file SLIK 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /.*(access-sit|auth-broker|kratos).*/i
+    Received string: "https://access-sit.banksinarmas.com/api/auth-broker/oidc/authorize?client_id=ory-kratos&redirect_uri=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fpublic%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Fiiam-auth-broker&response_type=code&scope=openid+email&state=0a10c9d444d53f4645b2b5b24995f778570612102eafb6e3655d4ea5836d935df0f729071a106969616d2d617574682d62726f6b6572"
+    Timeout: 60000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 60000ms
+        5 × locator resolved to <html lang="id">…</html>
+          - unexpected value "https://access-sit.banksinarmas.com/login/form?return_to=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fauth-broker%2Foidc%2Fauthorize%3Fclient_id%3Dory-kratos%26redirect_uri%3Dhttps%253A%252F%252Faccess-sit.banksinarmas.com%252Fapi%252Fpublic%252Fself-service%252Fmethods%252Foidc%252Fcallback%252Fiiam-auth-broker%26response_type%3Dcode%26scope%3Dopenid%2Bemail%26state%3D0a10c9d444d53f4645b2b5b24995f778570612102eafb6e3655d4ea5836d935df0f729071a106969616d2d617574682d62726f6b6572"
+        109 × locator resolved to <html>…</html>
+            - unexpected value "https://access-sit.banksinarmas.com/api/auth-broker/oidc/authorize?client_id=ory-kratos&redirect_uri=https%3A%2F%2Faccess-sit.banksinarmas.com%2Fapi%2Fpublic%2Fself-service%2Fmethods%2Foidc%2Fcallback%2Fiiam-auth-broker&response_type=code&scope=openid+email&state=0a10c9d444d53f4645b2b5b24995f778570612102eafb6e3655d4ea5836d935df0f729071a106969616d2d617574682d62726f6b6572"
+
+
+       at ..\pages\LoginPage.ts:55
+
+      53 |     } else {
+      54 |       // Tunggu hingga dialihkan kembali ke aplikasi LAMOS (Kratos SSO redirect butuh waktu hingga 60 detik)
+    > 55 |       await expect(this.page).not.toHaveURL(/.*(access-sit|auth-broker|kratos).*/i, { timeout: 60000 });
+         |                                   ^
+      56 |       await this.page.waitForLoadState('domcontentloaded');
+      57 |     }
+      58 |   }
+        at LoginPage.expectLoginSuccess (c:\Users\V50324\Documents\Automation-Lamos\pages\LoginPage.ts:55:35)
+        at loginAndOpen (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\helpers\agunanModal.ts:17:15)
+        at bukaForm (c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:34:3)
+        at c:\Users\V50324\Documents\Automation-Lamos\tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:146:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-2bb30-Batas-maksimal-20-file-SLIK-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\bucketAgunan-s2cml-4949-sl-2bb30-Batas-maksimal-20-file-SLIK-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\bucketAgunan-s2cml-4949-sl-2bb30-Batas-maksimal-20-file-SLIK-chromium\error-context.md
+
+  9 failed
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:56:7 › S2CML-4949: sisa TC SLIK › TC-4949-05: NIK 16 digit angka diterima tanpa error 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:68:7 › S2CML-4949: sisa TC SLIK › TC-4949-06: Upload dokumen KTP berhasil 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:76:7 › S2CML-4949: sisa TC SLIK › TC-4949-10: Isi Nama PIC & nomor telepon PIC badan usaha 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-12: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-13: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:96:9 › S2CML-4949: sisa TC SLIK › TC-4949-14: Opsi Hubungan dengan Debitur tersedia & dapat dipilih 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:117:7 › S2CML-4949: sisa TC SLIK › TC-4949-17: Hapus file SLIK PDF yang sudah di-upload 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:132:7 › S2CML-4949: sisa TC SLIK › TC-4949-19: File SLIK > 50MB ditolak 
+    [chromium] › tests\bucketAgunan\s2cml-4949-slik-remaining.spec.ts:144:7 › S2CML-4949: sisa TC SLIK › TC-4949-20: Batas maksimal 20 file SLIK 
+  2 passed (11.2m)

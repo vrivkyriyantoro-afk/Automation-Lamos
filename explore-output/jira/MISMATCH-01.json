@@ -1,0 +1,242 @@
+{
+  "fields": {
+    "project": {
+      "key": "S2CML"
+    },
+    "parent": {
+      "key": "S2CML-4948"
+    },
+    "issuetype": {
+      "id": "10015"
+    },
+    "summary": "[Defect] [BE] Dropdown ownerCategory debitur Badan Usaha mengirim \"001 - Calon Debitur\", bukan \"003 - Debitur\"",
+    "priority": {
+      "name": "Medium"
+    },
+    "customfield_10155": {
+      "value": "SIT"
+    },
+    "customfield_10275": 3,
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Langkah Reproduksi"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Buka modal \"Tambah agunan\" pada debitur badan usaha 01M482PRSVH5ZMTVZX5QH0VDNZ (debtorType=business)."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Masuk ke Step 3 \"Informasi kepemilikan\"."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Buka dropdown \"Kategori pemilik agunan\"."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Expected Result (per matriks TC-4948-04 / TC-4948-13 / TC-4890-BU-02)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Dropdown memuat opsi \"003 - Debitur\" untuk debitur badan usaha yang sudah memiliki fasilitas aktif."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Actual Result"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Dropdown memuat \"001 - Calon Debitur\"; opsi \"003\" sama sekali tidak muncul. Daftar lengkap:"
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {},
+          "content": [
+            {
+              "type": "text",
+              "text": "[\"001 - Calon Debitur\",\"005 - Pemilik Anggunan\",\"006 - Pengurus Perusahaan\",\n \"007 - Pemilik Perusahaan\",\"008 - Vendor\",\"009 - Penjamin\",\"010 - Pasangan Penjamin\"]"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Layer Penyebab: BACKEND"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Diverifikasi dengan menangkap response API saat dropdown dibuka. BE sendiri yang mengirim kode 001 dan tidak mengirim 003 — FE hanya merender apa yang diterima."
+            }
+          ]
+        },
+        {
+          "type": "codeBlock",
+          "attrs": {},
+          "content": [
+            {
+              "type": "text",
+              "text": "GET /lossvc/v1/sme/loans/01M482PRSVH5ZMTVZX5QH0VDNZ/dropdowns?type=ownerCategory\n\n[200] {\"data\":[{\"code\":\"001\",\"name\":\"Calon Debitur\"},{\"code\":\"005\",\"name\":\"Pemilik Anggunan\"},\n {\"code\":\"006\",\"name\":\"Pengurus Perusahaan\"},{\"code\":\"007\",\"name\":\"Pemilik Perusahaan\"},\n {\"code\":\"008\",\"name\":\"Vendor\"},{\"code\":\"009\",\"name\":\"Penjamin\"},\n {\"code\":\"010\",\"name\":\"Pasangan Penjamin\"}]}"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Catatan terhadap AC"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "AC S2CML-4948 menulis \"BE will always give FE all dropdown, need case if FE cannot handle logic to disable based on logic\" — namun BE justru sudah memfilter daftarnya, dan hasil filter untuk debitur Badan Usaha ini tidak memuat 003."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Per tabel \"Map Pilihan Dropdown\" pada AC: 003 - Debitur dimunculkan apabila Debitur SUDAH memiliki Fasilitas aktif di Bank Sinarmas (dilihat dari Struktur Kredit - part Exposure)."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Mohon dicek: apakah status Exposure pada App ID ini memang kosong (sehingga 001 benar), atau logika pemetaan 003 di BE yang belum berjalan."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Auto-fill sendiri berjalan normal: nama badan usaha \"PT Bintang Sejahtera\" dan nomor legalitas \"3578241603710991\" terisi otomatis dan bersifat read-only."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -5,6 +5,38 @@
   "issueType": "Epic",
   "status": "In Development",
   "description": "Bucket Agunan \n\n### Description\nThe Collateral Bucket is designed to capture, manage, and process collateral data used in a loan application. This includes both new collateral submitted as part of the current application and existing collateral that has previously been registered.\nThis bucket will provide capabilities to:\n- Capture collateral data submitted by the debtor.\n- Reuse existing collateral data available in the core loan system.\n- Ensure that collateral data used in the loan origination process is complete, valid, and aligned with the requirements for credit analysis, approval, legal documentation, collateral binding, and downstream system integration.\nThe Collateral Bucket also serves as a key data source to ensure that the relationship between the loan application, credit facility, debtor, and collateral object is properly documented and traceable throughout the origination process.\nMiro Flow : \n\n \nFigma  : \n\n \nMapping Jenis Agunan ke Group Agunan: \nhttps://docs.google.com/spreadsheets/d/1ggnrERlCKhFiZMq975T3ee_YeqbS4C-S8zSq3lC8kkM/edit?gid=1197100659#gid=1197100659\n",
+  "linkedIssues": [
+    {
+      "relation": "Relates",
+      "key": "S2CML-3302",
+      "summary": "LAMOS LOS SME - Pengajuan & Approval",
+      "status": "In Development"
+    },
+    {
+      "relation": "Cloners",
+      "key": "LP-5701",
+      "summary": "LAMOS LOS SME - Negotiation Process",
+      "status": "To Do"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-5133",
+      "summary": "3. [FE&BE] LAMOS LOS SME - Lembar Kerja AO PK : Step 1 Data Agunan & Pengikatan Agunan ke Fasilitas",
+      "status": "Backlog"
+    },
+    {
+      "relation": "Finish-to-Finish link (WBSGantt)",
+      "key": "LP-5598",
+      "summary": "Pengembangan Jaminan [Penjamin dan Agunan] di CLS",
+      "status": "In Development"
+    },
+    {
+      "relation": "Relates",
+      "key": "S2CML-6359",
+      "summary": "LAMOS LOS SME - FALCON #2.1 (Align with SmartCA)",
+      "status": "In Development"
+    }
+  ],
   "totalChildStories": 0,
   "childStories": []
 }

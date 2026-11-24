@@ -58,7 +58,7 @@ function loadAgunanFromCsv(filePath: string): CsvAgunanItem[] {
 
 test.describe('Validasi Dropdown Jenis Agunan', () => {
   const TARGET_URL = process.env.EXPLORE_URL
-    || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M482PRSVH5ZMTVZX5QH0VDNZ/create?bucket=agunan&debtorType=business';
+    || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M482PRSVH5ZMTVZX5QH0VDNZ/create?bucket=agunan&debtorType=business';
 
   const csvPath = path.resolve(__dirname, '../../fixtures/List Req data agunan baru CLS - request Data baru CLS.csv');
 

@@ -1,0 +1,86 @@
+{
+  "documentName": "LAMOS SME : Phase 1.1 - Agunan, 6C, FPPA",
+  "fileKey": "hayDfdzm40LHECLlcVsebo",
+  "targetNodeId": "6124:461023",
+  "lastModified": "2026-11-13T03:39:36Z",
+  "totalFrames": 10,
+  "totalComponents": 1,
+  "totalTextElements": 2,
+  "uniqueTexts": [
+    "Berhasil menghapus data pembanding.",
+    "Action"
+  ],
+  "extracted": {
+    "textItems": [
+      {
+        "id": "I6124:461023;3085:198960",
+        "text": "Berhasil menghapus data pembanding.",
+        "section": "Label"
+      },
+      {
+        "id": "I6124:461023;3085:198967",
+        "text": "Action",
+        "section": "Label"
+      }
+    ],
+    "frames": [
+      {
+        "id": "I6124:461023;3085:198957",
+        "name": "Solid/check-circle",
+        "type": "FRAME"
+      },
+      {
+        "id": "I6124:461023;3085:198959",
+        "name": "Label",
+        "type": "FRAME"
+      },
+      {
+        "id": "I6124:461023;3085:198961",
+        "name": "vuesax/bold/info-circle",
+        "type": "FRAME"
+      },
+      {
+        "id": "I6124:461023;3085:198962",
+        "name": "vuesax/bold/info-circle",
+        "type": "GROUP"
+      },
+      {
+        "id": "I6124:461023;3085:198963",
+        "name": "info-circle",
+        "type": "GROUP"
+      },
+      {
+        "id": "I6124:461023;3085:198966",
+        "name": "Label",
+        "type": "FRAME"
+      },
+      {
+        "id": "I6124:461023;3085:198968",
+        "name": "vuesax/bold/info-circle",
+        "type": "FRAME"
+      },
+      {
+        "id": "I6124:461023;3085:198969",
+        "name": "vuesax/bold/info-circle",
+        "type": "GROUP"
+      },
+      {
+        "id": "I6124:461023;3085:198970",
+        "name": "info-circle",
+        "type": "GROUP"
+      },
+      {
+        "id": "I6124:461023;3085:198973",
+        "name": "Outline/Close",
+        "type": "FRAME"
+      }
+    ],
+    "components": [
+      {
+        "id": "6124:461023",
+        "name": "Toast",
+        "section": "Root"
+      }
+    ]
+  }
+}

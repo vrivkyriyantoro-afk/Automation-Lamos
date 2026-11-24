@@ -1,0 +1,113 @@
+{
+  "steps": [
+    {
+      "label": "Jenis pengikatan",
+      "before": "Pilih jenis pengikatan",
+      "total": 7,
+      "first30": [
+        "Hak Tanggungan",
+        "Gadai",
+        "Fidusia",
+        "Surat Kuasa Membebankan Hak Tanggungan (SKMHT)",
+        "Cessie",
+        "Belum Diikat",
+        "Lainnya"
+      ]
+    },
+    {
+      "label": "Status agunan",
+      "before": "Pilih status agunan",
+      "total": 2,
+      "first30": [
+        "1 - Tersedia",
+        "2 - Indent"
+      ],
+      "chosen": "1 - Tersedia"
+    },
+    {
+      "label": "Jenis pengikatan",
+      "before": "Pilih jenis pengikatan",
+      "total": 7,
+      "first30": [
+        "Hak Tanggungan",
+        "Gadai",
+        "Fidusia",
+        "Surat Kuasa Membebankan Hak Tanggungan (SKMHT)",
+        "Cessie",
+        "Belum Diikat",
+        "Lainnya"
+      ]
+    },
+    {
+      "label": "Jenis segmen fasilitas",
+      "before": "Pilih jenis segmen fasilitas",
+      "total": 0,
+      "first30": []
+    },
+    {
+      "label": "Jenis pengikatan",
+      "before": "Pilih jenis pengikatan",
+      "total": 7,
+      "first30": [
+        "Hak Tanggungan",
+        "Gadai",
+        "Fidusia",
+        "Surat Kuasa Membebankan Hak Tanggungan (SKMHT)",
+        "Cessie",
+        "Belum Diikat",
+        "Lainnya"
+      ],
+      "chosen": "Hak Tanggungan"
+    },
+    {
+      "label": "Provinsi",
+      "before": "Isi sendiri",
+      "error": "locator.click: Timeout 8000ms exceeded."
+    },
+    {
+      "label": "Kota lokasi agunan atau Dati 2",
+      "before": "Pilih kota/kabupaten",
+      "total": 1,
+      "first30": [
+        "No results found"
+      ]
+    },
+    {
+      "label": "Kecamatan",
+      "before": "Pilih kecamatan",
+      "total": 0,
+      "first30": []
+    },
+    {
+      "label": "Kelurahan/desa",
+      "before": "Pilih kelurahan",
+      "total": 1,
+      "first30": [
+        "No results found"
+      ]
+    },
+    {
+      "label": "Tipe penilaian",
+      "before": "Pilih tipe penilaian",
+      "total": 2,
+      "first30": [
+        "Internal",
+        "KJPP"
+      ]
+    }
+  ],
+  "radios": [
+    "Diasuransikan* / Ya / Tidak",
+    "Diasuransikan* / Ya / Tidak",
+    "Apakah LPA sudah tersedia?* / Ya / Tidak",
+    "Apakah LPA sudah tersedia?* / Ya / Tidak",
+    "Apakah agunan tersebut tercantum dalam Negative List BSIM?* / Ya / Tidak",
+    "Apakah agunan tersebut tercantum dalam Negative List BSIM?* / Ya / Tidak"
+  ],
+  "rpFields": [
+    "Nilai prediksi*",
+    "Nilai agunan wajar/NJOP*",
+    "Nilai agunan menurut pelapor*"
+  ],
+  "formText": "John Doe AO5 | Senior Financing Sales Officer (005 - KCP Cempaka Mas-JKT) | JD | Ganti kata sandi | Keluar | Pengajuan kredit | Buat pengajuan kredit | Buat pengajuan kredit | Riwayat | Identitas dan Pengecekan | Struktur Kredit | Data Usaha | Penilaian Kelayakan | Agunan | Analisa Keuangan | Legal, Risk, & Compliance | Dokumen | Covenant & TBO | Penyimpangan & Pihak Terkait | Catatan Anda | Data Agunan | Belum Lengkap | Pengikatan agunan ke fasilitas | Belum Lengkap | Data agunan | Ringkasan | Total nilai appraisal yang dapat diagunkan | Rp 313.824.000 | Total nilai prediksi yang dapat diagunkan | Rp 163.583.000 | Daftar agunan (2) | Agunan | AN02010302 - Apartemen/Rumah Susun | ID: CLSA202608109374 | ABC-123456789 | Nilai agunan | Nilai appraisal yang dapat diagunkan | Rp 159.984.000 | Tampilkan informasi lengkap | AN020203 - Kendaraan | ID: CLSA202609081557 | COL-2026-001 | Nilai agunan | Nilai appraisal yang dapat diagunkan | Rp 153.840.000 | Tampilkan informasi lengkap | Menampilkan 1 sampai 2 dari 2 baris | 1 | Tampilan per halaman | 5 | 10 | 20 | 50 | Draf agunan (2) | Data agunan akan ditandai sebagai \"lengkap\" jika ada minimal satu agunan tersimpan dan tidak ada agunan yang tersimpan sebagai draf. | AN020101 - Tanah | Nilai agunan | Nilai prediksi agunan yang dapat diagunkan | Rp 0 | Masih menunggu nilai final | Tampilkan informasi lengkap | AN020101 - Tanah | Nilai agunan | Nilai prediksi agunan yang dapat diagunkan | Rp 0 | Masih menunggu nilai final | Tampilkan informasi lengkap | Menampilkan 1 sampai 2 dari 2 baris | 1 | Tampilan per halaman | 5 | 10 | 20 | 50 | Pengikatan agunan ke fasilitas | 2/11 selesai | Kirim | Copyright © 2026 PT Bank Sinarmas Tbk. All rights reserved. | Tambah agunan | Informasi umum agunan | Belum Lengkap | Data tambahan agunan | Belum Lengkap | Informasi kepemilikan | Belum Lengkap | Informasi umum agunan | Metode pengecekan agunan* | Isi sendiri | Jenis agunan* | AN020101 - Tanah | Status agunan* | 1 - Tersedia | Jenis pengikatan* | Hak Tanggungan | Tanggal pengikatan* | Jenis segmen fasilitas* | Pilih jenis segmen fasilitas | Diasuransikan* | Ya | Tidak | Kantor cabang/agunan diregistrasikan* | Pilih kantor cabang | Keterangan | Alamat agunan | Provinsi* | Pilih provinsi | Kota lokasi agunan atau Dati 2* | Pilih kota/kabupaten | Kecamatan* | Pilih kecamatan | Kelurahan/desa* | Pilih kelurahan | Kode pos* | RT/RW | Alamat* | Alamat lengkap* | Penilaian agunan | Apakah LPA sudah tersedia?* | Ya | Tidak | Apakah agunan tersebut tercantum dalam Negative List BSIM?* | Ya | Tidak | Tipe penilaian* | Nilai prediksi* | Rp | Nilai agunan wajar/NJOP* | Rp | Nilai agunan menurut pelapor* | Rp | Tanggal penilaian agunan menurut pelapor* | Catatan positif | Catatan negatif | Daftar data pembanding | Anda dapat menambahkan hingga 10 data pembanding. | + Data Pembanding | Sumber data pembanding | \t | Nama | \t | Nilai/harga berdasarkan data pembanding | \t | Kota/kabupaten | \t | Provinsi | \t | Tindakan | Belum ada data pembanding. | Data tambahan agunan | Informasi kepemilikan | Kembali | Simpan sebagai draft | Simpan | Internal | KJPP"
+}

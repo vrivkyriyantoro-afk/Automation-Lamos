@@ -7,13 +7,13 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4889 - Modul 2: Informasi Umum Agunan
  * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
- * Cakupan Test Cases: TC - 04 - 20 s.d. TC - 04 - 26
+ * Cakupan Test Cases: TC-4889-20, 21 (tanpa padanan 5419); TC-5419-05 s.d. TC-5419-07
  * Karakter: READ-ONLY (Validasi UI & Dropdown tanpa Submit Form)
  */
 
 const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const TARGET_URL = process.env.EXPLORE_URL
-  || `https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
+  || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
 
 test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
   test.beforeEach(async ({ page }) => {
@@ -79,10 +79,10 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
   }
 
   /**
-   * TC - 04 - 20: Urutan Jenis agunan sesuai master data
+   * TC-4889-20: Urutan Jenis agunan sesuai master data
    */
-  test('TC - 04 - 20: Urutan opsi Jenis Agunan sesuai master data', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 20: Urutan Jenis agunan sesuai master data');
+  test('TC-4889-20: Urutan opsi Jenis Agunan sesuai master data', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-4889-20: Urutan Jenis agunan sesuai master data');
     const modal = await openTambahAgunanModal(page);
 
     // Buka dropdown Jenis agunan
@@ -93,22 +93,22 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
     // Baca opsi yang muncul
     const options = await listbox.locator('li:not(.sticky) button, li:not(.sticky)').allInnerTexts();
     const cleanOptions = options.map(o => o.trim()).filter(o => o && o !== 'Clear');
-    console.log(`[TC-04-20] Ditemukan ${cleanOptions.length} opsi Jenis Agunan di UI.`);
+    console.log(`[TC-4889-20] Ditemukan ${cleanOptions.length} opsi Jenis Agunan di UI.`);
 
     expect(cleanOptions.length).toBeGreaterThan(10);
 
     await page.waitForTimeout(1000);
-    await testInfo.attach('Eviden TC-04-20: Dropdown Jenis Agunan Master Data', {
+    await testInfo.attach('Eviden TC-4889-20: Dropdown Jenis Agunan Master Data', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 21: Detail isian Jenis agunan Housing/Kendaraan/Elektronik (Status Tersedia)
+   * TC-4889-21: Detail isian Jenis agunan Housing/Kendaraan/Elektronik (Status Tersedia)
    */
-  test('TC - 04 - 21: Detail isian Jenis agunan Housing/Kendaraan/Elektronik (Status Tersedia)', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 21: Detail isian Jenis agunan Housing/Kendaraan');
+  test('TC-4889-21: Detail isian Jenis agunan Housing/Kendaraan/Elektronik (Status Tersedia)', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-4889-21: Detail isian Jenis agunan Housing/Kendaraan');
     // Masuk ke form dengan jenis Tanah / Bangunan / Housing
     const modal = await navigateToFormAgunanBaru(page, 'Tanah');
 
@@ -130,21 +130,21 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
     await expect(page.locator('text=Tanggal pengikatan').first()).toBeVisible({ timeout: 10000 });
     await expect(page.locator('text=Alamat agunan').first()).toBeVisible({ timeout: 10000 });
 
-    await testInfo.attach('Eviden TC-04-21: Form Detail Housing Status Tersedia', {
+    await testInfo.attach('Eviden TC-4889-21: Form Detail Housing Status Tersedia', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 22 & TC - 04 - 23: Field Peringkat agunan berdasarkan Status Tersedia vs Indent
+   * TC-5419-05: Field Peringkat agunan berdasarkan Status Tersedia vs Indent
    */
-  test('TC - 04 - 22 & 23: Validasi kondisional field Peringkat & Lembaga Pemeringkat pada status Tersedia vs Indent', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 22 & 23: Field Peringkat agunan Status Tersedia vs Indent');
+  test('TC-5419-05: Validasi kondisional field Peringkat & Lembaga Pemeringkat pada status Tersedia vs Indent', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-05: Field Peringkat agunan Status Tersedia vs Indent');
     // Masuk dengan Cash Collateral / Reksadana
     const modal = await navigateToFormAgunanBaru(page, 'Reksadana');
 
-    // 1. Pilih status Indent (TC-04-23)
+    // 1. Pilih status Indent (TC-5419-05b)
     const statusDropdown = page.locator('div, button, span').filter({ hasText: /^Pilih status agunan$/ }).last();
     await expect(statusDropdown).toBeVisible({ timeout: 15000 });
     await statusDropdown.click();
@@ -157,16 +157,16 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
       await optIndent.click();
       await page.waitForTimeout(1000);
 
-      // TC-04-23: Pada status Indent, field Lembaga Pemeringkat tidak tampil
+      // TC-5419-05b: Pada status Indent, field Lembaga Pemeringkat tidak tampil
       const lembagaField = page.locator('text=Lembaga pemeringkat');
       await expect(lembagaField).toHaveCount(0);
-      await testInfo.attach('Eviden TC-04-23: Status Indent Tanpa Lembaga Pemeringkat', {
+      await testInfo.attach('Eviden TC-5419-05b: Status Indent Tanpa Lembaga Pemeringkat', {
         body: await page.screenshot(),
         contentType: 'image/png'
       });
     }
 
-    // 2. Ubah status menjadi Tersedia (TC-04-22)
+    // 2. Ubah status menjadi Tersedia (TC-5419-05a)
     const statusSelected = page.locator('div, button, span').filter({ hasText: /Indent|status agunan/i }).last();
     await statusSelected.click();
     listbox = page.locator('[role="listbox"]:visible, ul:visible').first();
@@ -175,17 +175,17 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
     await optTersedia.click();
     await page.waitForTimeout(1500);
 
-    await testInfo.attach('Eviden TC-04-22: Status Tersedia Cash Collateral', {
+    await testInfo.attach('Eviden TC-5419-05a: Status Tersedia Cash Collateral', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
   });
 
   /**
-   * TC - 04 - 24, 25, 26: Dropdown Lembaga Pemeringkat dan Relasi Peringkat Agunan
+   * TC-5419-06 & 07: Dropdown Lembaga Pemeringkat dan Relasi Peringkat Agunan
    */
-  test('TC - 04 - 24, 25, 26: Validasi dropdown Lembaga Pemeringkat & opsi Peringkat Agunan', async ({ page }, testInfo) => {
-    console.log('Menjalankan TC - 04 - 24, 25, 26: Lembaga Pemeringkat & Rating');
+  test('TC-5419-06 & 07: Validasi dropdown Lembaga Pemeringkat & opsi Peringkat Agunan', async ({ page }, testInfo) => {
+    console.log('Menjalankan TC-5419-06 & 07: Lembaga Pemeringkat & Rating');
     const modal = await navigateToFormAgunanBaru(page, 'Reksadana');
 
     // Buka status agunan Tersedia
@@ -202,11 +202,11 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
     await modal.evaluate(el => el.scrollTop = el.scrollHeight);
     await page.waitForTimeout(1000);
 
-    // TC-04-26: Verifikasi placeholder "Pilih lembaga pemeringkat terlebih dahulu" muncul pada Peringkat Agunan
+    // TC-5419-07: Verifikasi placeholder "Pilih lembaga pemeringkat terlebih dahulu" muncul pada Peringkat Agunan
     const peringkatDisabledMsg = page.locator('div, span, button').filter({ hasText: /^Pilih lembaga pemeringkat terlebih dahulu$/ }).first();
     await expect(peringkatDisabledMsg).toBeVisible({ timeout: 10000 });
 
-    // TC-04-24: Buka dropdown Lembaga Pemeringkat (gunakan exact match agar tidak tertukar dengan Peringkat)
+    // TC-5419-06: Buka dropdown Lembaga Pemeringkat (gunakan exact match agar tidak tertukar dengan Peringkat)
     const lembagaDropdown = page.locator('div, span, button').filter({ hasText: /^Pilih lembaga pemeringkat$/ }).last();
     await expect(lembagaDropdown).toBeVisible({ timeout: 10000 });
     await lembagaDropdown.click();
@@ -215,12 +215,12 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
     await listboxLembaga.locator('li button, li').first().waitFor({ timeout: 10000 });
     const opsiLembaga = await listboxLembaga.locator('li:not(.sticky) button, li:not(.sticky)').allInnerTexts();
     const cleanLembaga = opsiLembaga.map(o => o.trim()).filter(o => o && o !== 'Clear');
-    console.log('[TC-04-24] Opsi Lembaga Pemeringkat:', cleanLembaga);
+    console.log('[TC-5419-06] Opsi Lembaga Pemeringkat:', cleanLembaga);
 
     // Verifikasi opsi memuat lembaga standar (FID, dsb.)
     expect(cleanLembaga.length).toBeGreaterThan(0);
 
-    // TC-04-25: Pilih salah satu lembaga misal FID / opsi pertama
+    // TC-5419-07: Pilih salah satu lembaga misal FID / opsi pertama
     const optFid = listboxLembaga.locator('li:not(.sticky) button, li:not(.sticky)').first();
     await optFid.click();
     await page.waitForTimeout(1000);
@@ -233,11 +233,11 @@ test.describe('S2CML-4889: Modul 2 - Informasi Umum Agunan', () => {
       await listboxRating.locator('li button, li').first().waitFor({ timeout: 10000 });
       const ratingOptions = await listboxRating.locator('li:not(.sticky) button, li:not(.sticky)').allInnerTexts();
       const cleanRating = ratingOptions.map(r => r.trim()).filter(r => r && r !== 'Clear');
-      console.log('[TC-04-25] Opsi Rating Agunan:', cleanRating);
+      console.log('[TC-5419-07] Opsi Rating Agunan:', cleanRating);
       expect(cleanRating.length).toBeGreaterThan(0);
     }
 
-    await testInfo.attach('Eviden TC-04-24-26: Lembaga Pemeringkat & Rating Agunan', {
+    await testInfo.attach('Eviden TC-5419-06 & 07: Lembaga Pemeringkat & Rating Agunan', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });

@@ -11,9 +11,10 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Karakter: READ-ONLY (Pencarian & Eksplorasi Modal Stepper tanpa Commit Data)
  */
 
-const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
-const TARGET_URL = process.env.EXPLORE_URL
-  || `https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;
+const TYPES = [
+  { name: 'Perseorangan', debtorType: 'individual', appId: process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY' },
+  { name: 'Badan Usaha', debtorType: 'business', appId: process.env.DEBITUR_TARGET || '01M482PRSVH5ZMTVZX5QH0VDNZ' },
+];
 
 // Helper parser CSV toleran multiline & tanda kutip
 function parseCsvFile(filePath: string): Map<string, any> {
@@ -60,7 +61,7 @@ function parseCsvFile(filePath: string): Map<string, any> {
     const r = rows[i];
     const tcIdRaw = r[0] || '';
     const cleanId = tcIdRaw.replace(/\s+/g, ' ').trim();
-    if (cleanId.startsWith('TC - 04') || cleanId.startsWith('TC-04')) {
+    if (cleanId.startsWith('TC-4889') || cleanId.startsWith('TC - 04') || cleanId.startsWith('TC-04')) {
       tcMap.set(cleanId, {
         id: cleanId,
         title: r[1],
@@ -74,8 +75,12 @@ function parseCsvFile(filePath: string): Map<string, any> {
   return tcMap;
 }
 
-test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
-  const csvPath = path.resolve(__dirname, '../../fixtures/TemplateAutomateLamos - Sheet1.csv');
+for (const { name, debtorType, appId } of TYPES) {
+const TARGET_URL = process.env.EXPLORE_URL
+  || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${appId}/create?bucket=agunan&debtorType=${debtorType}`;
+
+test.describe(`S2CML-4889 [${name}]: Modul 1 - Search Agunan Eksisting vs Baru`, () => {
+  const csvPath = path.resolve(__dirname, '../../../fixtures/TemplateAutomateLamos - Sheet1.csv');
   let tcData: Map<string, any>;
 
   test.beforeAll(() => {
@@ -101,7 +106,7 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
     await expect(btnTambah).toBeVisible({ timeout: 45000 });
     await btnTambah.click();
 
-    const dialog = page.locator('[role="dialog"]:visible').last();
+    const dialog = page.locator('div').filter({ has: page.locator('h2:has-text("Tambah agunan")') }).last();
     await expect(dialog).toBeVisible({ timeout: 20000 });
     return dialog;
   }
@@ -116,10 +121,10 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
   }
 
   /**
-   * TC - 04 - 01: Validasi Modal dan Urutan Stepper saat Klik Tambah Agunan
+   * TC-4889-01: Validasi Modal dan Urutan Stepper saat Klik Tambah Agunan
    */
-  test('TC - 04 - 01: Validasi modal dan urutan stepper Tambah Agunan', async ({ page }, testInfo) => {
-    const tc = tcData.get('TC - 04 - 01');
+  test('TC-4889-01: Validasi modal dan urutan stepper Tambah Agunan', async ({ page }, testInfo) => {
+    const tc = tcData.get('TC-4889-01');
     console.log(`Menjalankan: ${tc?.id} - ${tc?.title}`);
 
     // Eviden 1: Halaman Summary sebelum buka modal
@@ -153,41 +158,22 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
   });
 
   /**
-   * TC - 04 - 02: Validasi Pencarian ketika Jenis Kode Agunan Belum Dipilih
+   * TC-4889-02 + TC-4889-03: Cari disabled tanpa Jenis Agunan, aktif setelah kriteria wajib lengkap
    */
-  test('TC - 04 - 02: Validasi tombol Cari tetap disabled jika Jenis Agunan belum dipilih', async ({ page }, testInfo) => {
-    const tc = tcData.get('TC - 04 - 02');
+  test('TC-4889-02/03: Tombol Cari disabled tanpa Jenis Agunan, aktif jika kriteria wajib lengkap', async ({ page }, testInfo) => {
+    const tc = tcData.get('TC-4889-03');
     console.log(`Menjalankan: ${tc?.id} - ${tc?.title}`);
 
     const dialog = await openTambahAgunanModal(page);
 
-    // 1. Biarkan Jenis Agunan belum dipilih
-    // 2. Isi Nomor Bukti Pemilikan saja
-    const inputNomor = dialog.getByPlaceholder(/nomor/i).first();
-    await inputNomor.fill('12345/SHM/2026');
-
-    // 3. Tombol Cari wajib disabled
+    // 0. (TC-02) Hanya nomor bukti terisi, jenis kosong -> Cari disabled
     const btnCari = dialog.locator('button:has-text("Cari")').first();
+    await dialog.getByPlaceholder(/nomor/i).first().fill('12345/SHM/2026');
     await expect(btnCari).toBeDisabled();
-
-    // Eviden: Nomor bukti terisi tapi jenis agunan kosong -> tombol Cari tetap disabled
-    await testInfo.attach('Eviden TC-04-02: Nomor Bukti Terisi, Jenis Agunan Kosong, Cari Tetap Disabled', {
+    await testInfo.attach('Eviden TC-4889-02: Nomor Bukti Terisi, Jenis Agunan Kosong, Cari Tetap Disabled', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
-
-    // Tutup dialog
-    await closeDialogSafely(page);
-  });
-
-  /**
-   * TC - 04 - 03: Validasi Pencarian ketika Seluruh Field Optional Kosong
-   */
-  test('TC - 04 - 03: Validasi tombol Cari aktif ketika hanya kriteria wajib yang terisi', async ({ page }, testInfo) => {
-    const tc = tcData.get('TC - 04 - 03');
-    console.log(`Menjalankan: ${tc?.id} - ${tc?.title}`);
-
-    const dialog = await openTambahAgunanModal(page);
 
     // 1. Pilih Jenis Agunan
     await dialog.getByText(/Pilih jenis agunan/i).first().click();
@@ -195,16 +181,14 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
     await listbox.locator('li button').first().waitFor({ timeout: 15000 });
     await listbox.locator('li:not(.sticky) button').first().click();
 
-    // 2. Isi Nomor Bukti Pemilikan
-    const inputNomor = dialog.getByPlaceholder(/nomor/i).first();
-    await inputNomor.fill('12345/SHM/2026');
+    // 2. Isi ulang nomor (form bisa reset saat jenis berubah)
+    await dialog.getByPlaceholder(/nomor/i).first().fill('12345/SHM/2026');
 
     // 3. Tombol Cari wajib berubah menjadi aktif (Enabled)
-    const btnCari = dialog.locator('button:has-text("Cari")').first();
     await expect(btnCari).toBeEnabled({ timeout: 10000 });
 
     // Eviden: Field wajib lengkap -> tombol Cari aktif
-    await testInfo.attach('Eviden TC-04-03: Kriteria Wajib Lengkap & Tombol Cari Aktif', {
+    await testInfo.attach('Eviden TC-4889-03: Kriteria Wajib Lengkap & Tombol Cari Aktif', {
       body: await page.screenshot(),
       contentType: 'image/png'
     });
@@ -214,36 +198,16 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
   });
 
   /**
-   * TC - 04 - 05: Validasi Tombol Tambah Agunan Baru Sebelum Pencarian
+   * TC-4889-05 + TC-4889-06: Validasi Tambah Agunan Baru ketika Hasil Pencarian Kosong
    */
-  test('TC - 04 - 05: Tombol Tambah Agunan Baru tidak muncul sebelum dilakukan pencarian', async ({ page }, testInfo) => {
-    const tc = tcData.get('TC - 04 - 05');
+  test('TC-4889-05/06: Tombol Agunan Baru tidak ada sebelum Cari; muncul saat data tidak ditemukan di CLS', async ({ page }, testInfo) => {
+    const tc = tcData.get('TC-4889-06');
     console.log(`Menjalankan: ${tc?.id} - ${tc?.title}`);
 
     const dialog = await openTambahAgunanModal(page);
 
-    // Sebelum klik Cari, tombol "+ Agunan Baru" tidak boleh ada di dialog
-    const btnAgunanBaru = dialog.locator('button, [role="button"]').filter({ hasText: /Agunan Baru/i });
-    await expect(btnAgunanBaru).toHaveCount(0);
-
-    // Eviden: Tombol Tambah Agunan Baru tidak muncul sebelum pencarian
-    await testInfo.attach('Eviden TC-04-05: Tombol Agunan Baru Belum Muncul Sebelum Cari', {
-      body: await page.screenshot(),
-      contentType: 'image/png'
-    });
-
-    // Tutup dialog
-    await closeDialogSafely(page);
-  });
-
-  /**
-   * TC - 04 - 06: Validasi Tambah Agunan Baru ketika Hasil Pencarian Kosong
-   */
-  test('TC - 04 - 06: Menampilkan opsi Tambah Agunan Baru saat data tidak ditemukan di CLS', async ({ page }, testInfo) => {
-    const tc = tcData.get('TC - 04 - 06');
-    console.log(`Menjalankan: ${tc?.id} - ${tc?.title}`);
-
-    const dialog = await openTambahAgunanModal(page);
+    // 0. (TC-05) Sebelum Cari, tombol "+ Agunan Baru" tidak ada
+    await expect(dialog.locator('button, [role="button"]').filter({ hasText: /Agunan Baru/i })).toHaveCount(0);
 
     // 1. Pilih jenis agunan
     await dialog.getByText(/Pilih jenis agunan/i).first().click();
@@ -285,4 +249,41 @@ test.describe('S2CML-4889: Modul 1 - Search Agunan Eksisting vs Baru', () => {
     // Modal sengaja tidak ditutup manual agar screenshot otomatis Playwright (test-finished.png)
     // juga tetap menampilkan modal dalam kondisi terbuka dengan hasil pencarian dan tombol "+ Agunan Baru".
   });
+
+  /**
+   * TC-4889-09: Sistem memblokir reuse agunan existing dengan Paripasu = N
+   * Data uji: fixtures/Data Agunan CLS - Testing LAMOS.xlsx, sheet "Vehicle" > NON PARIPASU
+   * (CLSA202607274780, nomor COL-2026-501, jenis Kendaraan).
+   */
+  test('TC-4889-09: Reuse agunan existing Paripasu = N diblokir', async ({ page }, testInfo) => {
+    const dialog = await openTambahAgunanModal(page);
+
+    await dialog.getByText(/Pilih jenis agunan/i).first().click();
+    const listbox = page.locator('[role="listbox"]:visible').first();
+    await listbox.locator('li button').first().waitFor({ timeout: 15000 });
+    await listbox.locator('li:not(.sticky) button').filter({ hasText: /Kendaraan|Mobil|Motor/i }).first().click();
+    await dialog.getByPlaceholder(/nomor/i).first().fill('COL-2026-501');
+
+    const btnCari = dialog.locator('button:has-text("Cari")').first();
+    await expect(btnCari).toBeEnabled({ timeout: 10000 });
+    await btnCari.click();
+
+    const kartu = dialog.getByText(/COL-2026-501|CLSA202607274780/).first();
+    const ada = await kartu.waitFor({ timeout: 15000 }).then(() => true, () => false);
+    test.skip(!ada,
+      '[GAP DATA CLS] Agunan Paripasu = N (COL-2026-501) tidak ditemukan di SIT.');
+    await testInfo.attach('Eviden TC-4889-09: Hasil Pencarian Agunan Paripasu = N', {
+      body: await page.screenshot(), contentType: 'image/png'
+    });
+
+    await kartu.click();
+    // Blokir: banner merah muncul dan tombol Lanjutkan tidak aktif.
+    await expect(dialog.getByText(/tidak bisa digunakan/i)).toBeVisible({ timeout: 45000 });
+    await testInfo.attach('Eviden TC-4889-09: Banner Blokir Agunan Paripasu = N', {
+      body: await page.screenshot(), contentType: 'image/png'
+    });
+    const btnLanjut = page.locator('button:visible').filter({ hasText: /^\s*Lanjutkan\s*$/ });
+    if (await btnLanjut.count()) await expect(btnLanjut.first()).toBeDisabled();
+  });
 });
+}

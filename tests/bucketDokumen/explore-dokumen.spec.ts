@@ -9,7 +9,7 @@ import { LoginPage } from '../../pages/LoginPage';
  * Output: explore-output/dokumen-tree.json
  */
 const TARGET_URL = (process.env.EXPLORE_URL
-  || 'https://los-fe-coreloan-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual')
+  || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual')
   .replace(/bucket=[^&]+/, 'bucket=dokumen');
 const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output';
 

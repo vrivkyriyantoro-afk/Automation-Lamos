@@ -12,7 +12,7 @@ test_cases = [
         'id': 'TC-4890-01',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Navigasi Stepper & Indikator',
-        'title': 'Default Step saat Form Terbuka',
+        'title': 'Validasi Default Step saat Form Terbuka',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Modal form Tambah Agunan Baru terbuka',
@@ -24,7 +24,7 @@ test_cases = [
         'id': 'TC-4890-02',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Navigasi Stepper & Indikator',
-        'title': 'Struktur 3-Step Side Navigation',
+        'title': 'Validasi Struktur 3-Step Side Navigation',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Modal form Tambah Agunan Baru terbuka',
@@ -36,7 +36,7 @@ test_cases = [
         'id': 'TC-4890-03',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Navigasi Stepper & Indikator',
-        'title': 'Navigasi Paralel / Bebas Antar Step',
+        'title': 'Validasi Navigasi Paralel / Bebas Antar Step',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Step 1 belum diisi lengkap',
@@ -48,7 +48,7 @@ test_cases = [
         'id': 'TC-4890-04',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Navigasi Stepper & Indikator',
-        'title': 'Indikator Berubah Jadi "Lengkap"',
+        'title': 'Validasi Indikator Berubah Jadi "Lengkap"',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Berada di Step 1',
@@ -60,7 +60,7 @@ test_cases = [
         'id': 'TC-4890-05',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Navigasi Stepper & Indikator',
-        'title': 'Form Tetap Dapat Diedit Saat Sudah "Lengkap"',
+        'title': 'Validasi Form Tetap Dapat Diedit Saat Sudah "Lengkap"',
         'type': 'Positive',
         'priority': 'Medium',
         'precondition': 'Step 1 berstatus "Lengkap"',
@@ -74,25 +74,25 @@ test_cases = [
         'id': 'TC-4890-06',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Gating Validasi Bucket Identitas',
-        'title': 'Akses Step 3 saat Bucket Identitas Belum Lengkap',
+        'title': 'Validasi Akses Step 3 saat Bucket Identitas Belum Lengkap',
         'type': 'Negative',
         'priority': 'Critical',
         'precondition': 'Tab Identitas dan Pengecekan di aplikasi berstatus "Belum Lengkap" / not locked',
         'steps': '1. Masuk ke modal Tambah Agunan\n2. Klik Step 3 (Informasi kepemilikan) pada side-nav',
         'expected': 'Sistem memunculkan dialog / modal error peringatan bahwa user tidak dapat mengakses/melanjutkan step ini sebelum Bucket Identitas dan Pengecekan selesai (Lengkap). Form Step 3 diblokir.',
-        'reference': 'Jira AC: Step Form Informasi Kepemilikan (Tidak Lengkap) & CSV TC-04-62'
+        'reference': 'Jira AC: Step Form Informasi Kepemilikan (Tidak Lengkap) & CSV TC-4889-62'
     },
     {
         'id': 'TC-4890-07',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Gating Validasi Bucket Identitas',
-        'title': 'Akses Step 3 saat Bucket Identitas Lengkap',
+        'title': 'Validasi Akses Step 3 saat Bucket Identitas Lengkap',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Tab Identitas dan Pengecekan berstatus "Lengkap" (centang hijau)',
         'steps': '1. Masuk ke modal Tambah Agunan\n2. Klik Step 3 (Informasi kepemilikan)',
         'expected': 'Step 3 berhasil terbuka dan memuat form kategori pemilik agunan sesuai profil debitur.',
-        'reference': 'Jira AC: Step Form Informasi Kepemilikan (Lengkap) & CSV TC-04-67'
+        'reference': 'Jira AC: Step Form Informasi Kepemilikan (Lengkap) & CSV TC-4889-67'
     },
 
     # ─── KELOMPOK 3: BATASAN MAKSIMAL AGUNAN ──────────────────────────────────
@@ -114,7 +114,7 @@ test_cases = [
         'id': 'TC-4890-09',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Simpan Sebagai Draft',
-        'title': 'Simpan Draft dengan Form Parsial (Bypass Mandatory)',
+        'title': 'Validasi Simpan Draft dengan Form Parsial (Bypass Mandatory)',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Berada di Step 1, baru mengisi 1 atau 2 field (sebagian besar mandatory masih kosong)',
@@ -126,7 +126,7 @@ test_cases = [
         'id': 'TC-4890-10',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Simpan Sebagai Draft',
-        'title': 'Retensi Data Draft setelah Modal Ditutup',
+        'title': 'Validasi Retensi Data Draft setelah Modal Ditutup',
         'type': 'Positive',
         'priority': 'High',
         'precondition': 'Data draft telah tersimpan',
@@ -140,7 +140,7 @@ test_cases = [
         'id': 'TC-4890-11',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Tombol Simpan & Final Submission',
-        'title': 'Tombol Simpan Disabled saat Mandatory Belum Lengkap',
+        'title': 'Validasi Tombol Simpan Disabled saat Mandatory Belum Lengkap',
         'type': 'Negative',
         'priority': 'High',
         'precondition': 'Satu atau lebih field mandatory pada Step 1/2/3 masih kosong',
@@ -158,13 +158,13 @@ test_cases = [
         'precondition': 'Ada field salah format / belum diisi saat mencoba submit',
         'steps': '1. Coba lakukan klik / submit Simpan',
         'expected': 'Sistem memblokir proses submit, menampilkan notifikasi merah / toast berisi daftar field yang belum lengkap / salah (incomplete form error).',
-        'reference': 'Jira AC: Fail to submit final & CSV TC-04-64, 65'
+        'reference': 'Jira AC: Fail to submit final & CSV TC-4889-64, 65 [PERLU KONFIRMASI BA: AC tombol Simpan ambigu, bentrok dengan TC-11]'
     },
     {
         'id': 'TC-4890-13',
         'debtor_type': 'Perorangan & Badan Usaha',
         'group': 'Tombol Simpan & Final Submission',
-        'title': 'Submit Final Berhasil saat Seluruh 3 Step Lengkap',
+        'title': 'Validasi Submit Final Berhasil saat Seluruh 3 Step Lengkap',
         'type': 'Positive',
         'priority': 'Critical',
         'precondition': 'Semua field mandatory pada Step 1, Step 2, dan Step 3 telah terisi valid (indikator ketiga step berstatus Lengkap)',
@@ -173,157 +173,44 @@ test_cases = [
         'reference': 'Jira AC: Successfully submit final'
     },
 
-    # ─── KELOMPOK 6: ATURAN BISNIS & DATAPOINTS SPESIFIK ─────────────────────
+    # ─── KELOMPOK 6: GAP COVERAGE AC (DRAFT ANY STEP & METODE ENTRI) ─────────
     {
         'id': 'TC-4890-14',
         'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Aturan Bisnis & Datapoints',
-        'title': 'Default Tipe Penilaian saat LPA = "Tidak"',
+        'group': 'Simpan Sebagai Draft',
+        'title': 'Validasi Simpan Draft dari Step 2 dan Step 3 (Any Step)',
         'type': 'Positive',
-        'priority': 'Medium',
-        'precondition': 'Berada di Step 1 (Penilaian Agunan)',
-        'steps': '1. Pada radio "Apakah LPA sudah tersedia?", pilih Tidak',
-        'expected': 'Nilai input dropdown Tipe Penilaian otomatis ter-set default menjadi "Internal".',
-        'reference': 'Jira Linked Issue: S2CML-6756'
+        'priority': 'High',
+        'precondition': 'Modal Tambah Agunan terbuka, field mandatory sebagian besar masih kosong',
+        'steps': '1. Pindah ke Step 2, isi 1 field, klik "Simpan sebagai draft"\n2. Pindah ke Step 3 (Bucket Identitas Lengkap), isi 1 field, klik "Simpan sebagai draft"',
+        'expected': 'Pada kedua step sistem tidak memvalidasi field kosong dan menyimpan draft.',
+        'reference': 'Jira AC: Save to Draft (any step)'
     },
     {
         'id': 'TC-4890-15',
         'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Aturan Bisnis & Datapoints',
-        'title': 'Render Dinamis Step 2 (Data Tambahan Agunan) Sesuai Segmen',
+        'group': 'Simpan Sebagai Draft',
+        'title': 'Validasi Teks Notifikasi Draft dan Modal Dapat Ditutup',
         'type': 'Positive',
-        'priority': 'High',
-        'precondition': 'Step 1 memilih Jenis Agunan tertentu',
-        'steps': '1. Bandingkan form Step 2 antara jenis Housing vs Vehicle vs Cash Collateral',
-        'expected': 'Form Step 2 memuat komponen spesifik:\n- Housing: data sertifikat/IMB/NJOP.\n- Kendaraan: No Rangka/Mesin/BPKB.\n- Cash: CIF, Rekening, Blokir.',
-        'reference': 'Jira AC & S2WP-4880 & Excel Baris 112'
+        'priority': 'Medium',
+        'precondition': 'Form terisi sebagian',
+        'steps': '1. Klik "Simpan sebagai draft"\n2. Periksa teks notifikasi\n3. Tutup modal',
+        'expected': 'Notifikasi persis "Draft Saved Successfully". Modal bisa ditutup tanpa kehilangan progres.',
+        'reference': 'Jira AC: Save to Draft'
     },
-
-    # ─── KELOMPOK 7: SPESIFIK DEBITUR PERORANGAN (INDIVIDUAL) ────────────────
     {
         'id': 'TC-4890-16',
-        'debtor_type': 'Perorangan',
-        'group': 'Spesifik Debitur Perorangan',
-        'title': 'Step 3: Kategori Pemilik "010 - Pasangan" pada Debitur Belum Menikah',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Debitur perorangan berstatus perkawinan "Belum Menikah" di Bucket Identitas (ID: 01M4F7TNSCSHEDB5G3WTSP7HDY)',
-        'steps': '1. Buka Step 3: Informasi Kepemilikan\n2. Buka dropdown Kategori Pemilik Agunan\n3. Periksa ketersediaan opsi 010 - Pasangan peminjam',
-        'expected': 'Opsi "010 - Pasangan peminjam" tidak ditampilkan atau jika dipilih memicu pesan validasi bahwa status debitur belum menikah.',
-        'reference': 'CSV TC-04-75 & Excel Business Rules'
-    },
-    {
-        'id': 'TC-4890-17',
-        'debtor_type': 'Perorangan',
-        'group': 'Spesifik Debitur Perorangan',
-        'title': 'Step 3: Kategori Pemilik "009 - Penjamin" saat Data Penjamin Belum Ada',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Debitur perorangan belum memiliki data penjamin di Bucket Identitas',
-        'steps': '1. Buka Step 3: Informasi Kepemilikan\n2. Pilih Kategori Pemilik "009 - Penjamin (PG)"\n3. Periksa dropdown pilihan Penjamin',
-        'expected': 'Sistem menampilkan indikasi/pesan validasi bahwa data penjamin perorangan belum terdaftar pada pengajuan debitur ini.',
-        'reference': 'CSV TC-04-72, 73 & Excel'
-    },
-
-    # ─── KELOMPOK 8: SPESIFIK DEBITUR BADAN USAHA (CORPORATE) ─────────────────
-    {
-        'id': 'TC-4890-BU-01',
-        'debtor_type': 'Badan Usaha',
-        'group': 'Spesifik Debitur Badan Usaha',
-        'title': 'Step 3: Kategori Pemilik Perusahaan (006 - Pengurus & 007 - Pemilik)',
+        'debtor_type': 'Perorangan & Badan Usaha',
+        'group': 'Metode Entri Agunan',
+        'title': 'Validasi Form 3-Step Tampil setelah Pilih Metode New / Existing Collateral',
         'type': 'Positive',
         'priority': 'High',
-        'precondition': 'Debitur berjenis Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ, debtorType=business)',
-        'steps': '1. Buka modal Agunan pada debitur Badan Usaha\n2. Buka Step 3: Informasi Kepemilikan\n3. Buka dropdown Kategori Pemilik Agunan',
-        'expected': 'Dropdown Kategori Pemilik memuat opsi khusus entitas bisnis: "006 - Pengurus perusahaan" dan "007 - Pemilik perusahaan", serta tidak menampilkan opsi pasangan perorangan.',
-        'reference': 'CSV TC-04-79, 80, 81 & Excel'
-    },
-    {
-        'id': 'TC-4890-BU-02',
-        'debtor_type': 'Badan Usaha',
-        'group': 'Spesifik Debitur Badan Usaha',
-        'title': 'Step 3: Kategori 003 - Debitur Badan Usaha Mapping NPWP & Legalitas',
-        'type': 'Positive',
-        'priority': 'High',
-        'precondition': 'Debitur Badan Usaha (ID: 01M482PRSVH5ZMTVZX5QH0VDNZ)',
-        'steps': '1. Pada Step 3, pilih Kategori Pemilik "003 - Debitur (Badan Usaha)"',
-        'expected': 'Sistem otomatis memetakan nama badan usaha, NPWP, dan nomor legalitas perusahaan dari Bucket Identitas Badan Usaha ke form kepemilikan agunan.',
-        'reference': 'CSV TC-04-81, 82 & Excel'
-    },
-    {
-        'id': 'TC-4890-BU-03',
-        'debtor_type': 'Badan Usaha',
-        'group': 'Spesifik Debitur Badan Usaha',
-        'title': 'Step 3: Kategori 006 - Pengurus Tanpa Data Pengurus Terdaftar',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Debitur Badan Usaha yang belum memiliki pengurus terdaftar di Bucket Identitas',
-        'steps': '1. Pilih Kategori Pemilik "006 - Pengurus perusahaan"\n2. Periksa dropdown pilihan Pengurus',
-        'expected': 'Sistem memunculkan alert / warning bahwa daftar pengurus perusahaan belum diinput pada Bucket Identitas.',
-        'reference': 'CSV TC-04-79 edge case & Excel'
+        'precondition': 'Halaman Data Agunan, kuota belum penuh',
+        'steps': '1. Klik + Agunan\n2. Pilih "New Collateral"\n3. Ulangi dengan "Existing Collateral from CLS"',
+        'expected': 'Untuk kedua metode form 3-step tampil dengan default Step 1 Informasi Umum Agunan.',
+        'reference': 'Jira AC: Step of entry data agunan'
     },
 
-    # ─── KELOMPOK 9: NEGATIVE & FORM VALIDATION RULES (UMUM) ─────────────────
-    {
-        'id': 'TC-4890-18',
-        'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Negative Form & Business Logic',
-        'title': 'Step 2: Pengecekan CIF Cash Collateral Tidak Terdaftar',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Form Step 2 Agunan Cash Collateral, Agunan Tersimpan di Bank Sinarmas = Ya',
-        'steps': '1. Masukkan nomor CIF fiktif (misal: 9999999999)\n2. Klik tombol "Cek"',
-        'expected': 'Sistem menampilkan ikon silang merah "CIF tidak ditemukan", field rekening tetap terkunci, dan tombol Simpan diblokir.',
-        'reference': 'CSV TC-04-58 & Excel Baris 112'
-    },
-    {
-        'id': 'TC-4890-19',
-        'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Negative Form & Business Logic',
-        'title': 'Step 2: Nominal Cash Collateral Bernilai 0 atau Minus',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Form Step 2 Agunan Cash Collateral (Giro/Tabungan/Deposito)',
-        'steps': '1. Isi field Nominal Agunan dengan angka 0 atau nilai negatif\n2. Blur field / klik luar',
-        'expected': 'Muncul alert/pesan validasi error "Nominal agunan harus lebih besar dari 0" dan tombol Simpan tetap disabled.',
-        'reference': 'Excel Baris 116 & Form Validation Rules'
-    },
-    {
-        'id': 'TC-4890-20',
-        'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Negative Form & Business Logic',
-        'title': 'Step 2: Tanggal Berakhir Sertifikat Tanah/Bangunan Kadaluarsa',
-        'type': 'Negative',
-        'priority': 'Medium',
-        'precondition': 'Form Step 2 Agunan Housing / Tanah Bangunan dengan sertifikat berjangka (SHGB/HGB)',
-        'steps': '1. Isi field Tanggal Berakhir Sertifikat dengan tanggal di masa lalu (misal: 01/01/2020)',
-        'expected': 'Sistem menampilkan validasi error bahwa tanggal berakhir sertifikat tidak boleh lebih kecil dari tanggal saat ini (kadaluarsa).',
-        'reference': 'Excel Data Agunan & Validation Rules'
-    },
-    {
-        'id': 'TC-4890-21',
-        'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Negative Form & Business Logic',
-        'title': 'Step 2: Luas Tanah / Bangunan Diisi Angka 0',
-        'type': 'Negative',
-        'priority': 'Medium',
-        'precondition': 'Form Step 2 Agunan Housing',
-        'steps': '1. Isi field Luas Tanah atau Luas Bangunan dengan angka 0\n2. Blur field',
-        'expected': 'Sistem memicu error validasi "Luas tanah/bangunan minimal 1 m² / tidak boleh 0".',
-        'reference': 'Form Data Agunan Validation'
-    },
-    {
-        'id': 'TC-4890-22',
-        'debtor_type': 'Perorangan & Badan Usaha',
-        'group': 'Negative Form & Business Logic',
-        'title': 'Step 1: Nilai Agunan Wajar/NJOP Bernilai 0 saat LPA Tersedia',
-        'type': 'Negative',
-        'priority': 'High',
-        'precondition': 'Step 1 (Penilaian Agunan), Apakah LPA sudah tersedia = Ya',
-        'steps': '1. Kosongkan atau isi field Nilai Agunan Wajar/NJOP dengan 0\n2. Blur field',
-        'expected': 'Sistem memvalidasi kolom mandatory tidak boleh 0/kosong dan tombol Simpan tetap disabled.',
-        'reference': 'Excel Baris 85 & CSV TC-04-44'
-    }
 ]
 
 headers = ['Test Case ID', 'Tipe Debitur', 'Kelompok / Modul', 'Judul Skenario', 'Tipe', 'Prioritas', 'Prekondisi', 'Langkah Pengujian', 'Expected Result', 'Referensi Sumber']
