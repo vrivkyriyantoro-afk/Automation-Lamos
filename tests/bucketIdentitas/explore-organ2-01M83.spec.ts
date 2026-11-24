@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm } from '../../pages/buckets/identitas/PenjaminForms';
 
 // Probe READ-ONLY #2: bandingkan urutan (A) langsung klik organ vs (B) centang radio "Perseorangan" dulu, lalu klik organ.
 // Modal selalu dibatalkan, tidak ada yang disimpan.

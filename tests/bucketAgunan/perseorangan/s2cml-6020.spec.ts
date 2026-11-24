@@ -1,6 +1,6 @@
 import { test, expect, Page, TestInfo } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * Test Suite: S2CML-6020 - [BE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan

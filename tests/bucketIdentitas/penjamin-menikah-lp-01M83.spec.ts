@@ -1,9 +1,9 @@
 import { test, expect, Page } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm, PersonalGuaranteeData, SpouseData } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm, PersonalGuaranteeData, SpouseData } from '../../pages/buckets/identitas/PenjaminForms';
 
 /**
  * Dua penjamin perorangan Menikah (laki-laki & perempuan) beserta pasangan.

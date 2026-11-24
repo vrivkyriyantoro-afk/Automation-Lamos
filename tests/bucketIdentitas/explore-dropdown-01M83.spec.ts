@@ -1,10 +1,10 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPribadiTambahanSection } from '../../pages/bucketIdentitas/DataPribadiTambahanSection';
-import { DataPekerjaanKeuanganSection } from '../../pages/bucketIdentitas/DataPekerjaanKeuanganSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPribadiTambahanSection } from '../../pages/buckets/identitas/DataPribadiTambahanSection';
+import { DataPekerjaanKeuanganSection } from '../../pages/buckets/identitas/DataPekerjaanKeuanganSection';
 
 // Probe READ-ONLY: dump struktur combobox & field 'Pengalaman' di tiga section (tanpa mengisi/menyimpan)
 const APP_ID = process.env.APPLICATION_ID_IDENTITAS_LENGKAP || '01M83AP5FKPHB1D3E2QS8P015Z';

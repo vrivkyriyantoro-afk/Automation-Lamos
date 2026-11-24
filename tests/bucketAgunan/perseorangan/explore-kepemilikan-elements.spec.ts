@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 const DEFAULT_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const TARGET_URL = `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${DEFAULT_APP_ID}/create?bucket=agunan&debtorType=individual`;

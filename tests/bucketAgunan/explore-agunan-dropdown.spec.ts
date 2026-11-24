@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 /**
  * Probe read-only: daftar lengkap opsi "Jenis agunan" di modal "+ Agunan" (scroll listbox sampai habis).

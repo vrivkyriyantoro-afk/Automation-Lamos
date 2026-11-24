@@ -1,6 +1,6 @@
 import { test, expect, Page, Locator } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 / S2CML-4890 - Modul 7: Data Tambahan Agunan (Perseorangan)

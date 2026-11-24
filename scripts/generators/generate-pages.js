@@ -18,15 +18,15 @@ const ONLY = (process.argv.find(a => a.startsWith('--only=')) || '').replace('--
 
 /** bucket id -> folder. Bucket tanpa entri tidak di-generate. */
 const BUCKET_FOLDERS = {
-  identitas_pengecekan: 'bucketIdentitas',
-  struktur_kredit: 'bucketStrukturKredit',
-  penilaian_kelayakan: 'bucketPenilaianKelayakan',
-  data_usaha: 'bucketDataUsaha',
-  analisa_keuangan: 'bucketAnalisaKeuangan',
-  legal_risk_compliance: 'bucketLegalRiskCompliance',
-  covenant_tbo: 'bucketCovenantTBO',
-  penyimpangan_pihak_terkait: 'bucketPenyimpanganPihakTerkait',
-  catatan_anda: 'bucketCatatanAnda',
+  identitas_pengecekan: 'buckets/identitas',
+  struktur_kredit: 'buckets/struktur-kredit',
+  penilaian_kelayakan: 'buckets/penilaian-kelayakan',
+  data_usaha: 'buckets/data-usaha',
+  analisa_keuangan: 'buckets/analisa-keuangan',
+  legal_risk_compliance: 'buckets/legal-risk-compliance',
+  covenant_tbo: 'buckets/covenant-tbo',
+  penyimpangan_pihak_terkait: 'buckets/penyimpangan-pihak-terkait',
+  catatan_anda: 'buckets/catatan-anda',
   // collateral (Agunan): di-skip sementara
   // dokumen: ditulis manual dari explore-output/buckets/dokumen-tree.json
 };
@@ -229,8 +229,8 @@ function renderClass({ className, dataName, baseClass, bucket, title, sidebarTit
   lines.push(`// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari ${source}.`);
   lines.push(`// Boleh diedit manual; regenerate dengan --force akan menimpa file ini.`);
   lines.push(`import { ${rowGroups.length ? 'Locator, ' : ''}Page } from '@playwright/test';`);
-  lines.push(`import { ${baseClass}${baseClass === 'BucketSection' ? ', BucketId' : ''} } from '../components/BucketSection';`);
-  if (classes.length) lines.push(`import { ${classes.sort().join(', ')} } from '../components/FormControls';`);
+  lines.push(`import { ${baseClass}${baseClass === 'BucketSection' ? ', BucketId' : ''} } from '../../base/BucketSection';`);
+  if (classes.length) lines.push(`import { ${classes.sort().join(', ')} } from '../../controls/FormControls';`);
   lines.push('');
   for (const r of rowProps) renderRowClass(lines, r.rowClass, `${r.rowClass}Data`, r.g);
   if (props.length || rowProps.length) {

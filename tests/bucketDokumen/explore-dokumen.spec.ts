@@ -1,7 +1,7 @@
 import { test, Page } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 /**
  * Explorer read-only bucket Dokumen: memetakan pohon kategori -> sub-kategori -> slot dokumen

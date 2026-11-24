@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
 import {
   DataPenjaminForm, CorporateGuaranteeData, PengurusWniData, PengurusWnaData, PengurusBadanUsahaData,
   JenisKelamin, OrganBadanUsaha, JenisBadanUsaha,
-} from '../../pages/bucketIdentitas/PenjaminForms';
+} from '../../pages/buckets/identitas/PenjaminForms';
 import data from '../../fixtures/entities/penjamin-badan-usaha.json';
 
 /**

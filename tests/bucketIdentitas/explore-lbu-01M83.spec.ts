@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
 
 // Probe READ-ONLY: buka dropdown LBU (tanpa memilih), catat isi listbox + respons jaringan; baca nama pasangan di Data penjamin
 const APP_ID = process.env.APPLICATION_ID_IDENTITAS_LENGKAP || '01M83AP5FKPHB1D3E2QS8P015Z';

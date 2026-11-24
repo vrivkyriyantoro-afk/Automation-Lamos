@@ -138,7 +138,7 @@ Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas w
 
 ## 4. Prekondisi & Lingkungan Pengujian
 - **Lingkungan**: SIT (\`https://los-fe-lamos-sit.devs.banksinarmas.com/\`)
-- **Autentikasi**: SSO Kratos (\`pages/LoginPage.ts\`)
+- **Autentikasi**: SSO Kratos (\`pages/base/LoginPage.ts\`)
 - **Keamanan**: READ-ONLY saat eksplorasi awal.
 `;
   } else {

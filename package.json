@@ -22,7 +22,12 @@
     "figma:read": "node scripts/readers/read-figma.js",
     "atlassian:read": "node scripts/jira/read-atlassian.js",
     "test:ui": "playwright test --ui --project=chromium",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "bdd:gen": "bddgen -c playwright.bdd.config.ts",
+    "bdd:test": "bddgen -c playwright.bdd.config.ts && playwright test -c playwright.bdd.config.ts --project=chromium",
+    "bdd:test:headed": "bddgen -c playwright.bdd.config.ts && playwright test -c playwright.bdd.config.ts --project=chromium --headed",
+    "catalog:build": "node scripts/generators/build-catalog.js",
+    "catalog:check": "node scripts/generators/build-catalog.js --check"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +36,7 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.2",
-    "dotenv": "^18.0.5"
+    "dotenv": "^18.0.5",
+    "playwright-bdd": "^9.2.1"
   }
 }
-

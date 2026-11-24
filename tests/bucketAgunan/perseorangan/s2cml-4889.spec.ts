@@ -2,7 +2,7 @@ import { test, expect, Page } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
 import * as path from 'path';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Add Agunan/Collaterals Part 1

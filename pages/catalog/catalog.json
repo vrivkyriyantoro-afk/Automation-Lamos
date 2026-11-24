@@ -1,0 +1,3051 @@
+{
+  "note": "DIGENERATE oleh scripts/generators/build-catalog.js dari pages/buckets/**. Jangan edit manual.",
+  "controls": {
+    "TextInput": {
+      "type": "text",
+      "locator": "input[name=\"{k}\"], textarea[name=\"{k}\"]"
+    },
+    "CurrencyInput": {
+      "type": "currency",
+      "locator": "input[name=\"{k}\"]  (ketik digit, format ribuan otomatis)"
+    },
+    "DateInput": {
+      "type": "date",
+      "locator": "input[name=\"{k}\"]  (format \"DD MMM YYYY\", mis. \"01 Jan 1990\")"
+    },
+    "Dropdown": {
+      "type": "dropdown",
+      "locator": "[role=\"combobox\"][id^=\"{k}-r\"]  (opsi: #<id>-listbox li button)"
+    },
+    "RadioGroup": {
+      "type": "radio",
+      "locator": "getByRole(\"radiogroup\", { name: \"{k}\" })"
+    },
+    "FileUpload": {
+      "type": "file",
+      "locator": "input[type=\"file\"][id=\"{k}\"]"
+    },
+    "Checkbox": {
+      "type": "checkbox",
+      "locator": "[data-testid=\"checkbox-container\"] berlabel \"{k}\""
+    },
+    "RichTextEditor": {
+      "type": "richtext",
+      "locator": "[contenteditable=\"true\"][id=\"{k}\"]"
+    },
+    "CriteriaTable": {
+      "type": "table",
+      "locator": "table[data-testid=\"table\"]"
+    }
+  },
+  "buckets": {
+    "analisa-keuangan": [
+      {
+        "class": "AnalisaKebutuhanWorkingInvestmentNeedsRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/analisa-keuangan/AnalisaKebutuhanSection.ts",
+        "fields": [
+          {
+            "prop": "businessName",
+            "label": "businessName",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.businessName",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.businessName\"], textarea[name=\"workingInvestmentNeeds.{i}.businessName\"]",
+            "group": "WI need"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingAccountReceivable",
+            "label": "workingInvestment.beforeFinancing.accountReceivable",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accountReceivable",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accountReceivable\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingAccountReceivable",
+            "label": "workingInvestment.afterFinancing.accountReceivable",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accountReceivable",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accountReceivable\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingInventory",
+            "label": "workingInvestment.beforeFinancing.inventory",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.inventory",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.inventory\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingInventory",
+            "label": "workingInvestment.afterFinancing.inventory",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.inventory",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.inventory\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingAccountPayable",
+            "label": "workingInvestment.beforeFinancing.accountPayable",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accountPayable",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accountPayable\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingAccountPayable",
+            "label": "workingInvestment.afterFinancing.accountPayable",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accountPayable",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accountPayable\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingAccruedExpense",
+            "label": "workingInvestment.beforeFinancing.accruedExpense",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accruedExpense",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.accruedExpense\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingAccruedExpense",
+            "label": "workingInvestment.afterFinancing.accruedExpense",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accruedExpense",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.accruedExpense\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingWiNeedAmount",
+            "label": "workingInvestment.beforeFinancing.wiNeedAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.wiNeedAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.wiNeedAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingWiNeedAmount",
+            "label": "workingInvestment.afterFinancing.wiNeedAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.wiNeedAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.wiNeedAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingTotalBankFinancingAmount",
+            "label": "workingInvestment.beforeFinancing.totalBankFinancingAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.totalBankFinancingAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.totalBankFinancingAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingTotalBankFinancingAmount",
+            "label": "workingInvestment.afterFinancing.totalBankFinancingAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.totalBankFinancingAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.totalBankFinancingAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingTotalBankFinancingPercentage",
+            "label": "workingInvestment.beforeFinancing.totalBankFinancingPercentage",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.totalBankFinancingPercentage",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.totalBankFinancingPercentage\"], textarea[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.totalBankFinancingPercentage\"]",
+            "group": "WI need (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingTotalBankFinancingPercentage",
+            "label": "workingInvestment.afterFinancing.totalBankFinancingPercentage",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.totalBankFinancingPercentage",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.totalBankFinancingPercentage\"], textarea[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.totalBankFinancingPercentage\"]",
+            "group": "WI need (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingSelfFinancingAmount",
+            "label": "workingInvestment.beforeFinancing.selfFinancingAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.selfFinancingAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.selfFinancingAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingSelfFinancingAmount",
+            "label": "workingInvestment.afterFinancing.selfFinancingAmount",
+            "required": true,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.selfFinancingAmount",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.selfFinancingAmount\"]  (ketik digit, format ribuan otomatis)",
+            "group": "WI need (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "workingInvestmentBeforeFinancingSelfFinancingPercentage",
+            "label": "workingInvestment.beforeFinancing.selfFinancingPercentage",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.selfFinancingPercentage",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.selfFinancingPercentage\"], textarea[name=\"workingInvestmentNeeds.{i}.workingInvestment.beforeFinancing.selfFinancingPercentage\"]",
+            "group": "WI need (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "workingInvestmentAfterFinancingSelfFinancingPercentage",
+            "label": "workingInvestment.afterFinancing.selfFinancingPercentage",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.selfFinancingPercentage",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.selfFinancingPercentage\"], textarea[name=\"workingInvestmentNeeds.{i}.workingInvestment.afterFinancing.selfFinancingPercentage\"]",
+            "group": "WI need (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "wiNeedAnalysis",
+            "label": "Analisa WI need",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "workingInvestmentNeeds.{i}.wiNeedAnalysis",
+            "locator": "input[name=\"workingInvestmentNeeds.{i}.wiNeedAnalysis\"], textarea[name=\"workingInvestmentNeeds.{i}.wiNeedAnalysis\"]",
+            "group": "WI need"
+          }
+        ]
+      },
+      {
+        "class": "AnalisaKeuanganKemampuanBayarSection",
+        "kind": "section",
+        "bucketId": "analisa_keuangan",
+        "title": "Analisa keuangan & kemampuan bayar",
+        "sidebarTitle": "Analisa Keuangan & Kemampuan Bayar",
+        "file": "pages/buckets/analisa-keuangan/AnalisaKeuanganKemampuanBayarSection.ts",
+        "fields": [
+          {
+            "prop": "businessName",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessName",
+            "locator": "input[name=\"businessName\"], textarea[name=\"businessName\"]",
+            "group": ""
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingSales",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.sales",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.sales\"], textarea[name=\"profitAndLoss.beforeFinancing.sales\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingSales",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.sales",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.sales\"], textarea[name=\"profitAndLoss.afterFinancing.sales\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingCogs",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.cogs",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.cogs\"], textarea[name=\"profitAndLoss.beforeFinancing.cogs\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingCogs",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.cogs",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.cogs\"], textarea[name=\"profitAndLoss.afterFinancing.cogs\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingGrossProfit",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.grossProfit",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.grossProfit\"], textarea[name=\"profitAndLoss.beforeFinancing.grossProfit\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingGrossProfit",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.grossProfit",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.grossProfit\"], textarea[name=\"profitAndLoss.afterFinancing.grossProfit\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingOperatingExpense",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.operatingExpense",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.operatingExpense\"], textarea[name=\"profitAndLoss.beforeFinancing.operatingExpense\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingOperatingExpense",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.operatingExpense",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.operatingExpense\"], textarea[name=\"profitAndLoss.afterFinancing.operatingExpense\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingOperatingIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.operatingIncome",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.operatingIncome\"], textarea[name=\"profitAndLoss.beforeFinancing.operatingIncome\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingOperatingIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.operatingIncome",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.operatingIncome\"], textarea[name=\"profitAndLoss.afterFinancing.operatingIncome\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingTotalInterestAndInstallment",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.totalInterestAndInstallment",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.totalInterestAndInstallment\"], textarea[name=\"profitAndLoss.beforeFinancing.totalInterestAndInstallment\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingTotalInterestAndInstallment",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.totalInterestAndInstallment",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.totalInterestAndInstallment\"], textarea[name=\"profitAndLoss.afterFinancing.totalInterestAndInstallment\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingOtherExpense",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.otherExpense",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.otherExpense\"], textarea[name=\"profitAndLoss.beforeFinancing.otherExpense\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingOtherExpense",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.otherExpense",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.otherExpense\"], textarea[name=\"profitAndLoss.afterFinancing.otherExpense\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingOtherIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.otherIncome",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.otherIncome\"], textarea[name=\"profitAndLoss.beforeFinancing.otherIncome\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingOtherIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.otherIncome",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.otherIncome\"], textarea[name=\"profitAndLoss.afterFinancing.otherIncome\"]",
+            "group": "Laba rugi* satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossBeforeFinancingEarningBeforeTax",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.beforeFinancing.earningBeforeTax",
+            "locator": "input[name=\"profitAndLoss.beforeFinancing.earningBeforeTax\"], textarea[name=\"profitAndLoss.beforeFinancing.earningBeforeTax\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAfterFinancingEarningBeforeTax",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLoss.afterFinancing.earningBeforeTax",
+            "locator": "input[name=\"profitAndLoss.afterFinancing.earningBeforeTax\"], textarea[name=\"profitAndLoss.afterFinancing.earningBeforeTax\"]",
+            "group": "Laba rugi* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "profitAndLossAnalysis",
+            "label": "Analisa laba rugi",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "profitAndLossAnalysis",
+            "locator": "input[name=\"profitAndLossAnalysis\"], textarea[name=\"profitAndLossAnalysis\"]",
+            "group": "Laba rugi*"
+          },
+          {
+            "prop": "repaymentCapacityBeforeFinancingTotalInterestAndInstallment",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.beforeFinancing.totalInterestAndInstallment",
+            "locator": "input[name=\"repaymentCapacity.beforeFinancing.totalInterestAndInstallment\"], textarea[name=\"repaymentCapacity.beforeFinancing.totalInterestAndInstallment\"]",
+            "group": "RPC* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "repaymentCapacityAfterFinancingTotalInterestAndInstallment",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.afterFinancing.totalInterestAndInstallment",
+            "locator": "input[name=\"repaymentCapacity.afterFinancing.totalInterestAndInstallment\"], textarea[name=\"repaymentCapacity.afterFinancing.totalInterestAndInstallment\"]",
+            "group": "RPC* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "repaymentCapacityBeforeFinancingOperatingIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.beforeFinancing.operatingIncome",
+            "locator": "input[name=\"repaymentCapacity.beforeFinancing.operatingIncome\"], textarea[name=\"repaymentCapacity.beforeFinancing.operatingIncome\"]",
+            "group": "RPC* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "repaymentCapacityAfterFinancingOperatingIncome",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.afterFinancing.operatingIncome",
+            "locator": "input[name=\"repaymentCapacity.afterFinancing.operatingIncome\"], textarea[name=\"repaymentCapacity.afterFinancing.operatingIncome\"]",
+            "group": "RPC* (disabled saat explore / auto-fill) satuan: Rp"
+          },
+          {
+            "prop": "repaymentCapacityBeforeFinancingRpcRatio",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.beforeFinancing.rpcRatio",
+            "locator": "input[name=\"repaymentCapacity.beforeFinancing.rpcRatio\"], textarea[name=\"repaymentCapacity.beforeFinancing.rpcRatio\"]",
+            "group": "RPC* (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "repaymentCapacityAfterFinancingRpcRatio",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.afterFinancing.rpcRatio",
+            "locator": "input[name=\"repaymentCapacity.afterFinancing.rpcRatio\"], textarea[name=\"repaymentCapacity.afterFinancing.rpcRatio\"]",
+            "group": "RPC* (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "repaymentCapacityBeforeFinancingDscr",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.beforeFinancing.dscr",
+            "locator": "input[name=\"repaymentCapacity.beforeFinancing.dscr\"], textarea[name=\"repaymentCapacity.beforeFinancing.dscr\"]",
+            "group": "RPC* (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "repaymentCapacityAfterFinancingDscr",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "repaymentCapacity.afterFinancing.dscr",
+            "locator": "input[name=\"repaymentCapacity.afterFinancing.dscr\"], textarea[name=\"repaymentCapacity.afterFinancing.dscr\"]",
+            "group": "RPC* (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "rpcAnalysis",
+            "label": "Analisa RPC",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "rpcAnalysis",
+            "locator": "input[name=\"rpcAnalysis\"], textarea[name=\"rpcAnalysis\"]",
+            "group": "RPC*"
+          }
+        ]
+      },
+      {
+        "class": "AnalisaMutasiRekeningStatementDetailsRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/analisa-keuangan/AnalisaMutasiRekeningSection.ts",
+        "fields": [
+          {
+            "prop": "bankName",
+            "label": "bankName",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.bankName",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.bankName\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.bankName\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "accountNumber",
+            "label": "accountNumber",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.accountNumber",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.accountNumber\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.accountNumber\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "averageDebitAmount",
+            "label": "averageDebitAmount",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.averageDebitAmount",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.averageDebitAmount\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.averageDebitAmount\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "averageDebitFrequency",
+            "label": "averageDebitFrequency",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.averageDebitFrequency",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.averageDebitFrequency\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.averageDebitFrequency\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "averageCreditAmount",
+            "label": "averageCreditAmount",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.averageCreditAmount",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.averageCreditAmount\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.averageCreditAmount\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "averageCreditFrequency",
+            "label": "averageCreditFrequency",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.averageCreditFrequency",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.averageCreditFrequency\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.averageCreditFrequency\"]",
+            "group": "Mutasi rekening*"
+          },
+          {
+            "prop": "averageBalance",
+            "label": "averageBalance",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.0.statementDetails.{i}.averageBalance",
+            "locator": "input[name=\"mutasiRekening.0.statementDetails.{i}.averageBalance\"], textarea[name=\"mutasiRekening.0.statementDetails.{i}.averageBalance\"]",
+            "group": "Mutasi rekening*"
+          }
+        ]
+      },
+      {
+        "class": "AnalisaMutasiRekeningMutasiRekeningRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/analisa-keuangan/AnalisaMutasiRekeningSection.ts",
+        "fields": [
+          {
+            "prop": "businessName",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.{i}.businessName",
+            "locator": "input[name=\"mutasiRekening.{i}.businessName\"], textarea[name=\"mutasiRekening.{i}.businessName\"]",
+            "group": ""
+          },
+          {
+            "prop": "analysisSummary",
+            "label": "Analisa mutasi rekening",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mutasiRekening.{i}.analysisSummary",
+            "locator": "input[name=\"mutasiRekening.{i}.analysisSummary\"], textarea[name=\"mutasiRekening.{i}.analysisSummary\"]",
+            "group": "Mutasi rekening*"
+          }
+        ]
+      },
+      {
+        "class": "NeracaSection",
+        "kind": "section",
+        "bucketId": "analisa_keuangan",
+        "title": "Neraca",
+        "sidebarTitle": "Neraca",
+        "file": "pages/buckets/analisa-keuangan/NeracaSection.ts",
+        "fields": [
+          {
+            "prop": "name",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "name",
+            "locator": "input[name=\"name\"], textarea[name=\"name\"]",
+            "group": ""
+          },
+          {
+            "prop": "cashAndBank",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "cash_and_bank",
+            "locator": "input[name=\"cash_and_bank\"], textarea[name=\"cash_and_bank\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalCurrentAssets",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_current_assets",
+            "locator": "input[name=\"total_current_assets\"], textarea[name=\"total_current_assets\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalInventories",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_inventories",
+            "locator": "input[name=\"total_inventories\"], textarea[name=\"total_inventories\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalAssets",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_assets",
+            "locator": "input[name=\"total_assets\"], textarea[name=\"total_assets\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalCurrentLiabilities",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_current_liabilities",
+            "locator": "input[name=\"total_current_liabilities\"], textarea[name=\"total_current_liabilities\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalDebt",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_debt",
+            "locator": "input[name=\"total_debt\"], textarea[name=\"total_debt\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalEquity",
+            "label": "Nama usaha* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "total_equity",
+            "locator": "input[name=\"total_equity\"], textarea[name=\"total_equity\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "catatan-anda": [
+      {
+        "class": "CatatanAndaSection",
+        "kind": "section",
+        "bucketId": "catatan_anda",
+        "title": "Catatan Anda",
+        "sidebarTitle": "Catatan Anda",
+        "file": "pages/buckets/catatan-anda/CatatanAndaSection.ts",
+        "fields": [
+          {
+            "prop": "catatanPengajuan",
+            "label": "Catatan pengajuan",
+            "required": true,
+            "type": "richtext",
+            "control": "RichTextEditor",
+            "key": "rich-text-editor",
+            "locator": "[contenteditable=\"true\"][id=\"rich-text-editor\"]",
+            "group": ""
+          },
+          {
+            "prop": "attachmentFiles",
+            "label": "Lampiran (opsional) [file] accept: .pdf,.jpg,.jpeg,.png",
+            "required": false,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "attachmentFiles",
+            "locator": "input[type=\"file\"][id=\"attachmentFiles\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "covenant-tbo": [
+      {
+        "class": "CovenantSection",
+        "kind": "section",
+        "bucketId": "covenant_tbo",
+        "title": "Covenant",
+        "sidebarTitle": "Covenant",
+        "file": "pages/buckets/covenant-tbo/CovenantSection.ts",
+        "fields": [
+          {
+            "prop": "covenant",
+            "label": "Covenant",
+            "required": true,
+            "type": "richtext",
+            "control": "RichTextEditor",
+            "key": "rich-text-editor",
+            "locator": "[contenteditable=\"true\"][id=\"rich-text-editor\"]",
+            "group": "Lihat template covenant di sini"
+          }
+        ]
+      }
+    ],
+    "data-usaha": [
+      {
+        "class": "AspekUsahaListSupplierRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/AspekUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "name",
+            "label": "name",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "listSupplier.{i}.name",
+            "locator": "input[name=\"listSupplier.{i}.name\"], textarea[name=\"listSupplier.{i}.name\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "area",
+            "label": "area",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "listSupplier.{i}.area",
+            "locator": "input[name=\"listSupplier.{i}.area\"], textarea[name=\"listSupplier.{i}.area\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "supplierType",
+            "label": "supplierType",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "supplierType-{i}",
+            "locator": "[role=\"combobox\"][id^=\"supplierType-{i}-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          }
+        ]
+      },
+      {
+        "class": "AspekUsahaJenisRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/AspekUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "jenis",
+            "label": "Jenis resiko",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "jenis-{i}",
+            "locator": "[role=\"combobox\"][id^=\"jenis-{i}-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          }
+        ]
+      },
+      {
+        "class": "AspekUsahaTingkatRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/AspekUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "tingkat",
+            "label": "Tingkat resiko",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "tingkat-{i}",
+            "locator": "[role=\"combobox\"][id^=\"tingkat-{i}-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          }
+        ]
+      },
+      {
+        "class": "AspekUsahaAnalisaResikoRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/AspekUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "uraianDetail",
+            "label": "Uraian detail",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "analisaResiko.{i}.uraianDetail",
+            "locator": "input[name=\"analisaResiko.{i}.uraianDetail\"], textarea[name=\"analisaResiko.{i}.uraianDetail\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "mitigasi",
+            "label": "Mitigasi resiko",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "analisaResiko.{i}.mitigasi",
+            "locator": "input[name=\"analisaResiko.{i}.mitigasi\"], textarea[name=\"analisaResiko.{i}.mitigasi\"]",
+            "group": "List supplier"
+          }
+        ]
+      },
+      {
+        "class": "AspekUsahaSection",
+        "kind": "section",
+        "bucketId": "data_usaha",
+        "title": "Aspek Usaha",
+        "sidebarTitle": "Aspek usaha",
+        "file": "pages/buckets/data-usaha/AspekUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "name",
+            "label": "Nama Usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "name",
+            "locator": "input[name=\"name\"], textarea[name=\"name\"]",
+            "group": ""
+          },
+          {
+            "prop": "category",
+            "label": "Kategori usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "category",
+            "locator": "[role=\"combobox\"][id^=\"category-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "jenisProduk",
+            "label": "Jenis produk/jasa",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "jenisProduk",
+            "locator": "[role=\"combobox\"][id^=\"jenisProduk-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "statusUsahaSewa",
+            "label": "Status usaha sewa",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Status usaha sewa",
+            "locator": "getByRole(\"radiogroup\", { name: \"Status usaha sewa\" })",
+            "group": ""
+          },
+          {
+            "prop": "caraPemesananSupplier",
+            "label": "Cara pemesanan",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "caraPemesananSupplier",
+            "locator": "[role=\"combobox\"][id^=\"caraPemesananSupplier-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "caraPembayaranSupplier",
+            "label": "Cara pembayaran",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "caraPembayaranSupplier",
+            "locator": "[role=\"combobox\"][id^=\"caraPembayaranSupplier-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "jangkaCepatSupplier",
+            "label": "Paling cepat [text] satuan: hari",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "jangkaCepatSupplier",
+            "locator": "input[name=\"jangkaCepatSupplier\"], textarea[name=\"jangkaCepatSupplier\"]",
+            "group": ""
+          },
+          {
+            "prop": "jangkaLamaSupplier",
+            "label": "Paling lama [text] satuan: hari",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "jangkaLamaSupplier",
+            "locator": "input[name=\"jangkaLamaSupplier\"], textarea[name=\"jangkaLamaSupplier\"]",
+            "group": ""
+          },
+          {
+            "prop": "cashSupplier",
+            "label": "Cash [text] satuan: %",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "cashSupplier",
+            "locator": "input[name=\"cashSupplier\"], textarea[name=\"cashSupplier\"]",
+            "group": ""
+          },
+          {
+            "prop": "tempoSupplier",
+            "label": "Tempo [text] satuan: %",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "tempoSupplier",
+            "locator": "input[name=\"tempoSupplier\"], textarea[name=\"tempoSupplier\"]",
+            "group": ""
+          },
+          {
+            "prop": "skemaPembelianSupplier",
+            "label": "Skema pembelian ke supplier",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "skemaPembelianSupplier",
+            "locator": "input[name=\"skemaPembelianSupplier\"], textarea[name=\"skemaPembelianSupplier\"]",
+            "group": ""
+          },
+          {
+            "prop": "inventoryDays",
+            "label": "Inventory days on hand",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "inventoryDays",
+            "locator": "input[name=\"inventoryDays\"], textarea[name=\"inventoryDays\"]",
+            "group": "List supplier satuan: hari"
+          },
+          {
+            "prop": "detailInventory",
+            "label": "Detail inventory",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "detailInventory",
+            "locator": "input[name=\"detailInventory\"], textarea[name=\"detailInventory\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "tipeCustomerDebitur",
+            "label": "Tipe customer debitur",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "tipeCustomerDebitur",
+            "locator": "[role=\"combobox\"][id^=\"tipeCustomerDebitur-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "jumlahCustomer",
+            "label": "Jumlah customer",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "jumlahCustomer",
+            "locator": "input[name=\"jumlahCustomer\"], textarea[name=\"jumlahCustomer\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "penjualanCustomer",
+            "label": "Penjualan customer",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "penjualanCustomer",
+            "locator": "[role=\"combobox\"][id^=\"penjualanCustomer-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "caraPembayaranCustomer",
+            "label": "Cara pembayaran",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "caraPembayaranCustomer",
+            "locator": "[role=\"combobox\"][id^=\"caraPembayaranCustomer-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "jangkaCepatCustomer",
+            "label": "Paling cepat",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "jangkaCepatCustomer",
+            "locator": "input[name=\"jangkaCepatCustomer\"], textarea[name=\"jangkaCepatCustomer\"]",
+            "group": "List supplier satuan: hari"
+          },
+          {
+            "prop": "jangkaLamaCustomer",
+            "label": "Paling lama",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "jangkaLamaCustomer",
+            "locator": "input[name=\"jangkaLamaCustomer\"], textarea[name=\"jangkaLamaCustomer\"]",
+            "group": "List supplier satuan: hari"
+          },
+          {
+            "prop": "cashCustomer",
+            "label": "Cash",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "cashCustomer",
+            "locator": "input[name=\"cashCustomer\"], textarea[name=\"cashCustomer\"]",
+            "group": "List supplier satuan: %"
+          },
+          {
+            "prop": "tempoCustomer",
+            "label": "Tempo",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "tempoCustomer",
+            "locator": "input[name=\"tempoCustomer\"], textarea[name=\"tempoCustomer\"]",
+            "group": "List supplier satuan: %"
+          },
+          {
+            "prop": "skemaPenjualanCustomer",
+            "label": "Skema penjualan ke customer",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "skemaPenjualanCustomer",
+            "locator": "input[name=\"skemaPenjualanCustomer\"], textarea[name=\"skemaPenjualanCustomer\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "apakahAdaAspekProduksi",
+            "label": "Apakah ada aspek produksi",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah ada aspek produksi",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah ada aspek produksi\" })",
+            "group": "List supplier"
+          },
+          {
+            "prop": "sistemProduksiProduk",
+            "label": "Sistem produksi produk",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "sistemProduksiProduk",
+            "locator": "[role=\"combobox\"][id^=\"sistemProduksiProduk-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "namaBrand",
+            "label": "Nama brand/merk dagang debitur",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "namaBrand",
+            "locator": "input[name=\"namaBrand\"], textarea[name=\"namaBrand\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "jenisBahanBaku",
+            "label": "Jenis bahan baku",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "jenisBahanBaku",
+            "locator": "[role=\"combobox\"][id^=\"jenisBahanBaku-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "adaBarangPengganti",
+            "label": "Ada barang pengganti",
+            "required": false,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Ada barang pengganti",
+            "locator": "getByRole(\"radiogroup\", { name: \"Ada barang pengganti\" })",
+            "group": "List supplier"
+          },
+          {
+            "prop": "ketersediaanBahanBaku",
+            "label": "Ketersediaan sumber bahan baku",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "ketersediaanBahanBaku",
+            "locator": "input[name=\"ketersediaanBahanBaku\"], textarea[name=\"ketersediaanBahanBaku\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "adaArmada",
+            "label": "Ada armada",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Ada armada",
+            "locator": "getByRole(\"radiogroup\", { name: \"Ada armada\" })",
+            "group": "List supplier"
+          },
+          {
+            "prop": "memilikiCabang",
+            "label": "Memiliki cabang?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Memiliki cabang?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Memiliki cabang?\" })",
+            "group": "List supplier"
+          },
+          {
+            "prop": "riwayatPerkembanganUsaha",
+            "label": "Riwayat perkembangan usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "riwayatPerkembanganUsaha",
+            "locator": "input[name=\"riwayatPerkembanganUsaha\"], textarea[name=\"riwayatPerkembanganUsaha\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "prospekUsahaMendatang",
+            "label": "Prospek usaha yang akan datang",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "prospekUsahaMendatang",
+            "locator": "[role=\"combobox\"][id^=\"prospekUsahaMendatang-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "rencanaPengembanganMendatang",
+            "label": "Rencana pengembangan usaha ke depan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "rencanaPengembanganMendatang",
+            "locator": "[role=\"combobox\"][id^=\"rencanaPengembanganMendatang-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "detailProspekUsaha",
+            "label": "Detail prospek usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "detailProspekUsaha",
+            "locator": "input[name=\"detailProspekUsaha\"], textarea[name=\"detailProspekUsaha\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "detailModusOperandi",
+            "label": "Detail modus operandi",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "detailModusOperandi",
+            "locator": "input[name=\"detailModusOperandi\"], textarea[name=\"detailModusOperandi\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "situasiMarket",
+            "label": "Situasi market",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "situasiMarket",
+            "locator": "[role=\"combobox\"][id^=\"situasiMarket-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "terdapatPeakLowSeason",
+            "label": "Terdapat peak/low season",
+            "required": false,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Terdapat peak/low season",
+            "locator": "getByRole(\"radiogroup\", { name: \"Terdapat peak/low season\" })",
+            "group": "List supplier"
+          },
+          {
+            "prop": "kompetitorKondisiPasar",
+            "label": "Kompetitor dan kondisi pasar",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "kompetitorKondisiPasar",
+            "locator": "[role=\"combobox\"][id^=\"kompetitorKondisiPasar-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "kompetitorTerbesar",
+            "label": "Kompetitor terbesar usaha debitur",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "kompetitorTerbesar",
+            "locator": "input[name=\"kompetitorTerbesar\"], textarea[name=\"kompetitorTerbesar\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "kelebihanUsahaDebiturKompetitor",
+            "label": "Kelebihan usaha debitur dibanding kompetitor sejenis",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "kelebihanUsahaDebiturKompetitor",
+            "locator": "input[name=\"kelebihanUsahaDebiturKompetitor\"], textarea[name=\"kelebihanUsahaDebiturKompetitor\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "strategiHadapiKompetitor",
+            "label": "Strategi menghadapi kompetitor (usaha sejenis)",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "strategiHadapiKompetitor",
+            "locator": "input[name=\"strategiHadapiKompetitor\"], textarea[name=\"strategiHadapiKompetitor\"]",
+            "group": "List supplier"
+          },
+          {
+            "prop": "pengaruhKebijakan",
+            "label": "Pengaruh kebijakan sosial, ekonomi, dan politik ke usaha",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "pengaruhKebijakan",
+            "locator": "[role=\"combobox\"][id^=\"pengaruhKebijakan-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "List supplier"
+          },
+          {
+            "prop": "adaKontrakProject",
+            "label": "Ada kontrak/project?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Ada kontrak/project?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Ada kontrak/project?\" })",
+            "group": "List supplier"
+          }
+        ]
+      },
+      {
+        "class": "InformasiBadanUsahaDataUsahaRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/InformasiBadanUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "name",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.name",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.name\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.name\"]",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "picName",
+            "label": "Nama PIC",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.picName",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.picName\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.picName\"]",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "kategori",
+            "label": "Kategori usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.kategori",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.kategori-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "jenisTempat",
+            "label": "Jenis tempat usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.jenisTempat",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.jenisTempat-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "bidang",
+            "label": "Bidang usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.bidang",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.bidang-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "segmen",
+            "label": "Segmen usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.segmen",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.segmen-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "sektorEkonomi",
+            "label": "Sektor ekonomi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.sektorEkonomi",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.sektorEkonomi-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha 80+ opsi, contoh: RUMAH TANGGA UNTUK PEMILIKAN RUMAH TINGGAL S.D. TIPE 21, RUMAH TANGGA UNTUK PEMILIKAN RUMAH TINGGAL TIPE DIATAS 21 S.D. 70, RUMAH TANGGA UNTUK PEMILIKAN RUMAH TINGGAL TIPE DIATAS 70"
+          },
+          {
+            "prop": "monthlyBusinessCapitalInvested",
+            "label": "Modal usaha per bulan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.monthlyBusinessCapitalInvested",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.monthlyBusinessCapitalInvested\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.monthlyBusinessCapitalInvested\"]",
+            "group": "Legalitas Usaha satuan: Rp"
+          },
+          {
+            "prop": "monthlyBusinessRevenue",
+            "label": "Omset usaha per bulan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.monthlyBusinessRevenue",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.monthlyBusinessRevenue\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.monthlyBusinessRevenue\"]",
+            "group": "Legalitas Usaha satuan: Rp"
+          },
+          {
+            "prop": "businessStartDate",
+            "label": "Tanggal mulai usaha",
+            "required": true,
+            "type": "date",
+            "control": "DateInput",
+            "key": "usahaArray.0.dataUsaha.{i}.businessStartDate",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.businessStartDate\"]  (format \"DD MMM YYYY\", mis. \"01 Jan 1990\")",
+            "group": "Legalitas Usaha format \"DD MMM YYYY\", mis. \"01 Jan 1990\""
+          },
+          {
+            "prop": "businessDurationOperation",
+            "label": "Lama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.businessDurationOperation",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.businessDurationOperation\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.businessDurationOperation\"]",
+            "group": "Legalitas Usaha satuan: bulan"
+          },
+          {
+            "prop": "totalEmployee",
+            "label": "Jumlah pekerja",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.totalEmployee",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.totalEmployee\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.totalEmployee\"]",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "businessOwnershipStatus",
+            "label": "Kepemilikan usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.businessOwnershipStatus",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.businessOwnershipStatus-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "physicalConditionPremises",
+            "label": "Kondisi tempat usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.physicalConditionPremises",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.physicalConditionPremises-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "accessibilityBusinessLocation",
+            "label": "Akses tempat usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.0.dataUsaha.{i}.accessibilityBusinessLocation",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.0.dataUsaha.{i}.accessibilityBusinessLocation-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "totalSupplier",
+            "label": "Jumlah supplier",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.totalSupplier",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.totalSupplier\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.totalSupplier\"]",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "durationWithSupplier",
+            "label": "Lama hubungan dengan supplier",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.0.dataUsaha.{i}.durationWithSupplier",
+            "locator": "input[name=\"usahaArray.0.dataUsaha.{i}.durationWithSupplier\"], textarea[name=\"usahaArray.0.dataUsaha.{i}.durationWithSupplier\"]",
+            "group": "Legalitas Usaha satuan: bulan"
+          }
+        ]
+      },
+      {
+        "class": "InformasiBadanUsahaUsahaArrayRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/data-usaha/InformasiBadanUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "bentukUsaha",
+            "label": "Bentuk Usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "usahaArray.{i}.bentukUsaha",
+            "locator": "[role=\"combobox\"][id^=\"usahaArray.{i}.bentukUsaha-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Informasi bentuk usaha"
+          },
+          {
+            "prop": "nomorIzinBerusaha",
+            "label": "Nomor Izin Berusaha (NIB)",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "usahaArray.{i}.nomorIzinBerusaha",
+            "locator": "input[name=\"usahaArray.{i}.nomorIzinBerusaha\"], textarea[name=\"usahaArray.{i}.nomorIzinBerusaha\"]",
+            "group": "Legalitas Usaha"
+          }
+        ]
+      },
+      {
+        "class": "InformasiBadanUsahaSection",
+        "kind": "section",
+        "bucketId": "data_usaha",
+        "title": "Informasi Badan Usaha",
+        "sidebarTitle": "Informasi badan usaha",
+        "file": "pages/buckets/data-usaha/InformasiBadanUsahaSection.ts",
+        "fields": [
+          {
+            "prop": "adaIzinLainnya",
+            "label": "Ada Izin Lainnya?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Ada Izin Lainnya?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Ada Izin Lainnya?\" })",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "apakahLokasiUsahaTetap",
+            "label": "Apakah lokasi usaha tetap?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah lokasi usaha tetap?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah lokasi usaha tetap?\" })",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "apakahStatusUsahaSewa",
+            "label": "Apakah status usaha sewa?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah status usaha sewa?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah status usaha sewa?\" })",
+            "group": "Legalitas Usaha"
+          },
+          {
+            "prop": "tempatUsahaMemilikiParkir",
+            "label": "Tempat usaha memiliki parkir?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Tempat usaha memiliki parkir?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Tempat usaha memiliki parkir?\" })",
+            "group": "Legalitas Usaha"
+          }
+        ]
+      },
+      {
+        "class": "TradeCheckingSection",
+        "kind": "section",
+        "bucketId": "data_usaha",
+        "title": "Trade checking",
+        "sidebarTitle": "Trade checking",
+        "file": "pages/buckets/data-usaha/TradeCheckingSection.ts",
+        "fields": [
+          {
+            "prop": "businessName",
+            "label": "Nama usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessName",
+            "locator": "input[name=\"businessName\"], textarea[name=\"businessName\"]",
+            "group": ""
+          },
+          {
+            "prop": "dateUi",
+            "label": "Tanggal dan waktu* [date] format \"DD MMM YYYY\", mis. \"01 Jan 1990\"",
+            "required": false,
+            "type": "date",
+            "control": "DateInput",
+            "key": "date_ui",
+            "locator": "input[name=\"date_ui\"]  (format \"DD MMM YYYY\", mis. \"01 Jan 1990\")",
+            "group": ""
+          },
+          {
+            "prop": "timeUi",
+            "label": "Tanggal dan waktu* [date] format \"DD MMM YYYY\", mis. \"01 Jan 1990\"",
+            "required": false,
+            "type": "date",
+            "control": "DateInput",
+            "key": "time_ui",
+            "locator": "input[name=\"time_ui\"]  (format \"DD MMM YYYY\", mis. \"01 Jan 1990\")",
+            "group": ""
+          },
+          {
+            "prop": "companyName",
+            "label": "Nama perusahaan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyName",
+            "locator": "input[name=\"companyName\"], textarea[name=\"companyName\"]",
+            "group": ""
+          },
+          {
+            "prop": "telephoneNumber",
+            "label": "Nomor telepon perusahaan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "telephoneNumber",
+            "locator": "input[name=\"telephoneNumber\"], textarea[name=\"telephoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "picName",
+            "label": "Nama PIC",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "picName",
+            "locator": "input[name=\"picName\"], textarea[name=\"picName\"]",
+            "group": ""
+          },
+          {
+            "prop": "picPhoneNumber",
+            "label": "Nomor HP PIC",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "picPhoneNumber",
+            "locator": "input[name=\"picPhoneNumber\"], textarea[name=\"picPhoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjRelationship",
+            "label": "Hubungan dengan debitur",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_relationship",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_relationship-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "apakahPicMemilikiRekeningSinarmas",
+            "label": "Apakah PIC memiliki rekening Sinarmas?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah PIC memiliki rekening Sinarmas?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah PIC memiliki rekening Sinarmas?\" })",
+            "group": "Informasi rekening Sinarmas"
+          },
+          {
+            "prop": "businessAddressAddress",
+            "label": "Alamat",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessAddress.address",
+            "locator": "input[name=\"businessAddress.address\"], textarea[name=\"businessAddress.address\"]",
+            "group": "Alamat perusahaan"
+          },
+          {
+            "prop": "businessAddressRt",
+            "label": "RT/RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessAddress.rt",
+            "locator": "input[name=\"businessAddress.rt\"], textarea[name=\"businessAddress.rt\"]",
+            "group": "Alamat perusahaan"
+          },
+          {
+            "prop": "businessAddressRw",
+            "label": "RT/RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessAddress.rw",
+            "locator": "input[name=\"businessAddress.rw\"], textarea[name=\"businessAddress.rw\"]",
+            "group": "Alamat perusahaan"
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjBusinessAddressProvince",
+            "label": "Provinsi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.province",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.province-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjBusinessAddressCity",
+            "label": "Kota/kabupaten",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.city",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.city-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjBusinessAddressDistrict",
+            "label": "Kecamatan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.district",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.district-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjBusinessAddressSubdistrict",
+            "label": "Kelurahan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.subdistrict",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_businessAddress.subdistrict-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "businessAddressPostalCode",
+            "label": "Kode pos",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "businessAddress.postalCode",
+            "locator": "input[name=\"businessAddress.postalCode\"], textarea[name=\"businessAddress.postalCode\"]",
+            "group": "Alamat perusahaan"
+          },
+          {
+            "prop": "trxAmount",
+            "label": "Nilai transaksi",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "trxAmount",
+            "locator": "input[name=\"trxAmount\"], textarea[name=\"trxAmount\"]",
+            "group": "Informasi transaksi"
+          },
+          {
+            "prop": "f01M4Dmbb9H3Fest6Eq626Cj6WjPaymentType",
+            "label": "Jenis pembayaran",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "01M4DMBB9H3FEST6EQ626CJ6WJ_paymentType",
+            "locator": "[role=\"combobox\"][id^=\"01M4DMBB9H3FEST6EQ626CJ6WJ_paymentType-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Informasi transaksi"
+          },
+          {
+            "prop": "top",
+            "label": "Term of payment (TOP)",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "top",
+            "locator": "input[name=\"top\"], textarea[name=\"top\"]",
+            "group": "Informasi transaksi satuan: hari"
+          },
+          {
+            "prop": "monthlyTrxVolume",
+            "label": "Volume transaski per bulan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "monthlyTrxVolume",
+            "locator": "input[name=\"monthlyTrxVolume\"], textarea[name=\"monthlyTrxVolume\"]",
+            "group": "Informasi transaksi"
+          },
+          {
+            "prop": "relationshipDuration",
+            "label": "Lama hubungan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "relationshipDuration",
+            "locator": "input[name=\"relationshipDuration\"], textarea[name=\"relationshipDuration\"]",
+            "group": "Lain-lain satuan: bulan"
+          },
+          {
+            "prop": "reference",
+            "label": "Referensi",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "reference",
+            "locator": "input[name=\"reference\"], textarea[name=\"reference\"]",
+            "group": "Lain-lain"
+          },
+          {
+            "prop": "adaInformasiNegatif",
+            "label": "Ada informasi negatif?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Ada informasi negatif?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Ada informasi negatif?\" })",
+            "group": "Lain-lain"
+          },
+          {
+            "prop": "otherInfo",
+            "label": "Informasi lainnya",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "otherInfo",
+            "locator": "input[name=\"otherInfo\"], textarea[name=\"otherInfo\"]",
+            "group": "Lain-lain"
+          }
+        ]
+      }
+    ],
+    "identitas": [
+      {
+        "class": "DataKontakDaruratSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Data kontak darurat",
+        "sidebarTitle": "Data kontak darurat",
+        "file": "pages/buckets/identitas/DataKontakDaruratSection.ts",
+        "fields": [
+          {
+            "prop": "name",
+            "label": "Nama lengkap",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "name",
+            "locator": "input[name=\"name\"], textarea[name=\"name\"]",
+            "group": ""
+          },
+          {
+            "prop": "relationship",
+            "label": "Hubungan keluarga",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "relationship",
+            "locator": "[role=\"combobox\"][id^=\"relationship-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "mobileNumber",
+            "label": "Nomor HP",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "mobileNumber",
+            "locator": "input[name=\"mobileNumber\"], textarea[name=\"mobileNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "telephoneNumber",
+            "label": "No. Telepon Rumah",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "telephoneNumber",
+            "locator": "input[name=\"telephoneNumber\"], textarea[name=\"telephoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "address",
+            "label": "Alamat",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "address",
+            "locator": "input[name=\"address\"], textarea[name=\"address\"]",
+            "group": "Alamat tempat tinggal saat ini"
+          },
+          {
+            "prop": "rt",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "rt",
+            "locator": "input[name=\"rt\"], textarea[name=\"rt\"]",
+            "group": "Alamat tempat tinggal saat ini"
+          },
+          {
+            "prop": "rw",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "rw",
+            "locator": "input[name=\"rw\"], textarea[name=\"rw\"]",
+            "group": "Alamat tempat tinggal saat ini"
+          },
+          {
+            "prop": "province",
+            "label": "Provinsi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "province",
+            "locator": "[role=\"combobox\"][id^=\"province-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "city",
+            "label": "Kota/kabupaten",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "city",
+            "locator": "[role=\"combobox\"][id^=\"city-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "district",
+            "label": "Kecamatan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "district",
+            "locator": "[role=\"combobox\"][id^=\"district-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "subdistrict",
+            "label": "Kelurahan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "subdistrict",
+            "locator": "[role=\"combobox\"][id^=\"subdistrict-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "postalCode",
+            "label": "Kode pos",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "postalCode",
+            "locator": "input[name=\"postalCode\"], textarea[name=\"postalCode\"]",
+            "group": "Alamat tempat tinggal saat ini"
+          }
+        ]
+      },
+      {
+        "class": "DataPekerjaanKeuanganSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Data pekerjaan & Keuangan",
+        "sidebarTitle": "Data pekerjaan & keuangan",
+        "file": "pages/buckets/identitas/DataPekerjaanKeuanganSection.ts",
+        "fields": [
+          {
+            "prop": "job",
+            "label": "Pekerjaan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "job",
+            "locator": "[role=\"combobox\"][id^=\"job-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "companyName",
+            "label": "Nama perusahaan / usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyName",
+            "locator": "input[name=\"companyName\"], textarea[name=\"companyName\"]",
+            "group": ""
+          },
+          {
+            "prop": "companySector",
+            "label": "Bidang usaha",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "companySector",
+            "locator": "[role=\"combobox\"][id^=\"companySector-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "monthOfRelatedIndustryExp",
+            "label": "Pengalaman di industri terkait* [text] satuan: bulan",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "monthOfRelatedIndustryExp",
+            "locator": "input[name=\"monthOfRelatedIndustryExp\"], textarea[name=\"monthOfRelatedIndustryExp\"]",
+            "group": ""
+          },
+          {
+            "prop": "companyPhoneNumber",
+            "label": "No. Telepon Perusahaan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyPhoneNumber",
+            "locator": "input[name=\"companyPhoneNumber\"], textarea[name=\"companyPhoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "companyDuration",
+            "label": "Lama bekerja/usaha* [text] satuan: bulan",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyDuration",
+            "locator": "input[name=\"companyDuration\"], textarea[name=\"companyDuration\"]",
+            "group": ""
+          },
+          {
+            "prop": "income",
+            "label": "Pendapatan* [currency] satuan: Rp",
+            "required": false,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "income",
+            "locator": "input[name=\"income\"]  (ketik digit, format ribuan otomatis)",
+            "group": ""
+          },
+          {
+            "prop": "jointIncome",
+            "label": "Joint Income?",
+            "required": false,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Joint Income?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Joint Income?\" })",
+            "group": ""
+          },
+          {
+            "prop": "otherIncome",
+            "label": "Sumber pemasukan lainnya",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "otherIncome",
+            "locator": "[role=\"combobox\"][id^=\"otherIncome-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "otherIncomeValue",
+            "label": "Jumlah pemasukan lainnya* [currency] satuan: Rp",
+            "required": false,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "otherIncomeValue",
+            "locator": "input[name=\"otherIncomeValue\"]  (ketik digit, format ribuan otomatis)",
+            "group": ""
+          },
+          {
+            "prop": "monthlyLivingCost",
+            "label": "Biaya hidup per bulan* [currency] satuan: Rp",
+            "required": false,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "monthlyLivingCost",
+            "locator": "input[name=\"monthlyLivingCost\"]  (ketik digit, format ribuan otomatis)",
+            "group": ""
+          },
+          {
+            "prop": "memilikiPinjamanDiBankFintechBpr",
+            "label": "Memiliki pinjaman di Bank/Fintech/BPR/Multifinance?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Memiliki pinjaman di Bank/Fintech/BPR/Multifinance?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Memiliki pinjaman di Bank/Fintech/BPR/Multifinance?\" })",
+            "group": ""
+          },
+          {
+            "prop": "anotherLoanNominal",
+            "label": "Nominal angsuran lainnya [currency] satuan: Rp",
+            "required": false,
+            "type": "currency",
+            "control": "CurrencyInput",
+            "key": "anotherLoanNominal",
+            "locator": "input[name=\"anotherLoanNominal\"]  (ketik digit, format ribuan otomatis)",
+            "group": ""
+          },
+          {
+            "prop": "memilikiTabunganDiBankBpr",
+            "label": "Memiliki tabungan di Bank/BPR?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Memiliki tabungan di Bank/BPR?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Memiliki tabungan di Bank/BPR?\" })",
+            "group": ""
+          },
+          {
+            "prop": "companyAddress",
+            "label": "Alamat perusahaan / usaha",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyAddress",
+            "locator": "input[name=\"companyAddress\"], textarea[name=\"companyAddress\"]",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyRt",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyRT",
+            "locator": "input[name=\"companyRT\"], textarea[name=\"companyRT\"]",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyRw",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyRW",
+            "locator": "input[name=\"companyRW\"], textarea[name=\"companyRW\"]",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyProvinceCode",
+            "label": "Provinsi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "companyProvinceCode",
+            "locator": "[role=\"combobox\"][id^=\"companyProvinceCode-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyCityCode",
+            "label": "Kota/kabupaten",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "companyCityCode",
+            "locator": "[role=\"combobox\"][id^=\"companyCityCode-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyDistrictCode",
+            "label": "Kecamatan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "companyDistrictCode",
+            "locator": "[role=\"combobox\"][id^=\"companyDistrictCode-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companySubDistrictCode",
+            "label": "Kelurahan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "companySubDistrictCode",
+            "locator": "[role=\"combobox\"][id^=\"companySubDistrictCode-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat perusahaan / usaha"
+          },
+          {
+            "prop": "companyPostalCode",
+            "label": "Kode pos",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "companyPostalCode",
+            "locator": "input[name=\"companyPostalCode\"], textarea[name=\"companyPostalCode\"]",
+            "group": "Alamat perusahaan / usaha"
+          }
+        ]
+      },
+      {
+        "class": "DataPenjaminSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Data Penjamin",
+        "sidebarTitle": "Data penjamin",
+        "file": "pages/buckets/identitas/DataPenjaminSection.ts",
+        "fields": [
+          {
+            "prop": "debiturMemilikiPenjamin",
+            "label": "Debitur memiliki penjamin?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Debitur memiliki penjamin?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Debitur memiliki penjamin?\" })",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "DataPribadiSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Data pribadi",
+        "sidebarTitle": "Data pribadi",
+        "file": "pages/buckets/identitas/DataPribadiSection.ts",
+        "fields": [
+          {
+            "prop": "identityNumber",
+            "label": "Nomor KTP* [text] (disabled saat explore / auto-fill)",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "identityNumber",
+            "locator": "input[name=\"identityNumber\"], textarea[name=\"identityNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "name",
+            "label": "Nama lengkap* [text] (disabled saat explore / auto-fill)",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "name",
+            "locator": "input[name=\"name\"], textarea[name=\"name\"]",
+            "group": ""
+          },
+          {
+            "prop": "gender",
+            "label": "Jenis kelamin* [dropdown] (disabled saat explore / auto-fill)",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "gender",
+            "locator": "[role=\"combobox\"][id^=\"gender-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "placeOfBirth",
+            "label": "Tempat & tanggal lahir",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "placeOfBirth",
+            "locator": "input[name=\"placeOfBirth\"], textarea[name=\"placeOfBirth\"]",
+            "group": ""
+          },
+          {
+            "prop": "dateOfBirth",
+            "label": "Tempat & tanggal lahir* [date] (disabled saat explore / auto-fill) format \"DD MMM YYYY\", mis. \"01 Jan 1990\"",
+            "required": false,
+            "type": "date",
+            "control": "DateInput",
+            "key": "dateOfBirth",
+            "locator": "input[name=\"dateOfBirth\"]  (format \"DD MMM YYYY\", mis. \"01 Jan 1990\")",
+            "group": ""
+          },
+          {
+            "prop": "maritalStatus",
+            "label": "Status perkawinan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "maritalStatus",
+            "locator": "[role=\"combobox\"][id^=\"maritalStatus-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "motherMaidenName",
+            "label": "Nama gadis ibu kandung",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "motherMaidenName",
+            "locator": "input[name=\"motherMaidenName\"], textarea[name=\"motherMaidenName\"]",
+            "group": ""
+          },
+          {
+            "prop": "npwp",
+            "label": "NPWP",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "npwp",
+            "locator": "input[name=\"npwp\"], textarea[name=\"npwp\"]",
+            "group": ""
+          },
+          {
+            "prop": "phoneNumber",
+            "label": "Nomor HP",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "phoneNumber",
+            "locator": "input[name=\"phoneNumber\"], textarea[name=\"phoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "apakahDebiturMerupakanNasabahBankSinarmas",
+            "label": "Apakah debitur merupakan nasabah Bank Sinarmas",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah debitur merupakan nasabah Bank Sinarmas",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah debitur merupakan nasabah Bank Sinarmas\" })",
+            "group": ""
+          },
+          {
+            "prop": "identityAddressAddress",
+            "label": "Alamat",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "identityAddress.address",
+            "locator": "input[name=\"identityAddress.address\"], textarea[name=\"identityAddress.address\"]",
+            "group": "Alamat sesuai KTP"
+          },
+          {
+            "prop": "identityAddressRt",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "identityAddress.rt",
+            "locator": "input[name=\"identityAddress.rt\"], textarea[name=\"identityAddress.rt\"]",
+            "group": "Alamat sesuai KTP"
+          },
+          {
+            "prop": "identityAddressRw",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "identityAddress.rw",
+            "locator": "input[name=\"identityAddress.rw\"], textarea[name=\"identityAddress.rw\"]",
+            "group": "Alamat sesuai KTP"
+          },
+          {
+            "prop": "identityAddressProvince",
+            "label": "Provinsi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "identityAddress.province",
+            "locator": "[role=\"combobox\"][id^=\"identityAddress.province-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat sesuai KTP opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "identityAddressCity",
+            "label": "Kota/kabupaten",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "identityAddress.city",
+            "locator": "[role=\"combobox\"][id^=\"identityAddress.city-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat sesuai KTP opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "identityAddressDistrict",
+            "label": "Kecamatan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "identityAddress.district",
+            "locator": "[role=\"combobox\"][id^=\"identityAddress.district-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat sesuai KTP opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "identityAddressSubdistrict",
+            "label": "Kelurahan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "identityAddress.subdistrict",
+            "locator": "[role=\"combobox\"][id^=\"identityAddress.subdistrict-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat sesuai KTP opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "identityAddressPostalCode",
+            "label": "Kode pos",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "identityAddress.postalCode",
+            "locator": "input[name=\"identityAddress.postalCode\"], textarea[name=\"identityAddress.postalCode\"]",
+            "group": "Alamat sesuai KTP"
+          },
+          {
+            "prop": "currentAddressAddress",
+            "label": "Alamat",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "currentAddress.address",
+            "locator": "input[name=\"currentAddress.address\"], textarea[name=\"currentAddress.address\"]",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "currentAddressRt",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "currentAddress.rt",
+            "locator": "input[name=\"currentAddress.rt\"], textarea[name=\"currentAddress.rt\"]",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "currentAddressRw",
+            "label": "RT / RW",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "currentAddress.rw",
+            "locator": "input[name=\"currentAddress.rw\"], textarea[name=\"currentAddress.rw\"]",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "currentAddressProvince",
+            "label": "Provinsi",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "currentAddress.province",
+            "locator": "[role=\"combobox\"][id^=\"currentAddress.province-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill) opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "currentAddressCity",
+            "label": "Kota/kabupaten",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "currentAddress.city",
+            "locator": "[role=\"combobox\"][id^=\"currentAddress.city-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill) opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "currentAddressDistrict",
+            "label": "Kecamatan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "currentAddress.district",
+            "locator": "[role=\"combobox\"][id^=\"currentAddress.district-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill) opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "currentAddressSubdistrict",
+            "label": "Kelurahan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "currentAddress.subdistrict",
+            "locator": "[role=\"combobox\"][id^=\"currentAddress.subdistrict-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill) opsi bergantung dropdown sebelumnya"
+          },
+          {
+            "prop": "currentAddressPostalCode",
+            "label": "Kode pos",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "currentAddress.postalCode",
+            "locator": "input[name=\"currentAddress.postalCode\"], textarea[name=\"currentAddress.postalCode\"]",
+            "group": "Alamat tempat tinggal saat ini (disabled saat explore / auto-fill)"
+          },
+          {
+            "prop": "residencyStatus",
+            "label": "Status tempat tinggal",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "residencyStatus",
+            "locator": "[role=\"combobox\"][id^=\"residencyStatus-r\"]  (opsi: #<id>-listbox li button)",
+            "group": "Alamat tempat tinggal saat ini"
+          },
+          {
+            "prop": "ktpFiles",
+            "label": "Foto KTP",
+            "required": true,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "ktpFiles",
+            "locator": "input[type=\"file\"][id=\"ktpFiles\"]",
+            "group": "Dokument terkait identitas accept: .pdf,.jpg,.jpeg,.png"
+          },
+          {
+            "prop": "creditApplicationFormFiles",
+            "label": "Form Aplikasi Kredit",
+            "required": true,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "creditApplicationFormFiles",
+            "locator": "input[type=\"file\"][id=\"creditApplicationFormFiles\"]",
+            "group": "Dokument terkait identitas accept: .pdf,.jpg,.jpeg,.png"
+          }
+        ]
+      },
+      {
+        "class": "DataPribadiTambahanSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Data pribadi tambahan",
+        "sidebarTitle": "Data pribadi tambahan",
+        "file": "pages/buckets/identitas/DataPribadiTambahanSection.ts",
+        "fields": [
+          {
+            "prop": "totalRegisteredFamily",
+            "label": "Jumlah keluarga inti sesuai KK",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "totalRegisteredFamily",
+            "locator": "input[name=\"totalRegisteredFamily\"], textarea[name=\"totalRegisteredFamily\"]",
+            "group": ""
+          },
+          {
+            "prop": "pisahHarta",
+            "label": "Pisah harta",
+            "required": false,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Pisah harta",
+            "locator": "getByRole(\"radiogroup\", { name: \"Pisah harta\" })",
+            "group": ""
+          },
+          {
+            "prop": "kasusPidanaPenipuan",
+            "label": "Kasus pidana / penipuan",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Kasus pidana / penipuan",
+            "locator": "getByRole(\"radiogroup\", { name: \"Kasus pidana / penipuan\" })",
+            "group": ""
+          },
+          {
+            "prop": "lastEducation",
+            "label": "Pendidikan terakhir",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "lastEducation",
+            "locator": "[role=\"combobox\"][id^=\"lastEducation-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "LokasiKondisiTempatTinggalSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Lokasi & kondisi tempat tinggal",
+        "sidebarTitle": "Lokasi & kondisi tempat tinggal",
+        "file": "pages/buckets/identitas/LokasiKondisiTempatTinggalSection.ts",
+        "fields": [
+          {
+            "prop": "residenceLocation",
+            "label": "Lokasi tempat tinggal",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "residenceLocation",
+            "locator": "[role=\"combobox\"][id^=\"residenceLocation-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "residenceCondition",
+            "label": "Kondisi tempat tinggal",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "residenceCondition",
+            "locator": "[role=\"combobox\"][id^=\"residenceCondition-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "residenceEnvironmentCondition",
+            "label": "Kondisi lingkungan sekitar tempat tinggal",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "residenceEnvironmentCondition",
+            "locator": "[role=\"combobox\"][id^=\"residenceEnvironmentCondition-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "ReferensiSection",
+        "kind": "section",
+        "bucketId": "identitas_pengecekan",
+        "title": "Referensi",
+        "sidebarTitle": "Referensi",
+        "file": "pages/buckets/identitas/ReferensiSection.ts",
+        "fields": [
+          {
+            "prop": "type",
+            "label": "Tipe Referensi",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "type",
+            "locator": "[role=\"combobox\"][id^=\"type-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "telephoneNumber",
+            "label": "Nomor Telpon Referensi",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "telephoneNumber",
+            "locator": "input[name=\"telephoneNumber\"], textarea[name=\"telephoneNumber\"]",
+            "group": ""
+          },
+          {
+            "prop": "notes",
+            "label": "Notes referensi",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "notes",
+            "locator": "input[name=\"notes\"], textarea[name=\"notes\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "legal-risk-compliance": [
+      {
+        "class": "FormCsaSection",
+        "kind": "section",
+        "bucketId": "legal_risk_compliance",
+        "title": "Form CSA",
+        "sidebarTitle": "",
+        "file": "pages/buckets/legal-risk-compliance/FormCsaSection.ts",
+        "fields": [
+          {
+            "prop": "pilihAtauSeretFileKesini",
+            "label": "Pilih atau seret file kesini [file] accept: .pdf,.jpg,.png,.jpeg",
+            "required": false,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "",
+            "locator": "input[type=\"file\"][id=\"\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "LegalMemorandumSection",
+        "kind": "section",
+        "bucketId": "legal_risk_compliance",
+        "title": "Legal memorandum",
+        "sidebarTitle": "",
+        "file": "pages/buckets/legal-risk-compliance/LegalMemorandumSection.ts",
+        "fields": [
+          {
+            "prop": "pilihAtauSeretFileKesini",
+            "label": "Pilih atau seret file kesini [file] accept: .pdf,.jpg,.png,.jpeg",
+            "required": false,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "",
+            "locator": "input[type=\"file\"][id=\"\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "OpiniLegalSection",
+        "kind": "section",
+        "bucketId": "legal_risk_compliance",
+        "title": "Opini legal",
+        "sidebarTitle": "",
+        "file": "pages/buckets/legal-risk-compliance/OpiniLegalSection.ts",
+        "fields": [
+          {
+            "prop": "pilihAtauSeretFileKesini",
+            "label": "Pilih atau seret file kesini [file] accept: .pdf,.jpg,.png,.jpeg",
+            "required": false,
+            "type": "file",
+            "control": "FileUpload",
+            "key": "",
+            "locator": "input[type=\"file\"][id=\"\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "penilaian-kelayakan": [
+      {
+        "class": "GeneralEligibilityCriteriaSection",
+        "kind": "section",
+        "bucketId": "penilaian_kelayakan",
+        "title": "General eligibility criteria",
+        "sidebarTitle": "General eligibility criteria",
+        "file": "pages/buckets/penilaian-kelayakan/GeneralEligibilityCriteriaSection.ts",
+        "fields": [
+          {
+            "prop": "criteria",
+            "label": "Tabel kriteria Pass/fail (react-select per baris)",
+            "required": false,
+            "type": "table",
+            "control": "CriteriaTable",
+            "key": "",
+            "locator": "table[data-testid=\"table\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "KnockOutCriteriaSection",
+        "kind": "section",
+        "bucketId": "penilaian_kelayakan",
+        "title": "Knock-out criteria",
+        "sidebarTitle": "Knock-out criteria",
+        "file": "pages/buckets/penilaian-kelayakan/KnockOutCriteriaSection.ts",
+        "fields": [
+          {
+            "prop": "criteria",
+            "label": "Tabel kriteria Pass/fail (react-select per baris)",
+            "required": false,
+            "type": "table",
+            "control": "CriteriaTable",
+            "key": "",
+            "locator": "table[data-testid=\"table\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "penyimpangan-pihak-terkait": [
+      {
+        "class": "PenyimpanganDanPihakTerkaitSection",
+        "kind": "section",
+        "bucketId": "penyimpangan_pihak_terkait",
+        "title": "Penyimpangan dan pihak terkait",
+        "sidebarTitle": "Penyimpangan dan Pihak Terkait",
+        "file": "pages/buckets/penyimpangan-pihak-terkait/PenyimpanganDanPihakTerkaitSection.ts",
+        "fields": [
+          {
+            "prop": "apakahAdaKondisiYangMemerlukanPenyimpangan",
+            "label": "Apakah ada kondisi yang memerlukan penyimpangan?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah ada kondisi yang memerlukan penyimpangan?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah ada kondisi yang memerlukan penyimpangan?\" })",
+            "group": ""
+          },
+          {
+            "prop": "apakahDebiturTerafiliasiPihakTerkait",
+            "label": "Apakah debitur terafiliasi pihak terkait?",
+            "required": true,
+            "type": "radio",
+            "control": "RadioGroup",
+            "key": "Apakah debitur terafiliasi pihak terkait?",
+            "locator": "getByRole(\"radiogroup\", { name: \"Apakah debitur terafiliasi pihak terkait?\" })",
+            "group": ""
+          },
+          {
+            "prop": "finalBwmkcopyWriting",
+            "label": "Apakah ada kondisi yang memerlukan penyimpangan?* [text] (disabled saat explore / auto-fill)",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "finalBWMKCopyWriting",
+            "locator": "input[name=\"finalBWMKCopyWriting\"], textarea[name=\"finalBWMKCopyWriting\"]",
+            "group": ""
+          }
+        ]
+      }
+    ],
+    "struktur-kredit": [
+      {
+        "class": "RingkasanPengajuanSection",
+        "kind": "section",
+        "bucketId": "struktur_kredit",
+        "title": "Ringkasan pengajuan",
+        "sidebarTitle": "Ringkasan Pengajuan",
+        "file": "pages/buckets/struktur-kredit/RingkasanPengajuanSection.ts",
+        "fields": [
+          {
+            "prop": "totalPengajuanFasilitas",
+            "label": "Total pengajuan fasilitas* [text] (disabled saat explore / auto-fill) satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "totalPengajuanFasilitas",
+            "locator": "input[name=\"totalPengajuanFasilitas\"], textarea[name=\"totalPengajuanFasilitas\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalFasilitasSaatIni",
+            "label": "Total fasilitas saat ini* [text] (disabled saat explore / auto-fill) satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "totalFasilitasSaatIni",
+            "locator": "input[name=\"totalFasilitasSaatIni\"], textarea[name=\"totalFasilitasSaatIni\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalFasilitasObligor",
+            "label": "Total fasilitas obligor* [text] (disabled saat explore / auto-fill) satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "totalFasilitasObligor",
+            "locator": "input[name=\"totalFasilitasObligor\"], textarea[name=\"totalFasilitasObligor\"]",
+            "group": ""
+          },
+          {
+            "prop": "totalExposure",
+            "label": "Total exposure* [text] (disabled saat explore / auto-fill) satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "totalExposure",
+            "locator": "input[name=\"totalExposure\"], textarea[name=\"totalExposure\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "StrukturPengajuanKreditProductsRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/struktur-kredit/StrukturPengajuanKreditSection.ts",
+        "fields": [
+          {
+            "prop": "product",
+            "label": "Jenis fasilitas",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "products.{i}.product",
+            "locator": "[role=\"combobox\"][id^=\"products.{i}.product-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "StrukturPengajuanKreditFacilityRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/struktur-kredit/StrukturPengajuanKreditSection.ts",
+        "fields": [
+          {
+            "prop": "facilityType",
+            "label": "Jenis fasilitas",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "products.0.facility.{i}.facilityType",
+            "locator": "[role=\"combobox\"][id^=\"products.0.facility.{i}.facilityType-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "submissionType",
+            "label": "Jenis pengajuan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "products.0.facility.{i}.submissionType",
+            "locator": "[role=\"combobox\"][id^=\"products.0.facility.{i}.submissionType-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "plafon",
+            "label": "Pengajuan plafon* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.{i}.plafon",
+            "locator": "input[name=\"products.0.facility.{i}.plafon\"], textarea[name=\"products.0.facility.{i}.plafon\"]",
+            "group": ""
+          },
+          {
+            "prop": "tenorMonths",
+            "label": "Periode pinjaman (dalam bulan)",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.{i}.tenorMonths",
+            "locator": "input[name=\"products.0.facility.{i}.tenorMonths\"], textarea[name=\"products.0.facility.{i}.tenorMonths\"]",
+            "group": ""
+          },
+          {
+            "prop": "usagePurpose",
+            "label": "Tujuan penggunaan",
+            "required": true,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "products.0.facility.{i}.usagePurpose",
+            "locator": "[role=\"combobox\"][id^=\"products.0.facility.{i}.usagePurpose-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "usageDescription",
+            "label": "Keterangan tujuan",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.{i}.usageDescription",
+            "locator": "input[name=\"products.0.facility.{i}.usageDescription\"], textarea[name=\"products.0.facility.{i}.usageDescription\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "StrukturPengajuanKreditInterestSchemaRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/struktur-kredit/StrukturPengajuanKreditSection.ts",
+        "fields": [
+          {
+            "prop": "effectiveRatePa",
+            "label": "effectiveRatePA",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.0.interestSchema.{i}.effectiveRatePA",
+            "locator": "input[name=\"products.0.facility.0.interestSchema.{i}.effectiveRatePA\"], textarea[name=\"products.0.facility.0.interestSchema.{i}.effectiveRatePA\"]",
+            "group": ""
+          },
+          {
+            "prop": "flateRatePa",
+            "label": "flateRatePA",
+            "required": true,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.0.interestSchema.{i}.flateRatePA",
+            "locator": "input[name=\"products.0.facility.0.interestSchema.{i}.flateRatePA\"], textarea[name=\"products.0.facility.0.interestSchema.{i}.flateRatePA\"]",
+            "group": ""
+          }
+        ]
+      },
+      {
+        "class": "StrukturPengajuanKreditCreditFeeRow",
+        "kind": "row",
+        "bucketId": "",
+        "title": "",
+        "sidebarTitle": "",
+        "file": "pages/buckets/struktur-kredit/StrukturPengajuanKreditSection.ts",
+        "fields": [
+          {
+            "prop": "feeType",
+            "label": "feeType* [dropdown] (disabled saat explore / auto-fill)",
+            "required": false,
+            "type": "dropdown",
+            "control": "Dropdown",
+            "key": "products.0.facility.0.creditFee.{i}.feeType",
+            "locator": "[role=\"combobox\"][id^=\"products.0.facility.0.creditFee.{i}.feeType-r\"]  (opsi: #<id>-listbox li button)",
+            "group": ""
+          },
+          {
+            "prop": "nominal",
+            "label": "nominal* [text] satuan: Rp",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.0.creditFee.{i}.nominal",
+            "locator": "input[name=\"products.0.facility.0.creditFee.{i}.nominal\"], textarea[name=\"products.0.facility.0.creditFee.{i}.nominal\"]",
+            "group": ""
+          },
+          {
+            "prop": "percentage",
+            "label": "percentage* [text] satuan: %",
+            "required": false,
+            "type": "text",
+            "control": "TextInput",
+            "key": "products.0.facility.0.creditFee.{i}.percentage",
+            "locator": "input[name=\"products.0.facility.0.creditFee.{i}.percentage\"], textarea[name=\"products.0.facility.0.creditFee.{i}.percentage\"]",
+            "group": ""
+          }
+        ]
+      }
+    ]
+  }
+}

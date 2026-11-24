@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm } from '../../pages/buckets/identitas/PenjaminForms';
 
 // Probe READ-ONLY: dropdown "Organ badan usaha" di modal pengurus/pemegang saham (tidak memilih apa pun, modal dibatalkan)
 const APP_ID = process.env.APPLICATION_ID_PENJAMIN_LP || '01M83AP5FKPHB1D3E2QS8P015Z';

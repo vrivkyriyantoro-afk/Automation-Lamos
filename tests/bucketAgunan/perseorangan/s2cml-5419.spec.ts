@@ -1,6 +1,6 @@
 import { test, expect, Page, TestInfo, Locator } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * S2CML-5419 - Detailing Form Informasi Umum Agunan (Perseorangan)

@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm, PersonalGuaranteeData, SpouseData, toDisplayDate, normalizeWilayah } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm, PersonalGuaranteeData, SpouseData, toDisplayDate, normalizeWilayah } from '../../pages/buckets/identitas/PenjaminForms';
 import data from '../../fixtures/entities/penjamin-perorangan-menikah.json';
 
 /**

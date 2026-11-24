@@ -1,12 +1,12 @@
 import { test, expect, Page } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
 import {
   DataPenjaminForm, PersonalGuaranteeData, SpouseData, CorporateGuaranteeData,
   PengurusWniData, PengurusWnaData, PengurusBadanUsahaData, AlamatIndonesia,
-} from '../../pages/bucketIdentitas/PenjaminForms';
+} from '../../pages/buckets/identitas/PenjaminForms';
 
 /**
  * TC Penjamin Perorangan + Badan Usaha dalam satu file, data default inline (tanpa fixture JSON).

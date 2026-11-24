@@ -17,10 +17,10 @@ Tests use the live LAMOS SIT application and `.env` for configuration. Check a s
 
 ## Architecture
 
-- This repository is a Playwright + TypeScript automation suite for LAMOS, not the LAMOS application itself. `pages/LoginPage.ts` handles SSO; `pages/CreditApplicationPage.ts` is an older navigation page object.
-- `pages/components/BucketSection.ts` provides `CreditApplicationForm` for credit-application URL/bucket navigation and `BucketSection` for section scoping/opening. `pages/components/FormControls.ts` wraps the shared LAMOS controls.
+- This repository is a Playwright + TypeScript automation suite for LAMOS, not the LAMOS application itself. `pages/base/LoginPage.ts` handles SSO; `pages/base/CreditApplicationPage.ts` is an older navigation page object.
+- `pages/base/BucketSection.ts` provides `CreditApplicationForm` for credit-application URL/bucket navigation and `BucketSection` for section scoping/opening. `pages/controls/FormControls.ts` wraps the shared LAMOS controls.
 - Bucket-specific page objects live under `pages/bucket<Nama>/`, with section classes extending `BucketSection`. Most section classes and their `sections.ts` barrels are generated from `explore-output/buckets/<bucket>.json` by `scripts/generators/generate-pages.js`.
-- Document upload and its hierarchical document tree are manual implementations in `pages/bucketDokumen/`; Identity also contains manual guarantor/management forms alongside generated sections.
+- Document upload and its hierarchical document tree are manual implementations in `pages/buckets/dokumen/`; Identity also contains manual guarantor/management forms alongside generated sections.
 - Tests are grouped by bucket in `tests/bucket<Nama>/`; cross-bucket specs live in `tests/auth/`, `tests/explore/`, `tests/smoke/` (throwaway probes in `tests/_scratch/`). `tests/explore/explore-all-buckets.spec.ts` captures UI structure, while `tests/smoke/sections-locator-smoke.spec.ts` checks generated locators against the live app.
 
 ## Repository-specific conventions
@@ -28,5 +28,5 @@ Tests use the live LAMOS SIT application and `.env` for configuration. Check a s
 - Use the selector guidance in the “Konvensi DOM” table in [PROJECT_HISTORY.md](../PROJECT_HISTORY.md): prefer stable form `name` attributes over generated React `id` suffixes. Dropdown ids also contain dynamic suffixes; use their stable key/prefix and the shared `Dropdown` helper.
 - LAMOS accordions are single-open and fields can appear after skeleton loading. Open sections one at a time and wait for locators/visibility instead of relying on immediate `count()` results.
 - Treat files beginning `// AUTO-GENERATED` as generator output: change `scripts/generators/generate-pages.js` or its exploration input, then regenerate. The generator does not overwrite manual files by default; do not force-overwrite them.
-- Preserve exact bucket directory casing (for example, `bucketCovenantTBO`). Do not overwrite or remove user-authored `pages/bucketIdentitas/*Page.ts` or `pages/bucketDokumen/DocumentBucketPage.ts` without permission.
+- Preserve exact bucket directory casing (for example, `bucketCovenantTBO`). Do not overwrite or remove user-authored `pages/buckets/identitas/*Page.ts` or `pages/buckets/dokumen/DocumentBucketPage.ts` without permission.
 - If exploration reveals a new stable DOM selector pattern, add it to the “Konvensi DOM” table in `PROJECT_HISTORY.md`.

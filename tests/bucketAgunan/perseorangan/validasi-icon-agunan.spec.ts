@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 import path from 'path';
 import fs from 'fs';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * Test Suite: S2CML-6018 - Summary Agunan (Validasi Icon Kartu Agunan vs Desain Figma)

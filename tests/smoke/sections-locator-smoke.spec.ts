@@ -1,16 +1,16 @@
 ﻿import { test, expect, Locator } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
-import { BucketSection, CreditApplicationForm } from '../../pages/components/BucketSection';
-import * as identitas from '../../pages/bucketIdentitas/sections';
-import * as strukturKredit from '../../pages/bucketStrukturKredit/sections';
-import * as penilaianKelayakan from '../../pages/bucketPenilaianKelayakan/sections';
-import * as dataUsaha from '../../pages/bucketDataUsaha/sections';
-import * as analisaKeuangan from '../../pages/bucketAnalisaKeuangan/sections';
-import * as legalRiskCompliance from '../../pages/bucketLegalRiskCompliance/sections';
-import * as covenantTbo from '../../pages/bucketCovenantTBO/sections';
-import * as penyimpangan from '../../pages/bucketPenyimpanganPihakTerkait/sections';
-import * as catatanAnda from '../../pages/bucketCatatanAnda/sections';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { BucketSection, CreditApplicationForm } from '../../pages/base/BucketSection';
+import * as identitas from '../../pages/buckets/identitas/sections';
+import * as strukturKredit from '../../pages/buckets/struktur-kredit/sections';
+import * as penilaianKelayakan from '../../pages/buckets/penilaian-kelayakan/sections';
+import * as dataUsaha from '../../pages/buckets/data-usaha/sections';
+import * as analisaKeuangan from '../../pages/buckets/analisa-keuangan/sections';
+import * as legalRiskCompliance from '../../pages/buckets/legal-risk-compliance/sections';
+import * as covenantTbo from '../../pages/buckets/covenant-tbo/sections';
+import * as penyimpangan from '../../pages/buckets/penyimpangan-pihak-terkait/sections';
+import * as catatanAnda from '../../pages/buckets/catatan-anda/sections';
 
 /**
  * Smoke test read-only: setiap locator di page object hasil generate harus ditemukan di aplikasi.

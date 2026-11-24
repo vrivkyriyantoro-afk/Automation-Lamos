@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
-import { DataPenjaminPage } from '../../pages/bucketIdentitas/DataPenjaminPage';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { DataPenjaminPage } from '../../pages/buckets/identitas/legacy/DataPenjaminPage';
 import { generateBadanUsahaData, generateNik, generateNpwpBadanUsaha } from '../../utils/dataGenerator';
 
 test.describe('Input Data Pengurus dan Pemegang Saham (Perorangan & Badan Usaha)', () => {

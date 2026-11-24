@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 test.describe('Authentication - Login Flow LAMOS', () => {
   test.describe.configure({ mode: 'serial' });

@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // Read-only: membaca daftar & detail (ikon mata = lihat) pengurus/pemegang saham Penjamin korporasi.
 // TIDAK klik ikon pensil (edit) atau tempat sampah (hapus).

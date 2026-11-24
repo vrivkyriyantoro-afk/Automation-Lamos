@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 test('Investigasi hilangnya Card Agunan yang Diubah pada Badan Usaha', async ({ page }) => {
   test.setTimeout(120000);

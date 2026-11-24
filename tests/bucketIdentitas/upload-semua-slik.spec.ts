@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // Env: DIR, ENTITIES, HAPUS=1, PROSES=1, PDF, APP_ID.
 // MENGUBAH DATA SIT: upload .txt + .pdf untuk 9 baris modal "Lengkapi file SLIK" (setelah "Hapus semua file"), lalu opsional klik "Proses file .txt" (PROSES=1).

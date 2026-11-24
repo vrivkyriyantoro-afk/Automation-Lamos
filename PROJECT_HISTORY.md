@@ -843,28 +843,33 @@ Catatan: `fixtures/TemplateAutomateLamos - Sheet1.csv` (83 baris) adalah **sheet
 AGENTS.md                       # aturan untuk semua LLM/agent (sumber utama)
 GEMINI.md, CLAUDE.md, .github/copilot-instructions.md   # penunjuk ke AGENTS.md
 PROJECT_HISTORY.md              # file ini
-pages/
-  LoginPage.ts                  # login SSO
-  CreditApplicationPage.ts      # list pengajuan kredit (lama)
-  components/
-    FormControls.ts             # TextInput, CurrencyInput, DateInput, Dropdown, RadioGroup,
-                                # Checkbox, FileUpload, RichTextEditor, CriteriaTable, escapeRegex, pageOf
+pages/                          # SUMBER TUNGGAL LOCATOR (lihat pages/README.md)
+  base/
+    LoginPage.ts                # login SSO
+    CreditApplicationPage.ts    # list pengajuan kredit (lama)
     BucketSection.ts            # BucketId, CreditApplicationForm (goto/openBucket/sidebar),
                                 # BucketSection (root/open/button), ModalForm
-  bucket<Nama>/
+  controls/
+    FormControls.ts             # TextInput, CurrencyInput, DateInput, Dropdown, RadioGroup,
+                                # Checkbox, FileUpload, RichTextEditor, CriteriaTable, escapeRegex, pageOf
+  buckets/<bucket-kebab>/       # analisa-keuangan, catatan-anda, covenant-tbo, data-usaha, dokumen, identitas,
+                                # legal-risk-compliance, penilaian-kelayakan, penyimpangan-pihak-terkait, struktur-kredit, agunan (belum dimigrasi)
     <Section>Section.ts         # AUTO-GENERATED, satu class per section collapsible
     sections.ts                 # AUTO-GENERATED index (export *)
-    *Page.ts, index.ts          # (bucketIdentitas) page object LAMA buatan user — selector tebakan, tidak disentuh
-  bucketIdentitas/PenjaminForms.ts  # MANUAL: DataPenjaminForm (Personal/Corporate Guarantee + pasangan) & PengurusModal
-  bucketDokumen/
+  buckets/identitas/PenjaminForms.ts  # MANUAL: DataPenjaminForm (Personal/Corporate Guarantee + pasangan) & PengurusModal
+  buckets/identitas/legacy/DataPenjaminPage.ts  # DEPRECATED, masih dipakai 2 spec
+  buckets/dokumen/
     DocumentBucketPage.ts       # page object LAMA buatan user (upload & kategorisasi)
     DokumenSection.ts           # BARU, manual: upload, staging, kategori bertingkat, status pohon dokumen
     dokumenTree.ts              # konstanta pohon dokumen (PARSIAL)
+  catalog/                      # CATALOG.md + catalog.json (DIGENERATE: npm run catalog:build)
+features/                       # Gherkin (playwright-bdd): *.feature (# language: id) + steps/ (fixtures.ts, *.steps.ts)
+playwright.bdd.config.ts        # config BDD terpisah dari playwright.config.ts
 scripts/                        # dikelompokkan per fungsi
   export-tc/                    # export_tc_s2cml_*.py (generator matriks TC), audit/dedupe/fix TC
   jira/                         # read-atlassian, crawl/analyze graf epic, probe & audit Jira
   readers/                      # read-figma, read-excel-sheet16, read-sheet-mck
-  generators/                   # generate-pages.js (JSON explore -> page object TS), gen-slik.js, specify.js
+  generators/                   # generate-pages.js (JSON explore -> page object TS), build-catalog.js (katalog locator), gen-slik.js, specify.js
   evidence/                     # build_evidence_docx.py (evidence .docx dari manifest capture)
   reporting/                    # run-summary.js
   maintenance/                  # utilitas CSV/figma sekali pakai (dump-tc, audit-exports, fetch-figma, dst.)
@@ -965,6 +970,12 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
 ---
 
 ## 6. Riwayat
+
+### 2026-11-24 — Restruktur pages/ jadi sumber locator + katalog + fondasi Gherkin (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan: `pages/` -> `base/`, `controls/`, `buckets/<kebab>/` (import di 126 file + `generate-pages.js` disesuaikan). Hapus 8 `*Page.ts` lama + `index.ts` di identitas (tak diimpor siapa pun, atas izin user); `DataPenjaminPage` -> `buckets/identitas/legacy/` (2 spec masih memakai). Baru: `scripts/generators/build-catalog.js` -> `pages/catalog/{CATALOG.md,catalog.json}` (9 bucket, 34 class, 265 field = sama dengan jumlah getter di source), `pages/README.md`, `pages/buckets/agunan/README.md`. Gherkin: `playwright-bdd@9.2.1`, `playwright.bdd.config.ts`, `features/` (login.feature + steps), script npm `bdd:*` dan `catalog:*`. Aturan "locator hanya di pages/" ditambah ke AGENTS.md.
+- Verifikasi: `playwright --list` tetap 305 test / 89 file; generator tanpa `--force` tidak mengubah file; `catalog:check` up-to-date; `bddgen` + `--list` mengenali 2 skenario berbahasa Indonesia dan semua step ter-resolve.
+- Belum selesai / gagal: skenario BDD belum dijalankan ke SIT. Selector Agunan (~1.257 baris di 80 spec) belum ditarik ke `pages/buckets/agunan/` (fase 2, bertahap per modul). Bucket dokumen belum masuk katalog (DokumenSection bukan pola kontrol; pohon ada di `dokumenTree.ts`). `tests/auth/login.spec.ts` punya password default tertulis di kode.
+- Keputusan user: Agunan bertahap (struktur dulu); hapus Page lama yang tak terpakai; pakai playwright-bdd.
 
 ### 2026-11-24 — Rapikan struktur folder: scripts, tests, fixtures, exports, explore-output (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan: branch `bucketAgunanV1` (snapshot `b6608ee`, lalu refactor). `git mv` + perbaikan path (`__dirname`, `ROOT`, string literal, default `EXPLORE_OUT`) dan rujukan di AGENTS.md, `.github/`, agen, skill, docs.

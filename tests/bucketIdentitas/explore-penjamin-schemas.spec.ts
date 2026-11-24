@@ -1,7 +1,7 @@
 import { test, Page, Locator } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 /**
  * Explorer READ-ONLY untuk section "Data Penjamin":

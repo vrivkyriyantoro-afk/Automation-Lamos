@@ -2,7 +2,7 @@ import { test, expect, Page, TestInfo } from '@playwright/test';
 import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 /**
  * Test Suite: S2CML-5420 - Bucket Agunan - Detailing Form Informasi Tambahan Agunan non Cash Collateral

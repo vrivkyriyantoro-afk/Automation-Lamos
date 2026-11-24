@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationPage } from '../../pages/CreditApplicationPage';
-import { DocumentBucketPage } from '../../pages/bucketDokumen/DocumentBucketPage';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationPage } from '../../pages/base/CreditApplicationPage';
+import { DocumentBucketPage } from '../../pages/buckets/dokumen/DocumentBucketPage';
 
 test.describe('Bulk Upload Seluruh Dokumen Mandatory - Bucket Dokumen LAMOS', () => {
   test.describe.configure({ mode: 'serial', timeout: 600000 });

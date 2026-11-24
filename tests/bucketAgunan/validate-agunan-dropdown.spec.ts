@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
 import * as path from 'path';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 /**
  * Test Validasi: Dropdown "Jenis agunan" vs Data Acuan Excel/CSV

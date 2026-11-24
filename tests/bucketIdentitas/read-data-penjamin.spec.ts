@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // Read-only: membuka aplikasi dan membaca isi bagian "Data penjamin". Tidak mengubah data.
 const APP_ID = process.env.APP_ID || '01M83AP5FKPHB1D3E2QS8P015Z';

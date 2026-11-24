@@ -15,7 +15,8 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
 
 - **Selector** wajib mengikuti tabel "Konvensi DOM" di `PROJECT_HISTORY.md` (pakai atribut `name`, bukan `id` ber-suffix `-r..`). Kalau menemukan pola DOM baru, tambahkan ke tabel itu.
 - **Page object** hasil generate (diawali `// AUTO-GENERATED`) diubah lewat `scripts/generators/generate-pages.js` lalu regenerate. Jangan diedit manual kecuali header-nya dihapus (file jadi manual).
-- Jangan menimpa / menghapus file buatan user (`pages/bucketIdentitas/*Page.ts`, `pages/bucketDokumen/DocumentBucketPage.ts`) tanpa izin user.
+- Jangan menimpa / menghapus file buatan user (`pages/buckets/dokumen/DocumentBucketPage.ts`, `pages/buckets/identitas/legacy/DataPenjaminPage.ts`) tanpa izin user. (`*Page.ts` lama di identitas yang tak terpakai sudah dihapus atas izin user, 2026-11-24.)
+- **Locator hanya di `pages/`** (lihat `pages/README.md`). Spec/step Gherkin tidak menulis selector sendiri. Setelah mengubah page object, jalankan `npm run catalog:build`. Untuk menyusun TC, baca `pages/catalog/CATALOG.md`. Gherkin ada di `features/` (`npm run bdd:test`).
 - Explore aplikasi harus **read-only**: jangan klik `Simpan`, `Kirim`, `Lanjutkan`, `Hapus`, atau upload file di lingkungan SIT kecuali user meminta.
 - Jangan menulis isi `.env` (kredensial) ke file, log, commit, atau prompt.
 - Folder bucket: ikuti nama yang sudah ada (case-sensitive di CI Linux), mis. `bucketCovenantTBO`.

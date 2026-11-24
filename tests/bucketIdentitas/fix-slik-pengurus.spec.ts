@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // Mengganti file .txt SLIK satu entitas lewat modal "Kelola file SLIK" (mengubah data SIT).
 // Env: BARIS (nomor urut baris di modal), TXT (path file .txt pengganti).

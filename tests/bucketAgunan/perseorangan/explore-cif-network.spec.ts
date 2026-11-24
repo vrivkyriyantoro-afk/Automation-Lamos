@@ -1,7 +1,7 @@
 import { test, Page } from '@playwright/test';
 import 'dotenv/config';
 import fs from 'fs';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 // Eksplorasi read-only: rekam Network + screenshot hasil Cek CIF (5445). Output: explore-output/stories/s2cml-5445/
 const APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';

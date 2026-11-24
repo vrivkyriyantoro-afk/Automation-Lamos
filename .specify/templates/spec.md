@@ -7,7 +7,7 @@
 
 ## 2. Prekondisi & Lingkungan
 - Lingkungan: SIT (`https://los-fe-coreloan-sit.devs.banksinarmas.com/`)
-- Autentikasi: Sudah login via SSO (`pages/LoginPage.ts` / stored storageState).
+- Autentikasi: Sudah login via SSO (`pages/base/LoginPage.ts` / stored storageState).
 - Data Debitur: Menggunakan ID aplikasi debitur perorangan aktif dari `.env` (`DEBITUR_TARGET`).
 - **Batasan Keamanan**: Pengujian bersifat **READ-ONLY**. DILARANG submit/simpan/hapus data pengajuan riil tanpa izin eksplisit.
 

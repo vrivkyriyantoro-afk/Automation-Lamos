@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 test.describe('Eksplorasi & Otomasi Form Data Penjamin', () => {
   test.describe.configure({ mode: 'serial', timeout: 120000 });

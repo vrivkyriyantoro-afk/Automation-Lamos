@@ -1,9 +1,9 @@
 import { test, Locator } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm } from '../../pages/buckets/identitas/PenjaminForms';
 
 // Probe READ-ONLY #3: (C) centang radio lalu TUNGGU lama baru klik organ; (D) pilih organ DULU baru centang radio.
 // Modal selalu dibatalkan, tidak ada yang disimpan.

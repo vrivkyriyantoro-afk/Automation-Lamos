@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationPage } from '../../pages/CreditApplicationPage';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationPage } from '../../pages/base/CreditApplicationPage';
 import fs from 'fs';
 
 test.describe('Eksplorasi Dokumen Mandatory pada Bucket Dokumen', () => {

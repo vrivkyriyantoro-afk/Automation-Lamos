@@ -2,15 +2,15 @@ import { test, expect, Page, Locator } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { Dropdown } from '../../pages/components/FormControls';
-import { DataPribadiSection } from '../../pages/bucketIdentitas/DataPribadiSection';
-import { DataPribadiTambahanSection } from '../../pages/bucketIdentitas/DataPribadiTambahanSection';
-import { DataPekerjaanKeuanganSection } from '../../pages/bucketIdentitas/DataPekerjaanKeuanganSection';
-import { DataKontakDaruratSection } from '../../pages/bucketIdentitas/DataKontakDaruratSection';
-import { BucketSection, BucketId } from '../../pages/components/BucketSection';
-import { DataPenjaminSection } from '../../pages/bucketIdentitas/DataPenjaminSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { Dropdown } from '../../pages/controls/FormControls';
+import { DataPribadiSection } from '../../pages/buckets/identitas/DataPribadiSection';
+import { DataPribadiTambahanSection } from '../../pages/buckets/identitas/DataPribadiTambahanSection';
+import { DataPekerjaanKeuanganSection } from '../../pages/buckets/identitas/DataPekerjaanKeuanganSection';
+import { DataKontakDaruratSection } from '../../pages/buckets/identitas/DataKontakDaruratSection';
+import { BucketSection, BucketId } from '../../pages/base/BucketSection';
+import { DataPenjaminSection } from '../../pages/buckets/identitas/DataPenjaminSection';
 
 /**
  * Lengkapi bucket Identitas (perorangan) app 01M86 (debitur JOKO WIBOWO, Menikah: ada section Data pribadi pasangan + Data pekerjaan pasangan) dengan data DUMMY.

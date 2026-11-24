@@ -1,5 +1,5 @@
 import { expect, Page } from '@playwright/test';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 export const APP_ID_PERORANGAN = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 export const APP_ID_BADAN_USAHA = process.env.DEBITUR_BU_TARGET || '01M482PRSVH5ZMTVZX5QH0VDNZ';

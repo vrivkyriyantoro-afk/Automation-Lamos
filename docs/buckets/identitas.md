@@ -4,12 +4,12 @@
 > **Pembaca:** semua agent QA. Baca kartu ini SEBELUM menulis/menjalankan test di bucket ini.
 > Flow bertanda LOLOS/BLOCKED ada di `docs/GREEN_FLOWS.md` (bagian IDENTITAS). Kartu ini menyimpan **peta section, rule form, gate, dan perilaku**. Tiap klaim wajib bertanda bukti; tanpa bukti ditulis "tidak terbukti".
 
-Terakhir diperbarui: **2026-11-24** (rule tombol Proses SLIK + varian reupload; dibuat dari bukti sesi 2026-11-23/24 + page object `pages/bucketIdentitas/`).
+Terakhir diperbarui: **2026-11-24** (rule tombol Proses SLIK + varian reupload; dibuat dari bukti sesi 2026-11-23/24 + page object `pages/buckets/identitas/`).
 
 ## 1. Identitas bucket
 
 - Bucket id `identitas_pengecekan`, tab "Identitas dan Pengecekan". URL: `<BASE>/lamos/credit-application/<APP_ID>/create?bucket=identitas_pengecekan&debtorType=individual|business`.
-- Folder page object: `pages/bucketIdentitas/` (section di-generate dari `explore-output/buckets/identitas_pengecekan.json`; `PenjaminForms.ts` manual).
+- Folder page object: `pages/buckets/identitas/` (section di-generate dari `explore-output/buckets/identitas_pengecekan.json`; `PenjaminForms.ts` manual).
 - Varian: **perorangan** (`debtorType=individual`) terbukti; **badan usaha** (`business`) tidak terbukti di bucket ini (tidak ada flow Identitas BU).
 - App ID uji aktif: `01M83AP5FKPHB1D3E2QS8P015Z` (perorangan, debitur Agus). Daftar App ID lain: `GREEN_FLOWS.md` "Fakta data uji".
 

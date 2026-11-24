@@ -7,8 +7,8 @@ Terakhir diperbarui: **2026-11-24** (disusun dari registry `GREEN_FLOWS.md` bagi
 
 ## 1. Identitas bucket
 
-- Bucket id `agunan` (dulu tercatat `collateral`; alias di `pages/components/BucketSection.ts:18-19`). URL: `.../create?bucket=agunan&debtorType=individual|business`.
-- Page object: `pages/bucketAgunan/` kosong; test memakai helper `tests/bucketAgunan/helpers/agunanModal.ts` dan helper per spec.
+- Bucket id `agunan` (dulu tercatat `collateral`; alias di `pages/base/BucketSection.ts:18-19`). URL: `.../create?bucket=agunan&debtorType=individual|business`.
+- Page object: `pages/buckets/agunan/` belum berisi page object (lihat README di sana); test memakai helper `tests/bucketAgunan/helpers/agunanModal.ts` dan helper per spec.
 - Varian: **Perorangan** (`01M4F7TNSCSHEDB5G3WTSP7HDY`) dan **Badan Usaha** (`01M482PRSVH5ZMTVZX5QH0VDNZ`). Perilaku keduanya berbeda di Step 3 (lihat 4).
 - Story: epic LP-5685; S2CML-4889 (search), 4890 (form Step 1), 4941 (edit), 4948/4949 (Step 3 kepemilikan), 5419/5420/5445 (Step 1 pembanding, Step 2, cash collateral), 6018 (ikon), 6020 (load latest data).
 

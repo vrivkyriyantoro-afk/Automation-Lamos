@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // Probe READ-ONLY: petakan status bucket Identitas & Pengecekan untuk App ID 01M83AP5...
 const APP_ID = process.env.PROBE_APP_ID || '01M83AP5FKPHB1D3E2QS8P015Z';

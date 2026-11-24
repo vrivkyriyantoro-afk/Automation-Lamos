@@ -1,6 +1,6 @@
 import { test, Page } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../../pages/LoginPage';
+import { LoginPage } from '../../../pages/base/LoginPage';
 
 // Probe read-only: apakah hasil Cek CIF berubah seiring waktu (toast, "CIF tidak ditemukan", tombol Ubah)?
 const APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';

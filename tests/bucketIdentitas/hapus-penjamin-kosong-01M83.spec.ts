@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPenjaminForm } from '../../pages/bucketIdentitas/PenjaminForms';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPenjaminForm } from '../../pages/buckets/identitas/PenjaminForms';
 
 /**
  * Pembersihan: hapus kartu penjamin KOSONG ke-4 yang tidak sengaja dibuat spec penjamin-badan-usaha-lp-01M83

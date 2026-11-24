@@ -82,13 +82,13 @@ GF-COMMON-LOGIN
 ### GF-COMMON-LOGIN
 - **Status:** LOLOS (dipakai semua suite hijau, mis. 4949 `run-history/2026-11-18T01-45-56-960Z.json`)
 - **Prasyarat:** `.env` berisi `LAMOS_USERNAME`, `LAMOS_PASSWORD`
-- **Langkah:** `new LoginPage(page)` → `goto()` → `login(user, pass)` → `expectLoginSuccess()` | `pages/LoginPage.ts`, `tests/bucketAgunan/helpers/agunanModal.ts:13-19`
+- **Langkah:** `new LoginPage(page)` → `goto()` → `login(user, pass)` → `expectLoginSuccess()` | `pages/base/LoginPage.ts`, `tests/bucketAgunan/helpers/agunanModal.ts:13-19`
 - **Catatan:** redirect SSO Kratos + render awal 60–90 detik → `test.setTimeout(180000)` (Gotcha 11). Flaky di `LoginPage.ts:55` (`not.toHaveURL` kratos): TC-4949-08 gagal login (`run-history/2026-11-18T01-45-56-960Z.json`), `login.spec.ts` gagal (`2026-11-13T07-29-29`). Jangan menjalankan dua run SIT paralel.
 
 ### GF-COMMON-BUKA-BUCKET
 - **Status:** LOLOS
 - **Prasyarat:** GF-COMMON-LOGIN
-- **Langkah:** `page.goto(<BASE>/lamos/credit-application/<APP_ID>/create?bucket=<bucketId>&debtorType=individual|business)` atau `new CreditApplicationForm(page).goto(appId, bucketId)` | `pages/components/BucketSection.ts:35`. Pindah tab dalam halaman: `[role=tab][id=<bucket>]` + `waitForURL(/bucket=/)` (`s2cml-6020.spec.ts:41-48`).
+- **Langkah:** `page.goto(<BASE>/lamos/credit-application/<APP_ID>/create?bucket=<bucketId>&debtorType=individual|business)` atau `new CreditApplicationForm(page).goto(appId, bucketId)` | `pages/base/BucketSection.ts:35`. Pindah tab dalam halaman: `[role=tab][id=<bucket>]` + `waitForURL(/bucket=/)` (`s2cml-6020.spec.ts:41-48`).
 - **Bucket id:** lihat `PROJECT_HISTORY.md` 2.1. Alias `collateral` → `agunan` (`BucketSection.ts:18-19`).
 - **Catatan:** selalu cek `page.url()` sebelum menyimpulkan data SIT kosong (Gotcha 14).
 
@@ -100,7 +100,7 @@ GF-COMMON-LOGIN
 - **Status:** LOLOS (2026-11-23, 2 run passed)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET (`identitas_pengecekan`, `debtorType=individual`)
 - **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. 2 penjamin perorangan dari `automation_config.*.xlsx` sheet Leads: TEGAR JATI WICAKSONO (L) + pasangan NENDEN NUGRAHA; ERIN (P) + pasangan RENALDY KUSUMA.
-- **Langkah:** spec `tests/bucketIdentitas/penjamin-menikah-lp-01M83.spec.ts`. Env: `PENJAMIN_COMMIT=1` (tulis ke SIT), `PENJAMIN_ONLY_SPOUSE=<index>` (isi ulang pasangan kartu tertentu), `PENJAMIN_FILE` (file upload). Helper: `pages/bucketIdentitas/PenjaminForms.ts`, `pages/components/FormControls.ts`.
+- **Langkah:** spec `tests/bucketIdentitas/penjamin-menikah-lp-01M83.spec.ts`. Env: `PENJAMIN_COMMIT=1` (tulis ke SIT), `PENJAMIN_ONLY_SPOUSE=<index>` (isi ulang pasangan kartu tertentu), `PENJAMIN_FILE` (file upload). Helper: `pages/buckets/identitas/PenjaminForms.ts`, `pages/controls/FormControls.ts`.
 - **Bukti:** run 29,6 dtk passed (2 penjamin + pasangan); run 33,5 dtk passed (isi ulang pasangan kartu 2 + verifikasi muat ulang, sidebar "Data penjamin | Lengkap"). Sumber: log run sesi 2026-11-23. Screenshot `penjamin-1.png`, `penjamin-2.png`, `penjamin-akhir.png` di `test-results/bucketIdentitas-penjamin-m-5a9ab-L-NENDEN-dan-ERIN-P-RENALDY-chromium/` (folder tidak ditemukan saat pencatatan; test-results bisa tertimpa).
 - **Gotcha:** autosave section Data Penjamin baru terkirim saat MENINGGALKAN section atau menambah kartu, bukan saat mengetik; verifikasi selalu lewat muat ulang. Data dimuat async (awal: radio kosong, 0 kartu, sidebar sementara "Belum Lengkap"): tunggu data sebelum menghitung kartu.
 - **Konflik:** kartu kosong "Penjamin 4" sempat terlihat di satu sesi, hilang pada muat segar; asal tidak diketahui. Flow lama `GF-IDENTITAS-PENJAMIN-PERORANGAN` (App ID `01M483P7DDHBV41Z5QPV0FM8Q9`, `penjamin-perorangan-menikah.spec.ts`, dry run) tetap tercatat di bagian DITUNDA.
@@ -125,7 +125,7 @@ GF-COMMON-LOGIN
 - **Bukti:** sidebar semua Lengkap pada run terakhir sesi; `explore-output/identitas/probe-pengecekan-01M83.json` (snapshot sidebar).
 - **Gotcha:** "Pengalaman di industri terkait" menghapus nilainya ~1,5 dtk setelah diketik bila diisi segera setelah section dibuka; tunggu +-3 dtk lalu ketik dan pastikan bertahan.
 - **Konflik/celah:** belum diuji apakah Step 3 Agunan / auto-fill 001 di App ID ini berubah setelah Lengkap (tidak terbukti). Jalan pintas lama `01M22NAB4RXT92Y56AJ5VBQT75` (completed, 0 agunan) tetap ada.
-- **Perubahan helper bersama (belum di-commit):** `pages/components/FormControls.ts` (Dropdown.select tahan search tak bisa diisi + fallback listbox terbuka), `pages/bucketIdentitas/PenjaminForms.ts` (`fillDate` tutup kalender dengan Tab; `PengurusModal.base` pilih organ langsung dari listbox). Spec lain yang memakai helper ini belum dijalankan ulang: regresi tidak terbukti.
+- **Perubahan helper bersama (belum di-commit):** `pages/controls/FormControls.ts` (Dropdown.select tahan search tak bisa diisi + fallback listbox terbuka), `pages/buckets/identitas/PenjaminForms.ts` (`fillDate` tutup kalender dengan Tab; `PengurusModal.base` pilih organ langsung dari listbox). Spec lain yang memakai helper ini belum dijalankan ulang: regresi tidak terbukti.
 
 ### GF-IDENTITAS-PENGECEKAN
 - **Status:** SEBAGIAN / BELUM LENGKAP (2026-11-23). Bukan LOLOS penuh.

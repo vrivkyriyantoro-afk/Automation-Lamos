@@ -2,7 +2,7 @@ import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as path from 'path';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
+import { LoginPage } from '../../pages/base/LoginPage';
 
 // MENGUBAH DATA SIT: hapus semua file (.txt dan .pdf) satu entitas di modal "Kelola file SLIK", upload ulang, Simpan, lalu buka ulang modal untuk verifikasi.
 // Env: BARIS (default 4), TXT, PDF.

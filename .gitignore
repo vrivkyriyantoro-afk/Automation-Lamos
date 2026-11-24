@@ -13,3 +13,7 @@ node_modules/
 
 # QA evidence output
 evidence/
+
+# BDD output
+.features-gen/
+playwright-report-bdd/

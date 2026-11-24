@@ -1,9 +1,9 @@
 import { test } from '@playwright/test';
 import 'dotenv/config';
 import * as fs from 'fs';
-import { LoginPage } from '../../pages/LoginPage';
-import { CreditApplicationForm } from '../../pages/components/BucketSection';
-import { DataPekerjaanKeuanganSection } from '../../pages/bucketIdentitas/DataPekerjaanKeuanganSection';
+import { LoginPage } from '../../pages/base/LoginPage';
+import { CreditApplicationForm } from '../../pages/base/BucketSection';
+import { DataPekerjaanKeuanganSection } from '../../pages/buckets/identitas/DataPekerjaanKeuanganSection';
 
 // Probe: kenapa "Pengalaman di industri terkait" kosong setelah diketik? Tidak meninggalkan section (tidak memicu simpan).
 const APP_ID = process.env.APPLICATION_ID_IDENTITAS_LENGKAP || '01M83AP5FKPHB1D3E2QS8P015Z';
