@@ -8,7 +8,7 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Test Suite: S2CML-5420 - Bucket Agunan - Detailing Form Informasi Tambahan Agunan non Cash Collateral
  * Sumber:
  *   - Jira: https://bank-sinarmas.atlassian.net/browse/S2CML-5420 (Status: Ready to SIT)
- *   - Matriks Resmi: exports/TC_S2CML-5420_Data_Tambahan_Agunan.csv (16 Test Cases)
+ *   - Matriks Resmi: exports/test-cases/TC_S2CML-5420_Data_Tambahan_Agunan.csv (16 Test Cases)
  *   - Aturan Eviden (AGENTS.md bagian 2): test.step dipetakan 1:1 ke butir `Langkah Pengujian` CSV,
  *     screenshot per langkah, kondisi awal dipisah sebagai Prekondisi, tanpa kotak merah.
  *
@@ -24,7 +24,7 @@ const TARGET_URL = `${BASE_HOST.replace(/\/$/, '')}/lamos/credit-application/${T
 const DUMMY_FILE_1 = path.resolve('fixtures/files/dummy-identitas.pdf');
 const DUMMY_FILE_2 = path.resolve('fixtures/files/dummy-agunan-2.pdf');
 const DUMMY_FILE_51MB = path.resolve('fixtures/files/dummy-oversize-51mb.pdf');
-const EVIDEN_OUTPUT_DIR = path.resolve('explore-output/s2cml-5420');
+const EVIDEN_OUTPUT_DIR = path.resolve('explore-output/stories/s2cml-5420');
 
 test.describe('S2CML-5420: Data Tambahan Agunan (Non-Cash Collateral)', () => {
   test.beforeEach(async ({ page }) => {

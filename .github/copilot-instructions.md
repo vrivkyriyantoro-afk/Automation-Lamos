@@ -19,7 +19,7 @@ Tests use the live LAMOS SIT application and `.env` for configuration. Check a s
 
 - This repository is a Playwright + TypeScript automation suite for LAMOS, not the LAMOS application itself. `pages/LoginPage.ts` handles SSO; `pages/CreditApplicationPage.ts` is an older navigation page object.
 - `pages/components/BucketSection.ts` provides `CreditApplicationForm` for credit-application URL/bucket navigation and `BucketSection` for section scoping/opening. `pages/components/FormControls.ts` wraps the shared LAMOS controls.
-- Bucket-specific page objects live under `pages/bucket<Nama>/`, with section classes extending `BucketSection`. Most section classes and their `sections.ts` barrels are generated from `explore-output/<bucket>.json` by `scripts/generators/generate-pages.js`.
+- Bucket-specific page objects live under `pages/bucket<Nama>/`, with section classes extending `BucketSection`. Most section classes and their `sections.ts` barrels are generated from `explore-output/buckets/<bucket>.json` by `scripts/generators/generate-pages.js`.
 - Document upload and its hierarchical document tree are manual implementations in `pages/bucketDokumen/`; Identity also contains manual guarantor/management forms alongside generated sections.
 - Tests are grouped by bucket in `tests/bucket<Nama>/`; cross-bucket specs live in `tests/auth/`, `tests/explore/`, `tests/smoke/` (throwaway probes in `tests/_scratch/`). `tests/explore/explore-all-buckets.spec.ts` captures UI structure, while `tests/smoke/sections-locator-smoke.spec.ts` checks generated locators against the live app.
 

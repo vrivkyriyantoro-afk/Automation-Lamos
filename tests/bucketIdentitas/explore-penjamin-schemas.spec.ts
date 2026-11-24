@@ -10,13 +10,13 @@ import { LoginPage } from '../../pages/LoginPage';
  * - buka modal pengurus/pemegang saham, petakan varian Perseorangan WNI / WNA / Badan Usaha
  * Tidak pernah klik Simpan / Kirim / Lanjutkan. Modal ditutup dengan Batal.
  *
- * Output: explore-output/penjamin-schemas.json + screenshot.
+ * Output: explore-output/buckets/penjamin-schemas.json + screenshot.
  * Jalankan: npx playwright test tests/bucketIdentitas/explore-penjamin-schemas.spec.ts --project=chromium
  */
 const APPLICATION_ID = process.env.APPLICATION_ID || '01M483P7DDHBV41Z5QPV0FM8Q9';
 const BASE = (process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/').replace(/\/?$/, '/');
 const TARGET_URL = `${BASE}lamos/credit-application/${APPLICATION_ID}/create?bucket=identitas_pengecekan&debtorType=individual`;
-const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output';
+const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output/buckets';
 const SECTION_SEL = '[data-explore="penjamin"]';
 const MODAL_SEL = '[data-explore="modal"]';
 

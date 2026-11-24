@@ -7,12 +7,12 @@ import {
   DataPenjaminForm, CorporateGuaranteeData, PengurusWniData, PengurusWnaData, PengurusBadanUsahaData,
   JenisKelamin, OrganBadanUsaha, JenisBadanUsaha,
 } from '../../pages/bucketIdentitas/PenjaminForms';
-import data from '../../fixtures/penjamin-badan-usaha.json';
+import data from '../../fixtures/entities/penjamin-badan-usaha.json';
 
 /**
  * TC Penjamin Badan Usaha (Corporate Guarantee) dengan 3 pemegang saham:
  * Perseorangan WNI, Perseorangan WNA, dan Badan Usaha.
- * Data: fixtures/penjamin-badan-usaha.json
+ * Data: fixtures/entities/penjamin-badan-usaha.json
  *
  * PERHATIAN: section Data Penjamin menyimpan otomatis, jadi isian perusahaan langsung tersimpan.
  * Tanpa PENJAMIN_COMMIT=1, modal pemegang saham hanya diisi lalu DIBATALKAN (tidak menambah data).

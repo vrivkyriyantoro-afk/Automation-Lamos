@@ -6,7 +6,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
 sys.stdout.reconfigure(encoding='utf-8')
-os.makedirs('exports', exist_ok=True)
+os.makedirs('exports/test-cases', exist_ok=True)
 
 test_cases = [
     {
@@ -204,7 +204,7 @@ test_cases = [
 ]
 
 # ─── EXPORT CSV ──────────────────────────────────────────────────────────
-csv_file_path = os.path.join('exports', 'TC_S2CML-5420_Data_Tambahan_Agunan.csv')
+csv_file_path = os.path.join('exports', 'test-cases', 'TC_S2CML-5420_Data_Tambahan_Agunan.csv')
 with open(csv_file_path, mode='w', newline='', encoding='utf-8-sig') as f:
     writer = csv.writer(f)
     writer.writerow([
@@ -236,7 +236,7 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8-sig') as f:
 print(f'✅ CSV berhasil digenerate: {csv_file_path} ({len(test_cases)} Test Cases)')
 
 # ─── EXPORT XLSX ─────────────────────────────────────────────────────────
-xlsx_file_path = os.path.join('exports', 'TC_S2CML-5420_Data_Tambahan_Agunan.xlsx')
+xlsx_file_path = os.path.join('exports', 'test-cases', 'TC_S2CML-5420_Data_Tambahan_Agunan.xlsx')
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = 'S2CML-5420'

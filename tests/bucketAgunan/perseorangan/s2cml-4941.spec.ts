@@ -9,7 +9,7 @@ import { ambilScreenshotBersih, bersihkanTanda } from '../helpers/eviden';
  * Test Suite: S2CML-4941 - [BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Edit Agunan/Collaterals - Edit data Existing
  * Sumber:
  *   - Jira: https://bank-sinarmas.atlassian.net/browse/S2CML-4941 (Status: In SIT)
- *   - Matriks Resmi: exports/TC_S2CML-4941_Edit_Agunan_Existing.csv (15 TC)
+ *   - Matriks Resmi: exports/test-cases/TC_S2CML-4941_Edit_Agunan_Existing.csv (15 TC)
  *   - Target Debitur: Perseorangan (01M4F7TNSCSHEDB5G3WTSP7HDY)
  *   - Scope: Menu titik 3, Form edit modal, Prefill 3-step, Draft vs Final gating rules, Pembatalan & Validasi
  */
@@ -17,7 +17,7 @@ import { ambilScreenshotBersih, bersihkanTanda } from '../helpers/eviden';
 const TARGET_APP_ID = process.env.TARGET_APP_ID_AGUNAN || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const BASE_HOST = process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/';
 const TARGET_URL = `${BASE_HOST.replace(/\/$/, '')}/lamos/credit-application/${TARGET_APP_ID}/create?bucket=agunan&debtorType=individual`;
-const EVIDEN_DIR = path.resolve(__dirname, '../../../explore-output/s2cml-4941');
+const EVIDEN_DIR = path.resolve(__dirname, '../../../explore-output/stories/s2cml-4941');
 
 test.describe('S2CML-4941: Edit Agunan Existing - Debitur Perseorangan', () => {
   test.beforeAll(() => {

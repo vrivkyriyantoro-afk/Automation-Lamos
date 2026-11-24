@@ -4,11 +4,11 @@ import * as path from 'path';
 import { LoginPage } from '../../pages/LoginPage';
 import { CreditApplicationForm } from '../../pages/components/BucketSection';
 import { DataPenjaminForm, PersonalGuaranteeData, SpouseData, toDisplayDate, normalizeWilayah } from '../../pages/bucketIdentitas/PenjaminForms';
-import data from '../../fixtures/penjamin-perorangan-menikah.json';
+import data from '../../fixtures/entities/penjamin-perorangan-menikah.json';
 
 /**
  * TC Penjamin Perorangan (Personal Guarantee) WNI, status Menikah + data pasangan.
- * Data: fixtures/penjamin-perorangan-menikah.json
+ * Data: fixtures/entities/penjamin-perorangan-menikah.json
  *
  * PERHATIAN: section Data Penjamin menyimpan otomatis, jadi isian field langsung tersimpan di aplikasi target.
  * Upload KTP hanya dilakukan bila PENJAMIN_COMMIT=1.

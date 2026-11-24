@@ -860,17 +860,27 @@ pages/
     DocumentBucketPage.ts       # page object LAMA buatan user (upload & kategorisasi)
     DokumenSection.ts           # BARU, manual: upload, staging, kategori bertingkat, status pohon dokumen
     dokumenTree.ts              # konstanta pohon dokumen (PARSIAL)
-scripts/
-  generate-pages.js             # JSON explore -> page object TS
-tests/                          # root = lintas bucket; spec khusus bucket di tests/bucket<Nama>/ (nama folder sama dengan pages/)
-  explore-all-buckets.spec.ts   # explorer read-only semua bucket (fase 1 + 2)
-  explore-probe.spec.ts         # probe sekali pakai (debug DOM), boleh dihapus
-  sections-locator-smoke.spec.ts# verifikasi semua locator generated ditemukan di app (read-only)
-  login.spec.ts
+scripts/                        # dikelompokkan per fungsi
+  export-tc/                    # export_tc_s2cml_*.py (generator matriks TC), audit/dedupe/fix TC
+  jira/                         # read-atlassian, crawl/analyze graf epic, probe & audit Jira
+  readers/                      # read-figma, read-excel-sheet16, read-sheet-mck
+  generators/                   # generate-pages.js (JSON explore -> page object TS), gen-slik.js, specify.js
+  evidence/                     # build_evidence_docx.py (evidence .docx dari manifest capture)
+  reporting/                    # run-summary.js
+  maintenance/                  # utilitas CSV/figma sekali pakai (dump-tc, audit-exports, fetch-figma, dst.)
+  _archive/                     # file .bak
+tests/                          # spec khusus bucket di tests/bucket<Nama>/ (nama folder sama dengan pages/)
+  auth/login.spec.ts
+  explore/                      # explore-all-buckets (explorer read-only semua bucket), explore-probe
+  smoke/sections-locator-smoke.spec.ts  # verifikasi semua locator generated ditemukan di app (read-only)
+  _scratch/                     # spec sekali pakai (tmp-gf), boleh dihapus
   bucketIdentitas/              # identitas-pengecekan, penjamin-*, data-penjamin-*, input-pengurus-*, explore-pengurus-*, explore-penjamin-*
   bucketDokumen/                # explore-dokumen, explore-mandatory-docs, inspect-doc-dropdowns, document-bucket, bulk-upload-mandatory, credit-application
   bucketAgunan/                 # explore-agunan-dropdown
-explore-output/                 # hasil explore: <bucket>.json, .html, .png, dokumen-tree.json
+fixtures/                       # sources/ (template & sheet data uji), entities/ (JSON penjamin & SLIK), files/ (PDF dummy)
+exports/                        # test-cases/ (TC_*.csv/xlsx), slik/ (NIK_/NPWP_ + slik-*), config/
+explore-output/                 # buckets/ (<bucket>.json/.html/.png, dokumen-tree.json), agunan/ identitas/ bug/ atlassian/ jira/ figma/,
+                                # stories/ (eviden per story), probes/ (file lepas), logs/, _archive/
 ```
 
 ### 3.1 Pola class hasil generate
@@ -957,6 +967,16 @@ Aturan generator: file yang **tidak** diawali `// AUTO-GENERATED` tidak pernah d
 ---
 
 ## 6. Riwayat
+
+### 2026-11-24 — Rapikan struktur folder: scripts, tests, fixtures, exports, explore-output (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan: branch `bucketAgunanV1` (snapshot `b6608ee`, lalu refactor). `git mv` + perbaikan path (`__dirname`, `ROOT`, string literal, default `EXPLORE_OUT`) dan rujukan di AGENTS.md, `.github/`, agen, skill, docs.
+  - `scripts/` -> export-tc, jira, readers, generators, evidence, reporting, maintenance, _archive. Spec lepas di `tests/` -> auth, explore, smoke, _scratch.
+  - `fixtures/` -> sources, entities, files. `exports/` -> test-cases, slik, config.
+  - `explore-output/` -> buckets, stories, probes, logs, _archive (agunan, identitas, bug, atlassian, jira, figma tetap).
+  - Tambah `.claude/agents/qa-evidence-runner.md`, `scripts/evidence/build_evidence_docx.py`, `.mcp.json` (Playwright MCP), `evidence/` di `.gitignore`.
+- Verifikasi: `playwright test --list` tetap 309 test / 93 file (sebelum dan sesudah); `node --check` semua script; `run-summary.js`, `audit_tc_redundancy.py`, `audit-exports.js` jalan dari lokasi baru; cek semua path literal di kode menunjuk ke file ada (sisa hanya direktori output runtime). Entri riwayat lama sengaja tidak diubah (path lama di dalamnya historis).
+- Belum selesai / gagal: tidak ada test dijalankan ke SIT. `pages/` tidak direstruktur (sudah per-bucket; generator & import ratusan spec bergantung padanya). `explore-output/atlassian/S2CML-4981.json` berisi 3 `apikey` dari deskripsi Jira, sengaja tidak di-commit. Playwright MCP belum diuji start.
+- Keputusan user: restruktur penuh scripts/tests/fixtures/exports/explore-output; branch baru `bucketAgunanV1` dengan perubahan terbawa.
 
 ### 2026-11-01 — Modul 8 Informasi Kepemilikan Agunan Lengkap: Error/Validasi Perseorangan + Suite Badan Usaha (Claude Opus 5 via Claude Code)
 - Dikerjakan:

@@ -62,7 +62,7 @@ test.describe('Probe Ketersediaan Agunan Existing untuk S2CML-4941', () => {
 
       // Ambil screenshot full page
       await page.screenshot({
-        path: `explore-output/probe-4941-${cand.id}.png`,
+        path: `explore-output/probes/probe-4941-${cand.id}.png`,
         fullPage: true,
       });
 
@@ -105,7 +105,7 @@ test.describe('Probe Ketersediaan Agunan Existing untuk S2CML-4941', () => {
         console.log(`  Opsi menu popover yang muncul: ${JSON.stringify(popoverText)}`);
 
         await page.screenshot({
-          path: `explore-output/probe-4941-${cand.id}-menu.png`,
+          path: `explore-output/probes/probe-4941-${cand.id}-menu.png`,
         });
 
         // Tutup kembali popover dengan klik di luar atau escape

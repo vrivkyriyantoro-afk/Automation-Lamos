@@ -48,7 +48,7 @@ test('Explore SIT Kepemilikan Tab Elements & Buttons', async ({ page }) => {
   const filteredLabels = [...new Set(labels.map(l => l.trim()).filter(l => l.length > 2))];
   console.log('Tab Kepemilikan Text/Labels:', filteredLabels.slice(0, 30));
 
-  await page.screenshot({ path: 'explore-output/modal-tab-kepemilikan-detail.png', fullPage: true });
+  await page.screenshot({ path: 'explore-output/probes/modal-tab-kepemilikan-detail.png', fullPage: true });
 
   await page.keyboard.press('Escape');
   await page.waitForTimeout(500);

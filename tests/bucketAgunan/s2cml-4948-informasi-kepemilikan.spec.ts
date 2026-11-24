@@ -19,7 +19,7 @@ import {
 /**
  * S2CML-4948 — Informasi Kepemilikan Agunan:
  * Dropdown Kategori, Load List Nama dari Bucket Identitas, dan Auto-Fill.
- * Matriks: exports/TC_S2CML-4948_Informasi_Kepemilikan.csv
+ * Matriks: exports/test-cases/TC_S2CML-4948_Informasi_Kepemilikan.csv
  */
 test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Auto-Fill', () => {
   // Listbox kategori dibuka ke bawah; pada tinggi 720px opsi terbawah jatuh di luar
@@ -53,7 +53,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     const ada010 = options.some(o => o.includes('010'));
     console.log(`TC-4948-01 GAP prekondisi -> 002=${ada002} 009=${ada009} 010=${ada010} (butuh App ID belum menikah & tanpa penjamin untuk assert penuh)`);
 
-    await page.screenshot({ path: 'explore-output/tc-4948-01-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-01-options.png' });
     await closeModal(page);
   });
 
@@ -74,7 +74,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     console.log(`TC-4948-03 GAP prekondisi -> butuh App ID dengan fasilitas aktif BSB. Aktual: 001=${ada001} 003=${ada003}`);
     expect(ada001 !== ada003, '001 dan 003 harus saling eksklusif').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4948-03-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-03-options.png' });
     await closeModal(page);
   });
 
@@ -100,7 +100,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     const ada001 = options.some(o => o.includes('001'));
     console.log(`TC-4948-04 MISMATCH desain -> expected 003 - Debitur; aktual 001=${ada001} 003=${ada003}`);
 
-    await page.screenshot({ path: 'explore-output/tc-4948-04-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-04-options.png' });
     await closeModal(page);
   });
 
@@ -115,7 +115,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     expect(options.some(o => o.includes('006')), '006 tidak boleh tampil di perorangan').toBeFalsy();
     expect(options.some(o => o.includes('007')), '007 tidak boleh tampil di perorangan').toBeFalsy();
 
-    await page.screenshot({ path: 'explore-output/tc-4948-05-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-05-options.png' });
     await closeModal(page);
   });
 
@@ -140,7 +140,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     console.log(`TC-4948-07 dropdownNamaKosong=${namaKosong} adaNotif=${adaNotif}`);
     expect(namaKosong || adaNotif, 'harus tampil dropdown Nama kosong atau notifikasi data tidak tersedia').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4948-07-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-07-after.png' });
     await closeModal(page);
   });
 
@@ -176,7 +176,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
         'Butuh App ID badan usaha tanpa data Pengurus & Pemegang Saham untuk assert penuh.');
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-08-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-08-after.png' });
     await closeModal(page);
   });
 
@@ -206,7 +206,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
         'expected mensyaratkan minimal 2 untuk verifikasi jumlah item.');
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-09-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-09-options.png' });
     await closeModal(page);
   });
 
@@ -238,7 +238,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
       expect(i.disabled || i.readOnly, `field "${i.value}" harus read-only`).toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-11-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-11-after.png' });
     await closeModal(page);
   });
 
@@ -271,7 +271,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
       expect(i.disabled || i.readOnly, `field "${i.value}" harus read-only`).toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-13-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-13-after.png' });
     await closeModal(page);
   });
 
@@ -307,7 +307,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
       expect(adaDropdownNama, 'minimal dropdown Nama harus dirender setelah kategori 010 dipilih').toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-15-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-15-after.png' });
     await closeModal(page);
   });
 
@@ -355,7 +355,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
       expect(/pilih hubungan/i.test(hubungan), 'Hubungan dengan Debitur harus tetap kosong (dipilih manual)').toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-16-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-16-after.png' });
     await closeModal(page);
   });
 
@@ -380,7 +380,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     // adalah cakupan TC-4890-06 (AC S2CML-4890), bukan TC ini. TC ini fokus pada
     // field Bukti kepemilikan yang auto-fill dari Step 2 (asal TC-4889-62 & 63).
 
-    await page.screenshot({ path: 'explore-output/tc-4948-17-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-17-after.png' });
     await closeModal(page);
   });
 
@@ -407,7 +407,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     console.log('TC-4948-18 GAP prekondisi -> butuh App ID dengan penjamin perorangan berstatus ' +
       `Belum Menikah untuk assert penuh. Aktual: 009=${ada009} 010=${ada010}`);
 
-    await page.screenshot({ path: 'explore-output/tc-4948-18-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-18-options.png' });
     await closeModal(page);
   });
 
@@ -428,7 +428,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
       expect(i.disabled || i.readOnly, `field "${i.value}" harus tidak dapat diedit manual`).toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4948-19-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-19-after.png' });
     await closeModal(page);
   });
 
@@ -463,7 +463,7 @@ test.describe('S2CML-4948: Informasi Kepemilikan Agunan - Dropdown Kategori & Au
     const combos = await snapshotComboboxes(page);
     console.log('TC-4948-20 Comboboxes setelah 005:', JSON.stringify(combos));
 
-    await page.screenshot({ path: 'explore-output/tc-4948-20-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4948-20-after.png' });
     await closeModal(page);
   });
 });

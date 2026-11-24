@@ -79,7 +79,7 @@ test('Explore DOM Modul 8: tombol Simpan, label, dan form setelah kategori 001',
   );
   console.log('INPUTS_AFTER_001=' + JSON.stringify(inputsAfter));
 
-  await page.screenshot({ path: 'explore-output/m8-dom-after-001.png', fullPage: true });
+  await page.screenshot({ path: 'explore-output/probes/m8-dom-after-001.png', fullPage: true });
 
   await page.keyboard.press('Escape');
   await page.waitForTimeout(500);

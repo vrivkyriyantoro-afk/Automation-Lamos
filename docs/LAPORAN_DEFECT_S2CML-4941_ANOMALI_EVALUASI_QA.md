@@ -13,10 +13,10 @@
 
 | Metrik | Hasil | Catatan |
 |---|---|---|
-| Total Test Cases Terdaftar | 15 | Sesuai matriks `exports/TC_S2CML-4941_Edit_Agunan_Existing.csv` |
+| Total Test Cases Terdaftar | 15 | Sesuai matriks `exports/test-cases/TC_S2CML-4941_Edit_Agunan_Existing.csv` |
 | Eksekusi Lolos (Passed) | 13 | 10 benar terverifikasi eviden, 3 terindikasi *False Positive / Placeholder* |
 | Eksekusi Diskip (Skipped) | 2 | `TC-4941-07` (GAP data Agunan Draft) & `TC-4941-12` (GAP Fasilitas Terikat) |
-| Screenshot Eviden Tersedia | 11 file | Di folder `explore-output/s2cml-4941/` |
+| Screenshot Eviden Tersedia | 11 file | Di folder `explore-output/stories/s2cml-4941/` |
 | Integritas Kalkulasi Finansial | Valid (Rp 1.6 M = Rp 700 jt + Rp 900 jt) | Tidak ditemukan nilai NaN/Undefined |
 | Anomali UI & Data Ditemukan | 2 Temuan Defect | 1 Bug Visual Overlap, 1 Bug Typo String UI |
 
@@ -31,7 +31,7 @@
 - **Priority:** Medium
 - **Komponen / Modul:** Bucket Agunan → Halaman Ringkasan Daftar Agunan
 - **Test Case Terkait:** `TC-4941-01`, `TC-4941-02`
-- **File Eviden:** `explore-output/s2cml-4941/TC-4941-01-step-1.png`
+- **File Eviden:** `explore-output/stories/s2cml-4941/TC-4941-01-step-1.png`
 
 #### Deskripsi Masalah
 Pada halaman utama ringkasan Bucket Agunan (`buildup/credit-application`), tombol navigasi melayang (*floating action button*) arah panah kiri (`←`) berposisi absolut di kanan bawah layar tanpa margin proteksi (*padding bottom*) yang cukup terhadap daftar kartu agunan. Ketika terdapat ≥ 2 kartu agunan yang dirender, tombol ini menimpa langsung baris teks informasi finansial *"Nilai appraisal yang dapat diagunkan Rp 900.000.000"* pada kartu kedua (`F15 - Setoran Jaminan`), sehingga nominal nilai terpotong (*truncated*) dan tidak terbaca jelas oleh Account Officer (AO).
@@ -59,7 +59,7 @@ Pada halaman utama ringkasan Bucket Agunan (`buildup/credit-application`), tombo
 - **Priority:** Low
 - **Komponen / Modul:** Bucket Agunan → Modal Ubah Agunan → Step 3 (Informasi Kepemilikan)
 - **Test Case Terkait:** `TC-4941-06`
-- **File Eviden:** `explore-output/s2cml-4941/TC-4941-06-step-1.png`
+- **File Eviden:** `explore-output/stories/s2cml-4941/TC-4941-06-step-1.png`
 
 #### Deskripsi Masalah
 Pada form edit modal *Ubah agunan* Step 3 (*Informasi kepemilikan*), pilihan opsi dropdown pada field **Kategori pemilik agunan\*** menampilkan nilai `005 - Pemilik Anggunan`. Penulisan kata `Anggunan` mengandung huruf 'g' ganda (saltik), yang menyimpang dari pedoman ejaan baku bahasa Indonesia serta istilah standar perbankan Bank Sinarmas (*Agunan*).
@@ -85,7 +85,7 @@ Opsi dropdown tertulis dengan saltik: `005 - Pemilik Anggunan`.
    - Skrip **belum memverifikasi** kontrol input kepemilikan yang sebenarnya di dalam body form Step 3 dan **belum memverifikasi** apakah file dokumen kepemilikan terlampir tetap melekat (*attachment retention*).
 
 2. **TC-4941-10 & TC-4941-11 (Kalkulasi Nilai Prediktif & Pelapor): Placeholder Test**
-   - Kedua test case tercatat `Passed`, namun tidak memiliki *assertion* verifikasi kalkulasi dan tidak menghasilkan tangkapan layar (*screenshot*) di folder `explore-output/s2cml-4941/`.
+   - Kedua test case tercatat `Passed`, namun tidak memiliki *assertion* verifikasi kalkulasi dan tidak menghasilkan tangkapan layar (*screenshot*) di folder `explore-output/stories/s2cml-4941/`.
    - Hal ini disebabkan oleh mode *Read-Only* di SIT, sehingga perubahan nilai tidak disubmit ke backend. Perlu dibuat mock API atau validasi respon kalkulasi tanpa commit data.
 
 3. **TC-4941-15 (Stepper Status Pasca Edit): Skenario Tidak Dieksekusi**

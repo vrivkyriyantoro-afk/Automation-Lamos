@@ -90,7 +90,7 @@ test('Explore DOM Badan Usaha: form setelah kategori 005 / 006 / 007', async ({ 
       await page.waitForTimeout(500);
     }
 
-    await page.screenshot({ path: `explore-output/bu-dom-${kode}.png`, fullPage: true });
+    await page.screenshot({ path: `explore-output/probes/bu-dom-${kode}.png`, fullPage: true });
   }
 
   await page.keyboard.press('Escape');

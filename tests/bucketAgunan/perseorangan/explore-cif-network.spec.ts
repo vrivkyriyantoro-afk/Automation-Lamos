@@ -3,10 +3,10 @@ import 'dotenv/config';
 import fs from 'fs';
 import { LoginPage } from '../../../pages/LoginPage';
 
-// Eksplorasi read-only: rekam Network + screenshot hasil Cek CIF (5445). Output: explore-output/s2cml-5445/
+// Eksplorasi read-only: rekam Network + screenshot hasil Cek CIF (5445). Output: explore-output/stories/s2cml-5445/
 const APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const URL = `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${APP_ID}/create?bucket=agunan&debtorType=individual`;
-const OUT = 'explore-output/s2cml-5445';
+const OUT = 'explore-output/stories/s2cml-5445';
 const CIFS: Record<string, string> = { valid1: process.env.CIF_VALID_1!, valid2: process.env.CIF_VALID_2!, invalid: '99999999' };
 
 async function openForm(page: Page, jenis: RegExp) {

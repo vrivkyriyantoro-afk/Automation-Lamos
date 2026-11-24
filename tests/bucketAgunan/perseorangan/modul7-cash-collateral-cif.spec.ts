@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 7: Sifat Agunan, Cash Collateral & Pengecekan CIF Bank Sinarmas
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC - 04 - 49 s.d. TC - 04 - 61
  * Karakter: READ-ONLY (Validasi Opsi Sifat Agunan, Conditional Cash Collateral, Status CIF, Integrasi Tombol Cek CIF, & Instansi Penerbit)
  */

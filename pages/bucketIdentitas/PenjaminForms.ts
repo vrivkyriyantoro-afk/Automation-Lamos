@@ -1,4 +1,4 @@
-// Manual (bukan generated). Dibuat dari explore-output/penjamin-schemas.json (tests/bucketIdentitas/explore-penjamin-schemas.spec.ts).
+// Manual (bukan generated). Dibuat dari explore-output/buckets/penjamin-schemas.json (tests/bucketIdentitas/explore-penjamin-schemas.spec.ts).
 import { Page, Locator, expect } from '@playwright/test';
 import { DataPenjaminSection } from './DataPenjaminSection';
 import { Dropdown, Checkbox, escapeRegex } from '../components/FormControls';

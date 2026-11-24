@@ -6,13 +6,13 @@ import { LoginPage } from '../../pages/LoginPage';
 /**
  * Explorer read-only: menelusuri semua bucket (tab) di halaman Buat Pengajuan Kredit,
  * expand setiap section, lalu memetakan field (label, name, tipe, wajib, opsi dropdown).
- * Output: explore-output/<bucket>.json + screenshot (di luar test-results agar tidak terhapus tiap run).
+ * Output: explore-output/buckets/<bucket>.json + screenshot (di luar test-results agar tidak terhapus tiap run).
  *
  * Jalankan: EXPLORE_URL=<url> npx playwright test tests/explore/explore-all-buckets.spec.ts --project=chromium
  */
 const TARGET_URL = process.env.EXPLORE_URL
   || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M483P7DDHBV41Z5QPV0FM8Q9/create?bucket=identitas_pengecekan&debtorType=individual';
-const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output';
+const OUT_DIR = process.env.EXPLORE_OUT || 'explore-output/buckets';
 const ONLY_BUCKETS = (process.env.EXPLORE_BUCKETS || '').split(',').filter(Boolean);
 
 async function settle(page: Page, ms = 1500) {

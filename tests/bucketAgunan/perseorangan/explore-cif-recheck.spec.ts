@@ -44,6 +44,6 @@ test('recheck: radio Ya -> CIF muncul?', async ({ page }, testInfo) => {
   });
   await page.waitForTimeout(800);
   await testInfo.attach('recheck-after-ya-scrolled', { body: await page.screenshot(), contentType: 'image/png' });
-  await page.screenshot({ path: 'explore-output/recheck-cif-after-ya.png' });
+  await page.screenshot({ path: 'explore-output/probes/recheck-cif-after-ya.png' });
   console.log('TEKS MODAL:', (await page.locator('body').innerText()).match(/CIF[^\n]*/gi));
 });

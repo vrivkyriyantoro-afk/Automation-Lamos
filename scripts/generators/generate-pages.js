@@ -1,5 +1,5 @@
 ﻿/**
- * Generator page object per section dari hasil explore (explore-output/<bucket>.json).
+ * Generator page object per section dari hasil explore (explore-output/buckets/<bucket>.json).
  *
  *   node scripts/generators/generate-pages.js            # tulis file yang belum ada
  *   node scripts/generators/generate-pages.js --force    # timpa file hasil generate sebelumnya
@@ -11,7 +11,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '../..');
-const IN_DIR = path.join(ROOT, process.env.EXPLORE_OUT || 'explore-output');
+const IN_DIR = path.join(ROOT, process.env.EXPLORE_OUT || 'explore-output/buckets');
 const PAGES_DIR = path.join(ROOT, 'pages');
 const FORCE = process.argv.includes('--force');
 const ONLY = (process.argv.find(a => a.startsWith('--only=')) || '').replace('--only=', '').split(',').filter(Boolean);
@@ -28,7 +28,7 @@ const BUCKET_FOLDERS = {
   penyimpangan_pihak_terkait: 'bucketPenyimpanganPihakTerkait',
   catatan_anda: 'bucketCatatanAnda',
   // collateral (Agunan): di-skip sementara
-  // dokumen: ditulis manual dari explore-output/dokumen-tree.json
+  // dokumen: ditulis manual dari explore-output/buckets/dokumen-tree.json
 };
 
 const INPUT_KINDS = ['text', 'textarea', 'currency', 'date', 'dropdown', 'radio', 'file', 'checkbox', 'richtext'];
@@ -357,7 +357,7 @@ function main() {
         fields,
         hasCriteria,
         note,
-        source: `explore-output/${bucket}.json`,
+        source: `explore-output/buckets/${bucket}.json`,
         rowGroups: isModal ? [] : buildRowGroups(fields, inlineBySection[s.section] || []),
       });
       writeFile(path.join(dir, `${className}.ts`), content, written);

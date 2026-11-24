@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 5: Data Pembanding Agunan
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC-5419-14 s.d. TC-5419-18
  * Karakter: Interaktif UI, Modal Input Data Pembanding, Tabel Preview & Aksi (Detail, Edit, Hapus, Max 10 Record)
  */

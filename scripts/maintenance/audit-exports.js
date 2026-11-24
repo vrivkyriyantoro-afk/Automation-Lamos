@@ -20,7 +20,7 @@ function parseCSV(str) {
   return rows;
 }
 
-const dir = 'exports';
+const dir = 'exports/test-cases';
 for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.csv'))) {
   const rows = parseCSV(fs.readFileSync(path.join(dir, f), 'utf8'));
   const header = rows[0].map(h => h.replace(/^﻿+/, '').trim());

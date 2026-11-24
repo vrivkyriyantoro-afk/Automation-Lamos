@@ -52,7 +52,7 @@ test('Probe card three-dot menu on 01M4F7TNSCSHEDB5G3WTSP7HDY', async ({ page })
 
   // Ambil screenshot menu popover
   await page.screenshot({
-    path: `explore-output/probe-card-menu-${appId}.png`,
+    path: `explore-output/probes/probe-card-menu-${appId}.png`,
   });
 
   // Ambil teks seluruh opsi menu
@@ -73,7 +73,7 @@ test('Probe card three-dot menu on 01M4F7TNSCSHEDB5G3WTSP7HDY', async ({ page })
 
     // Ambil screenshot modal edit agunan
     await page.screenshot({
-      path: `explore-output/probe-modal-ubah-${appId}.png`,
+      path: `explore-output/probes/probe-modal-ubah-${appId}.png`,
       fullPage: true,
     });
 

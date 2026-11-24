@@ -4,7 +4,7 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-os.makedirs('exports', exist_ok=True)
+os.makedirs('exports/test-cases', exist_ok=True)
 
 test_cases = [
     # ─── KELOMPOK 1: NAVIGASI STEPPER & INDIKATOR ────────────────────────────
@@ -216,7 +216,7 @@ test_cases = [
 headers = ['Test Case ID', 'Tipe Debitur', 'Kelompok / Modul', 'Judul Skenario', 'Tipe', 'Prioritas', 'Prekondisi', 'Langkah Pengujian', 'Expected Result', 'Referensi Sumber']
 
 # 1. Generate CSV (UTF-8 with BOM for Excel)
-csv_path = os.path.join('exports', 'TC_S2CML-4890_Bucket_Agunan.csv')
+csv_path = os.path.join('exports', 'test-cases', 'TC_S2CML-4890_Bucket_Agunan.csv')
 with open(csv_path, 'w', encoding='utf-8-sig', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(headers)
@@ -224,7 +224,7 @@ with open(csv_path, 'w', encoding='utf-8-sig', newline='') as f:
         writer.writerow([tc['id'], tc['debtor_type'], tc['group'], tc['title'], tc['type'], tc['priority'], tc['precondition'], tc['steps'], tc['expected'], tc['reference']])
 
 # 2. Generate XLSX with styling
-xlsx_path = os.path.join('exports', 'TC_S2CML-4890_Bucket_Agunan.xlsx')
+xlsx_path = os.path.join('exports', 'test-cases', 'TC_S2CML-4890_Bucket_Agunan.xlsx')
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = 'TC S2CML-4890'

@@ -70,7 +70,7 @@ test('Explore combobox state setelah pilih kategori 009 lalu 010', async ({ page
   console.log('OPTION_BOXES=' + JSON.stringify(optionBoxes));
   console.log('VIEWPORT=' + JSON.stringify(page.viewportSize()));
 
-  await page.screenshot({ path: 'explore-output/m8-listbox-009.png' });
+  await page.screenshot({ path: 'explore-output/probes/m8-listbox-009.png' });
 
   await page.keyboard.press('Escape');
   await page.waitForTimeout(400);

@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const text = fs.readFileSync('fixtures/TemplateAutomateLamos - Sheet1.csv', 'utf8');
+const text = fs.readFileSync('fixtures/sources/TemplateAutomateLamos - Sheet1.csv', 'utf8');
 
 // Parser CSV sederhana yang menghormati field berkutip dan newline di dalamnya.
 function parseCSV(str) {

@@ -52,7 +52,7 @@ test('Eksplorasi Dropdown Kategori Pemilik Agunan SIT', async ({ page }) => {
   const optionsKategori = await page.locator('[role="listbox"]:visible [role="option"], [role="listbox"]:visible li, ul:visible li').allInnerTexts();
   console.log('Opsi Kategori Pemilik Agunan:', optionsKategori.map(o => o.trim()).filter(o => o.length > 0));
 
-  await page.screenshot({ path: 'explore-output/opsi-kategori-pemilik.png' });
+  await page.screenshot({ path: 'explore-output/probes/opsi-kategori-pemilik.png' });
 
   await page.keyboard.press('Escape');
   await page.waitForTimeout(500);

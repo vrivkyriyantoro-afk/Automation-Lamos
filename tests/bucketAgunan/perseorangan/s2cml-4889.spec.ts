@@ -7,7 +7,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4889 - Add Agunan/Collaterals Part 1
  * Epic: LP-5685
- * Sumber Data Test Case: fixtures/TemplateAutomateLamos - Sheet1.csv (Modul 1: Search Agunan)
+ * Sumber Data Test Case: fixtures/sources/TemplateAutomateLamos - Sheet1.csv (Modul 1: Search Agunan)
  * Karakter: READ-ONLY (Pencarian & Eksplorasi Modal Stepper tanpa Commit Data)
  */
 
@@ -80,7 +80,7 @@ const TARGET_URL = process.env.EXPLORE_URL
   || `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${appId}/create?bucket=agunan&debtorType=${debtorType}`;
 
 test.describe(`S2CML-4889 [${name}]: Modul 1 - Search Agunan Eksisting vs Baru`, () => {
-  const csvPath = path.resolve(__dirname, '../../../fixtures/TemplateAutomateLamos - Sheet1.csv');
+  const csvPath = path.resolve(__dirname, '../../../fixtures/sources/TemplateAutomateLamos - Sheet1.csv');
   let tcData: Map<string, any>;
 
   test.beforeAll(() => {
@@ -252,7 +252,7 @@ test.describe(`S2CML-4889 [${name}]: Modul 1 - Search Agunan Eksisting vs Baru`,
 
   /**
    * TC-4889-09: Sistem memblokir reuse agunan existing dengan Paripasu = N
-   * Data uji: fixtures/Data Agunan CLS - Testing LAMOS.xlsx, sheet "Vehicle" > NON PARIPASU
+   * Data uji: fixtures/sources/Data Agunan CLS - Testing LAMOS.xlsx, sheet "Vehicle" > NON PARIPASU
    * (CLSA202607274780, nomor COL-2026-501, jenis Kendaraan).
    */
   test('TC-4889-09: Reuse agunan existing Paripasu = N diblokir', async ({ page }, testInfo) => {

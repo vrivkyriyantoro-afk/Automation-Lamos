@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 4: Alamat Agunan
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC-5419-08 s.d. TC-5419-11
  * Karakter: READ-ONLY (Validasi UI, Cascading Location Dropdowns, Reset Behavior, & Postal Code Validation)
  */

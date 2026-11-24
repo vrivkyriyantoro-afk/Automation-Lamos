@@ -5,9 +5,9 @@ import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
-os.makedirs('exports', exist_ok=True)
+os.makedirs('exports/test-cases', exist_ok=True)
 
-csv_source = os.path.join('fixtures', 'TemplateAutomateLamos - Sheet1.csv')
+csv_source = os.path.join('fixtures', 'sources', 'TemplateAutomateLamos - Sheet1.csv')
 
 def get_module_group(num):
     if 1 <= num <= 19:
@@ -99,7 +99,7 @@ print(f'[OK] Updated source CSV: {csv_source} ({len(test_cases)} TCs converted)'
 
 # 2. Generate standard CSV export
 headers = ['Test Case ID', 'Tipe Debitur', 'Kelompok / Modul', 'Judul Skenario', 'Tipe', 'Prioritas', 'Prekondisi', 'Langkah Pengujian', 'Expected Result', 'Referensi Sumber']
-csv_export_path = os.path.join('exports', 'TC_S2CML-4889_Bucket_Agunan.csv')
+csv_export_path = os.path.join('exports', 'test-cases', 'TC_S2CML-4889_Bucket_Agunan.csv')
 with open(csv_export_path, 'w', encoding='utf-8-sig', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(headers)
@@ -113,7 +113,7 @@ with open(csv_export_path, 'w', encoding='utf-8-sig', newline='') as f:
 print(f'[OK] Exported CSV: {csv_export_path}')
 
 # 3. Generate standard XLSX export with styling
-xlsx_export_path = os.path.join('exports', 'TC_S2CML-4889_Bucket_Agunan.xlsx')
+xlsx_export_path = os.path.join('exports', 'test-cases', 'TC_S2CML-4889_Bucket_Agunan.xlsx')
 wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = 'TC S2CML-4889'

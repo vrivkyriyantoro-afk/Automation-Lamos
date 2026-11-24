@@ -44,8 +44,8 @@ for file_path in files_to_update:
     # 3. Fix relative fixtures path if it's 2 levels instead of 3
     if 's2cml-4889.spec.ts' in file_path:
         content = content.replace(
-            "path.resolve(__dirname, '../../fixtures/TemplateAutomateLamos - Sheet1.csv')",
-            "path.resolve(__dirname, '../../../fixtures/TemplateAutomateLamos - Sheet1.csv')"
+            "path.resolve(__dirname, '../../fixtures/sources/TemplateAutomateLamos - Sheet1.csv')",
+            "path.resolve(__dirname, '../../../fixtures/sources/TemplateAutomateLamos - Sheet1.csv')"
         )
         content = content.replace(
             "cleanId.startsWith('TC - 04') || cleanId.startsWith('TC-04')",

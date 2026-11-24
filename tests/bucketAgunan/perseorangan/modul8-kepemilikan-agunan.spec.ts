@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 8: Informasi Kepemilikan Agunan (Step 3)
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC - 04 - 62 s.d. TC - 04 - 82
  * Karakter: READ-ONLY (Gating Identitas, Kategori Pemilik Agunan 001-010, Perseorangan vs Badan Usaha, Error Handling, & Mapping Pasangan)
  */

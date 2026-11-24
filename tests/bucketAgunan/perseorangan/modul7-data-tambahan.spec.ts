@@ -7,7 +7,7 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Target Debitur: Individual / Perseorangan (debtorType=individual)
  * Application ID: 01M4F7TNSCSHEDB5G3WTSP7HDY
  * Sumber Acuan:
- *   - CSV Test Case: fixtures/TemplateAutomateLamos - Sheet1.csv
+ *   - CSV Test Case: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  *     (TC-4889-49 s.d TC-4889-53 milik S2CML-4889; TC-5445-01 s.d TC-5445-08 milik S2CML-5445 / S2CML-4981)
  *   - Figma: Node 6124:461698 (hayDfdzm40LHECLlcVsebo)
  * Skenario:
@@ -435,8 +435,8 @@ test.describe('S2CML-4889: Modul 7 - Data Tambahan Agunan (Perseorangan)', () =>
     await page.evaluate(() => document.getElementById('__evidence_url')?.remove());
     await testInfo.attach(title, { body, contentType: 'image/png' });
     const fs = await import('fs');
-    fs.mkdirSync('explore-output/s2cml-5445/eviden', { recursive: true });
-    fs.writeFileSync('explore-output/s2cml-5445/eviden/' + title.replace(/[^A-Za-z0-9]+/g, '_').slice(0, 80) + '.png', body);
+    fs.mkdirSync('explore-output/stories/s2cml-5445/eviden', { recursive: true });
+    fs.writeFileSync('explore-output/stories/s2cml-5445/eviden/' + title.replace(/[^A-Za-z0-9]+/g, '_').slice(0, 80) + '.png', body);
   }
 
   test('TC-5445-03: Indikator Loading pada Tombol Cek saat Inquiry Berjalan', async ({ page }, testInfo) => {

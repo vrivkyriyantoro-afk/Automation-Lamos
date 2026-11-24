@@ -1,7 +1,7 @@
 import openpyxl
 import json
 
-wb = openpyxl.load_workbook(r'fixtures\Analisa Data LAMOS SME Phase 2.xlsx', data_only=True)
+wb = openpyxl.load_workbook(r'fixtures\sources\Analisa Data LAMOS SME Phase 2.xlsx', data_only=True)
 sheet = wb['FEBucket-Agunan (MVP - McK)']
 
 print("Membaca sheet: 'FEBucket-Agunan (MVP - McK)'")
@@ -30,10 +30,10 @@ for idx, r in enumerate(rows):
         # Cek jika baris terlihat seperti nama bagian/sub-bagian
         pass
 
-# Simpan dump text lengkap ke explore-output/sheet_mck_dump.txt agar bisa dianalisis mendalam
+# Simpan dump text lengkap ke explore-output/probes/sheet_mck_dump.txt agar bisa dianalisis mendalam
 with open(r'explore-output\sheet_mck_dump.txt', 'w', encoding='utf-8') as f:
     for i, r in enumerate(rows):
         f.write(f"[{i+1}] " + " | ".join(r) + "\n")
 
-print("\nDump berhasil disimpan di explore-output/sheet_mck_dump.txt")
+print("\nDump berhasil disimpan di explore-output/probes/sheet_mck_dump.txt")
 

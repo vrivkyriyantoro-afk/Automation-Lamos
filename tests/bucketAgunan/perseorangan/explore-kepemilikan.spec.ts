@@ -53,7 +53,7 @@ test('Eksplorasi Tab Kepemilikan Agunan SIT', async ({ page }) => {
     await page.waitForTimeout(1500);
 
     // Screenshot setelah klik tab kepemilikan
-    await page.screenshot({ path: 'explore-output/tab-kepemilikan.png' });
+    await page.screenshot({ path: 'explore-output/probes/tab-kepemilikan.png' });
 
     // Cek dropdown / field di tab kepemilikan
     const labels = await page.locator('label, div > span, [role="combobox"]').allInnerTexts();

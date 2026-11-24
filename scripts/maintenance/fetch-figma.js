@@ -1,7 +1,7 @@
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
 const token = (process.env.FIGMA_TOKEN || '').trim();
 const fileKey = 'hayDfdzm40LHECLlcVsebo';
@@ -32,7 +32,7 @@ https.get(options, (res) => {
         process.exit(1);
       }
 
-      const outPath = path.resolve(__dirname, 'figma-488-173708.json');
+      const outPath = path.resolve(__dirname, '../../explore-output/figma/figma-488-173708.json');
       fs.writeFileSync(outPath, JSON.stringify(parsed, null, 2));
       console.log(`✅ Saved full node to ${outPath}`);
 
@@ -64,7 +64,7 @@ https.get(options, (res) => {
         components: components.slice(0, 30)
       };
 
-      const summaryPath = path.resolve(__dirname, 'figma-488-173708-summary.json');
+      const summaryPath = path.resolve(__dirname, '../../explore-output/figma/figma-488-173708-summary.json');
       fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
       console.log(`✅ Saved summary to ${summaryPath}`);
       console.log('Document Name:', targetNode.document.name);

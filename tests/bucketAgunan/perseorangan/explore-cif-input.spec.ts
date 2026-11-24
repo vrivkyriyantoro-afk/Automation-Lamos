@@ -54,7 +54,7 @@ test('Inspeksi Interaksi Radio Ya SIT', async ({ page }) => {
   await labelYa.click();
   await page.waitForTimeout(1500);
 
-  await page.screenshot({ path: 'explore-output/after-click-ya.png' });
+  await page.screenshot({ path: 'explore-output/probes/after-click-ya.png' });
 
   // Ambil input setelah klik Ya
   const inputsAfter = await page.locator('input:visible').all();

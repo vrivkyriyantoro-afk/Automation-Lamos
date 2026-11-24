@@ -38,7 +38,7 @@ Rule form, peta section/step, gate, dan gotcha **per bucket** ada di `docs/bucke
   | `01M4F7TNSCSHEDB5G3WTSP7HDY` | Perseorangan | belum lengkap (probe 2026-11-03) | 2 FINAL (Reksadana, Setoran Jaminan) + kemungkinan 1 Draft | `agunanModal.ts:4`, modul5/6/7, 4890, 4941, 6018 |
   | `01M79GW1XYEQAK97TM803HFY8F` | Perseorangan (no. pengajuan `0060052026110014`, MUCHAMMAD TAUFAN) | Draf Pengajuan 1/4 (belum lengkap) | draft hasil run TC-4890-09/10 | `s2cml-4890*.spec.ts` perorangan (default sejak 2026-11-24) |
   | `01M7P9WH6PQ1AZ058P0C18QX4Q` | Badan Usaha (no. pengajuan `0060052026110020`, PT Bintang Sejahtera) | Draf Pengajuan 1/4 | – | `badanUsaha/s2cml-4890.spec.ts` (default sejak 2026-11-24) |
-  | `01M22NAB4RXT92Y56AJ5VBQT75` | Perseorangan | **completed** (`explore-output/run-febe.log:49-51`) | 0 | dulu nilai `DEBITUR_TARGET`; kandidat untuk auto-fill 001 |
+  | `01M22NAB4RXT92Y56AJ5VBQT75` | Perseorangan | **completed** (`explore-output/logs/run-febe.log:49-51`) | 0 | dulu nilai `DEBITUR_TARGET`; kandidat untuk auto-fill 001 |
   | `01M482PRSVH5ZMTVZX5QH0VDNZ` | Badan Usaha | – | 2 FINAL | `agunanModal.ts:5`, `badanUsaha/s2cml-4890.spec.ts:18` |
   | `01M5TYDZSJFK7J66ZDK2YHRCZ9` | Perseorangan | – | – | `s2cml-5420.spec.ts:20` |
   | `01M6ZA0CWY9Q33Y031ZRGKFB4E` | Perseorangan | – | Draft + Final, ID kartu `QA-xxxx` | `s2cml-6020.spec.ts:17` |
@@ -108,7 +108,7 @@ GF-COMMON-LOGIN
 ### GF-IDENTITAS-PENJAMIN-BADAN-USAHA
 - **Status:** LOLOS (2026-11-23, run passed 1,3 menit)
 - **Prasyarat:** GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH (2 kartu perorangan dulu)
-- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. Kartu ke-3 Corporate Guarantee PT Bintang Sejahtera (`fixtures/penjamin-badan-usaha.json`) + pengurus/pemegang saham PIPIT NILA WARDANI (perorangan WNI) dan CV Makmur Abadi (badan usaha).
+- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. Kartu ke-3 Corporate Guarantee PT Bintang Sejahtera (`fixtures/entities/penjamin-badan-usaha.json`) + pengurus/pemegang saham PIPIT NILA WARDANI (perorangan WNI) dan CV Makmur Abadi (badan usaha).
 - **Langkah:** spec `tests/bucketIdentitas/penjamin-badan-usaha-lp-01M83.spec.ts`; modal "Tambah pengurus/pemegang saham" via `PengurusModal` (`PenjaminForms.ts`).
 - **Bukti:** jaringan dua `POST .../data_penjamin/<id>/shareholders` = 201; verifikasi setelah muat ulang; sidebar Data penjamin Lengkap. Screenshot `penjamin-3-akhir.png` di `test-results/bucketIdentitas-penjamin-b-94f7e--Guarantee-3-pemegang-saham-chromium/` (folder tidak ditemukan saat pencatatan).
 - **Gotcha:** viewport 1280x1800 (720 terlalu pendek; popup dropdown modal terbuka ke atas dan ditutup scroll otomatis Playwright). Klik di luar form saat menutup datepicker menutup modal: pakai Tab. Tombol dialog/modal tanpa accessible name: pakai CSS + teks, bukan `getByRole`. `Locator.isVisible({timeout})` mengabaikan timeout: pakai `waitFor`. Backend SIT intermiten 500 pada `GET /lossvc/v1/config/dropdowns?type=GUARANTOR_TYPE` dan `type=provinces_lamos` (opsi dropdown kosong).
@@ -140,7 +140,7 @@ GF-COMMON-LOGIN
 ### GF-IDENTITAS-PENGECEKAN-SLIK-UPLOAD
 - **Status:** SEBAGIAN / BELUM DICOBA penuh (2026-11-24). Bukan LOLOS: status bucket SLIK masih Belum Lengkap; run passed hanya membuktikan alur modal berjalan, bukan impor selesai untuk semua baris. Cek ulang 2026-11-24: perbaikan baris 7 tidak persisten, baris 4 belum berstatus impor.
 - **Prasyarat:** GF-IDENTITAS-PENGECEKAN (halaman bucket `identitas_pengecekan`), GF-IDENTITAS-PENJAMIN-PERORANGAN-MENIKAH + GF-IDENTITAS-PENJAMIN-BADAN-USAHA (entitas yang tampil di modal berasal dari data penjamin/pengurus), GF-IDENTITAS-DATA-BACA-SAJA (nomor identitas per entitas).
-- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. File SLIK mock (format IDEB/SLIK JSON dari template `exports/NIK_3276020602850001.txt`, Windows-1252; NPWP template UTF-8), dibuat manual user: `exports/slik-debitur/NIK_3200000000000006.txt` (Agus); `exports/slik-penjamin/`: NIK_3373041608960002 (TEGAR), NIK_3211146311760006 (NENDEN), NIK_3205335802980003 (ERIN), NIK_3277010909850013 (RENALDY), NIK_3302265910820003 (PIPIT), NIK_3171030309630002 (HANDHIANTO), NPWP_3578241603710991 (PT Bintang Sejahtera, berisi 3 pengurus/pemilik), NPWP_3578241603710992 (CV Makmur Abadi). Nama file wajib `NIK_<nik>.txt` / `NPWP_<npwp>.txt`, tidak boleh diubah (catatan di modal). File .pdf di modal: `document-10mb.pdf` (10.485.760 byte; sumber lokal user: `C:\Users\V50324\Downloads\document-10mb.pdf`, di luar repo).
+- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. File SLIK mock (format IDEB/SLIK JSON dari template `exports/slik/NIK_3276020602850001.txt`, Windows-1252; NPWP template UTF-8), dibuat manual user: `exports/slik/slik-debitur/NIK_3200000000000006.txt` (Agus); `exports/slik/slik-penjamin/`: NIK_3373041608960002 (TEGAR), NIK_3211146311760006 (NENDEN), NIK_3205335802980003 (ERIN), NIK_3277010909850013 (RENALDY), NIK_3302265910820003 (PIPIT), NIK_3171030309630002 (HANDHIANTO), NPWP_3578241603710991 (PT Bintang Sejahtera, berisi 3 pengurus/pemilik), NPWP_3578241603710992 (CV Makmur Abadi). Nama file wajib `NIK_<nik>.txt` / `NPWP_<npwp>.txt`, tidak boleh diubah (catatan di modal). File .pdf di modal: `document-10mb.pdf` (10.485.760 byte; sumber lokal user: `C:\Users\V50324\Downloads\document-10mb.pdf`, di luar repo).
 - **Langkah (terbukti):**
   1. Buka `.../credit-application/<APP_ID>/create?bucket=identitas_pengecekan&debtorType=individual`.
   2. Klik teks "Pengecekan SLIK" (exact, `.last()`, force) di sidebar: halaman menggulung ke bagian SLIK.
@@ -161,7 +161,7 @@ GF-COMMON-LOGIN
 - **Status:** SEBAGIAN (2026-11-24). Bukan LOLOS: belum terbukti 9 dari 9 baris "Berhasil diimpor" + bucket Lengkap final. Tombol "Kirim" tidak pernah ditekan.
 - **Kondisi khusus:** App ID sudah pernah diproses; tombol "Proses file .txt" di bawah modal "Lengkapi file SLIK" abu-abu/nonaktif (`disabled:true`, class `disabled:bg-neutral-300`); biru = aktif. Penyebab "nonaktif karena sudah diproses" = keterangan user, tidak diuji mandiri. Dalam kondisi ini "Simpan" di dialog "Kelola file SLIK" hanya mengubah state klien dan kembali ke file lama setelah reload; ganti per baris lewat ikon X TIDAK cukup.
 - **Prasyarat:** GF-IDENTITAS-PENGECEKAN-SLIK-UPLOAD (modal, file mock, pemetaan entitas), GF-IDENTITAS-PENGECEKAN.
-- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. PDF `C:/Users/V50324/Downloads/document-10mb.pdf` (10.485.760 byte, di luar repo; pakai garis miring biasa, backslash rusak di heredoc). Pemetaan baris -> .txt: 1 Agus `exports/slik-debitur/NIK_3200000000000006.txt`; sisanya di `exports/slik-penjamin/`: 2 ERIN NIK_3205335802980003; 3 RENALDY NIK_3277010909850013; 4 TEGAR NIK_3373041608960002; 5 NENDEN NIK_3211146311760006; 6 PT Bintang NPWP_3578241603710991; 7 PIPIT NIK_3302265910820003; 8 HANDHIANTO NIK_3171030309630002; 9 CV Makmur Abadi NPWP_3578241603710992.
+- **Data uji:** App ID `01M83AP5FKPHB1D3E2QS8P015Z`. PDF `C:/Users/V50324/Downloads/document-10mb.pdf` (10.485.760 byte, di luar repo; pakai garis miring biasa, backslash rusak di heredoc). Pemetaan baris -> .txt: 1 Agus `exports/slik/slik-debitur/NIK_3200000000000006.txt`; sisanya di `exports/slik/slik-penjamin/`: 2 ERIN NIK_3205335802980003; 3 RENALDY NIK_3277010909850013; 4 TEGAR NIK_3373041608960002; 5 NENDEN NIK_3211146311760006; 6 PT Bintang NPWP_3578241603710991; 7 PIPIT NIK_3302265910820003; 8 HANDHIANTO NIK_3171030309630002; 9 CV Makmur Abadi NPWP_3578241603710992.
 - **PERINGATAN destruktif:** "Hapus semua file" menghapus semua file SLIK yang sudah diupload, termasuk yang sedang/sudah diproses (data impor lama hilang). Jalankan hanya dengan izin user.
 - **Langkah (terbukti, `tests/bucketIdentitas/upload-semua-slik.spec.ts` passed 3,1 mnt, env PROSES=1):**
   1. Buka modal "Lengkapi file SLIK" (sidebar "Pengecekan SLIK" lalu klik "Klik untuk melengkapi file SLIK").
@@ -229,7 +229,7 @@ GF-COMMON-LOGIN
 ### GF-AGUNAN-STEP2-DATA-TAMBAHAN
 - **Status:** LOLOS (5420: `run-history/2026-11-16T14-06-25-410Z.json` TC-5420-01 passed; 5445 2026-11-22: hanya riwayat + eviden, tanpa JSON run)
 - **Prasyarat:** GF-AGUNAN-AGUNAN-BARU (pilih jenis sesuai skenario)
-- **Data uji:** 5420 `APP_ID_5420||01M5TYDZSJFK7J66ZDK2YHRCZ9` (juga pernah `01M79GW1XYEQAK97TM803HFY8F`); 5445 `01M4F7…` (banner URL di `explore-output/s2cml-5445/eviden/`).
+- **Data uji:** 5420 `APP_ID_5420||01M5TYDZSJFK7J66ZDK2YHRCZ9` (juga pernah `01M79GW1XYEQAK97TM803HFY8F`); 5445 `01M4F7…` (banner URL di `explore-output/stories/s2cml-5445/eviden/`).
 - **Langkah:** klik tab `button, [role="tab"]` berteks `Data tambahan agunan` | `navigateToStep2` `modul7-data-tambahan.spec.ts:39-69`; `openStep2` `s2cml-5420.spec.ts:115`.
 - **Cabang Cash Collateral (CIF):** jenis F15 → radio `input[name="isCollateralStoredAtBsim"][value="true|false"]` + `check({ force: true })` → `GET /lossvc/v1/cif?number=<CIF>&jenisAgunanCode=…`. CIF uji di `.env` (`CIF_VALID_1`, `CIF_VALID_2`); rekening ada di F09/F15, kosong di F10/F11.
 - **BLOCKED:** deposito F11 (TC-5445-13/14) butuh CIF dengan rekening deposito; agunan CLS (TC-5420-06) → lihat GF-AGUNAN-EXISTING-CLS.
@@ -246,21 +246,21 @@ GF-COMMON-LOGIN
   - TC-4948-10 [eks 15]: keterangan "Pasangan dari …" tidak tampil (2026-11-17).
 
 ### GF-AGUNAN-STEP3-AUTOFILL-001
-- **Status:** STALE. Lolos 2026-11-01 (`explore-output/run-all3.log:104,180,184`: nama + NIK terisi); gagal 2026-11-17 (TC-4948-08 [eks 19], TC-4948-12 [eks 20], auto-fill `[]`).
+- **Status:** STALE. Lolos 2026-11-01 (`explore-output/logs/run-all3.log:104,180,184`: nama + NIK terisi); gagal 2026-11-17 (TC-4948-08 [eks 19], TC-4948-12 [eks 20], auto-fill `[]`).
 - **Prasyarat:** GF-AGUNAN-STEP3-KEPEMILIKAN + GF-IDENTITAS-LENGKAP
 - **Data uji:** run lolos kemungkinan di `01M22NAB4RXT92Y56AJ5VBQT75` (Identitas completed; inferensi visual, bukan URL). Run gagal di `01M4F7`.
 - **Langkah:** `pilihKategori(page,'001')` → `snapshotInputs` `agunanModal.ts:88-95`.
 - **Konflik:** tidak ada env khusus; `DEBITUR_IDENTITAS_LENGKAP` (`s2cml-4890-batch2.spec.ts:280`) tidak ada di `.env`. `01M22NAB` punya 0 agunan, jadi tidak bisa dipakai untuk flow yang butuh agunan tersimpan.
 
 ### GF-AGUNAN-STEP3-SLIK-005-008
-- **Status:** LOLOS sebagian (2026-11-18, `s2cml-4949-slik-new-identity.spec.ts` + `s2cml-4949-slik-remaining.spec.ts`). Passed: 01–06, 09–11, 16, 18; TC-07 passed setelah fix (`explore-output/run-4949-07.log`). Gagal/timeout: 12, 13, 14 (opsi Penjamin tidak ada), 15 (`Jual/Beli`), 17, 19 (buffer >50MB), 20 (input tidak `multiple`); TC-08 gagal login. Belum ada satu run utuh 20 hijau.
+- **Status:** LOLOS sebagian (2026-11-18, `s2cml-4949-slik-new-identity.spec.ts` + `s2cml-4949-slik-remaining.spec.ts`). Passed: 01–06, 09–11, 16, 18; TC-07 passed setelah fix (`explore-output/logs/run-4949-07.log`). Gagal/timeout: 12, 13, 14 (opsi Penjamin tidak ada), 15 (`Jual/Beli`), 17, 19 (buffer >50MB), 20 (input tidak `multiple`); TC-08 gagal login. Belum ada satu run utuh 20 hijau.
 - **Prasyarat:** GF-AGUNAN-STEP3-KEPEMILIKAN
 - **Data uji:** `APP_ID_PERORANGAN` (`01M4F7`)
 - **Langkah:** `pilihKategori('005'|'008')` → `pilihTipeKepemilikan('Individu'|'Non Individu')` `agunanModal.ts:158-173` | `bukaForm` `s2cml-4949-slik-remaining.spec.ts:33-38`. Eviden: `slik-005-individu.png`, `slik-005-non-individu.png`, `slik-008-*.png`.
 - **Konflik:** label SIT `Individu`/`Non Individu` vs matriks `Perorangan`/`Badan Usaha` (MISMATCH-03). Placeholder PIC terduplikasi (kandidat bug).
 
 ### GF-AGUNAN-BU-STEPPER
-- **Status:** LOLOS (2026-11-01 `tests/bucketAgunan/badanUsaha/s2cml-4890.spec.ts` 2 passed, `explore-output/run-bu-stepper.log`)
+- **Status:** LOLOS (2026-11-01 `tests/bucketAgunan/badanUsaha/s2cml-4890.spec.ts` 2 passed, `explore-output/logs/run-bu-stepper.log`)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET (`agunan`, `debtorType=business`)
 - **Data uji:** `01M482PRSVH5ZMTVZX5QH0VDNZ` di-hardcode (`badanUsaha/s2cml-4890.spec.ts:18`)
 - **Langkah:** `navigateToFormAgunanBaru` `badanUsaha/s2cml-4890.spec.ts:47` → 3 step (TC-4890-02 :80), navigasi paralel (TC-4890-03 :106).
@@ -280,7 +280,7 @@ GF-COMMON-LOGIN
 - **Catatan:** klik draft **menulis data ke SIT**; hanya di App ID khusus uji dan atas izin user.
 
 ### GF-AGUNAN-EXISTING-CLS
-- **Status:** BLOCKED (TC-5420-06 skip; TC-4889-09 `test.skip` `[GAP DATA CLS]` `s2cml-4889.spec.ts:272-273`; `POST /lossvc/v1/existing-collaterals` → `items: []`, `explore-output/S2CML-5419/summary.txt`)
+- **Status:** BLOCKED (TC-5420-06 skip; TC-4889-09 `test.skip` `[GAP DATA CLS]` `s2cml-4889.spec.ts:272-273`; `POST /lossvc/v1/existing-collaterals` → `items: []`, `explore-output/stories/S2CML-5419/summary.txt`)
 - **Prasyarat:** GF-AGUNAN-TAMBAH-SEARCH dengan nomor agunan CLS nyata
 - **Data uji:** tidak ada; butuh nomor agunan CLS dari tim (COL-2026-501 tidak ditemukan).
 
@@ -294,7 +294,7 @@ GF-COMMON-LOGIN
 ### GF-AGUNAN-EDIT-DRAFT
 - **Status:** BELUM DICOBA (TC-4941-07 `test.skip(true)` `s2cml-4941.spec.ts:270`)
 - **Prasyarat:** GF-AGUNAN-EDIT-EXISTING + agunan berstatus Draft
-- **Konflik:** komentar skip menyebut "seluruh agunan FINAL", padahal `01M4F7` tampak punya 1 draft (`explore-output/s2cml-6018/TC-6018-04-step-1.png` "Draf agunan (1)"; `GET …/collaterals?status=DRAFT` → 1 HOUSING di `explore-output/S2CML-5419/summary.txt`). Skip tidak pernah dicoba ulang.
+- **Konflik:** komentar skip menyebut "seluruh agunan FINAL", padahal `01M4F7` tampak punya 1 draft (`explore-output/stories/s2cml-6018/TC-6018-04-step-1.png` "Draf agunan (1)"; `GET …/collaterals?status=DRAFT` → 1 HOUSING di `explore-output/stories/S2CML-5419/summary.txt`). Skip tidak pernah dicoba ulang.
 
 ### GF-AGUNAN-HAPUS
 - **Status:** menu "Hapus agunan" terlihat → LOLOS (TC-4941-02 `s2cml-4941.spec.ts:164-168`, 2026-11-12); aksi hapus → BELUM DICOBA (tidak ada spec)
@@ -307,7 +307,7 @@ GF-COMMON-LOGIN
 - **Langkah:** `navigateBucket` `s2cml-6020.spec.ts:41-48` → `ensureDataAgunanOpen` :50-61.
 
 ### GF-AGUNAN-ICON-KARTU
-- **Status:** LOLOS (2026-11-12 `validasi-icon-agunan.spec.ts` 4 passed; eviden `explore-output/s2cml-6018/` dari `01M4F7`)
+- **Status:** LOLOS (2026-11-12 `validasi-icon-agunan.spec.ts` 4 passed; eviden `explore-output/stories/s2cml-6018/` dari `01M4F7`)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET + kartu Reksadana dan Setoran Jaminan tersimpan
 - **Data uji:** `DEBITUR_TARGET||01M4F7…` (`validasi-icon-agunan.spec.ts:21`). Harus `01M4F7`; `01M22NAB` punya 0 agunan.
 - **Langkah:** `ensureDataAgunanOpen` `validasi-icon-agunan.spec.ts:52` → `img` `/assets/agunan-image/{housing,vehicle,document,cash}.svg` 48x48.

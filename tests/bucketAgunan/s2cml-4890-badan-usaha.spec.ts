@@ -17,7 +17,7 @@ import {
 
 /**
  * S2CML-4890 — Bucket Agunan, bagian spesifik Debitur Badan Usaha + gating Simpan.
- * Matriks: exports/TC_S2CML-4890_Bucket_Agunan.csv
+ * Matriks: exports/test-cases/TC_S2CML-4890_Bucket_Agunan.csv
  *
  * Cakupan: LEGACY-4890-BU-01, BU-02, BU-03, dan TC-4890-11.
  */
@@ -48,7 +48,7 @@ test.describe('S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan', () => 
     expect(options.some(o => o.includes('002')), '002 - Calon Pasangan Debitur tidak boleh tampil').toBeFalsy();
     expect(options.some(o => o.includes('004')), '004 - Pasangan Debitur tidak boleh tampil').toBeFalsy();
 
-    await page.screenshot({ path: 'explore-output/tc-4890-bu-01-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4890-bu-01-options.png' });
     await closeModal(page);
   });
 
@@ -83,7 +83,7 @@ test.describe('S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan', () => 
       expect(i.disabled || i.readOnly, `field "${i.value}" hasil mapping harus read-only`).toBeTruthy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4890-bu-02-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4890-bu-02-after.png' });
     await closeModal(page);
   });
 
@@ -129,7 +129,7 @@ test.describe('S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan', () => 
         'kondisi "tanpa pengurus" tidak dapat diuji. Butuh App ID badan usaha tanpa pengurus di Bucket Identitas.');
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4890-bu-03-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4890-bu-03-after.png' });
     await closeModal(page);
   });
 
@@ -156,7 +156,7 @@ test.describe('S2CML-4890: Spesifik Debitur Badan Usaha & Gating Simpan', () => 
     await expect(btnSimpan(page)).toBeDisabled({ timeout: 10000 });
     console.log(`TC-4890-11 setelah pilih kategori ${kode} -> Simpan tetap disabled`);
 
-    await page.screenshot({ path: 'explore-output/tc-4890-11-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4890-11-after.png' });
     await closeModal(page);
   });
 });

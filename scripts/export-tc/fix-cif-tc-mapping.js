@@ -16,7 +16,7 @@ const path = require('path');
  */
 
 const APPLY = process.argv.includes('--apply');
-const FILE = path.resolve(__dirname, '../../fixtures/TemplateAutomateLamos - Sheet1.csv');
+const FILE = path.resolve(__dirname, '../../fixtures/sources/TemplateAutomateLamos - Sheet1.csv');
 const TARGET = /^TC-4889-(5[4-9]|6[01])$/;
 
 const NOTE_BY_TC = {
@@ -116,7 +116,7 @@ if (!APPLY) {
   process.exit(0);
 }
 
-const backup = path.resolve(__dirname, `../../explore-output/TemplateAutomateLamos-backup-before-cif-fix.csv`);
+const backup = path.resolve(__dirname, `../../explore-output/_archive/TemplateAutomateLamos-backup-before-cif-fix.csv`);
 fs.writeFileSync(backup, raw, 'utf8');
 fs.writeFileSync(FILE, toCSV(rows), 'utf8');
 console.log(`✅ Ditulis. Backup: ${backup}`);

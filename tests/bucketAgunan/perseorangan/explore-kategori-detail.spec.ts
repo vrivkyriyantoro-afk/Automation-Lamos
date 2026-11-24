@@ -67,7 +67,7 @@ test('Inspect Form untuk tiap Kategori Pemilik Agunan', async ({ page }) => {
     const visibleLabels = await page.locator('.mantine-Modal-content label, .mantine-Modal-content [role="combobox"]').allInnerTexts();
     console.log(`Labels untuk kategori ${cat}:`, visibleLabels.map(l => l.trim()).filter(l => l.length > 0 && l.length < 50));
 
-    await page.screenshot({ path: `explore-output/kategori-${cat}.png` });
+    await page.screenshot({ path: `explore-output/probes/kategori-${cat}.png` });
   }
 
   await closeModal(page);

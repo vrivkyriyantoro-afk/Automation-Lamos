@@ -13,20 +13,20 @@ Skill MENULIS ke SIT. Pemanggilan = izin mengunggah file mock untuk App ID itu. 
 3. PDF pendamping: `C:/Users/V50324/Downloads/document-10mb.pdf` (di luar repo; pakai garis miring biasa). Bila tidak ada, minta user.
 
 ## 1. Daftar entitas
-`fixtures/slik-entities.json` berisi entitas urut baris modal (type NIK/NPWP, id, nama, gender, tanggal lahir; NPWP berisi daftar pengurus/pemilik). Untuk App ID baru, ISI ULANG dari data aplikasi, jangan karang:
+`fixtures/entities/slik-entities.json` berisi entitas urut baris modal (type NIK/NPWP, id, nama, gender, tanggal lahir; NPWP berisi daftar pengurus/pemilik). Untuk App ID baru, ISI ULANG dari data aplikasi, jangan karang:
 - Baca halaman lewat spec read-only: `tests/bucketIdentitas/read-data-debitur.spec.ts`, `read-data-penjamin.spec.ts`, `read-pengurus-penjamin.spec.ts` (env `APP_ID`; output `explore-output/identitas/*.json`).
 - Debitur dan penjamin memakai NIK dari halaman (autofill leads terkunci); pasangan, pengurus ikut daftar pengurus. Urutan baris = urutan di modal (lihat `slik-modal.json` / modal itu sendiri). Gunakan nama entitas, bukan "Penjamin N", karena label modal bisa berbeda dari halaman.
 - Nomor identitas di DALAM file harus sama dengan entitas baris (SIT menolak: "No ID Entitas ... tidak sesuai").
 
 ## 2. Generate file
 ```powershell
-node scripts/generators/gen-slik.js --out exports/slik-<APP_ID>
+node scripts/generators/gen-slik.js --out exports/slik/slik-<APP_ID>
 ```
-Struktur diklon dari template `exports/NIK_3276020602850001.txt` (Windows-1252) dan `exports/NPWP_3210077012810002.txt` (UTF-8); data fasilitas = salinan template, bukan data nyata. File yang sudah ada tidak ditimpa tanpa `--force`. Folder baru, jangan menimpa `exports/` lain.
+Struktur diklon dari template `exports/slik/NIK_3276020602850001.txt` (Windows-1252) dan `exports/slik/NPWP_3210077012810002.txt` (UTF-8); data fasilitas = salinan template, bukan data nyata. File yang sudah ada tidak ditimpa tanpa `--force`. Folder baru, jangan menimpa `exports/` lain.
 
 ## 3. Upload + proses
 ```powershell
-$env:DIR='exports/slik-<APP_ID>'; $env:APP_ID='<APP_ID>'; $env:PROSES='1'
+$env:DIR='exports/slik/slik-<APP_ID>'; $env:APP_ID='<APP_ID>'; $env:PROSES='1'
 # $env:HAPUS='1'   # hanya bila App ID sudah pernah diproses (tombol Proses abu-abu); destruktif
 npx playwright test tests/bucketIdentitas/upload-semua-slik.spec.ts --project=chromium --headed --reporter=line
 ```

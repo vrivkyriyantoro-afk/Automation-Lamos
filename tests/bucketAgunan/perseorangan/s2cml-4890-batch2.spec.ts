@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4890 - Batch 2
- * Sumber Acuan: exports/TC_S2CML-4890_Bucket_Agunan.csv
+ * Sumber Acuan: exports/test-cases/TC_S2CML-4890_Bucket_Agunan.csv
  * Cakupan (penomoran mengikuti CSV, 16 TC):
  *   - TC-4890-04 & 05: fixme (belum ada flow isi Step 1 Lengkap)
  *   - TC-4890-07: Akses Step 3 saat Identitas Lengkap (butuh DEBITUR_IDENTITAS_LENGKAP)

@@ -23,5 +23,5 @@ test('probe skeleton', async ({ page }) => {
       return row ? row.outerHTML.replace(/<svg[\s\S]*?<\/svg>/g, '<svg/>').slice(0, 1500) : 'no label';
     }));
   }
-  fs.writeFileSync('explore-output/probe-skeleton.txt', snaps.join('\n\n=====\n\n'));
+  fs.writeFileSync('explore-output/probes/probe-skeleton.txt', snaps.join('\n\n=====\n\n'));
 });

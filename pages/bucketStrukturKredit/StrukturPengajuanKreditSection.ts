@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari explore-output/struktur_kredit.json.
+// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari explore-output/buckets/struktur_kredit.json.
 // Boleh diedit manual; regenerate dengan --force akan menimpa file ini.
 import { Locator, Page } from '@playwright/test';
 import { BucketSection, BucketId } from '../components/BucketSection';

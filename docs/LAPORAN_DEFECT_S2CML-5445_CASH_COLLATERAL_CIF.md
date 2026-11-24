@@ -47,17 +47,17 @@ AC S2CML-5445 hanya meminta: *"Jika Gagal akan muncul notif CIF gagal ditemukan"
 
 ### 5. Bukti Teknis & Eviden
 - **Screenshot**:
-  - `explore-output/s2cml-5445/eviden/Eviden_TC_5445_05_CIF_tidak_ditemukan_disertai_toast_konektivitas_dugaan_defect_.png` (22-11-2026 23.10.15)
+  - `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_05_CIF_tidak_ditemukan_disertai_toast_konektivitas_dugaan_defect_.png` (22-11-2026 23.10.15)
   - `test-results/bucketAgunan-perseorangan--b0e32-ak-Ditemukan---Silang-Merah-chromium/test-failed-1.png` dan `error-context.md` (assert `toHaveCount(0)` menerima 1)
-  - `explore-output/s2cml-5445/valid1-2-setelah-cek.png` (F11, CIF valid, rekening kosong → toast)
-  - Pembanding 500: `explore-output/s2cml-5445/eviden/Eviden_TC_5445_06_service_inquiry_500_simulasi_pesan_kegagalan.png`
+  - `explore-output/stories/s2cml-5445/valid1-2-setelah-cek.png` (F11, CIF valid, rekening kosong → toast)
+  - Pembanding 500: `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_06_service_inquiry_500_simulasi_pesan_kegagalan.png`
 - **Request/Response**:
-  - `explore-output/s2cml-5445/invalid-network.json`
+  - `explore-output/stories/s2cml-5445/invalid-network.json`
     ```
     GET /lossvc/v1/cif?number=99999999&jenisAgunanCode=F11 -> 400
     {"errorCode":2000,"errorMessage":"Request cannot be fulfilled. Please check your request body.","responseMessage":"Bad Request","statusCode":400}
     ```
-  - `explore-output/s2cml-5445/valid1-network.json`, `valid2-network.json`, `F10-valid1-network.json`, `F10-valid2-network.json`
+  - `explore-output/stories/s2cml-5445/valid1-network.json`, `valid2-network.json`, `F10-valid1-network.json`, `F10-valid2-network.json`
     ```
     GET /lossvc/v1/cif?number=<CIF>&jenisAgunanCode=F11|F10 -> 200
     {"data":{"accounts":[]},"responseMessage":"OK","statuscode":200}
@@ -98,9 +98,9 @@ Di SIT, segera setelah "Ya" dipilih (bahkan saat inquiry berjalan dan setelah CI
 
 ### 5. Bukti Teknis & Eviden
 - **Screenshot**:
-  - Saat inquiry berjalan (F15): `explore-output/s2cml-5445/eviden/Eviden_TC_5445_03_tombol_Cek_saat_proses_inquiry_respons_ditahan_5_detik_.png` (23.09.33)
-  - CIF tidak ditemukan (F15), field lain tetap tampil: `explore-output/s2cml-5445/eviden/Eviden_TC_5445_05_CIF_tidak_ditemukan_disertai_toast_konektivitas_dugaan_defect_.png`
-  - CIF ditemukan (F15), Alasan blokir tampil: `explore-output/s2cml-5445/eviden/Eviden_TC_5445_04_CIF_ditemukan_tombol_Ubah_dropdown_Rekening_cash_collateral.png`, `explore-output/s2cml-5445/eviden/Eviden_TC_5445_07_setelah_Ubah_inquiry_ulang_dengan_CIF_baru.png`
-  - CIF ditemukan (F09), Alasan blokir tampil: `explore-output/s2cml-5445/F09-valid2-3-setelah-cek-scroll.png`
-- **Request/Response**: `explore-output/s2cml-5445/F15-valid2-network.json`, `F09-valid2-network.json` (`GET /lossvc/v1/cif?number=2505501&jenisAgunanCode=F15|F09 -> 200`, 4 rekening).
+  - Saat inquiry berjalan (F15): `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_03_tombol_Cek_saat_proses_inquiry_respons_ditahan_5_detik_.png` (23.09.33)
+  - CIF tidak ditemukan (F15), field lain tetap tampil: `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_05_CIF_tidak_ditemukan_disertai_toast_konektivitas_dugaan_defect_.png`
+  - CIF ditemukan (F15), Alasan blokir tampil: `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_04_CIF_ditemukan_tombol_Ubah_dropdown_Rekening_cash_collateral.png`, `explore-output/stories/s2cml-5445/eviden/Eviden_TC_5445_07_setelah_Ubah_inquiry_ulang_dengan_CIF_baru.png`
+  - CIF ditemukan (F09), Alasan blokir tampil: `explore-output/stories/s2cml-5445/F09-valid2-3-setelah-cek-scroll.png`
+- **Request/Response**: `explore-output/stories/s2cml-5445/F15-valid2-network.json`, `F09-valid2-network.json` (`GET /lossvc/v1/cif?number=2505501&jenisAgunanCode=F15|F09 -> 200`, 4 rekening).
 - **Catatan**: Pembanding opsi "Tidak" pada F11 sudah sesuai AC (ARO/Tipe blokir/Alasan blokir tidak tampil; snapshot DOM `test-results/bucketAgunan-perseorangan--8805e-g-Muncul-Instansi-Penerbit--chromium/error-context.md`).

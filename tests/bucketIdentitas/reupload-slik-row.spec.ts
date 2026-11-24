@@ -8,7 +8,7 @@ import { LoginPage } from '../../pages/LoginPage';
 // Env: BARIS (default 4), TXT, PDF.
 const URL = `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${process.env.APP_ID || '01M83AP5FKPHB1D3E2QS8P015Z'}/create?bucket=identitas_pengecekan&debtorType=individual`;
 const BARIS = Number(process.env.BARIS || 4);
-const TXT = path.resolve(process.env.TXT || 'exports/slik-penjamin/NIK_3373041608960002.txt');
+const TXT = path.resolve(process.env.TXT || 'exports/slik/slik-penjamin/NIK_3373041608960002.txt');
 const PDF = path.resolve(process.env.PDF || 'fixtures/files/dummy-identitas.pdf');
 
 test('Hapus semua file SLIK satu entitas lalu upload ulang', async ({ page }) => {
@@ -23,7 +23,7 @@ test('Hapus semua file SLIK satu entitas lalu upload ulang', async ({ page }) =>
     await page.waitForTimeout(4000);
   };
   await openModal();
-  const ROWS = (process.env.ROWS || `${BARIS}:exports/slik-penjamin/NIK_3373041608960002.txt`).split(',').map(x => x.split(':'));
+  const ROWS = (process.env.ROWS || `${BARIS}:exports/slik/slik-penjamin/NIK_3373041608960002.txt`).split(',').map(x => x.split(':'));
   for (const [r, txt] of ROWS) { const row = Number(r);
   await page.getByText('Kelola file', { exact: true }).nth(row - 1).click({ force: true });
   await page.waitForTimeout(2500);

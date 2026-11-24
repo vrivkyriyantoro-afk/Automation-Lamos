@@ -10,7 +10,7 @@ import {
 
 /**
  * TC Penjamin Perorangan + Badan Usaha dalam satu file, data default inline (tanpa fixture JSON).
- * Data disalin dari fixtures/penjamin-perorangan-menikah.json & fixtures/penjamin-badan-usaha.json.
+ * Data disalin dari fixtures/entities/penjamin-perorangan-menikah.json & fixtures/entities/penjamin-badan-usaha.json.
  *
  * PERHATIAN: section Data Penjamin menyimpan otomatis. Bila kedua TC memakai APPLICATION_ID + kartu yang sama,
  * TC02 (Badan Usaha) menimpa isian TC01 (Perorangan). Pakai id berbeda via env bila keduanya perlu bertahan.

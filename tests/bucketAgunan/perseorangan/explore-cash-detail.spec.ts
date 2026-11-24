@@ -75,7 +75,7 @@ test.describe('Eksplorasi Sifat Agunan & Radio Ya/Tidak di SIT', () => {
     await page.waitForTimeout(1000);
 
     // Screenshot setelah klik Tidak
-    await page.screenshot({ path: 'explore-output/radio-tidak-clicked.png' });
+    await page.screenshot({ path: 'explore-output/probes/radio-tidak-clicked.png' });
 
     const labelsAfterTidak = await page.locator('label, [role="heading"], h3, h4, h5, div > span').allInnerTexts();
     console.log('Labels setelah Tidak:', labelsAfterTidak.map(l => l.trim()).filter(l => l.length > 0 && l.length < 60));

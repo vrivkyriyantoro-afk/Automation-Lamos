@@ -6,7 +6,7 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Test Suite: S2CML-6020 - [BE] LAMOS LOS SME - Bucket Agunan - Form Data Agunan > Load Latest data Agunan
  * Sumber:
  *   - Jira: https://bank-sinarmas.atlassian.net/browse/S2CML-6020 (Status: In SIT)
- *   - Matriks Resmi: exports/TC_S2CML-6020_Load_Latest_Data_Agunan.csv (6 TC: TC-6020-01 s.d TC-6020-06)
+ *   - Matriks Resmi: exports/test-cases/TC_S2CML-6020_Load_Latest_Data_Agunan.csv (6 TC: TC-6020-01 s.d TC-6020-06)
  *   - Aturan Eviden (AGENTS.md bagian 2): test.step dipetakan 1:1 ke butir kolom `Langkah Pengujian` CSV,
  *     screenshot Full Per-Step (tiap langkah 1 eviden), kondisi awal dipisah sebagai Prekondisi,
  *     eviden langkah terakhir wajib menampilkan elemen pada `Expected Result`. Tanpa kotak merah.

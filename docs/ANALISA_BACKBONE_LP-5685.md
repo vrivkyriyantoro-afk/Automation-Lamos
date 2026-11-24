@@ -258,7 +258,7 @@ Verifikasi AC Jira memastikan seluruh skenario CIF (field CIF muncul bila "tersi
 | Status | `BLOCKED` | `NOT TESTABLE YET` |
 | Status Dokumentasi | `SIT BUILD DISCREPANCY` | `FEATURE NOT DEPLOYED (S2CML-5445 / S2CML-4981 Ready to SIT)` |
 
-File terdampak: `fixtures/TemplateAutomateLamos - Sheet1.csv` (via `scripts/export-tc/fix-cif-tc-mapping.js`), `tests/bucketAgunan/perseorangan/modul7-data-tambahan.spec.ts`, `specs/bucket-agunan/S2CML-4889/tasks.md`. Spec baru: `specs/bucket-agunan/S2CML-5445/`.
+File terdampak: `fixtures/sources/TemplateAutomateLamos - Sheet1.csv` (via `scripts/export-tc/fix-cif-tc-mapping.js`), `tests/bucketAgunan/perseorangan/modul7-data-tambahan.spec.ts`, `specs/bucket-agunan/S2CML-4889/tasks.md`. Spec baru: `specs/bucket-agunan/S2CML-5445/`.
 
 ### 2. Tiga story pemilik defect berstatus mundur
 

@@ -7,12 +7,12 @@ import {
   DataPenjaminForm, CorporateGuaranteeData, PengurusWniData, PengurusBadanUsahaData,
   JenisKelamin, OrganBadanUsaha, JenisBadanUsaha,
 } from '../../pages/bucketIdentitas/PenjaminForms';
-import data from '../../fixtures/penjamin-badan-usaha.json';
+import data from '../../fixtures/entities/penjamin-badan-usaha.json';
 
 /**
  * Penjamin ke-3 (tipe Badan Usaha / Corporate Guarantee) pada app 01M83, menyusul 2 penjamin perorangan
  * (TEGAR+NENDEN, ERIN+RENALDY) dari penjamin-menikah-lp-01M83.spec.ts.
- * Data: fixtures/penjamin-badan-usaha.json (PT Bintang Sejahtera + pemegang saham WNI, WNA, Badan Usaha).
+ * Data: fixtures/entities/penjamin-badan-usaha.json (PT Bintang Sejahtera + pemegang saham WNI, WNA, Badan Usaha).
  *
  * Catatan teknis helper DataPenjaminForm: index dipakai untuk SEMUA locator. Kartu ke-3 adalah satu-satunya kartu
  * Corporate, jadi field corporate & tombol pengurus memakai index 0 (instance `corp`), sedangkan dropdown tipe

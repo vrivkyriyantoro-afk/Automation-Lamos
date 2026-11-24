@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 // Generator file SLIK mock (NIK_<nik>.txt / NPWP_<npwp>.txt) dari daftar entitas.
-// Pakai: node scripts/generators/gen-slik.js [--entities fixtures/slik-entities.json] [--out exports/slik-auto] [--force]
-// Struktur diklon dari template exports/NIK_3276020602850001.txt (Windows-1252) dan exports/NPWP_3210077012810002.txt (UTF-8).
+// Pakai: node scripts/generators/gen-slik.js [--entities fixtures/entities/slik-entities.json] [--out exports/slik/slik-auto] [--force]
+// Struktur diklon dari template exports/slik/NIK_3276020602850001.txt (Windows-1252) dan exports/slik/NPWP_3210077012810002.txt (UTF-8).
 // Yang diubah: nomor identitas/NPWP, nama, jenis kelamin, tanggal lahir (NIK); nama, NPWP, pengurus (NPWP).
 // Data fasilitas = salinan template (BUKAN data nyata). File yang sudah ada tidak ditimpa tanpa --force.
 const fs = require('fs');
 const path = require('path');
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > -1 ? process.argv[i + 1] : d; };
-const ENT = arg('--entities', 'fixtures/slik-entities.json');
-const OUT = arg('--out', 'exports/slik-auto');
+const ENT = arg('--entities', 'fixtures/entities/slik-entities.json');
+const OUT = arg('--out', 'exports/slik/slik-auto');
 const FORCE = process.argv.includes('--force');
-const TPL_NIK = 'exports/NIK_3276020602850001.txt';
-const TPL_NPWP = 'exports/NPWP_3210077012810002.txt';
+const TPL_NIK = 'exports/slik/NIK_3276020602850001.txt';
+const TPL_NPWP = 'exports/slik/NPWP_3210077012810002.txt';
 const OLD_NIK = '3276020602850001';
 const OLD_NPWP = '4850241603710928';
 

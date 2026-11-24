@@ -6,7 +6,7 @@ import { LoginPage } from '../../pages/LoginPage';
 
 /**
  * Test Validasi: Dropdown "Jenis agunan" vs Data Acuan Excel/CSV
- * File Acuan: fixtures/List Req data agunan baru CLS - request Data baru CLS.csv
+ * File Acuan: fixtures/sources/List Req data agunan baru CLS - request Data baru CLS.csv
  * Karakter: READ-ONLY (membuka modal, memverifikasi opsi, menutup kembali tanpa submit)
  */
 
@@ -60,7 +60,7 @@ test.describe('Validasi Dropdown Jenis Agunan', () => {
   const TARGET_URL = process.env.EXPLORE_URL
     || 'https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/01M482PRSVH5ZMTVZX5QH0VDNZ/create?bucket=agunan&debtorType=business';
 
-  const csvPath = path.resolve(__dirname, '../../fixtures/List Req data agunan baru CLS - request Data baru CLS.csv');
+  const csvPath = path.resolve(__dirname, '../../fixtures/sources/List Req data agunan baru CLS - request Data baru CLS.csv');
 
   test('validasi kelengkapan opsi jenis agunan terhadap data CSV', async ({ page }) => {
     test.setTimeout(120000);

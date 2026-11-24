@@ -6,7 +6,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 2: Informasi Umum Agunan
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC-4889-20, 21 (tanpa padanan 5419); TC-5419-05 s.d. TC-5419-07
  * Karakter: READ-ONLY (Validasi UI & Dropdown tanpa Submit Form)
  */

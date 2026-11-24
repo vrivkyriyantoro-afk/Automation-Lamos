@@ -17,7 +17,7 @@ import {
 
 /**
  * S2CML-4949 — Informasi Kepemilikan Agunan: New Data Identitas & SLIK Checking Form.
- * Matriks: exports/TC_S2CML-4949_Informasi_Kepemilikan_New_Identity.csv
+ * Matriks: exports/test-cases/TC_S2CML-4949_Informasi_Kepemilikan_New_Identity.csv
  *
  * Catatan label SIT: opsi Tipe kepemilikan berlabel "Individu" / "Non Individu",
  * sedangkan matriks menulis "Perorangan" / "Badan Usaha".
@@ -62,7 +62,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     const bodyText = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
     expect(/slik/i.test(bodyText), 'section SLIK Check harus tampil').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4949-01-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-01-after.png' });
     await closeModal(page);
   });
 
@@ -87,7 +87,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     const bodyText = (await page.locator('body').innerText()).replace(/\s+/g, ' ');
     expect(/slik/i.test(bodyText), 'form SLIK Check vendor harus tampil').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4949-02-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-02-after.png' });
     await closeModal(page);
   });
 
@@ -116,7 +116,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     expect(opsi.some(o => /^Non Individu$/i.test(o)), 'opsi tipe non-individu harus ada').toBeTruthy();
     console.log('TC-4949-03 MISMATCH desain -> expected "Perorangan"/"Badan Usaha"; aktual "Individu"/"Non Individu"');
 
-    await page.screenshot({ path: 'explore-output/tc-4949-03-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-03-options.png' });
     await closeModal(page);
   });
 
@@ -161,7 +161,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
       expect(labelStatus.includes('*'), 'Status pernikahan harus opsional (tanpa *)').toBeFalsy();
     }
 
-    await page.screenshot({ path: 'explore-output/tc-4949-04-after.png', fullPage: true });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-04-after.png', fullPage: true });
     await closeModal(page);
   });
 
@@ -187,7 +187,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     expect(opsi.some(o => /belum menikah|lajang/i.test(o)), 'harus ada opsi belum menikah').toBeTruthy();
     expect(opsi.some(o => /^menikah/i.test(o)), 'harus ada opsi menikah').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4949-07-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-07-options.png' });
     await closeModal(page);
   });
 
@@ -236,7 +236,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
 
     console.log('TC-4949-08 Inputs:', JSON.stringify(inputs.map(i => i.placeholder)));
 
-    await page.screenshot({ path: 'explore-output/tc-4949-08-after.png', fullPage: true });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-08-after.png', fullPage: true });
     await closeModal(page);
   });
 
@@ -260,7 +260,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     expect(opsi.length, 'dropdown Jenis badan usaha harus punya opsi').toBeGreaterThan(0);
     expect(opsi.some(o => /\bPT\b|perseroan/i.test(o)), 'harus ada opsi PT / Perseroan').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4949-09-options.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-09-options.png' });
     await closeModal(page);
   });
 
@@ -300,7 +300,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     const combos = await snapshotComboboxes(page);
     expect(combos.some(c => /jenis badan usaha/i.test(c)), 'form badan usaha harus menggantikan form perorangan').toBeTruthy();
 
-    await page.screenshot({ path: 'explore-output/tc-4949-11-after.png', fullPage: true });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-11-after.png', fullPage: true });
     await closeModal(page);
   });
 
@@ -328,7 +328,7 @@ test.describe('S2CML-4949: Form SLIK Check & New Data Identitas', () => {
     const isDisabled = await btnSimpan(page).isDisabled();
     console.log(`TC-4949-18 Simpan disabled=${isDisabled} aria-disabled=${ariaDisabled}`);
 
-    await page.screenshot({ path: 'explore-output/tc-4949-18-after.png' });
+    await page.screenshot({ path: 'explore-output/probes/tc-4949-18-after.png' });
     await closeModal(page);
   });
 });

@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari explore-output/penilaian_kelayakan.json.
+// AUTO-GENERATED oleh scripts/generators/generate-pages.js dari explore-output/buckets/penilaian_kelayakan.json.
 // Boleh diedit manual; regenerate dengan --force akan menimpa file ini.
 import { Page } from '@playwright/test';
 import { BucketSection, BucketId } from '../components/BucketSection';

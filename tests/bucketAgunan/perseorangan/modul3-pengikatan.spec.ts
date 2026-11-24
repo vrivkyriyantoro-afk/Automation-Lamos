@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 3: Pengikatan Agunan
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC-5419-03, TC-5419-04
  * Karakter: READ-ONLY (Validasi UI, Mandatory Marker, & Dynamic Conditional Field tanpa submit)
  */

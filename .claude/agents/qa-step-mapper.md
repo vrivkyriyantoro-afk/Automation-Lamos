@@ -27,7 +27,7 @@ Batas akses:
 3. `PROJECT_HISTORY.md`: baca hanya bagian 2.3 Konvensi DOM, 5 Gotcha, 7 Status & TODO, dan 3-5 entri riwayat terbaru. Grep kata kunci bucket/story, jangan baca seluruh file.
 4. Spec yang terbukti lolos (cari "passed" di riwayat), terutama helper navigasi (`navigateToStep2`, `tests/**/helpers/`) dan `pages/`.
 5. `explore-output/` (JSON, screenshot, log), `run-history/`, dan `explore-output/atlassian/<STORY>.json` untuk AC.
-6. `exports/TC_<STORY>_*.csv` dan `specs/` untuk skenario.
+6. `exports/test-cases/TC_<STORY>_*.csv` dan `specs/` untuk skenario.
 
 ## Aturan kartu bucket (rule form)
 - Untuk tiap section/step catat: field wajib (`*`) vs opsional; tipe kontrol; field autofill/terkunci (jangan ubah); field **kondisional** beserta pemicunya (mis. status Menikah memunculkan blok pasangan, tipe Corporate memunculkan pengurus); dropdown berantai/bergantung; validasi dan pesan error yang terbukti; syarat upload; perilaku simpan (tombol vs autosave, kapan terkirim); syarat tombol aktif/disabled; gate antar section/bucket; aksi yang MENULIS data final (Kirim/Simpan) dan izin yang dibutuhkan.

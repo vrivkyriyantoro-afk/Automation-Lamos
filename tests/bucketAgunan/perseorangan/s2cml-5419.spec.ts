@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * S2CML-5419 - Detailing Form Informasi Umum Agunan (Perseorangan)
- * Sumber: exports/TC_S2CML-5419_Detailing_Informasi_Umum.csv (TC-5419-01..20)
+ * Sumber: exports/test-cases/TC_S2CML-5419_Detailing_Informasi_Umum.csv (TC-5419-01..20)
  * Aturan eviden (AGENTS.md): 1 test.step = 1 butir "Langkah Pengujian" CSV, step-0 = prekondisi,
  * screenshot langkah terakhir membuktikan Expected Result, tanpa kotak merah.
  * TC-5419-21 (auto-sync BE) tidak di sini: butuh cek payload BE.

@@ -6,7 +6,7 @@ import { LoginPage } from '../../../pages/LoginPage';
  * Test Suite: Story S2CML-4890 - [BE] LAMOS LOS SME - Bucket Agunan - Data Agunan > Add Agunan/Collaterals Part 2
  * Sumber Acuan:
  *   - Jira Story: https://bank-sinarmas.atlassian.net/browse/S2CML-4890
- *   - Master Matriks TC: exports/TC_S2CML-4890_Bucket_Agunan.csv (22 TCs)
+ *   - Master Matriks TC: exports/test-cases/TC_S2CML-4890_Bucket_Agunan.csv (22 TCs)
  * Karakter: READ-ONLY (Validasi UI Stepper, Parallel Nav, Gating Identitas, & Business Rules tanpa submit final)
  */
 

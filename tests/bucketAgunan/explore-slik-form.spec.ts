@@ -51,7 +51,7 @@ test('Explore: apakah Form SLIK Check ada di Step 3 kategori 005 / 008', async (
         continue;
       }
       await dump(`${kode}_${label.replace(/\s+/g, '')}`);
-      await page.screenshot({ path: `explore-output/slik-${kode}-${label.toLowerCase().replace(/\s+/g, '-')}.png`, fullPage: true });
+      await page.screenshot({ path: `explore-output/probes/slik-${kode}-${label.toLowerCase().replace(/\s+/g, '-')}.png`, fullPage: true });
     }
   }
 

@@ -58,7 +58,7 @@ test.describe('Eksplorasi Tab Data Tambahan Agunan', () => {
     }
 
     // Ambil screenshot untuk inspeksi visual
-    await page.screenshot({ path: 'explore-output/tab-data-tambahan-f11.png' });
+    await page.screenshot({ path: 'explore-output/probes/tab-data-tambahan-f11.png' });
 
     // Tutup modal
     const btnBatal = page.locator('button:has-text("Batal")').last();

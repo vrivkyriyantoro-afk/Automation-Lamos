@@ -4,7 +4,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 
 /**
  * Test Suite: Story S2CML-4889 - Modul 6: Data Tambahan Agunan & Penilaian / LPA
- * Sumber Data: fixtures/TemplateAutomateLamos - Sheet1.csv
+ * Sumber Data: fixtures/sources/TemplateAutomateLamos - Sheet1.csv
  * Cakupan Test Cases: TC - 04 - 44 s.d. TC - 04 - 48
  * Karakter: READ-ONLY (Validasi Mandatory Marker, Conditional Fields LPA Tersedia vs Belum Tersedia, & Tipe Penilaian Internal vs KJPP)
  */

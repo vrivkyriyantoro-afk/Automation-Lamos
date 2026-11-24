@@ -1,6 +1,6 @@
 import openpyxl
 
-wb = openpyxl.load_workbook(r'fixtures\Analisa Data LAMOS SME Phase 2.xlsx', read_only=True, data_only=True)
+wb = openpyxl.load_workbook(r'fixtures\sources\Analisa Data LAMOS SME Phase 2.xlsx', read_only=True, data_only=True)
 sheet_names = wb.sheetnames
 
 print("Total sheet:", len(sheet_names))

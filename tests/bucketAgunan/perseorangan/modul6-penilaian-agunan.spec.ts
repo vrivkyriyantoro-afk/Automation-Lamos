@@ -5,7 +5,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4889 / S2CML-4890 - Modul 6: Penilaian Agunan (Perseorangan)
  * Sumber Acuan:
- *   - CSV Test Case: fixtures/TemplateAutomateLamos - Sheet1.csv (TC-4889-44 s.d TC-4889-48)
+ *   - CSV Test Case: fixtures/sources/TemplateAutomateLamos - Sheet1.csv (TC-4889-44 s.d TC-4889-48)
  *   - TC-4889-45: LPA belum tersedia: hanya Nilai prediksi wajib
  * Precondition:
  *   - Form Agunan Baru dibuka (Opsi A)

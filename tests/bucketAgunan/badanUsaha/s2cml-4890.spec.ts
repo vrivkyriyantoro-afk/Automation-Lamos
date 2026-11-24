@@ -5,7 +5,7 @@ import { LoginPage } from '../../../pages/LoginPage';
 /**
  * Test Suite: Story S2CML-4890 - Navigasi Stepper pada Debitur Badan Usaha.
  * Target Debitur: 01M7P9WH6PQ1AZ058P0C18QX4Q (debtorType=business)
- * Matriks: exports/TC_S2CML-4890_Bucket_Agunan.csv
+ * Matriks: exports/test-cases/TC_S2CML-4890_Bucket_Agunan.csv
  *
  * Cakupan: TC-4890-02 & TC-4890-03 (keduanya bertipe debitur "Perorangan & Badan Usaha";
  * varian Perorangan ada di tests/bucketAgunan/perseorangan/s2cml-4890.spec.ts).
