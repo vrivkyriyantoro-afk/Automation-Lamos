@@ -7,6 +7,15 @@
 
 Terakhir diperbarui: **2026-11-24**
 
+### 2026-11-24 — Tambah MCP Atlassian & Figma di `.mcp.json` (Claude Sonnet 5.5 via Claude Code)
+- Dikerjakan:
+  - `.mcp.json`: tambah server remote `atlassian` (`https://mcp.atlassian.com/v1/mcp`) dan `figma` (`https://mcp.figma.com/mcp`) di samping `playwright`.
+  - `AGENTS.md` (bagian 2): aturan "MCP Server" — MCP diutamakan untuk baca Jira/Figma, `npm run atlassian:read` / `figma:read` jadi cadangan; tetap read-only.
+  - `.claude/agents/qa-spec-auditor.md`: sumber tarik ulang Jira/Figma diubah ke MCP dulu, script sebagai cadangan.
+- Verifikasi: 🟡 belum diverifikasi — server MCP belum dicoba start/login OAuth; URL endpoint dari ingatan, belum dicek ke dokumentasi resmi.
+- Belum selesai / gagal: user perlu restart/reload, `/mcp` → setujui server project → login OAuth Atlassian & Figma. Bila Atlassian menolak `/v1/mcp`, coba `https://mcp.atlassian.com/v1/sse` dengan `"type": "sse"`. Playwright MCP juga belum diuji start.
+- Keputusan user: tambahkan MCP Atlassian & Figma ke project; dokumentasi/agent disesuaikan.
+
 ### 2026-11-24 — Sesuaikan spec S2CML-4890 batch2 dengan CSV + debitur baru 0060052026110014/20 (Claude Sonnet 5.5 via Claude Code)
 - Dikerjakan:
   - `tests/bucketAgunan/perseorangan/s2cml-4890-batch2.spec.ts`: penomoran disesuaikan dengan CSV (16 TC). TC-04/05 dipisah dan `fixme` (belum ada flow isi Step 1 Lengkap; cek badge lama PASS palsu dihapus). TC-08 kini cek popup "Maximum number agunan…" (skip tanpa env `DEBITUR_MAX_AGUNAN`). TC-09/10 klik "Simpan sebagai draft" + cek toast + buka draft via titik 3 > Ubah (hanya jalan bila `ALLOW_SIT_WRITE=1`). TC-12 `fixme` (perlu konfirmasi BA). Test berlabel "12 & 13" (sebenarnya TC-11) dihapus.
