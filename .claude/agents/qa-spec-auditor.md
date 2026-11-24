@@ -12,7 +12,7 @@ Input: key story (mis. `S2CML-6018`) atau key epic (mis. `LP-5685`).
 
 Sumber yang dibandingkan (baca dari file lokal; tarik ulang Jira/Figma hanya bila diminta, utamakan MCP `atlassian`/`figma`; cadangan: `scripts/jira/read-atlassian.js` dan `scripts/readers/read-figma.js`):
 - Jira: `explore-output/atlassian/<story>.json`, `graph-LP-5685.json`
-- Spec & tugas: `specs/**/<story>/spec.md` dan `tasks.md`
+- Spec & tugas: `tests/**/<story>/spec.md` dan `tasks.md`
 - Matriks TC: `tests/<bucket>/<story>/TC_<story>_*.csv` (folder story)
 - Test otomatis: `tests/**/*<story>*.spec.ts`
 - Peta kepemilikan TC: `docs/BACKBONE_STORY_TC_LP-5685.md`

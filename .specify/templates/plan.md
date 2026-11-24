@@ -3,7 +3,7 @@
 ## 1. Komponen & Berkas yang Disentuh
 - **Page Object**: `pages/[namaBucketFolder]/[PageName].ts`
   *(Catatan: Jika diawali `// AUTO-GENERATED`, ubah via `scripts/generators/generate-pages.js` atau hapus header jika ingin dikonversi ke manual)*
-- **Test File**: `tests/[namaBucketFolder]/[test-name].spec.ts`
+- **Test File**: `tests/[namaBucketFolder]/[STORY]/[test-name].spec.ts`
 - **Helpers / Fixtures**: `fixtures/...` (jika ada)
 
 ## 2. Pemetaan Selector DOM (Wajib Sesuai Konvensi LAMOS)
@@ -29,6 +29,6 @@ Rencana method baru yang akan ditambahkan ke Page Object:
 - **Skeleton Wait**: Gunakan auto-waiting locator Playwright (`toBeVisible()` / `waitFor({ state: 'visible' })`), hindari `count()` instan saat data masih loading.
 - **Verifikasi Perintah**:
   ```bash
-  npx playwright test tests/[namaBucketFolder]/[test-name].spec.ts --project=chromium
+  npx playwright test tests/[namaBucketFolder]/[STORY]/[test-name].spec.ts --project=chromium
   ```
 

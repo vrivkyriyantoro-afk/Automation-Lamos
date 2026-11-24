@@ -19,7 +19,7 @@
   - [ ] Verifikasi typecheck pada file Page Object.
 
 - [ ] **3. Implementasi Test Automation**
-  - [ ] Buat file test di `tests/[namaBucketFolder]/[test-name].spec.ts`.
+  - [ ] Buat file test di `tests/[namaBucketFolder]/[STORY]/[test-name].spec.ts`.
   - [ ] Terapkan Skenario 1 (Navigasi & Pembukaan section).
   - [ ] Terapkan Skenario 2 (Validasi field & assertions).
   - [ ] Pastikan tidak ada hardcoded credentials (gunakan `.env`).
@@ -27,7 +27,7 @@
 - [ ] **4. Verifikasi Eksekusi (Verification-Before-Completion)**
   - [ ] Jalankan test Playwright di lingkungan target:
     ```bash
-    npx playwright test tests/[namaBucketFolder]/[test-name].spec.ts --project=chromium
+    npx playwright test tests/[namaBucketFolder]/[STORY]/[test-name].spec.ts --project=chromium
     ```
   - [ ] Pastikan hasil test 100% passed tanpa flaky/timeout.
 

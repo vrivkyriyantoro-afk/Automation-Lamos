@@ -101,10 +101,13 @@ async function main() {
     bucketArg = detectBucket(storyKey) || '';
   }
 
-  const baseSpecsDir = path.resolve(__dirname, '../../specs');
-  const targetDir = bucketArg 
-    ? path.join(baseSpecsDir, bucketArg, storyKey)
-    : path.join(baseSpecsDir, storyKey);
+  // spec.md/plan.md/tasks.md disimpan satu folder dengan matriks TC & spec Playwright: tests/<bucket>/<STORY>/
+  // 'bucket-agunan' -> 'bucketAgunan'; bila folder sudah ada di tests/, pakai ejaan aslinya (mis. bucketCovenantTBO)
+  const camelBucket = bucketArg ? 'bucket' + bucketArg.replace(/^bucket-?/, '').split('-').filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join('') : 'bucketAgunan';
+  const existingBucket = fs.readdirSync(path.resolve(__dirname, '../../tests')).find((d) => d.toLowerCase() === camelBucket.toLowerCase());
+  const bucketTestFolder = existingBucket || camelBucket;
+  const storyFolder = storyKey.toUpperCase();
+  const targetDir = path.resolve(__dirname, '../../tests', bucketTestFolder, storyFolder);
 
   const templateDir = path.resolve(__dirname, '../../.specify/templates');
 
@@ -116,7 +119,6 @@ async function main() {
 
   const specRelPath = path.relative(path.resolve(__dirname, '../..'), targetDir).replace(/\\/g, '/');
   const testFileName = `${storyKey.toLowerCase()}.spec.ts`;
-  const bucketTestFolder = bucketArg ? bucketArg.replace(/^bucket-/, 'bucket').replace(/-([a-z])/g, (_, c) => c.toUpperCase()) : 'bucketAgunan';
 
   // 1. Generate spec.md
   let specContent = '';
@@ -155,7 +157,7 @@ Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas w
     planContent = `# PLAN: ${jiraData.key} - ${jiraData.summary}
 
 ## 1. Berkas & Target Pengujian
-- **File Test Target**: \`tests/${bucketTestFolder}/${testFileName}\`
+- **File Test Target**: \`tests/${bucketTestFolder}/${storyFolder}/${testFileName}\`
 - **Living Spec**: \`${specRelPath}/spec.md\`
 - **Acuan Jira**: [${jiraData.key}](https://${domain}/browse/${jiraData.key})
 
@@ -177,7 +179,7 @@ Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas w
    - Menguji skenario saat hasil ditemukan -> memilih salah satu kartu agunan eksisting.
 3. **Perintah Verifikasi**:
    \`\`\`bash
-   npx playwright test tests/${bucketTestFolder}/${testFileName} --project=chromium
+   npx playwright test tests/${bucketTestFolder}/${storyFolder}/${testFileName} --project=chromium
    \`\`\`
 `;
   } else {
@@ -200,7 +202,7 @@ Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas w
   - [ ] Siapkan data debitur dan keyword pencarian di lingkungan SIT.
 
 - [ ] **2. Implementasi Test Automation Playwright**
-  - [ ] Buat file test: \`tests/${bucketTestFolder}/${testFileName}\`.
+  - [ ] Buat file test: \`tests/${bucketTestFolder}/${storyFolder}/${testFileName}\`.
   - [ ] Test Case 1: Tampilkan modal stepper Tambah Agunan saat tombol diklik.
   - [ ] Test Case 2: Input kriteria pencarian dan trigger tombol Cari.
   - [ ] Test Case 3: Verifikasi hasil pencarian (menampilkan list atau opsi "Tambah Agunan Baru").
@@ -208,7 +210,7 @@ Dokumen ini menjadi acuan utama verifikasi Playwright. Setiap skenario di atas w
 - [ ] **3. Eksekusi & Verifikasi (Verification-Before-Completion)**
   - [ ] Jalankan test di SIT:
     \`\`\`bash
-    npx playwright test tests/${bucketTestFolder}/${testFileName} --project=chromium
+    npx playwright test tests/${bucketTestFolder}/${storyFolder}/${testFileName} --project=chromium
     \`\`\`
   - [ ] Pastikan seluruh test lolos tanpa timeout.
 
