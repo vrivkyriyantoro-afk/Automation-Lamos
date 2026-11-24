@@ -36,8 +36,8 @@ Bukti: `GF-AGUNAN-TAMBAH-SEARCH`, `GF-AGUNAN-AGUNAN-BARU`, `agunanModal.ts:25-44
 ### 3.2 Step 1 Informasi umum
 - Default step; status **Belum Lengkap**. **Simpan disabled** dan **Simpan draft aktif** selama belum lengkap (TC-4890-01/02/03/11). Klik Simpan draft **menulis ke SIT** → hanya di App ID uji dan atas izin user.
 - Field per modul: `tests/bucketAgunan/_umum/modul2-informasi-umum`, `modul3-pengikatan`, `modul4-alamat`. Daftar field lengkap tidak diulang di sini (tidak ada probe tersimpan terbaru).
-- **Data Pembanding:** tombol `+ Data Pembanding` **disabled setelah 10 record** (TC-04-43, 2026-10-31); jenis Tanah. Hapus pembanding tanpa konfirmasi = defect (`docs/LAPORAN_DEFECT_Hapus_Data_Pembanding.md`).
-- **Penilaian:** radio LPA Ya/Tidak (Gotcha 13); Tipe penilaian Internal/KJPP. Rasio agunan (LTV/CC/LM): rumus di skill lending-domain; defect Sisa Nilai 0 di `docs/LAPORAN_DEFECT_S2CML-4889_Sisa_Nilai_0.md`.
+- **Data Pembanding:** tombol `+ Data Pembanding` **disabled setelah 10 record** (TC-04-43, 2026-10-31); jenis Tanah. Hapus pembanding tanpa konfirmasi = defect (`tests/bucketAgunan/S2CML-5419/bug/LAPORAN_DEFECT_Hapus_Data_Pembanding.md`).
+- **Penilaian:** radio LPA Ya/Tidak (Gotcha 13); Tipe penilaian Internal/KJPP. Rasio agunan (LTV/CC/LM): rumus di skill lending-domain; defect Sisa Nilai 0 di `tests/bucketAgunan/S2CML-4889/bug/LAPORAN_DEFECT_S2CML-4889_Sisa_Nilai_0.md`.
 
 ### 3.3 Step 2 Data tambahan
 - Tab "Data tambahan agunan" (`navigateToStep2`, `modul7-data-tambahan.spec.ts:39-69`). Isi bergantung jenis agunan.

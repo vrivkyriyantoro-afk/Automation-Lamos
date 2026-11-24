@@ -435,8 +435,8 @@ test.describe('S2CML-4889: Modul 7 - Data Tambahan Agunan (Perseorangan)', () =>
     await page.evaluate(() => document.getElementById('__evidence_url')?.remove());
     await testInfo.attach(title, { body, contentType: 'image/png' });
     const fs = await import('fs');
-    fs.mkdirSync('explore-output/stories/s2cml-5445/eviden', { recursive: true });
-    fs.writeFileSync('explore-output/stories/s2cml-5445/eviden/' + title.replace(/[^A-Za-z0-9]+/g, '_').slice(0, 80) + '.png', body);
+    fs.mkdirSync('tests/bucketAgunan/S2CML-5445/eviden', { recursive: true });
+    fs.writeFileSync('tests/bucketAgunan/S2CML-5445/eviden/' + title.replace(/[^A-Za-z0-9]+/g, '_').slice(0, 80) + '.png', body);
   }
 
   test('TC-5445-03: Indikator Loading pada Tombol Cek saat Inquiry Berjalan', async ({ page }, testInfo) => {

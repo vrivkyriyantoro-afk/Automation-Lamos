@@ -21,7 +21,7 @@ import { LoginPage } from '../../../pages/base/LoginPage';
 const TARGET_APP_ID = process.env.DEBITUR_TARGET || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const BASE_URL = process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/';
 const TARGET_URL = `${BASE_URL.replace(/\/$/, '')}/lamos/credit-application/${TARGET_APP_ID}/create?bucket=agunan&debtorType=individual`;
-const EVIDEN_DIR = path.join(process.cwd(), 'explore-output', 'stories', 's2cml-6018');
+const EVIDEN_DIR = path.join(__dirname, 'eviden');
 
 test.describe('S2CML-6018: Validasi Icon Kartu Agunan vs Desain Figma', () => {
   test.beforeAll(() => {

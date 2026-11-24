@@ -217,7 +217,7 @@ GF-COMMON-LOGIN
 - **Prasyarat:** GF-AGUNAN-STEP1-INFORMASI-UMUM (jenis Tanah)
 - **Data uji:** `DEBITUR_TARGET||01M4F7…` (modul5:12); App ID run 10-30 tidak terbukti.
 - **Langkah:** `navigateToFormAgunanBaru` modul5:42 → `openTambahDataPembanding` :85-99 → `fillDataPembanding` :101. Alternatif: `addPembanding` `s2cml-5419.spec.ts:112`.
-- **Konflik:** suite 5419 **tidak terbukti** jalan: riwayat 2026-11-17 mencatat "18 lulus, 2 gagal" sekaligus "tidak dijalankan di SIT", dan semua `run-history` 5419 hanya `--list`. Defect hapus pembanding tanpa konfirmasi: `docs/LAPORAN_DEFECT_Hapus_Data_Pembanding.md`.
+- **Konflik:** suite 5419 **tidak terbukti** jalan: riwayat 2026-11-17 mencatat "18 lulus, 2 gagal" sekaligus "tidak dijalankan di SIT", dan semua `run-history` 5419 hanya `--list`. Defect hapus pembanding tanpa konfirmasi: `tests/bucketAgunan/S2CML-5419/bug/LAPORAN_DEFECT_Hapus_Data_Pembanding.md`.
 
 ### GF-AGUNAN-STEP1-PENILAIAN-LPA
 - **Status:** LOLOS (2026-10-31 `modul6-penilaian-agunan.spec.ts` 6 passed, `PROJECT_HISTORY.md` ~647)
@@ -229,7 +229,7 @@ GF-COMMON-LOGIN
 ### GF-AGUNAN-STEP2-DATA-TAMBAHAN
 - **Status:** LOLOS (5420: `run-history/2026-11-16T14-06-25-410Z.json` TC-5420-01 passed; 5445 2026-11-22: hanya riwayat + eviden, tanpa JSON run)
 - **Prasyarat:** GF-AGUNAN-AGUNAN-BARU (pilih jenis sesuai skenario)
-- **Data uji:** 5420 `APP_ID_5420||01M5TYDZSJFK7J66ZDK2YHRCZ9` (juga pernah `01M79GW1XYEQAK97TM803HFY8F`); 5445 `01M4F7…` (banner URL di `explore-output/stories/s2cml-5445/eviden/`).
+- **Data uji:** 5420 `APP_ID_5420||01M5TYDZSJFK7J66ZDK2YHRCZ9` (juga pernah `01M79GW1XYEQAK97TM803HFY8F`); 5445 `01M4F7…` (banner URL di `tests/bucketAgunan/S2CML-5445/eviden/`).
 - **Langkah:** klik tab `button, [role="tab"]` berteks `Data tambahan agunan` | `navigateToStep2` `modul7-data-tambahan.spec.ts:39-69`; `openStep2` `s2cml-5420.spec.ts:115`.
 - **Cabang Cash Collateral (CIF):** jenis F15 → radio `input[name="isCollateralStoredAtBsim"][value="true|false"]` + `check({ force: true })` → `GET /lossvc/v1/cif?number=<CIF>&jenisAgunanCode=…`. CIF uji di `.env` (`CIF_VALID_1`, `CIF_VALID_2`); rekening ada di F09/F15, kosong di F10/F11.
 - **BLOCKED:** deposito F11 (TC-5445-13/14) butuh CIF dengan rekening deposito; agunan CLS (TC-5420-06) → lihat GF-AGUNAN-EXISTING-CLS.
@@ -280,7 +280,7 @@ GF-COMMON-LOGIN
 - **Catatan:** klik draft **menulis data ke SIT**; hanya di App ID khusus uji dan atas izin user.
 
 ### GF-AGUNAN-EXISTING-CLS
-- **Status:** BLOCKED (TC-5420-06 skip; TC-4889-09 `test.skip` `[GAP DATA CLS]` `s2cml-4889.spec.ts:272-273`; `POST /lossvc/v1/existing-collaterals` → `items: []`, `explore-output/stories/S2CML-5419/summary.txt`)
+- **Status:** BLOCKED (TC-5420-06 skip; TC-4889-09 `test.skip` `[GAP DATA CLS]` `s2cml-4889.spec.ts:272-273`; `POST /lossvc/v1/existing-collaterals` → `items: []`, `tests/bucketAgunan/S2CML-5419/eviden/summary.txt`)
 - **Prasyarat:** GF-AGUNAN-TAMBAH-SEARCH dengan nomor agunan CLS nyata
 - **Data uji:** tidak ada; butuh nomor agunan CLS dari tim (COL-2026-501 tidak ditemukan).
 
@@ -294,7 +294,7 @@ GF-COMMON-LOGIN
 ### GF-AGUNAN-EDIT-DRAFT
 - **Status:** BELUM DICOBA (TC-4941-07 `test.skip(true)` `s2cml-4941.spec.ts:270`)
 - **Prasyarat:** GF-AGUNAN-EDIT-EXISTING + agunan berstatus Draft
-- **Konflik:** komentar skip menyebut "seluruh agunan FINAL", padahal `01M4F7` tampak punya 1 draft (`explore-output/stories/s2cml-6018/TC-6018-04-step-1.png` "Draf agunan (1)"; `GET …/collaterals?status=DRAFT` → 1 HOUSING di `explore-output/stories/S2CML-5419/summary.txt`). Skip tidak pernah dicoba ulang.
+- **Konflik:** komentar skip menyebut "seluruh agunan FINAL", padahal `01M4F7` tampak punya 1 draft (`tests/bucketAgunan/S2CML-6018/eviden/TC-6018-04-step-1.png` "Draf agunan (1)"; `GET …/collaterals?status=DRAFT` → 1 HOUSING di `tests/bucketAgunan/S2CML-5419/eviden/summary.txt`). Skip tidak pernah dicoba ulang.
 
 ### GF-AGUNAN-HAPUS
 - **Status:** menu "Hapus agunan" terlihat → LOLOS (TC-4941-02 `s2cml-4941.spec.ts:164-168`, 2026-11-12); aksi hapus → BELUM DICOBA (tidak ada spec)
@@ -307,7 +307,7 @@ GF-COMMON-LOGIN
 - **Langkah:** `navigateBucket` `s2cml-6020.spec.ts:41-48` → `ensureDataAgunanOpen` :50-61.
 
 ### GF-AGUNAN-ICON-KARTU
-- **Status:** LOLOS (2026-11-12 `validasi-icon-agunan.spec.ts` 4 passed; eviden `explore-output/stories/s2cml-6018/` dari `01M4F7`)
+- **Status:** LOLOS (2026-11-12 `validasi-icon-agunan.spec.ts` 4 passed; eviden `tests/bucketAgunan/S2CML-6018/eviden/` dari `01M4F7`)
 - **Prasyarat:** GF-COMMON-BUKA-BUCKET + kartu Reksadana dan Setoran Jaminan tersimpan
 - **Data uji:** `DEBITUR_TARGET||01M4F7…` (`validasi-icon-agunan.spec.ts:21`). Harus `01M4F7`; `01M22NAB` punya 0 agunan.
 - **Langkah:** `ensureDataAgunanOpen` `validasi-icon-agunan.spec.ts:52` → `img` `/assets/agunan-image/{housing,vehicle,document,cash}.svg` 48x48.

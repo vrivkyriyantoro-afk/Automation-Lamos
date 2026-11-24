@@ -18,7 +18,7 @@ import { bersihkanTanda, scrollKeElemen, tandaiKotakMerah } from '../_shared/evi
  * Pengambilan eviden visual untuk laporan bug & mismatch desain.
  * Setiap screenshot diberi penanda kotak merah pada elemen bermasalah.
  *
- * Output: explore-output/bug/BUG-xx-*.png
+ * Output: tests/bucketAgunan/<story>/bug/*.png (4948: MISMATCH-01/02, 4949: BUG-01/MISMATCH-03)
  */
 test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
   test.beforeEach(async ({ page }) => {
@@ -52,7 +52,7 @@ test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
     await tandaiKotakMerah(page, inputHpBU, 'Nomor HP badan usaha (placeholder benar)');
     await tandaiKotakMerah(page, inputPic, 'BUG: Nomor telepon PIC -> placeholder "Masukkan nomor HP badan usaha"');
 
-    await page.screenshot({ path: 'explore-output/bug/BUG-01-placeholder-pic.png', fullPage: true });
+    await page.screenshot({ path: 'tests/bucketAgunan/S2CML-4949/bug/BUG-01-placeholder-pic.png', fullPage: true });
     await bersihkanTanda(page);
   });
 
@@ -71,7 +71,7 @@ test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
       .filter({ hasText: /001/ }).first();
     await tandaiKotakMerah(page, opt001, 'SIT: "001 - Calon Debitur" | Expected matriks: "003 - Debitur"');
 
-    await page.screenshot({ path: 'explore-output/bug/MISMATCH-01-kode-003-vs-001.png' });
+    await page.screenshot({ path: 'tests/bucketAgunan/S2CML-4948/bug/MISMATCH-01-kode-003-vs-001.png' });
     await bersihkanTanda(page);
   });
 
@@ -88,7 +88,7 @@ test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
 
     const comboHubungan = page.locator('[role="combobox"]:visible').filter({ hasText: /hubungan dengan debitur/i }).first();
     await tandaiKotakMerah(page, comboHubungan, 'Kategori 005: dropdown "Hubungan dengan debitur" TAMPIL');
-    await page.screenshot({ path: 'explore-output/bug/MISMATCH-02a-kategori-005-ada-hubungan.png', fullPage: true });
+    await page.screenshot({ path: 'tests/bucketAgunan/S2CML-4948/bug/MISMATCH-02a-kategori-005-ada-hubungan.png', fullPage: true });
     await bersihkanTanda(page);
 
     // Kategori 006: dropdown Hubungan TIDAK dirender
@@ -110,7 +110,7 @@ test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
     await scrollKeElemen(page, comboTerakhir);
     await tandaiKotakMerah(page, comboTerakhir, 'Kategori 006: dropdown "Hubungan dengan debitur" TIDAK ADA setelah field ini');
 
-    await page.screenshot({ path: 'explore-output/bug/MISMATCH-02b-kategori-006-tanpa-hubungan.png', fullPage: true });
+    await page.screenshot({ path: 'tests/bucketAgunan/S2CML-4948/bug/MISMATCH-02b-kategori-006-tanpa-hubungan.png', fullPage: true });
     await bersihkanTanda(page);
   });
 
@@ -132,7 +132,7 @@ test.describe('Eviden Laporan Bug - Bucket Agunan', () => {
     const listbox = page.locator('[role="listbox"]:visible').first();
     await tandaiKotakMerah(page, listbox, 'SIT: "Individu"/"Non Individu" | Expected matriks: "Perorangan"/"Badan Usaha"');
 
-    await page.screenshot({ path: 'explore-output/bug/MISMATCH-03-label-tipe-kepemilikan.png' });
+    await page.screenshot({ path: 'tests/bucketAgunan/S2CML-4949/bug/MISMATCH-03-label-tipe-kepemilikan.png' });
     await bersihkanTanda(page);
   });
 });

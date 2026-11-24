@@ -73,7 +73,7 @@ Berikut adalah profil dan arsitektur kerja kita:
 * **Story S2CML-4890 (Form Part 2):** 25 TC mencakup 3-Step Stepper, Gating Identitas, Max 100, Draft, dan LPA.
 * **Story S2CML-4948 & 4949 (Kepemilikan & SLIK):** Masing-masing 20 TC, test Playwright sudah 28/28 passed.
 * **Defect Terbuka Terkonfirmasi:** 
-  - Bug Kalkulasi BE LAMOS S2CML-4889: Service `other-facilities` mengirim `remainingAppraisedValue: 0` padahal penjaminan 0%, melanggar aturan fallback nilai wajar (tercatat di `docs/LAPORAN_DEFECT_S2CML-4889_Sisa_Nilai_0.md` dan Obsidian `Defect Agunan.md`).
+  - Bug Kalkulasi BE LAMOS S2CML-4889: Service `other-facilities` mengirim `remainingAppraisedValue: 0` padahal penjaminan 0%, melanggar aturan fallback nilai wajar (tercatat di `tests/bucketAgunan/S2CML-4889/bug/LAPORAN_DEFECT_S2CML-4889_Sisa_Nilai_0.md` dan Obsidian `Defect Agunan.md`).
 
 Tolong konfirmasi bahwa kamu sudah memahami seluruh konteks, aturan kerja, dan arsitektur proyek ini, lalu sebutkan apa langkah selanjutnya dari Status & TODO yang siap kita kerjakan!
 ````

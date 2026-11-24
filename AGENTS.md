@@ -21,7 +21,7 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
 - Jangan menulis isi `.env` (kredensial) ke file, log, commit, atau prompt.
 - Folder bucket: ikuti nama yang sudah ada (case-sensitive di CI Linux), mis. `bucketCovenantTBO`.
 - Keputusan user yang tercatat di history (mis. Agunan di-skip) tetap berlaku sampai user mengubahnya.
-- **Struktur folder test**: `tests/<bucket>/<S2CML-xxxx>/` berisi matriks TC (`TC_S2CML-xxxx_*.csv/.xlsx`) dan spec Playwright story itu. `tests/<bucket>/_shared/` = helper bersama; `tests/<bucket>/_umum/` = spec lintas story / alat bantu (mis. isi Identitas, SLIK, modul Agunan). Script export TC (`scripts/export-tc/`) menulis langsung ke folder story.
+- **Struktur folder test**: `tests/<bucket>/<S2CML-xxxx>/` berisi matriks TC (`TC_S2CML-xxxx_*.csv/.xlsx`) dan spec Playwright story itu. `tests/<bucket>/_shared/` = helper bersama; `tests/<bucket>/_umum/` = spec lintas story / alat bantu (mis. isi Identitas, SLIK, modul Agunan). Script export TC (`scripts/export-tc/`) menulis langsung ke folder story. Subfolder opsional per story: `bug/` (laporan defect + screenshot) dan `eviden/` (screenshot/network hasil run).
 - **Standar format ID Test Case**: Mengikuti pola `TC-<StoryKey>-<NoUrut>` (contoh: `TC-4890-01`, `TC-4944-01`).
 - **Cara menghitung jumlah Test Case**: Hitung dari **kolom `Test Case ID`**, JANGAN dari jumlah baris file CSV. Sel pada kolom Prekondisi/Langkah/Expected berisi teks multi-baris sehingga `wc -l` atau `Measure-Object -Line` menghasilkan angka jauh lebih besar dan menyesatkan. Perintah benar: `Import-Csv "tests\<bucket>\<story>\<file>.csv" | Where-Object { $_.'Test Case ID' -match '^TC-' } | Measure-Object`. Rekap resmi per story ada di `PROJECT_HISTORY.md` bagian **1.1**.
 - **Standar Judul Test Case**: Judul skenario (Title) wajib konsisten menggunakan kata awalan **`Validasi ...`** (misal: *"Validasi Modal dan Urutan Stepper saat Klik Tambah Agunan"*, *"Validasi Tombol Simpan Disabled saat Mandatory Belum Lengkap"*).
@@ -36,7 +36,7 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
 - **MCP Server (`.mcp.json`)**: `playwright` (browser, output ke `evidence/`), `atlassian` (Jira/Confluence), `figma` (desain). Atlassian & Figma memakai OAuth per user (`/mcp` → login); tidak ada kredensial di repo. Prioritaskan MCP untuk membaca Jira/Figma; bila MCP belum login/gagal, pakai cadangan `npm run atlassian:read` / `npm run figma:read` (butuh `.env`). Aturan read-only tetap berlaku: jangan menulis/mengubah isi Jira atau Figma tanpa permintaan user.
 - **Push GitHub Harian (Jam 16.00 Sore)**: Setiap pukul 16.00 sore (akhir sesi kerja), ingatkan user untuk melakukan push perubahan ke remote GitHub. **Wajib minta konfirmasi user terlebih dahulu** sebelum menjalankan `git add` / `git commit` / `git push` — jangan push otomatis tanpa persetujuan. Sebelum push, pastikan tidak ada kredensial `.env` atau secret yang ikut ter-commit.
 - **Sinkronisasi Obsidian Vault (QA BSM)**: Knowledge base QA proyek ini tersinkronisasi dengan Obsidian Vault di `C:\Users\V50324\Documents\obsidian\QA BSM\Projects\LAMOS\`. Catatan defect dan spesifikasi disinkronkan ke subfolder terkait (mis. `Agunan/`).
-- **Standar Format Laporan Defect**: Laporan defect disimpan di `docs/` dengan struktur baku:
+- **Standar Format Laporan Defect**: Laporan defect disimpan di folder story: `tests/<bucket>/<story>/bug/LAPORAN_DEFECT_<STORY>_<DESKRIPSI>.md` (screenshot eviden di folder `bug/` yang sama, ditaut relatif `./nama.png`) dengan struktur baku:
   ```markdown
   # Laporan Defect — [Nama Fitur / Modul] ([Nomor Story])
 
@@ -73,7 +73,7 @@ Berlaku untuk Claude, Gemini, GPT/Codex, Copilot, Cursor, dan agent lain yang me
   | [Komponen/Field] | [Ekspektasi] | [Kondisi aktual di SIT] |
 
   ### 5. Bukti Teknis & Eviden
-  - **Screenshot**: Path file screenshot eviden (`explore-output/bug/...`).
+  - **Screenshot**: Path file screenshot eviden (`./<nama>.png` di folder `bug/` story yang sama).
   - **cURL Command**: Perintah copy as cURL (bash) dari Network DevTools untuk reproduksi langsung:
     ```bash
     curl 'https://...' \

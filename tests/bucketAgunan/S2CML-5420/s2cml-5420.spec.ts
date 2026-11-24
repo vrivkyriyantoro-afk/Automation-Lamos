@@ -24,7 +24,7 @@ const TARGET_URL = `${BASE_HOST.replace(/\/$/, '')}/lamos/credit-application/${T
 const DUMMY_FILE_1 = path.resolve('fixtures/files/dummy-identitas.pdf');
 const DUMMY_FILE_2 = path.resolve('fixtures/files/dummy-agunan-2.pdf');
 const DUMMY_FILE_51MB = path.resolve('fixtures/files/dummy-oversize-51mb.pdf');
-const EVIDEN_OUTPUT_DIR = path.resolve('explore-output/stories/s2cml-5420');
+const EVIDEN_OUTPUT_DIR = path.resolve(__dirname, 'eviden');
 
 test.describe('S2CML-5420: Data Tambahan Agunan (Non-Cash Collateral)', () => {
   test.beforeEach(async ({ page }) => {

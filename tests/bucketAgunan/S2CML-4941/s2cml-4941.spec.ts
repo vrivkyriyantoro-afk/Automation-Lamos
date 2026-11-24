@@ -17,7 +17,7 @@ import { ambilScreenshotBersih, bersihkanTanda } from '../_shared/eviden';
 const TARGET_APP_ID = process.env.TARGET_APP_ID_AGUNAN || '01M4F7TNSCSHEDB5G3WTSP7HDY';
 const BASE_HOST = process.env.BASE_URL || 'https://los-fe-lamos-sit.devs.banksinarmas.com/';
 const TARGET_URL = `${BASE_HOST.replace(/\/$/, '')}/lamos/credit-application/${TARGET_APP_ID}/create?bucket=agunan&debtorType=individual`;
-const EVIDEN_DIR = path.resolve(__dirname, '../../../explore-output/stories/s2cml-4941');
+const EVIDEN_DIR = path.resolve(__dirname, 'eviden');
 
 test.describe('S2CML-4941: Edit Agunan Existing - Debitur Perseorangan', () => {
   test.beforeAll(() => {
