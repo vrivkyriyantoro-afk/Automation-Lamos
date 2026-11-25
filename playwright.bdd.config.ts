@@ -11,13 +11,14 @@ dotenv.config();
  * Step definition hanya boleh memakai page object di pages/ (bukan selector sendiri).
  */
 const testDir = defineBddConfig({
-  features: 'features/**/*.feature',
+  // Fitur boleh ada di features/ (lintas bucket, mis. auth) atau di folder story (tests/<bucket>/<story>/*.feature).
+  features: ['features/**/*.feature', 'tests/**/*.feature'],
   steps: 'features/steps/**/*.ts',
 });
 
 export default defineConfig({
   testDir,
-  timeout: 60000,
+  timeout: 180000, // login SSO SIT + buka bucket Agunan bisa lambat (spec TypeScript setara memakai 180 dtk)
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: 0,

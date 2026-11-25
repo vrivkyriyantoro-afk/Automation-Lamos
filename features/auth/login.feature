@@ -6,7 +6,7 @@ Fitur: Login LAMOS
   Agar dapat mengakses pengajuan kredit
 
   Latar Belakang:
-    Diberikan saya membuka halaman login LAMOS
+    Diketahui saya membuka halaman login LAMOS
 
   @smoke
   Skenario: Login berhasil dengan kredensial valid

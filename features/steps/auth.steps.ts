@@ -8,6 +8,13 @@ Given('saya membuka halaman login LAMOS', async ({ loginPage }) => {
   await loginPage.goto();
 });
 
+// Gabungan untuk Latar Belakang fitur lain: buka halaman login, login, tunggu keluar dari SSO.
+Given('saya sudah login ke LAMOS', async ({ loginPage }) => {
+  await loginPage.goto();
+  await loginPage.login(username(), password());
+  await loginPage.expectLoginSuccess();
+});
+
 When('saya login dengan kredensial yang valid', async ({ loginPage }) => {
   await loginPage.login(username(), password());
 });
