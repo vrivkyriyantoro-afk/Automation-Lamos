@@ -10,7 +10,8 @@ export default defineConfig({
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  workers: 1,
+  // Default berurutan (aman untuk spec yang menulis ke SIT). Paralel: WORKERS=4 (file spec berbeda jalan bersamaan).
+  workers: Number(process.env.WORKERS) || 1,
   reporter: [
     ['html', { open: 'never' }],
     ['list'],
