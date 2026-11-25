@@ -3,7 +3,7 @@
 **Tanggal:** 2 November 2026
 **Epic:** [LP-5685](https://bank-sinarmas.atlassian.net/browse/LP-5685) — Bucket Agunan
 **Sumber status:** Jira REST API live (`scripts/jira/crawl-agunan-graph.js`)
-**Sumber jumlah TC:** kolom `Test Case ID` pada `exports/*.csv`
+**Sumber jumlah TC:** kolom `Test Case ID` pada `tests/<bucket>/<story>/TC_*.csv`
 **Audit redundansi:** `scripts/export-tc/audit_tc_redundancy.py`
 
 Dokumen ini memetakan **satu skenario = satu story pemilik**, supaya tidak ada test case yang ditulis dua kali di story berbeda.

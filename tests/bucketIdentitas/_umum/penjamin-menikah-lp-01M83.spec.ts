@@ -7,7 +7,7 @@ import { DataPenjaminForm, PersonalGuaranteeData, SpouseData } from '../../../pa
 
 /**
  * Dua penjamin perorangan Menikah (laki-laki & perempuan) beserta pasangan.
- * Sumber data: exports/config/automation_config.2026-11-23T02-35-03-625Z.xlsx sheet Leads (pasangan dicocokkan via Pasangan_No_KTP).
+ * Sumber data: fixtures/config/automation_config.2026-11-23T02-35-03-625Z.xlsx sheet Leads (pasangan dicocokkan via Pasangan_No_KTP).
  *   Penjamin 1: TEGAR JATI WICAKSONO (L)  + pasangan NENDEN NUGRAHA (P)
  *   Penjamin 2: ERIN (P)                  + pasangan RENALDY KUSUMA (L)
  * Default (tidak ada di Excel): NPWP = NIK, alamat KTP = fixtures/entities/penjamin-perorangan-menikah.json, domisili = sama.

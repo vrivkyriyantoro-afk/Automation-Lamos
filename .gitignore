@@ -23,3 +23,12 @@ playwright-report-bdd/
 
 # Berisi apikey salinan deskripsi Jira, jangan di-commit
 explore-output/atlassian/S2CML-4981.json
+
+# Credential per role (berisi password) - hanya template yang boleh di-commit
+fixtures/credentials/*
+!fixtures/credentials/roles.example.csv
+!fixtures/credentials/README.md
+
+# Python cache
+__pycache__/
+*.pyc

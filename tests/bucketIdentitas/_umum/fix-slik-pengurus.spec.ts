@@ -8,7 +8,7 @@ import { LoginPage } from '../../../pages/base/LoginPage';
 // Env: BARIS (nomor urut baris di modal), TXT (path file .txt pengganti).
 const URL = `https://los-fe-lamos-sit.devs.banksinarmas.com/lamos/credit-application/${process.env.APP_ID || '01M83AP5FKPHB1D3E2QS8P015Z'}/create?bucket=identitas_pengecekan&debtorType=individual`;
 const BARIS = Number(process.env.BARIS || 7);
-const TXT = path.resolve(process.env.TXT || 'exports/slik/slik-penjamin/NIK_3302265910820003.txt');
+const TXT = path.resolve(process.env.TXT || 'fixtures/slik/slik-penjamin/NIK_3302265910820003.txt');
 
 test('Ganti file SLIK .txt satu entitas', async ({ page }) => {
   test.setTimeout(120000);
